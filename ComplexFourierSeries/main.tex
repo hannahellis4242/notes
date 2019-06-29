@@ -7,6 +7,7 @@
 \usepackage{float}
 \floatstyle{boxed}
 \restylefloat{figure}
+\usepackage{mdframed}
 \begin{document}
 \title{Complex Fourier Series}
 \author{Hannah Ellis}
@@ -25,7 +26,7 @@ term, we get the equation
 
 \begin{equation}
 \label{eq:cfs}
-f(x)=\sum_{n=-infty}^{infty} c_n \exp\left(\frac{2ni\pi}{a}x\right)
+f(x)=\sum_{n=-\infty}^{\infty} c_n \exp\left(\frac{2ni\pi}{a}x\right)
 \end{equation}
 This is the complex Fourier series.
 
@@ -51,7 +52,8 @@ I_{nm}  &=\frac{a}{2 i p \pi} \left[\cos(p\pi) + i \sin(p\pi) - \left(\cos(p\pi)
         &=\frac{a}{2 i p \pi} \left[2i \sin(p\pi) \right]\\
         &=\frac{a}{p \pi} \sin(p\pi)\\
         &=a \frac{\sin(p\pi)}{p\pi}\\
-        &=a \text{sinc}(p\pi)
+        &=a \text{sinc}(p\pi)\\
+        &= a \delta_{nm}
 \end{align}
 \end{subequations}
 
@@ -73,4 +75,49 @@ ytick={-1.5,-1.0,...,1.5},]
 \caption{plot of $\text{sinc}(x\pi)$}
 \end{figure}
 
+\subsection{"Summary"}
+\begin{mdframed}
+\begin{equation*}
+I_{nm} = \int_{-\frac{a}{2}}^{\frac{a}{2}} \exp \left( \frac{2 i n \pi}{a} x\right) \exp \left( \frac{-2 i m \pi}{a} x\right) dx = a \delta_{nm}
+\end{equation*}
+Where
+\begin{equation*}
+\delta_{nm} = \left\{
+  \begin{array}{lr}
+    1 & n = m\\
+    0 & n != m
+  \end{array}
+\right.
+\end{equation*}
+\end{mdframed}
+\section{"Extracting cooefficents"}
+Multiplying equation \ref{eq:cfs} by $\exp\left(-\frac{2mi\pi}{a}\right)$ and
+integrating over the range $-\frac{a}{2}<x<\frac{a}{2}$ gives
+\begin{subequations}
+  \label{eq:extract1}
+\begin{align}
+\label{eq:cfs2}
+\int_{-\frac{a}{2}}^{\frac{a}{2}} f(x) \exp\left(-\frac{2mi\pi}{a}\right) dx &= \int_{-\frac{a}{2}}^{\frac{a}{2}} \sum_{n=-\infty}^{\infty} c_n \exp\left(\frac{2ni\pi}{a}x\right) \exp\left(-\frac{2mi\pi}{a}\right) dx \\
+&=\sum_{n=-\infty}^{\infty} c_n \int_{-\frac{a}{2}}^{\frac{a}{2}} \exp\left(\frac{2ni\pi}{a}x\right) \exp\left(-\frac{2mi\pi}{a}\right) dx \\
+&=\sum_{n=-\infty}^{\infty} c_n I_{nm} \\
+&=\sum_{n=-\infty}^{\infty} c_n a \delta_{nm} \\
+&= a c_m
+\end{align}
+\end{subequations}
+Taking the result from equation \ref{eq:extract1} and rearranging gives us
+\begin{equation}
+c_m = \frac{1}{a}\int_{-\frac{a}{2}}^{\frac{a}{2}} f(x) \exp\left(-\frac{2mi\pi}{a}\right) dx
+\end{equation}
+\subsection{"Summary"}
+\begin{mdframed}
+Assuming that a function on the range $-\frac{a}{2}<x<\frac{a}{2}$ can be expressed
+as a sum of complex exponentials of the form
+\begin{equation*}
+f(x)=\sum_{n=-\infty}^{\infty} c_n \exp\left(\frac{2ni\pi}{a}x\right)
+\end{equation*}
+The value of a cooefficent $c_n$ is given by the following intergral
+\begin{equation*}
+c_n = \frac{1}{a}\int_{-\frac{a}{2}}^{\frac{a}{2}} f(x) \exp\left(-\frac{2ni\pi}{a}\right) dx
+\end{equation*}
+\end{mdframed}
 \end{document}
