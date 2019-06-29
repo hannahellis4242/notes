@@ -1,4 +1,4 @@
-\documentclass[11pt,twoside,a4paper]{article}
+\documentclass[11pt,twoside,a4paper]{book}
 \usepackage{mathtools}
 \usepackage{pgf,tikz,pgfplots}
 \pgfplotsset{compat=1.15}
@@ -13,7 +13,10 @@
 \author{Hannah Ellis}
 \date{June 2017}
 \maketitle
-\section{"The Series"}
+\tableofcontents
+\chapter{Derivation}
+
+\section{The Series}
 For a function $f(x)$ with range $-\frac{a}{2}<x<\frac{a}{2}$ we assume that it can
 be reproduced by a sum of complex exponentials of the form
 \begin{equation}
@@ -30,7 +33,7 @@ f(x)=\sum_{n=-\infty}^{\infty} c_n \exp\left(\frac{2ni\pi}{a}x\right)
 \end{equation}
 This is the complex Fourier series.
 
-\section{"An interesting result"}
+\section{An interesting result}
 To calculate any particular coefficient, it will be important to evaluate the
 following intergral.
 \begin{subequations}
@@ -74,8 +77,8 @@ ytick={-1.5,-1.0,...,1.5},]
 \end{tikzpicture}
 \caption{plot of $\text{sinc}(x\pi)$}
 \end{figure}
-
-\subsection{"Summary"}
+\newpage
+\subsection{Summary}
 \begin{mdframed}
 \begin{equation*}
 I_{nm} = \int_{-\frac{a}{2}}^{\frac{a}{2}} \exp \left( \frac{2 i n \pi}{a} x\right) \exp \left( \frac{-2 i m \pi}{a} x\right) dx = a \delta_{nm}
@@ -90,7 +93,7 @@ Where
 \right.
 \end{equation*}
 \end{mdframed}
-\section{"Extracting cooefficents"}
+\section{Extracting cooefficents}
 Multiplying equation \ref{eq:cfs} by $\exp\left(-\frac{2mi\pi}{a}\right)$ and
 integrating over the range $-\frac{a}{2}<x<\frac{a}{2}$ gives
 \begin{subequations}
@@ -108,7 +111,8 @@ Taking the result from equation \ref{eq:extract1} and rearranging gives us
 \begin{equation}
 c_m = \frac{1}{a}\int_{-\frac{a}{2}}^{\frac{a}{2}} f(x) \exp\left(-\frac{2mi\pi}{a}\right) dx
 \end{equation}
-\subsection{"Summary"}
+\newpage
+\subsection{Summary}
 \begin{mdframed}
 Assuming that a function on the range $-\frac{a}{2}<x<\frac{a}{2}$ can be expressed
 as a sum of complex exponentials of the form
@@ -120,4 +124,6 @@ The value of a cooefficent $c_n$ is given by the following intergral
 c_n = \frac{1}{a}\int_{-\frac{a}{2}}^{\frac{a}{2}} f(x) \exp\left(-\frac{2ni\pi}{a}\right) dx
 \end{equation*}
 \end{mdframed}
+
+\chapter{Solutions to a few common functions}
 \end{document}
