@@ -537,11 +537,13 @@ ytick={-2.0,-1.0,...,2.0},]
 \draw[line width=2.pt] (1.4700000000000022,1.0) -- (1.4775000000000023,1.0);
 \draw[line width=2.pt] (1.4775000000000023,1.0) -- (1.4850000000000023,1.0);
 \draw[line width=2.pt] (1.4850000000000023,1.0) -- (1.4925000000000024,1.0);
-\begin{scriptsize}
-\draw[color=black] (-1.4707317073170731,-1.0362537764350455) node {$f$};
-\end{scriptsize}
 \end{axis}
 \end{tikzpicture}
 \caption{square wave}
 \end{figure}
+\begin{subequations}
+\begin{align}
+c_n &= \frac{1}{a}\int_{-\frac{a}{2}}^{\frac{a}{2}} f(x) \exp\left(-\frac{2ni\pi}{a}\right) dx
+\end{align}
+\end{subequations}
 \end{document}
