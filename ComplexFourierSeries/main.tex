@@ -154,7 +154,8 @@ ytick={-2.0,-1.0,...,2.0},]
 \end{figure}
 \begin{subequations}
 \begin{align}
-c_n &= \frac{1}{a}\int_{-\frac{a}{2}}^{\frac{a}{2}} f(x) \exp\left(-\frac{2ni\pi}{a}\right) dx
+c_n &= \frac{1}{a}\left[\int_{-\frac{a}{2}}^{0} -A \exp\left(-\frac{2ni\pi}{a}\right) dx + \int_{0}^{\frac{a}{2}} A \exp\left(-\frac{2ni\pi}{a}\right) dx \right]\\
+&= \frac{A}{a}\left[\int_{0}^{\frac{a}{2}} \exp\left(-\frac{2ni\pi}{a}\right) dx - \int_{-\frac{a}{2}}^{0} \exp\left(-\frac{2ni\pi}{a}\right) dx \right]
 \end{align}
 \end{subequations}
 \end{document}
