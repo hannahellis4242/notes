@@ -1,0 +1,10 @@
+# Ignore Mac system files
+.DS_store
+
+# Ignore LaTeX cache files
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.synctex.gz
+*.toc
