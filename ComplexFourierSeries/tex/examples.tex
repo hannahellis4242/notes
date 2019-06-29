@@ -1,0 +1,30 @@
+\section{Square Wave}
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=2.0cm,y=2.0cm]
+\begin{axis}[
+x=2.0cm,y=2.0cm,
+axis lines=middle,
+xmin=-1.5,
+xmax=1.5,
+ymin=-2.0,
+ymax=2.0,
+xtick={-1.5,-1.0,...,1.5},
+ytick={-2.0,-1.0,...,2.0},]
+\clip(-1.5,-2.) rectangle (1.5,2.);
+\draw[line width=2.pt] (-1.5,-1.0) -- (-1.0,-1.0);
+\draw[line width=2.pt] (-1.0,1.0) -- (-0.5,1.0);
+\draw[line width=2.pt] (-0.5,-1.0) -- (0.0,-1.0);
+\draw[line width=2.pt] (-0.0,1.0) -- (0.5,1.0);
+\draw[line width=2.pt] (0.5,-1.0) -- (1.0,-1.0);
+\draw[line width=2.pt] (1.0,1.0) -- (1.5,1.0);
+\end{axis}
+\end{tikzpicture}
+\caption{square wave}
+\end{figure}
+\begin{subequations}
+\begin{align}
+c_n &= \frac{1}{a}\left[\int_{-\frac{a}{2}}^{0} -A \exp\left(-\frac{2ni\pi}{a}\right) dx + \int_{0}^{\frac{a}{2}} A \exp\left(-\frac{2ni\pi}{a}\right) dx \right]\\
+&= \frac{A}{a}\left[\int_{0}^{\frac{a}{2}} \exp\left(-\frac{2ni\pi}{a}\right) dx - \int_{-\frac{a}{2}}^{0} \exp\left(-\frac{2ni\pi}{a}\right) dx \right]
+\end{align}
+\end{subequations}
