@@ -8,3 +8,8 @@
 *.log
 *.synctex.gz
 *.toc
+*.idx
+*.ilg
+*.ind
+*.lof
+*.lot
