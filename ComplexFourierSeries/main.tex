@@ -1,6 +1,5 @@
 \documentclass[11pt,twoside,a5paper]{book}
-\usepackage{mathtools}
-\usepackage{pgf,tikz,pgfplots}
+\usepackage{notes,mathtools,pgf,tikz,pgfplots}
 \pgfplotsset{compat=1.15}
 \usepackage{mathrsfs}
 \usetikzlibrary{arrows}
@@ -9,13 +8,18 @@
 \restylefloat{figure}
 \usepackage{mdframed}
 \begin{document}
-\title{Complex Fourier Series}
-\author{Hannah Michelle Ellis}
-\date{June 2017}
-\maketitle
+\input{./tex/title.tex}
+\clearpage
 \tableofcontents
+%\listoftables
+\listoffigures
+\clearpage
 \chapter{Derivation}
 \input{tex/derivation.tex}
+\clearpage
 \chapter{Examples}
 \input{tex/examples.tex}
+\clearpage
+\addcontentsline{toc}{chapter}{Index}
+\printindex
 \end{document}
