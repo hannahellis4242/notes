@@ -1,0 +1,72 @@
+Here we will solve the system of eqations given in section \ref{sec:Gravity}.
+\subsection{Conservation of angular momentum revisited}
+Firstly we note that
+\begin{equation}
+\frac{d}{dt}\left(r^2 \frac{d\theta}{dt}\right)=r^2 \frac{d^2\theta}{dt^2} + 2r\frac{dr}{dt}\frac{d\theta}{dt}
+\end{equation}
+is the same as eqation \ref{eq:angularAcceleration} except for the $r$ term in front of everything.
+\begin{equation}
+\frac{1}{r}\frac{d}{dt}\left(r^2 \dot{\theta}\right)=r\ddot{\theta} + 2\dot{r}\dot{\theta}=0\label{eq:Solution:constAngular}
+\end{equation}
+using equation \ref{eq:AngularMomentumInTermsOfrandomega}
+\begin{equation}
+r^2 \dot{\theta}=\frac{l}{m} \label{eq:Solution:const}
+\end{equation}
+and is a constant of the motion. I.e. this is a restatement of the conservation of angular momentum.
+Using above we can get $\omega$
+\begin{equation}
+\omega=\frac{l}{mr^2}
+\end{equation}
+Now if we let $r=\frac{1}{u}$ we find that
+\begin{align}
+\frac{dr}{dt}&=\frac{du^{-1}}{du}\frac{du}{dt} \nonumber \\
+&=-\frac{1}{u^2}\frac{du}{dt} \nonumber \\
+&=-r^2\frac{du}{dt} \nonumber \\
+&=-\left(r^2\frac{d\theta}{dt}\right)\frac{du}{d\theta} 
+\end{align}
+Notice that the brakects are the same as in equation \ref{eq:Solution:constAngular} and so is constant.
+Now take the derivitive again with respect to time 
+\begin{align}
+\frac{d^2r}{dt^2}&=-\frac{d}{dt}\left(r^2\frac{d\theta}{dt}\right)\frac{du}{d\theta} - \left(r^2\frac{d\theta}{dt}\right)\frac{d}{dt}\frac{du}{d\theta} \nonumber \\
+&=- \left(r^2\frac{d\theta}{dt}\right)\frac{d\theta}{dt}\frac{d}{d\theta}\frac{du}{d\theta} \nonumber \\
+&=- r^2\left(\frac{d\theta}{dt}\right)^2\frac{d^2u}{d\theta^2} \label{eq:Solution:radial}
+\end{align}
+Using equation \ref{eq:Solution:radial} in equation \ref{eq:radialAcceleration} and continuing with the change of variables gives
+\begin{align}
+-\frac{GM}{r^2}&=-r^2\left(\frac{d\theta}{dt}\right)^2\frac{d^2u}{d\theta^2} - r\left(\frac{d\theta}{dt}\right)^2 \nonumber \\
+GM&=r^4\left(\frac{d\theta}{dt}\right)^2\frac{d^2u}{d\theta^2} + r^3\left(\frac{d\theta}{dt}\right)^2 \nonumber \\
+GM&=\left[r^2\frac{d\theta}{dt}\right]^2\frac{d^2u}{d\theta^2} + \frac{1}{r}\left[r^2\frac{d\theta}{dt}\right]^2 \nonumber \\
+GM&=\left[r^2\frac{d\theta}{dt}\right]^2\left[\frac{d^2u}{d\theta^2} + u\right] \label{eq:Solution:ode}
+\end{align}
+making the subsitution in equation \ref{eq:Solution:ode} for the first set of brackets on the right hand side with equation \ref{eq:Solution:const} gives us
+\begin{align}
+GM&=\left(\frac{l}{m}\right)^2\left[\frac{d^2u}{d\theta^2} + u\right] \nonumber \\
+\frac{GMm^2}{l^2}&=\frac{d^2u}{d\theta^2} + u
+\end{align}
+
+which leads to the solution being
+\begin{align}
+u(\theta)&=\frac{GMm^2}{l^2}-c\cos \theta \nonumber \\
+r(\theta)&=\frac{1}{\frac{GMm^2}{l^2}-c\cos \theta} \label{eq:Solution:uglySolution}
+\end{align}
+
+equation \ref{eq:Solution:uglySolution} is a form of the polar equation for an ellipse. Rearanging to the more usual polar form will give us the semi-major axis and the eccentricity of the obit. Let $\gamma=\frac{l^2}{GMm^2}$
+
+\begin{align}
+r(\theta)&=\frac{1}{\frac{1}{\gamma}-c\cos \theta} \nonumber \\
+r(\theta)&=\frac{\gamma}{1-\frac{c}{\gamma}\cos \theta} \label{eq:Solution:neatSolution}
+\end{align}
+
+\begin{framed}
+\subsection{Summary}
+The equations of motion under gravity are
+\begin{align*}
+-\frac{GM}{r^2} &=\ddot{r} - r \omega^2 \\
+0 &=r \ddot{\theta} + 2 \dot{r} \dot{\theta}
+\end{align*}
+Which has a solution for $r$ in terms of $\theta$ which is
+\begin{equation*}
+r(\theta)=\frac{\gamma}{1-\frac{c}{\gamma}\cos \theta}
+\end{equation*}
+where $\gamma=\frac{l^2}{GMm^2}$. This is the equation for an ellipse in polar coordinates and so shows that orbits are elliptial.
+\end{framed}

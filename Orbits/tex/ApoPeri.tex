@@ -1,0 +1,74 @@
+Starting with the equation of an ellipse in polar form
+\begin{equation} \label{eq:ellipse}
+r(\theta)=\frac{A(1+e)(1-e)}{1-e \cos \theta}
+\end{equation}
+
+When $r$ is maximum then the particle is at the apoasis\footnote{the furthest point from the parent body} of it's orbit. This occurs when $\cos \theta=1$ i.e. when $\theta=0$.
+We stall call the radius at apoasis $a$ so using equation\ref{eq:ellipse} with $\cos \theta=1$
+\begin{equation} \label{eq:apoasis}
+a=\frac{A(1+e)(1-e)}{1-e}=A(1+e)
+\end{equation}
+Also we can find the periapsis\footnote{the closest point from the parent body} when $r$ is minimum. This occurs when $\cos \theta=-1$ i.e. when $\theta=\pi$. Again using equation \ref{eq:ellipse} with $\cos \theta=-1$
+\begin{equation} \label{eq:periapsis}
+p=\frac{A(1+e)(1-e)}{1+e}=A(1-e)
+\end{equation}
+
+We can sum the equations \ref{eq:apoasis} and \ref{eq:periapsis} above to give 
+\begin{align}
+a+p&=A+eA+A-eA \nonumber \\
+a+p&=2A \nonumber \\
+A&=\frac{a+p}{2}\label{eq:ApoPeri:semiMajorAxis}
+\end{align}
+
+This also follows from the geometry of an ellipse.
+
+finally taking the difference of the equations \ref{eq:apoasis} and \ref{eq:periapsis} above gives
+\begin{align}
+a-p&=A+eA-A+eA \nonumber \\
+a-p&=2eA \nonumber \\
+e&=\frac{a-p}{2A} \nonumber \\
+e&=\frac{a-p}{a+p} \label{eq:ApoPeri:ecentricity}
+\end{align}
+
+Using the relationship for the focus and the ecentricity
+\begin{align}
+f&=eA\nonumber \\
+&=\frac{a-p}{a+p}\frac{a+p}{2} \nonumber \\
+&=\frac{a-p}{2}
+\end{align}
+
+\subsection{Relationship between apoasis and periapsis}
+Comparing equation \ref{eq:Solution:neatSolution} to the equation for an elipse in polar form
+\begin{align}
+r=\frac{A(1-e^2)}{1-e\cos\theta} \label{eq:Solution:ellipse}\\
+\Rightarrow A(1-e^2)=\gamma
+\end{align}
+using equation \ref{eq:ApoPeri:semiMajorAxis} and equation \ref{eq:ApoPeri:ecentricity} we get
+\begin{align}
+\gamma&=\frac{a+p}{2}\left(1-\frac{(a-p)^2}{(a+p)^2}\right) \nonumber \\
+&=\frac{(a+p)^2-(a-p)^2}{2(a+p)} \nonumber \\
+&=\frac{a^2+2ap+p^2-a^2+2ap-p^2}{2(a+p)} \nonumber \\
+&=\frac{2ap}{a+p} \label{eq:ApoPeri:gamma}
+\end{align}
+
+\begin{framed}
+\subsection{Summary}
+The apoasis $a$ and periapsis $p$ radius is given by
+\begin{align*}
+a&=A(1+e) \\
+p&=A(1-e)
+\end{align*}
+
+where $A$ is the semi-major axis of the ellipse and $e$ is the ecentricity. $A$ , $e$ and $f$ can be found in terms of $a$ and $p$ by the following
+\begin{align*}
+A&=\frac{a+p}{2} \\
+e&=\frac{a-p}{a+p} \\
+f&=\frac{a-p}{2}
+\end{align*}
+
+The relationship between the apoasis and periapsis is given by
+\begin{equation*}
+\gamma=\frac{2ap}{a+p}
+\end{equation*}
+where $\gamma=\frac{l^2}{GMm^2}$
+\end{framed}

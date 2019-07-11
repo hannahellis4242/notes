@@ -1,0 +1,21 @@
+The areal velocity is the rate of change in the area swept out between a point (typically the origin) and a particle as it moves.
+\begin{figure}[h]
+  \centering
+\input{./img/ArealVelocityImg.tex} 
+\caption{Areal velocity about a point} \label{fig:arealVelocity}
+\end{figure}
+
+It can be seen from figure \ref{fig:arealVelocity} that the area swept out is approximatly the area of the triangle formed between $\bm{r}(t)$ and $\bm{r}(t+\delta t)$ and would be equal in the limit $\delta t \rightarrow 0$
+\begin{align}
+\delta A&\approx\frac{1}{2}h|\bm{r}(t+\delta t)|  \nonumber \\
+h &=|\bm{r}(t)|\sin \theta \nonumber\\
+\delta A&\approx\frac{1}{2}|\bm{r}(t)||\bm{r}(t+\delta t)| \sin \theta  \nonumber \\
+\delta A&\approx\frac{1}{2}|\bm{r}(t) \times \bm{r}(t+\delta t)| \label{eq:AV1}
+\end{align}
+
+Using the expansion
+\begin{equation} \label{eq:expansion}
+\bm{r}(t+\delta t)=\bm{r}(t)+\delta t \frac{d\bm{r}(t)}{dt}+\frac{\delta t}{2}\frac{d^2 \bm{r}(t)}{d t^2} +\dots
+\end{equation}
+
+in equation \ref{eq:AV1}

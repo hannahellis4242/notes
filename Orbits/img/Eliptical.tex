@@ -1,0 +1,19 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{pgf,tikz}
+\usetikzlibrary{arrows}
+\pagestyle{empty}
+\begin{document}
+\definecolor{qqqqff}{rgb}{0,0,1}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-2,-4) rectangle (8,4);
+\draw [rotate around={0:(3,0)}] (3,0) ellipse (4cm and 2.65cm);
+\draw (0,0)-- (7,0);
+\draw (0,0)-- (-1,0);
+\begin{scriptsize}
+\fill [color=qqqqff] (0,0) circle (1.5pt);
+\draw[color=black] (3.58,-0.18) node {b};
+\draw[color=black] (-0.48,-0.2) node {a};
+\end{scriptsize}
+\end{tikzpicture}
+\end{document}

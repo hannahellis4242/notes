@@ -1,0 +1,68 @@
+Unlike circular orbits, elliptical orbits do not have a constant radius and so we don't see the same simplification as we do for circular orbits\footnote{that $\ddot{r}=0$}. However we already have a relationship bettween $\gamma$ and the apses, equation \ref{eq:ApoPeri:gamma}
+\begin{equation}
+\gamma=\frac{2ap}{a+p}
+\end{equation}
+
+\subsection{Radial Acceleration}
+However we can calculate the radial acceleration at the apses by using equation \ref{eq:radialAcceleration}
+\begin{align}
+\ddot{r}&=r\omega^2-\frac{GM}{r^2}\nonumber \\
+\ddot{r}&=\frac{1}{r^3}\left(\frac{l}{m}\right)^2-\frac{GM}{r^2} \nonumber \\
+\ddot{r}&=GM\left(\frac{\gamma}{r^3}-\frac{1}{r^2}\right)\label{eq:Elliptical:radialAcceleration}
+\end{align}
+
+\subsubsection{Radial Acceleration at Apoapsis}
+At apoapsis $r=a$. Substituting this into equation \ref{eq:Elliptical:radialAcceleration} gives
+\begin{align}
+\ddot{r}(a)&=GM\left(\frac{\gamma}{a^3}-\frac{1}{a^2}\right)
+\end{align}
+
+\subsection{Angular momentum}
+Since we already have a relationship bettween $\gamma$ and the apses, the angular momentum is easy to find from $\gamma$
+\begin{equation}
+\frac{l}{m}=\sqrt{GM\frac{2ap}{a+p}}
+\end{equation}
+\subsection{Period}
+Again the period of an orbit should be as simple as using the link between angular momentum and areal velocity and knowing the area of an ellipse
+\begin{equation}
+\pi AB=\frac{1}{2}\frac{l}{m}T
+\end{equation}
+substituting in the relationship between $A$,$B$ and the apses.
+\begin{subequations}
+\begin{align}
+A&=\frac{a+p}{2}\\
+B&=\sqrt{ap}
+\end{align}
+\end{subequations}
+gives
+\begin{align}
+\pi \sqrt{ap}\frac{a+p}{2}&=\frac{1}{2}\frac{l}{m}T \nonumber \\
+\pi \sqrt{ap}(a+p)&=\sqrt{GM\frac{2ap}{a+p}}T \nonumber \\
+T &= \frac{2\pi}{\sqrt{GM\left(\frac{2}{a+p}\right)^2}} \nonumber \\
+T &=\frac{2\pi}{\sqrt{GM}}\left(\frac{a+p}{2}\right)^\frac{3}{2}
+\end{align}
+
+\subsection{Energy}
+Again we use the energy equation \ref{eq:Gravity:TotalEnergy}, and rearranging to get energy per unit mass
+\begin{equation}
+\frac{E}{m}=\frac{1}{2} \dot{r}^2 +\frac{1}{2r^2} \left(\frac{l}{m}\right)^2- \frac{GM}{r}
+\end{equation}
+although our orbit isn't circular, there are two points in the orbit where $\dot{r}=0$ allowing us to drop the first term. Since energy is conservered, the energy will be the same for all points along the orbit. The two points where $\dot{r}=0$ are at the apopsis and periapsis. So substituting $r=a$ gives
+\begin{align}
+\frac{E}{m}&=\frac{1}{2a^2} \left(\frac{l}{m}\right)^2- \frac{GM}{a}\nonumber \\
+\frac{E}{m}&=\frac{GM}{2a^2} \gamma- \frac{GM}{a}\nonumber \\
+\frac{E}{m}&=GM\left[\frac{2ap}{2a^2(a+p)} - \frac{1}{a}\right] \nonumber \\
+\frac{E}{m}&=GM\left[\frac{2ap-2a(a+p)}{2a^2(a+p)}\right] \nonumber \\
+\frac{E}{m}&=GM\left[\frac{a^2}{a^2(a+p)}\right] \nonumber \\
+\frac{E}{m}&=\frac{GM}{2}\frac{1}{\frac{a+p}{2}}
+\end{align}
+Which again shows that for elliptical orbits we get the same pattern as circular orbits, except we take the average of the orbital radius in place of $r$.
+\begin{framed}
+\subsection{Summary}
+\begin{align*}
+\gamma&=\frac{2ap}{a+p}\\
+\frac{l}{m}&=\sqrt{GM\frac{2ap}{a+p}}\\
+T &=\frac{2\pi}{\sqrt{GM}}\left(\frac{a+p}{2}\right)^\frac{3}{2}\\
+\frac{E}{m}&=\frac{GM}{2}\frac{1}{\frac{a+p}{2}}
+\end{align*}
+\end{framed}

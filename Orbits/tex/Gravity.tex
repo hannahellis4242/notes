@@ -1,0 +1,90 @@
+\subsection{Gravity as a central force}
+The force between two particles a distance $r$ apart with mass $M$ and $m$ respectivly is given by
+\begin{equation}
+\bm{F}=-\frac{G M m}{r^2} \hat{\bm{r}}
+\end{equation}
+
+The acceleration on the particle of mass $m$ due to the force of gravity between the two particles is
+\begin{equation}
+\ddot{\bm{r}} =\frac{ \bm{F} }{m}=-\frac{GM}{r^2} \hat{\bm{r}}
+\end{equation}
+Using equation \ref{eq:acceleration} we can split the acceleration into radial and angular parts
+\begin{align}
+-\frac{GM}{r^2} &=\ddot{r} - r \omega^2 \label{eq:radialAcceleration} \\
+0 &=r \ddot{\theta} + 2 \dot{r} \dot{\theta} \label{eq:angularAcceleration}
+\end{align}
+
+We can use equation \ref{eq:angularAcceleration} to show that angular momentum is conserved
+\subsection{Conservation of angular momentum}
+Taking the first deriviative of angular momentum
+\begin{align}
+\frac{d \bm{L}}{d t} &= \left[m \frac{d r^2}{d t} \omega + m r^2 \frac{d \omega}{d t} \right] \uveck \nonumber \\
+&=m \left[ \frac{d r^2}{d r}\dot{r}\dot{\theta}+ r^2  \ddot{\theta} \right] \uveck \nonumber \\
+&=mr \left[2\dot{r}\dot{\theta}+ r  \ddot{\theta} \right] \uveck \nonumber \\
+&=0
+\end{align}
+where in the last line we have used equation \ref{eq:angularAcceleration}. Since the angular momenum does not change with time, it is therefore a constant.
+
+\subsection{Energy}
+Here we consider the energy of a particle in orbit.
+\subsubsection{Potential Energy}
+Firstly let us consider the potential energy of the particle question. The potential energy is the work done in moving the particle from a radius of $\infty$ to $r$.
+So the work done is given by
+\begin{align}
+U(r)&=\int_{\infty}^{r} \bm{F}(r') \cdot d\bm{r}'  \nonumber \\
+U(r)&=\int_{\infty}^{r} -\frac{GMm}{r'^2} \hat{\bm{r}} \cdot dr' \hat{\bm{r}}  \nonumber \\
+U(r)&=-GMm\int_{\infty}^{r} \frac{dr'}{r'^2} \nonumber \\
+U(r)&=-GMm \left[ \frac{-1}{r'} \right]_{\infty}^{r} \nonumber \\
+U(r)&=GMm \left[ \frac{1}{\infty} - \frac{1}{r} \right] \nonumber \\
+U(r)&=- \frac{GMm}{r} \label{eq:potentialEnergy}
+\end{align}
+
+\subsubsection{Kinetic Energy}
+The kinetic energy of a particle is given by
+\begin{equation}
+T(\dot{r})=\frac{1}{2}m\dot{\bm{r}}\cdot\dot{\bm{r}} \label{eq:KineticEnergy}
+\end{equation}
+using eqation \ref{eq:vel} gives 
+\begin{align}
+T(\dot{r})&=\frac{1}{2}m\left[ \dot{r}\hat{\bm{r}}+r\omega\hat{\bm{\theta}}\right]\cdot\left[ \dot{r}\hat{\bm{r}}+r\omega\hat{\bm{\theta}}\right] \nonumber \\
+&=\frac{1}{2}m \dot{r}^2 + \frac{1}{2}mr^2 \omega^2 \label{eq:Gravity:KineticEnergy}
+\end{align}
+
+we can also make the subsitution using equation \ref{eq:AngularMomentumInTermsOfrandomega} with the notation that $l=mr^2\omega$
+
+\begin{align}
+l&=mr^2\omega \nonumber \\
+\omega&=\frac{l}{mr^2} \label{eq:Gravity:AngularMomentum}
+\end{align}
+
+using equation \ref{eq:Gravity:AngularMomentum} in equation \ref{eq:Gravity:KineticEnergy} leads to
+
+\begin{align}
+T(\dot{r})&=\frac{1}{2}m \dot{r}^2 + \frac{1}{2}mr^2 \omega^2 \nonumber \\
+&=\frac{1}{2}m \dot{r}^2 + \frac{1}{2}mr^2 \frac{l^2}{m^2r^4} \nonumber \\
+&=\frac{1}{2}m \dot{r}^2 + \frac{l^2}{2mr^2} \label{eq:Gravity:KineticEnergyFinal}
+\end{align}
+
+\subsubsection{Total Energy}
+Finally the total energy can be found by putting together the equation for kinetic energy and potential energy
+\begin{align}
+E(r,\dot{r})=T(\dot{r})+U(r) \nonumber \\
+E(r,\dot{r})=\frac{1}{2}m \dot{r}^2 + \frac{l^2}{2mr^2}- \frac{GMm}{r}\label{eq:Gravity:TotalEnergy}
+\end{align}
+
+sometimes the last two terms of equation \ref{eq:Gravity:TotalEnergy} are put together to form a new potential energy type term that is dependent only on the radius and the angular momentum.
+
+\subsubsection{Conservation of Total Energy}
+
+\begin{framed}
+\subsection{Summary}
+The equations of motion under gravity are
+\begin{align*}
+-\frac{GM}{r^2} &=\ddot{r} - r \omega^2 \\
+0 &=r \ddot{\theta} + 2 \dot{r} \dot{\theta}
+\end{align*}
+and the total energy of a particle acted on by gravity is
+\begin{equation*}
+E(r,\dot{r})=\frac{1}{2}m \dot{r}^2 + \frac{l^2}{2mr^2}- \frac{GMm}{r}
+\end{equation*}
+\end{framed}

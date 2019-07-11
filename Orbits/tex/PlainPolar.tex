@@ -1,0 +1,85 @@
+In this section we will derive the equations of motion for an object acted upon by gravity in plane
+polar coordinates. To do this we will first consider plane polar coordinates themselves and the derivatives of the position vector within the coordinate system.
+\begin{figure}[h]
+  \centering
+\input{./img/PolarCoordinates.tex} 
+\caption{Position and unit vectors in plane polar coordinates} \label{fig:PolarCoordinates}
+\end{figure}
+
+\subsection{Polar unit vectors}
+The unit vectors of plane polar coordinates can be determined from the standard unit vectors as
+\begin{align}
+\hat{\bm{r}} &= \uveci \cos( \theta ) + \uvecj \sin( \theta ) \label{eq:unitrad} \\
+\hat{\bm{\theta}}  &= - \uveci \sin( \theta ) + \uvecj \cos( \theta ) \label{eq:unitangle}
+\end{align}
+Where $r$ is the distance from the origin to the position or alternatively the length of the position vector, and $\theta$ is the angle between $\uveci$ and $\bm{r}$.
+Since the unit vectors $\hat{\bm{r}}$ and $\hat{\bm{\theta}}$ depend on $\theta$ which changes with time, the unit vectors also change with time. We will begin by looking at the derivative of $\hat{\bm{r}}$ with respect to time.
+
+\begin{equation} \label{eq:radvel}
+\frac{d {\hat{\bm{r}}}}{d t} = \frac{ d \theta}{d t}\frac{d}{d \theta} \hat{\bm{r}} =  \frac{ d \theta}{d t} \left[ -\uveci \sin( \theta ) + \uvecj \cos( \theta ) \right] = \frac{ d \theta}{d t} \hat{\bm{\theta}}
+\end{equation}
+
+where we have used equation \ref{eq:unitangle} to replace the typical Cartesian coordinate unit vectors.
+
+\begin{equation}\label{eq:angvel}
+\frac{d {\hat{\bm{\theta}}}}{d t}=\frac{d \theta}{d t} \frac{d}{dt}{\hat{\bm{\theta}}}=\frac{d \theta}{d t}  \left[ - \uveci \cos( \theta ) - \uvecj \sin( \theta ) \right]=- \frac{d \theta}{d t} \hat{\bm{r}}
+\end{equation}
+
+ Since $\frac{d {\hat{\bm{r}}}}{d t}$ too depends on $\theta$ so is also time dependent.
+
+\begin{equation} \label{eq:radvel}
+\frac{d^2 {\hat{\bm{r}}}}{d t^2} = \frac{d}{dt}\left[ \frac{ d \theta}{d t} \hat{\bm{\theta}} \right]=\frac{d^2 \theta}{d t^2}\hat{\bm{\theta}}+\frac{d \theta}{d t} \frac{d \hat{\bm{\theta}}}{dt}=\frac{d^2 \theta}{d t^2}\hat{\bm{\theta}}-\left(\frac{d \theta}{d t} \right)^2  \hat{\bm{r}} 
+\end{equation}
+
+\begin{framed}
+\subsubsection{Polar unit vectors summary}
+The polar coordinate unit vectors are
+\begin{align*}
+\hat{\bm{r}} &= \uveci \cos( \theta ) + \uvecj \sin( \theta ) \\
+\hat{\bm{\theta}}  &= - \uveci \sin( \theta ) + \uvecj \cos( \theta )
+\end{align*}
+With the first derivatives being
+\begin{align*}
+\frac{d {\hat{\bm{r}}}}{d t} &=  \omega \hat{\bm{\theta}} \\
+\frac{d {\hat{\bm{\theta}}}}{d t} &=-\omega \hat{\bm{r}}
+\end{align*}
+And the second derivative of $\hat{\bm{r}}$ being
+\begin{equation*}
+\frac{d^2 {\hat{\bm{r}}}}{d t^2} =\frac{d \omega}{d t}\hat{\bm{\theta}}-\omega^2  \hat{\bm{r}} 
+\end{equation*}
+with $\omega = \frac{d \theta}{d t}$
+\end{framed}
+
+\subsection{Acceleration in polar coordinates}
+Here we will calculate the acceleration in terms of the polar unit vectors. Starting with the position vector
+\begin{equation}
+\textbf{r}= r \hat{\textbf{r}}
+\end{equation}
+This is the length of the position vector in the direction of $\hat{\bm{r}}$. The first derivative will be the velocity of the position vector in terms of the polar unit vectors
+\begin{equation}\label{eq:vel}
+\frac{d \bm{r}}{d t} = \frac{d r}{d t} \hat{\bm{r}} + r \frac{d \hat{\bm{r}}}{d t}=\frac{d r}{d t} \hat{\bm{r}} + r \omega \hat{\bm{\theta}}
+\end{equation}
+The velocity is the sum of the radial velocity in the radial direction $\dot{r}$ and the angular part of the velocity $r \omega$ in the angular direction.
+
+The acceleration
+\begin{align}\label{eq:acceleration}
+\frac{ d^2 \bm{r}}{ d t^2} &= \frac{ d^2 r}{d t^2} \hat{\bm{r}} + \frac{d r}{d t} \frac{d \hat{\bm{r}}}{d t} +\frac{d r}{d t} \omega \hat{\bm{\theta}} +r \frac{d \omega}{d t} \hat{\bm{\theta}}+r \omega \frac{d \hat{\bm{\theta}}}{d t} \nonumber \\
+&=  \frac{ d^2 r}{d t^2} \hat{\bm{r}} + \frac{d r}{d t} \omega \hat{\bm{\theta}} +\frac{d r}{d t} \omega \hat{\bm{\theta}} +r \frac{d \omega}{d t} \hat{\bm{\theta}}-r \omega^2 \hat{\bm{r}} \nonumber \\
+&=\left[  \frac{ d^2 r}{d t^2} -r \omega^2 \right] \hat{\bm{r}} + \left[ 2 \frac{d r}{d t} \omega + r \frac{ d \omega}{d t} \right] \hat{\bm{\theta}}
+\end{align}
+
+\begin{framed}
+\subsubsection{Acceleration in polar coordinates summary}
+The position vector
+\begin{equation*}
+\bm{r}=r \hat{\bm{r}}
+\end{equation*}
+Velocity
+\begin{equation*}\label{eq:vel}
+\frac{d \bm{r}}{d t} =\frac{d r}{d t} \hat{\bm{r}} + r \omega \hat{\bm{\theta}}
+\end{equation*}
+Acceleration
+\begin{equation*}
+\frac{ d^2 \bm{r}}{ d t^2} =\left[  \frac{ d^2 r}{d t^2} -r \omega^2 \right] \hat{\bm{r}} + \left[ 2 \frac{d r}{d t} \omega + r \frac{ d \omega}{d t} \right] \hat{\bm{\theta}}
+\end{equation*}
+\end{framed}

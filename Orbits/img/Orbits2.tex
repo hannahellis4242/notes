@@ -1,0 +1,22 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{pgf,tikz}
+\usetikzlibrary{arrows}
+\pagestyle{empty}
+\begin{document}
+\definecolor{ffqqqq}{rgb}{1,0,0}
+\definecolor{qqqqff}{rgb}{0,0,1}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-50,-50) rectangle (50,50);
+\draw [color=ffqqqq] (0,0) circle (10cm);
+\draw [color=qqqqff] (0,0) circle (50cm);
+\draw [rotate around={0:(20,0)}] (20,0) ellipse (30cm and 22.36cm);
+\draw (0,0)-- (-10,0);
+\draw (0,0)-- (50,0);
+\begin{scriptsize}
+\fill [color=qqqqff] (0,0) circle (1.5pt);
+\draw[color=black] (-5.38,-1.35) node {a};
+\draw[color=black] (25.49,-1.09) node {b};
+\end{scriptsize}
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,57 @@
+When an orbit is circular $r=const$. This means that $\dot{r}=\ddot{r}=0$.
+Looking back at the equation \ref{eq:radialAcceleration}
+\begin{align}
+-\frac{GM}{r^2} &=\ddot{r} - r \omega^2 \nonumber \\
+-\frac{GM}{r^2} &= - r \omega^2 \label{eq:Circular:motion}
+\end{align}
+since $\ddot{r}=0$. 
+\subsection{Radius of orbit}
+Making the substitution here that $\omega=\frac{l}{mr^2}$ in equation \ref{eq:Circular:motion} gives
+\begin{align}
+GM&= \frac{1}{r} \left(\frac{l}{m}\right)^2 \nonumber \\
+r&=\frac{\left(\frac{l}{m}\right)^2}{GM}=\gamma 
+\end{align}
+so we find that the raduis is $\gamma$
+
+\subsection{Angular momentum}
+Since $r=\gamma$ the angular momentum is easy to find
+\begin{align}
+r&=\frac{\left(\frac{l}{m}\right)^2}{GM} \nonumber \\
+\frac{l}{m}&=\sqrt{GMr}\label{eq:Circular:angularMomentum}
+\end{align}
+
+\subsection{Period}
+Since the angular momentum is related to the areal velocity by equation \ref{eq:ArealVelocity}, finding the period is just a case of finding out how long it takes to sweep out the full area of a circle.
+\begin{align}
+\pi r^2 &= \frac{1}{2}\frac{l}{m} T \nonumber \\
+T&=\frac{2\pi r^2}{\frac{l}{m}} \nonumber \\
+T&=\frac{2\pi}{G^2M^2} \left(\frac{l}{m}\right)^3
+\end{align}
+Using equation \ref{eq:Circular:angularMomentum} gives
+\begin{align}
+T&=\frac{2\pi}{G^2M^2}\sqrt{G^3M^3r^3}\nonumber\\
+T&=\frac{2\pi}{\sqrt{GM}}\sqrt{r^3}
+\end{align}
+\subsection{Energy}
+The energy is given by equation \ref{eq:Gravity:TotalEnergy}, so rearranging to get energy per unit mass
+\begin{equation}
+\frac{E}{m}=\frac{1}{2} \dot{r}^2 +\frac{1}{2r^2} \left(\frac{l}{m}\right)^2- \frac{GM}{r}
+\end{equation}
+Since the orbit is circular $\dot{r}=0$ so the first term disappears leaving only
+\begin{align}
+\frac{E}{m}&=\frac{1}{2r^2} \left(\frac{l}{m}\right)^2- \frac{GM}{r}\nonumber \\
+\frac{E}{m}\frac{r^2}{GM}&=\frac{1}{2} \frac{\left(\frac{l}{m}\right)^2}{GM}- r \nonumber \\
+\frac{E}{m}\frac{r^2}{GM}&=\frac{1}{2} \gamma-r \nonumber \\
+\frac{E}{m}\frac{r^2}{GM}&=-\frac{1}{2}r \nonumber \\
+\frac{E}{m}&=-\frac{GM}{2}\frac{1}{r}
+\end{align}
+
+\begin{framed}
+\subsection{Summary}
+\begin{align*}
+r&=\gamma \\
+\frac{l}{m}&=\sqrt{GMr}\\
+T&=\frac{2\pi}{\sqrt{GM}}r^{\frac{3}{2}}\\
+\frac{E}{m}&=-\frac{GM}{2}\frac{1}{r}
+\end{align*}
+\end{framed}
