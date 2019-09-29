@@ -1,0 +1,49 @@
+\documentclass[a5paper,12pt]{article}
+\usepackage{notes}
+\begin{document}
+\input{./tex/title.tex}
+\clearpage
+\tableofcontents
+\listoftables
+\listoffigures
+\clearpage
+
+\section{Cubic Curve}
+The general vector equation for a cubic curve is
+\begin{equation}\label{eq:curve}
+\mathbf{r}=\lambda^3\mathbf{a}+\lambda^2\mathbf{b}+\lambda\mathbf{c}+\mathbf{d}
+\end{equation}
+with the derivative being
+\begin{equation}\label{eq:derivative_curve}
+\frac{d\mathbf{r}}{d\lambda}=3\lambda^2\mathbf{a}+2\lambda\mathbf{b}+\mathbf{c}
+\end{equation} 
+Boundary conditions
+$\lambda=0 , r = A , \frac{d r}{d\lambda}=C - A$ and $\lambda=1 , r = B , \frac{d r}{d\lambda}=B - D$
+\begin{align}\label{eq:bc_equation}
+A &= d \nonumber \\
+C-A &= c \nonumber \\
+B &= a + b + c + d \nonumber \\
+B-D &= 3a + 2 b + c
+\end{align}
+
+\begin{equation}
+\left[ \begin{matrix}
+1 & 0 & 0 & 0 \\
+-1 & 0 & 1 & 0 \\
+0 & 1 & 0 & 0 \\
+0 & 1 & 0 & -1 
+\end{matrix} \right]
+\left( \begin{matrix} A \\ B\\ C \\D\end{matrix}\right) = \left[ \begin{matrix}
+0 & 0 & 0 & 1 \\
+0 & 0 & 1 & 0 \\
+1 & 1 & 1 & 1 \\
+3 & 2 & 1 & 0 
+\end{matrix} \right]
+\left( \begin{matrix} a \\ b\\ c \\d\end{matrix}\right)
+\end{equation}
+\include{main}
+
+\clearpage
+\addcontentsline{toc}{chapter}{Index}
+\printindex
+\end{document}
