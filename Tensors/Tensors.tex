@@ -1,13 +1,23 @@
-\documentclass[a5paper,12pt]{article}
+\documentclass[a5paper,12pt]{book}
 \usepackage{notes}
+\usepackage{hyperref}
 \begin{document}
 \input{./tex/title.tex}
-\clearpage
+\frontmatter
+\addcontentsline{toc}{chapter}{Foreword}
+My set of notes based on the YouTube videos by egienchris
+
+\url{https://www.youtube.com/channel/UCN8wTUlSAroLslWyf87E2pw}\linebreak
+
+Intrduction to Tensors
+
+\url{https://www.youtube.com/playlist?list=PLJHszsWbB6hrkmmq57lX8BV-o-YIOFsiG}
 \tableofcontents
 \listoftables
 \listoffigures
 \clearpage
-
+\mainmatter
+\chapter{Tensors}
 \section{What is a tensor?}
 \input{./tex/WhatIsATensor.tex}
 \clearpage
