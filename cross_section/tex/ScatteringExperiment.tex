@@ -56,11 +56,38 @@ When we talk about cross section normally though, we are more conserned with the
 As the beam passes through the target material, the particles in the beam will undergo colisions with the target particles. This will lead to the beam flux decreasing as it goes through the material, which will also have to factor into any calculations for the cross section.
 
 Imagine a slice of through the target material perpendicular to the beam at a point a distance $x$ into the material and $\delta x$ thick.
-$N(x)$ beam particles pass enter through area $A$ per unit time, and $N(x+\delta x)$ particles leave through area $A$ per unit time through the back face at $x+\delta x$.
+$\dot{N}(x)$ beam particles pass enter through area $A$ per unit time, and $\dot{N}(x+\delta x)$ particles leave through area $A$ per unit time through the back face at $x+\delta x$.
 The volume of material which the beam passes through is $\delta V=A \delta x$ which will contain $\delta n = n^{\prime\prime\prime}\delta V$ target particles.
-The rate of interaction per target particle is $\bar{r}=\bar{\sigma} \delta n$.
 \begin{figure}[h]
   \centering
 \input{./img/attenuation.tex}
 \caption{a cross section of the target material perpendicular to the beam} \label{fig:attenuation}
 \end{figure}
+The rate of interaction for the slice is $r=\bar{\sigma} \delta n$. This means that
+\begin{subequations}
+\begin{align}
+\dot{N}(x+\delta x) - \dot{N}(x) &=-r\\
+\dot{N}(x+\delta x) - \dot{N}(x) &=-\bar{\sigma} \delta n\\
+ &=-\bar{\sigma} n^{\prime\prime\prime} \delta V\\
+ &=-\bar{\sigma} n^{\prime\prime\prime} A \delta x\\
+ \frac{\dot{N}(x+\delta x) - \dot{N}(x)}{A \delta x} &= -\bar{\sigma} n^{\prime\prime\prime}\\
+ \frac{\frac{\dot{N}}{A}(x+\delta x) - \frac{\dot{N}}{A}(x)}{\delta x} &= -\bar{\sigma} n^{\prime\prime\prime} \\
+\lim_{\delta x \to 0} \frac{f(x+\delta x) - f(x)}{\delta x} &= -\bar{\sigma} n^{\prime\prime\prime}\\
+\frac{df}{dx} = -\bar{\sigma} n^{\prime\prime\prime} \label{eq:attenuation}
+\end{align}
+\end{subequations}
+
+$f(x)$ is the beam flux at the depth $x$ into the target material. Equation \ref{eq:attenuation} has the solution
+\begin{equation}
+  \label{eq:attenuation_solution}
+f(x)=f(0)e^{-\bar{\sigma}n^{\prime\prime\prime}x}
+\end{equation}
+
+Where the term $e^{-\bar{\sigma}n^{\prime\prime\prime}x}$ is considered to be the attenuation factor of the target material.
+\subsubsection{A note on alternative units}
+It might be that for a particular problem, you are not given a target number density etc and instead may be given different units for things. For example you may have the number of particles per square metre or some way of calculating it. In this case we can use that $n^{\prime\prime}=n^{\prime\prime\prime}x$
+
+\begin{framed}
+An Example: Going back to our $\ch{^{265}_{92}U}$ taget from earlier. It has a thickness of $m^{\prime\prime}=10^{-1}kg.m^{-2}$. It also has a beam of neutrons incident on it. The total cross section for interactions with neutrons is $\bar{\sigma}_t=2.7002\times10^{-26}m^2$ We can work out the attenuation factor as follows. Firstly we note that we can calculate the spesific number (as we did before). $\tilde{n}=\frac{N_A}{\check{m}}$ where $\check{m}=2.65\time10^{-2}kg.mol^{-1}$. Using this we can get the number of target particles per unit area $n^{\prime\prime}=\tilde{n}m^{\prime\prime}$.
+Then we get the attenuation factor by $e^{\bar{\sigma}_t n^{\prime\prime}}=e^{2.7002\times10^{-26}m^2 \frac{6.02214076\times10^{23}}{2.65\times10^{-2}kg}10^{-1}kg.m^{-2}}$
+\end{framed}
