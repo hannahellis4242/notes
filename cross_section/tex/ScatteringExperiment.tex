@@ -18,3 +18,36 @@ The target material will have $n^{\prime\prime\prime}$ target particles per unit
 \end{equation}
 
 where $\check{m}$ is the mass of a mole of the target material and $N_A$ is the Avogadro constant, which is the number of particles per mole\footnote{In the notation used in this book, we should really use the symbol $\check{n}$ as this is the number of particles per mole of substance. However due to this being a constant with an already agreed upon symbol, namely $N_A$, we stall stick to using that here.}.
+
+\begin{framed}
+  An Example: Consider a target made of pure $\ch{^{265}_{92}U}$. The mass per mole is just the atomic weight or $\check{m} = 265 \times 10^{-3}kg$. So to calculate the number of particles per unit mass we just divide $N_A$ by the atomic weight. In this case $\tilde{n}=\frac{N_A}{\check{m}}=-\frac{6.02214076\times10^{23}}{265 \times 10^{-3}}kg^{-1}=2.272505947\times10^{24}kg{-1}$
+\end{framed}
+
+This can be linked to the density of the target material by
+\begin{equation}
+  \label{eq:density}
+\mathrm{density} =\rho= m^{\prime\prime\prime} = \frac{n^{\prime\prime\prime}}{\tilde{n}}
+\end{equation}
+Note that in equation -ref{eq:density} we have used the standard symbol $\rho$ for density. Included is the notation used by this text also. It is more typical to use the density of the material to calculate the number density by multiplying the density and the spesific number together.
+
+\begin{framed}
+  Example Continued : The density of $\ch{^{265}_{92}U}$ is $1.91 \times 10^4 kg.m^{-3}$, using this we can calculate the number density of our target.
+  $n^{\prime\prime\prime}=\rho \tilde{n} = 1.91\times10^2 kg.m^{-3} \times 2.272505947\times10^{24}kg^{-1} = 4.340486359\times10^{28} m^{-3}$
+\end{framed}
+
+\subsubsection{The Beam}
+The beam will typically have a known flux, $f$ or using the book notation $\dot{n}^{\prime\prime}$ per unit area per unit time. If the area does not come into play, then the beam rate might be given instead.
+
+\subsection{cross section}
+The cross section for the whole target is given by
+\begin{equation}
+  \label{eq:target_cross_section}
+\mathrm{cross\:section} = \frac{\mathrm{rate}}{\mathrm{flux}}
+\end{equation}
+As you can see, it is a fairly common poke factor type equation. ie, something we can measure (here the rate of a particular interaction) is given by some poke factor times by something we can control (here the beam flux) and we poke the system with the thing we can control. So as you can see, if we double the beam flux then the rate will also double as a response.
+
+\begin{framed}
+  An Example: Sticking with our Uranium target from previous examples. If we have a beam of neutons with a flux of $10^{6}m^{-2}.s^{-1}$ incident on the target which results in $10^{2}$ fission events per second, we have a cross section of $\sigma = \frac{\mathrm{rate}}{\mathrm{flux}}=\frac{100s^{-1}}{1000000m^{-2}.s^{-1}}=10^{-4}m^{2}=1cm^{2}$
+\end{framed}
+
+When we talk about cross section normally though, we are more conserned with the cross section per target particle $\bar{\sigma}$. Unless the target is a single atom thick, we have to consider the attenuation of the beam through the target material.
