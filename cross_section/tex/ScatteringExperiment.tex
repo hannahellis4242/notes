@@ -51,3 +51,16 @@ As you can see, it is a fairly common poke factor type equation. ie, something w
 \end{framed}
 
 When we talk about cross section normally though, we are more conserned with the cross section per target particle $\bar{\sigma}$. Unless the target is a single atom thick, we have to consider the attenuation of the beam through the target material.
+
+\subsection{Beam Attenuation}
+As the beam passes through the target material, the particles in the beam will undergo colisions with the target particles. This will lead to the beam flux decreasing as it goes through the material, which will also have to factor into any calculations for the cross section.
+
+Imagine a slice of through the target material perpendicular to the beam at a point a distance $x$ into the material and $\delta x$ thick.
+$N(x)$ beam particles pass enter through area $A$ per unit time, and $N(x+\delta x)$ particles leave through area $A$ per unit time through the back face at $x+\delta x$.
+The volume of material which the beam passes through is $\delta V=A \delta x$ which will contain $\delta n = n^{\prime\prime\prime}\delta V$ target particles.
+The rate of interaction per target particle is $\bar{r}=\bar{\sigma} \delta n$.
+\begin{figure}[h]
+  \centering
+\input{./img/attenuation.tex}
+\caption{a cross section of the target material perpendicular to the beam} \label{fig:attenuation}
+\end{figure}
