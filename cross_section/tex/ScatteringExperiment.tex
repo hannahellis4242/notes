@@ -1,10 +1,20 @@
 Here we will look into scattering cross sections and how the relate to scattering experiments.
 
 \subsection{Experimental Setup}
-A typical experiment usually involves a beam of particles which is incident on some sort of target material.
+A typical experiment usually involves a beam of particles which is incident on some sort of target material as shown in figure \ref{fig:setup}.
 
 \begin{figure}[h]
   \centering
 \input{./img/scattering.tex}
-\caption{Typical scattering experiment setup. A target with a beam of particles incident on it.} \label{fig:semiMajor}
+\caption{Typical scattering experiment setup. A target with a beam of particles incident on it.} \label{fig:setup}
 \end{figure}
+
+\subsubsection{The Target}
+The target material will have $n^{\prime\prime\prime}$ target particles per unit volume. If the target material is of some known composition\footnote{Either elemental or some known substance} then we can calculate the number of particles per unit mass of the target material.
+
+\begin{equation}
+  \label{eq:spesific number}
+\tilde{n} = \frac{N_A}{\check{m}}
+\end{equation}
+
+where $\check{m}$ is the mass of a mole of the target material and $N_A$ is the Avogadro constant, which is the number of particles per mole\footnote{In the notation used in this book, we should really use the symbol $\check{n}$ as this is the number of particles per mole of substance. However due to this being a constant with an already agreed upon symbol, namely $N_A$, we stall stick to using that here.}.

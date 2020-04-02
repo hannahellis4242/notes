@@ -1,4 +1,4 @@
-\documentclass[a5paper,12pt]{book}
+\documentclass[a4paper,12pt]{book}
 \usepackage{notes}
 \usepackage{hyperref}
 \begin{document}
@@ -8,12 +8,29 @@
 \listoftables
 \listoffigures
 \clearpage
+
 \mainmatter
 \chapter{Introduction}
 \section{Scattering Experiment}
 \input{./tex/ScatteringExperiment}
 \clearpage
-
+\appendix
+\chapter{Notation}
+Due to having many material properties used in calculations, it is useful to be able to track the type of property the symbol represents. To aid in keeping track the following the following notation (unless stated otherwise) will be used throughout this text.
+\begin{table}[h]
+  \centering
+\begin{tabular}{ p{5cm} | p{5cm} | l }
+  Quantity & Description & Example \\
+  \hline
+  Specific quanity or a quanity per unit mass & Tilde above symbol & $\tilde{n}$ \\
+  Quantity per unit length & Dash following symbol & $a^{\prime}$ \\
+  Quantity per unit area & Double dash following symbol & $a^{\prime\prime}$ \\
+  Quantity per unit volume & Triple dash following symbol & $a^{\prime\prime\prime}$ \\
+  Quantity per particle & Bar above symbol & $\bar{a}$ \\
+  Quantity per mole & Check above symbol & $\check{a}$ \\
+\end{tabular}
+\caption{Notation used in this book} \label{table:notation}
+\end{table}
 \clearpage
 \addcontentsline{toc}{chapter}{Index}
 \printindex
