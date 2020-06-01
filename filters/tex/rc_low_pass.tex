@@ -1,0 +1,63 @@
+A simple low pass filter can be formed from a resistor and a capacitor in series.
+
+\begin{figure}[h]
+  \centering
+\begin{circuitikz}
+\draw (0,0) to [short,*-,l=$V_{in}$] (1,0)
+  to [european resistor, l=$R$] (3,0)
+  to [C,l=$C$] (3,-2)
+  to (3,-2) node[ground]{};
+\draw (3,0) to [short,-*,l=$V_{out}$] (5,0);
+\end{circuitikz}
+\caption{Circuit diagram for a RC low pass filter.} \label{fig:RC_low_pass_circuit}
+\end{figure}
+We can see from figure \ref{fig:RC_low_pass_circuit}, that the output voltage is
+the same as the voltage across the capacitor. So we have
+\begin{align}
+V_{in} &= V_{R} + V_{C} \nonumber \\
+       &= IR + V_{out}
+\end{align}
+Using the fact that the current through the RC section of the circuit is given
+by
+\begin{equation}
+  I = \frac{V_{in}}{R - i X_C}
+\end{equation}
+Leading to the output voltage being
+\begin{align}
+V_{out} &= V_{in} - IR \nonumber \\
+&= V_{in} - \frac{V_{in}R}{R - i X_C} \nonumber  \\
+&= V_{in}\left[ 1 - \frac{V_{in}R}{R - i X_C} \right]
+\end{align}
+which leads to a ratio of the output voltage to the input voltage of
+\begin{align}
+\frac{V_{out}}{V_{in}} &= 1 - \frac{R}{R - i X_C} \nonumber \\
+&= \frac{-i X_C}{R - i X_C} \nonumber \\
+&= \frac{-i X_C(R+iX_C)}{R^2+{X_C}^2} \label{eq:volt_ratio}
+\end{align}
+Now if we let
+\begin{equation}
+u = \frac{R}{X_c} = \omega R C
+\end{equation}
+we can see that $R=uX_C$, and putting this in equation \ref{eq:volt_ratio} leads to
+\begin{align}
+\frac{V_{out}}{V_{in}} &= \frac{-i {X_C}^2(u+i)}{u^2{X_C}^2+{X_C}^2} \\
+&= \frac{1-iu}{1+u^2} \label{eq:volt_ratio_final}
+\end{align}
+\begin{framed}
+\subsection*{Summary}
+We looked at the classic example of a low pass RC filter circuit, and discovered
+the relationship between the voltage into the filter and the voltage out of the
+filter is given by
+\begin{equation}
+  \frac{V_{out}}{V_{in}} = \frac{1-iu}{1+u^2} \nonumber
+\end{equation}
+where $u=\frac{R}{X_C}=\omega R C$.
+\end{framed}
+
+We can work out the magnitude and the phase angle of the attenuation through the
+filter as follows.
+\begin{align}
+  \left| \frac{V_{out}}{V_{in}}\right| &= \sqrt{\frac{1-iu}{1+u^2}\frac{1+iu}{1+u^2}}\nonumber \\
+ &= \frac{\sqrt{1+u^2}}{1+u^2} \nonumber \\
+ &= \frac{1}{\sqrt{1+u^2}}
+\end{align}
