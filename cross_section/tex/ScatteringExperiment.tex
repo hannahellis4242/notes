@@ -83,11 +83,18 @@ $f(x)$ is the beam flux at the depth $x$ into the target material. Equation \ref
 f(x)=f(0)e^{-\bar{\sigma}n^{\prime\prime\prime}x}
 \end{equation}
 
-Where the term $e^{-\bar{\sigma}n^{\prime\prime\prime}x}$ is considered to be the attenuation factor of the target material.
+Where the term $e^{-\bar{\sigma}n^{\prime\prime\prime}x}$ is considered to be the attenuation factor of the target material. Also it's worth noting that the total rate per unit of beam area will then be.
+\begin{equation}
+  \label{eq:total_rate}
+\dot{N}^{\prime\prime}=\dot{N}^{\prime\prime}_0 (1-e^{-\bar{\sigma}n^{\prime\prime\prime}x})
+\end{equation}
 \subsubsection{A note on alternative units}
 It might be that for a particular problem, you are not given a target number density etc and instead may be given different units for things. For example you may have the number of particles per square metre or some way of calculating it. In this case we can use that $n^{\prime\prime}=n^{\prime\prime\prime}x$
 
 \begin{framed}
 An Example: Going back to our $\ch{^{265}_{92}U}$ taget from earlier. It has a thickness of $m^{\prime\prime}=10^{-1}kg.m^{-2}$. It also has a beam of neutrons incident on it. The total cross section for interactions with neutrons is $\bar{\sigma}_t=2.7002\times10^{-26}m^2$ We can work out the attenuation factor as follows. Firstly we note that we can calculate the spesific number (as we did before). $\tilde{n}=\frac{N_A}{\check{m}}$ where $\check{m}=2.65\time10^{-2}kg.mol^{-1}$. Using this we can get the number of target particles per unit area $n^{\prime\prime}=\tilde{n}m^{\prime\prime}$.
-Then we get the attenuation factor by $e^{\bar{\sigma}_t n^{\prime\prime}}=e^{2.7002\times10^{-26}m^2 \frac{6.02214076\times10^{23}}{2.65\times10^{-2}kg}10^{-1}kg.m^{-2}}$
+Then we get the attenuation factor by $e^{-\bar{\sigma}_t n^{\prime\prime}}=e^{-2.7002\times10^{-26}m^2 \frac{6.02214076\times10^{23}}{2.65\times10^{-2}kg}10^{-1}kg.m^{-2}}=e^{-6.13622\times10^{-3}}=0.9938825676$. This means the total rate is $r=f(1-\mathrm{attenuation})=f\times6.117432406\times10^{-3}$
+
+If the beam has a particle rate of $10^5s^{-1}$ (Note that we've already multiplied by the beam area here), then the total rate of interaction is
+$6.117432406\times10^{-3}\times10^{5}s^{-1}=611.7432406s^{-1}$
 \end{framed}
