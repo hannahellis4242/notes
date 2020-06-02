@@ -1,3 +1,4 @@
+\subsection{ Filter Attenuation }
 A simple low pass filter can be formed from a resistor and a capacitor in series.
 
 \begin{figure}[h]
@@ -43,16 +44,6 @@ we can see that $R=uX_C$, and putting this in equation \ref{eq:volt_ratio} leads
 \frac{V_{out}}{V_{in}} &= \frac{-i {X_C}^2(u+i)}{u^2{X_C}^2+{X_C}^2} \\
 &= \frac{1-iu}{1+u^2} \label{eq:volt_ratio_final}
 \end{align}
-\begin{framed}
-\subsection*{Summary}
-We looked at the classic example of a low pass RC filter circuit, and discovered
-the relationship between the voltage into the filter and the voltage out of the
-filter is given by
-\begin{equation}
-  \frac{V_{out}}{V_{in}} = \frac{1-iu}{1+u^2} \nonumber
-\end{equation}
-where $u=\frac{R}{X_C}=\omega R C$.
-\end{framed}
 
 We can work out the magnitude and the phase angle of the attenuation through the
 filter as follows.
@@ -61,3 +52,24 @@ filter as follows.
  &= \frac{\sqrt{1+u^2}}{1+u^2} \nonumber \\
  &= \frac{1}{\sqrt{1+u^2}}
 \end{align}
+and for the phase factor
+\begin{align}
+  \phi &= \arctan\left(\frac{\frac{-u}{1+u^2}}{\frac{1}{1+u^2}}\right) \nonumber \\
+  &= -\arctan u
+\end{align}
+
+\begin{framed}
+\subsection*{Summary}
+We looked at the classic example of a low pass RC filter circuit, and discovered
+the relationship between the voltage into the filter and the voltage out of the
+filter is given by
+\begin{equation}
+  \frac{V_{out}}{V_{in}} = \frac{1-iu}{1+u^2} \nonumber
+\end{equation}
+Or in terms of magnitude and phase angle
+\begin{align}
+  \left|\frac{V_{out}}{V_{in}}\right| &= \frac{1}{\sqrt{1+u^2}} \nonumber \\
+  \phi &= - \arctan u \nonumber
+\end{align}
+where $u=\frac{R}{X_C}=\omega R C$.
+\end{framed}
