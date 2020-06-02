@@ -108,10 +108,16 @@ We looked at the classic example of a low pass RC filter circuit, and discovered
 the relationship between the voltage into the filter and the voltage out of the
 filter is given by
 \begin{equation*}
-  f = \frac{1}{2\pi R C} \label{eq:RC_cuttof}
+  f = \frac{1}{2\pi R C}
 \end{equation*}
 At this frequency both the resistance of the resistor and the reactance of the
 capacitor are equal, which leads to a value of $u=1$.
 This leads to an attenuation $\left|\frac{V_{out}}{V_{in}}\right| = \frac{1}{\sqrt{2}}$ and
 a phase of $\phi=-\frac{\pi}{4}=-\SI{45}{\degree}$.
 \end{framed}
+
+\subsection{Log-Log Plots}
+Often you will see the attenuation of a filter on a log-log grapth, ie the log
+of the attenuation against the log of the frequency. This is usually because
+the frequency can cover many powers of ten, and the attenuation can get very low
+very fast.
