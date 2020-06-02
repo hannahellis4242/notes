@@ -165,3 +165,19 @@ Then to get $\frac{dA}{dF}$ it's a simple matter of the chain rule.
   \frac{dA}{dF}&=-\frac{1}{2} S(k+x)\times 2 \nonumber \\
   \frac{dA}{dF}&= -S(k+2F)
 \end{align}
+
+Looking back at equation \ref{eq:RC_log_log} again
+\begin{align}
+  A &=-\frac{1}{2}\ln \left[ 1+\exp \left( k + 2F \right) \right] \label{eq:RC_log_log2}
+\end{align}
+where $F=\ln f$ and $k=2 \ln \left( 2 \pi R C \right)$. We can simplify this with
+the following result
+\begin{align}
+  \ln(a+b) &= \ln\left(a\left(1+\frac{b}{a}\right)\right) \nonumber \\
+  &= \ln a + \ln\left(1+\frac{b}{a}\right) \label{eq:RC_log_ident}
+\end{align}
+If we take $a=\exp \left( k + 2F \right)$ and $b=1$ from equation \ref{eq:RC_log_log} in equation \ref{eq:RC_log_ident} we get
+\begin{align}
+  -\frac{1}{2}\ln(\exp \left( k + 2F \right)+1) &= -\frac{1}{2}\ln \left(\exp \left( k + 2F \right)\right) -\frac{1}{2}\ln\left(1+\frac{1}{\exp \left( k + 2F \right)}\right) \nonumber \\
+  &= -\frac{1}{2}\left[\ln \left(\exp \left( k + 2F \right)\right) \right]-\frac{1}{2}\ln\left(1+\frac{1}{\exp \left( k + 2F \right)}\right)
+\end{align}
