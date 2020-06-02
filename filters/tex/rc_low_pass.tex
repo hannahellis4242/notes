@@ -178,6 +178,81 @@ the following result
 \end{align}
 If we take $a=\exp \left( k + 2F \right)$ and $b=1$ from equation \ref{eq:RC_log_log} in equation \ref{eq:RC_log_ident} we get
 \begin{align}
-  -\frac{1}{2}\ln(\exp \left( k + 2F \right)+1) &= -\frac{1}{2}\ln \left(\exp \left( k + 2F \right)\right) -\frac{1}{2}\ln\left(1+\frac{1}{\exp \left( k + 2F \right)}\right) \nonumber \\
-  &= -\frac{1}{2}\left[\ln \left(\exp \left( k + 2F \right)\right) \right]-\frac{1}{2}\ln\left(1+\frac{1}{\exp \left( k + 2F \right)}\right)
+  A &= -\frac{1}{2}\ln(\exp \left( k + 2F \right)+1) \nonumber \\
+  &= -\frac{1}{2}\ln \left(\exp \left( k + 2F \right)\right) -\frac{1}{2}\ln\left(1+\frac{1}{\exp \left( k + 2F \right)}\right) \nonumber \\
+  &= -\frac{1}{2}\left[ k + 2F \right]-\frac{1}{2}\ln\left(1+\exp \left( -k - 2F \right)\right)\nonumber \\
+  &= -F - \frac{k}{2}-\frac{1}{2}\ln\left(1+\exp \left( -k - 2F \right)\right) \label{eq:RC_log_log3}
 \end{align}
+As you can see the first couple of terms in equation \ref{eq:RC_log_log3}, look like a straight line, with gradient -1. There is however another term at the end. We will come back to this term shortly, for now lets look at the linear part some more, in particular the term $\frac{k}{2}$.
+\begin{align}
+  \frac{k}{2} &= \frac{2 \ln \left( 2 \pi R C \right)}{2} \nonumber \\
+  &= \ln \left( 2 \pi R C \right) \nonumber \\
+  &= \ln \left( \frac{1}{f_0} \right)\nonumber \\
+  &= - \ln f_0\nonumber \\
+  &= - F_0
+\end{align}
+where we have used the cuttof frequency equation \ref{eq:RC_cuttof} and denoted it by $f_0$ and it's logithim as $F_0$.
+Using this result in equation \ref{eq:RC_log_log3}, gives us the equation
+\begin{align}
+  A &= F_0 -F -g(F) \label{eq:RC_log_log4}
+\end{align}
+So this would be nice and linear (or at least log-log linear), if it wasn't for
+the last term. Lets look at that now.
+\begin{align}
+  g(F) &= \frac{1}{2}\ln\left(1+\exp \left( -k - 2F \right)\right) \nonumber \\
+  g(F) &= \frac{1}{2}\ln\left(1+\exp \left( 2 (F_0 - F) \right)\right)
+\end{align}
+where we have used that $k=-2F_0$.
+We're not overly concerned about the exact values for $g(F)$, here, but we are
+going to look at what it looks like at extreams.
+
+For frequencies where $F << F_0$, the exponential term is going to be far greater
+than one, $\exp \left( 2 (F_0 - F) \right) >> 1$. This means we can neglect the
+1 in the logithim, which leads to
+\begin{align}
+  g(F) &\approx \frac{1}{2}\ln\left(\exp \left( 2 (F_0 - F) \right)\right) \text{ when } F<<F_0 \nonumber \\
+  g(F) &\approx F_0 - F  \text{ when } F<<F_0
+\end{align}
+
+In the other extream when $F>>F_0$, the exponential term becomes far smaller than 1,
+$\exp \left( 2 (F_0 - F) \right) << 1$, and so we can neglect that term leading to
+\begin{align}
+  g(F) &\approx -\frac{1}{2}\ln\left(1\right) \text{ when } F>>F_0 \nonumber \\
+  g(F) &\approx 0  \text{ when } F>>F_0
+\end{align}
+
+We can also consider the value of $g(F)$, when $F=F_0$,
+\begin{align}
+  g(F_0) &= \frac{1}{2}\ln\left(1+\exp \left( 2 (F_0 - F_0) \right)\right) \nonumber \\
+  &= \frac{\ln 2}{2}
+\end{align}
+
+So using these two known extreamum values, lets consider the extream cases for
+equation \ref{eq:RC_log_log4}
+\begin{align}
+  A &\approx F_0 -F - F_0 + F = 0 & F<<F_0 \nonumber \\
+  A &\approx F_0 -F &F>>F_0 \nonumber \\
+  A &= F_0 -F_0 - \frac{\ln 2}{2} = - \frac{\ln 2}{2}&F=F_0
+\end{align}
+
+\begin{framed}
+\subsection*{Summary}
+When considering the log-log plot of the attenuation of an RC filter, the equation
+takes the form.
+\begin{equation*}
+  A = F_0 -F -\frac{\ln\left(1+\exp \left( 2 (F_0 - F) \right)\right)}{2}
+\end{equation*}
+Where $A=\ln \left|\frac{V_{out}}{V_{in}}\right|$, $F_0 = \ln f_0$, and $f_0$ is the cuttof frequency given by
+\begin{equation*}
+  f_0 = \frac{1}{2\pi R C}
+\end{equation*}
+At the cutoff frequency we get a value for $A$ of
+\begin{equation*}
+   \ln \left|\frac{V_{out}}{V_{in}}\right| = - \frac{\ln 2}{2}
+\end{equation*}
+At the frequency extreams we get the following behavour
+\begin{align*}
+  \ln \left|\frac{V_{out}}{V_{in}}\right| &\approx 0 & F<<F_0  \\
+  \ln \left|\frac{V_{out}}{V_{in}}\right| &\approx F_0 -F &F>>F_0
+\end{align*}
+\end{framed}
