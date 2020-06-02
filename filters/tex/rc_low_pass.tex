@@ -33,16 +33,16 @@ which leads to a ratio of the output voltage to the input voltage of
 \begin{align}
 \frac{V_{out}}{V_{in}} &= 1 - \frac{R}{R - i X_C} \nonumber \\
 &= \frac{-i X_C}{R - i X_C} \nonumber \\
-&= \frac{-i X_C(R+iX_C)}{R^2+{X_C}^2} \label{eq:volt_ratio}
+&= \frac{-i X_C(R+iX_C)}{R^2+{X_C}^2} \label{eq:RC_volt_ratio}
 \end{align}
 Now if we let
 \begin{equation}
-u = \frac{R}{X_c} = \omega R C
+u = \frac{R}{X_c} = \omega R C \label{eq:RC_u}
 \end{equation}
-we can see that $R=uX_C$, and putting this in equation \ref{eq:volt_ratio} leads to
+we can see that $R=uX_C$, and putting this in equation \ref{eq:RC_volt_ratio} leads to
 \begin{align}
 \frac{V_{out}}{V_{in}} &= \frac{-i {X_C}^2(u+i)}{u^2{X_C}^2+{X_C}^2} \\
-&= \frac{1-iu}{1+u^2} \label{eq:volt_ratio_final}
+&= \frac{1-iu}{1+u^2} \label{eq:RC_volt_ratio_final}
 \end{align}
 
 We can work out the magnitude and the phase angle of the attenuation through the
@@ -50,12 +50,12 @@ filter as follows.
 \begin{align}
   \left| \frac{V_{out}}{V_{in}}\right| &= \sqrt{\frac{1-iu}{1+u^2}\frac{1+iu}{1+u^2}}\nonumber \\
  &= \frac{\sqrt{1+u^2}}{1+u^2} \nonumber \\
- &= \frac{1}{\sqrt{1+u^2}}
+ &= \frac{1}{\sqrt{1+u^2}} \label{eq:RC_mag}
 \end{align}
 and for the phase factor
 \begin{align}
   \phi &= \arctan\left(\frac{\frac{-u}{1+u^2}}{\frac{1}{1+u^2}}\right) \nonumber \\
-  &= -\arctan u
+  &= -\arctan u \label{eq:RC_phase}
 \end{align}
 
 \begin{framed}
@@ -73,3 +73,28 @@ Or in terms of magnitude and phase angle
 \end{align}
 where $u=\frac{R}{X_C}=\omega R C$.
 \end{framed}
+
+\subsection{Cutoff Frequency}
+Letting the attenuation $a=\left| \frac{V_{out}}{V_{in}}\right|$ and rearranging will give us
+\begin{align}
+  a &= \frac{1}{\sqrt{1+u^2}} \nonumber \\
+  1+u^2 &= \frac{1}{a^2} \nonumber \\
+  u &= \frac{\sqrt{1-a^2}}{a} \label{eq:RC_1}
+\end{align}
+Equation \ref{eq:RC_1} and \ref{eq:RC_u} can be used together to calculate component values if a particular attenuation is required at a particular frequency. However an interesting result is the attenuation when $u=1$.
+\begin{align}
+  u & = 1 \nonumber \\
+  a &= \frac{1}{\sqrt{1+u^2}} \nonumber \\
+   &= \frac{1}{\sqrt{1+1}} \nonumber \\
+  &= \frac{1}{\sqrt{2}} \label{eq:RC_cuttoff_attenuation}
+\end{align}
+When looking at equation \ref{eq:RC_u} and considering what it means when $u=1$, you will realise this is when the resistance of the capacitor and the
+reactance of the capacitor are equal. Also the phase as given by equation \ref{eq:RC_phase} is $\phi=-\arctan{1}=-\frac{\pi}{4}=-\SI{45}{\degree}$
+
+The frequency when $u=1$ is known as the cutoff frequency of the filter, and
+is calculated as follows
+\begin{align}
+  u &= 1 \nonumber \\
+  2\pi R C f &= 1 \nonumber \\
+  f &= \frac{1}{2\pi R C} \label{eq:RC_cuttof}
+\end{align}
