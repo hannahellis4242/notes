@@ -63,14 +63,14 @@ and for the phase factor
 We looked at the classic example of a low pass RC filter circuit, and discovered
 the relationship between the voltage into the filter and the voltage out of the
 filter is given by
-\begin{equation}
-  \frac{V_{out}}{V_{in}} = \frac{1-iu}{1+u^2} \nonumber
-\end{equation}
+\begin{equation*}
+  \frac{V_{out}}{V_{in}} = \frac{1-iu}{1+u^2}
+\end{equation*}
 Or in terms of magnitude and phase angle
-\begin{align}
-  \left|\frac{V_{out}}{V_{in}}\right| &= \frac{1}{\sqrt{1+u^2}} \nonumber \\
-  \phi &= - \arctan u \nonumber
-\end{align}
+\begin{align*}
+  \left|\frac{V_{out}}{V_{in}}\right| &= \frac{1}{\sqrt{1+u^2}} \\
+  \phi &= - \arctan u
+\end{align*}
 where $u=\frac{R}{X_C}=\omega R C$.
 \end{framed}
 
@@ -98,3 +98,20 @@ is calculated as follows
   2\pi R C f &= 1 \nonumber \\
   f &= \frac{1}{2\pi R C} \label{eq:RC_cuttof}
 \end{align}
+
+\begin{framed}
+\subsection*{Summary}
+For the RC filter there is a special frequency called the cuttof frequency, which
+is given by.
+
+We looked at the classic example of a low pass RC filter circuit, and discovered
+the relationship between the voltage into the filter and the voltage out of the
+filter is given by
+\begin{equation*}
+  f = \frac{1}{2\pi R C} \label{eq:RC_cuttof}
+\end{equation*}
+At this frequency both the resistance of the resistor and the reactance of the
+capacitor are equal, which leads to a value of $u=1$.
+This leads to an attenuation $\left|\frac{V_{out}}{V_{in}}\right| = \frac{1}{\sqrt{2}}$ and
+a phase of $\phi=-\frac{\pi}{4}=-\SI{45}{\degree}$.
+\end{framed}
