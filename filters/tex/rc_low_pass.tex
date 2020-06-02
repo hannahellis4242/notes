@@ -121,3 +121,47 @@ Often you will see the attenuation of a filter on a log-log grapth, ie the log
 of the attenuation against the log of the frequency. This is usually because
 the frequency can cover many powers of ten, and the attenuation can get very low
 very fast.
+
+First we'll start by taking the logithim of equation \ref{eq:RC_mag}
+\begin{align}
+  \ln \left|\frac{V_{out}}{V_{in}}\right| &= \ln \left( \frac{1}{\sqrt{1+u^2}} \right) \nonumber \\
+  A&=-\frac{1}{2}\ln \left( 1+u^2 \right)
+\end{align}
+where we have let $A=\ln \left|\frac{V_{out}}{V_{in}}\right|$. Now if we let
+$U=\ln u$. \label{eq:RC_2}
+\begin{align}
+  u &= \exp U \nonumber \\
+  u^2 &= \exp U \times \exp U = \exp \left( 2 U\right)\label{eq:RC_3}
+\end{align}
+putting equation \ref{eq:RC_2} into equation \ref{eq:RC_3} gives us
+\begin{align}
+  A&=-\frac{1}{2}\ln \left[ 1+\exp \left( 2 U\right) \right] \label{eq:RC_4}
+\end{align}
+Now expanding $u$ to get a relationship to $f$.
+\begin{align}
+  u &= 2 \pi R C f \nonumber \\
+  \ln u &= \ln \left( 2 \pi R C f \right) \nonumber \\
+  U &= \ln \left( 2 \pi R C \right)+ \ln f \label{eq:RC_5}
+\end{align}
+Substituting in equation \ref{eq:RC_5} into equation \ref{eq:RC_4} gives
+\begin{align}
+  A&=-\frac{1}{2}\ln \left[ 1+\exp \left( 2 \ln \left( 2 \pi R C \right) + 2 F\right) \right] \nonumber \\
+  &=-\frac{1}{2}\ln \left[ 1+\exp \left( k + x \right) \right] \label{eq:RC_log_log}
+\end{align}
+where $F=\ln f$, $k=2 \ln \left( 2 \pi R C \right)$ and $x=2F$.
+We will plot this function later, but it's interesting to look at the derivative of equation \ref{eq:RC_log_log}.
+\begin{align}
+  \frac{dA}{dx}&=-\frac{1}{2} \frac{d}{dx}\left(\ln \left[ 1+\exp \left( k + x \right) \right]\right) \nonumber \\
+  &=-\frac{1}{2} \frac{d w}{dx}\frac{d}{dw}\left(\ln w\right) \nonumber \\
+  &=-\frac{1}{2} \frac{\exp \left( k + x \right)}{1+\exp \left( k + x \right)} \nonumber \\
+  &=-\frac{1}{2} \frac{1}{1+\exp \left( -(k+x) \right)} \nonumber \\
+  &=-\frac{1}{2} S(k+x) \label{eq:RC_6}
+\end{align}
+with $w=1+\exp \left( k + x \right)$ and $S(x)$ is the sigmoid function which is
+defined as $S(x)=\frac{1}{1+\exp\left(-x\right)}$
+Then to get $\frac{dA}{dF}$ it's a simple matter of the chain rule.
+\begin{align}
+  \frac{dA}{dF} &= \frac{dA}{dx}\frac{dx}{dF} \nonumber \\
+  \frac{dA}{dF}&=-\frac{1}{2} S(k+x)\times 2 \nonumber \\
+  \frac{dA}{dF}&= -S(k+2F)
+\end{align}
