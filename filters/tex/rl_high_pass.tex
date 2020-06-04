@@ -84,3 +84,37 @@ or in terms of magnitude and phase shift
   \phi = \arctan{u} =  -\arctan{\frac{f_0}{f}}
 \end{equation*}
 \end{framed}
+
+\subsection{Log-Log Form}
+You won't often see attenuation given in the form seen earlier. It is more likely
+to be seen in Log-Log form, due to wanting to see the behaviour over a large range
+of frequencies and the fact the attenuation itself can get very small very fast.
+However it helps to look at the logirthm of $u$ before looking at the attenuation
+straight away.
+\begin{equation}
+  \ln u = \ln \frac{f_0}{f} = \ln f_0 - \ln f = F_0 - F
+\end{equation}
+where we have used $F=\ln f$ and $F_0 = \ln f_0 $
+
+Now looking at the attenuation
+\begin{align}
+  \ln \left|\frac{V_{\text{out}}}{V_{\text{in}}} \right| & = \ln \frac{1}{\sqrt{1+u^2}} \nonumber \\
+  &= -\frac{1}{2} \ln \left(1+u^2\right) \nonumber \\
+  &= -\frac{1}{2} \ln \left(u^2\left(1+\frac{1}{u^2}\right)\right) \nonumber \\
+  &= -\frac{1}{2} \ln u^2 -\frac{1}{2} \ln\left(1+\frac{1}{u^2}\right) \nonumber \\
+  &= -\ln u -\frac{1}{2} \ln\left(1+\frac{1}{u^2}\right) \nonumber \\
+  &= F - F_0  -\frac{1}{2} \ln\left(1+\left(\frac{f}{f_0}\right)^2\right) \label{eq:RL_log_log1}
+\end{align}
+Lets quickly look at the term $\frac{f_0}{f}$ in equation \ref{eq:RL_log_log1}.
+We'd like to express it in terms of our new variables $F$ and $F_0$. To do this,
+we note that since $F = \ln f$ then $f = \exp(f)$, and so
+\begin{equation}
+  \frac{f}{f_0} = \frac{\exp(F)}{\exp(F_0)} = \exp( F - F_0 ) \label{eq:RL_1}
+\end{equation}
+putting the result from equation \ref{eq:RL_1} back into equation  \ref{eq:RL_log_log1}
+gives us
+\begin{equation}
+  \ln \left|\frac{V_{\text{out}}}{V_{\text{in}}} \right| = F - F_0  -\frac{1}{2} \ln\left(1+\exp( 2(F - F_0) )\right) \label{eq:RL_log_log2}
+\end{equation}
+This is as simple as it gets sadly, however we can study some particular values
+of this equation and the extreame cases.
