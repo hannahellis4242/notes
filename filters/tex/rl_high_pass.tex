@@ -1,0 +1,40 @@
+\subsection{ Filter Attenuation }
+A simple high pass filter can be formed from a resistor and an inductor in series.
+
+\begin{figure}[h]
+  \centering
+\begin{circuitikz}
+\draw (0,0) to [short,*-,l=$V_{in}$] (1,0)
+  to [european resistor, l=$R$] (3,0)
+  to [american inductor,l=$L$] (3,-2)
+  to (3,-2) node[ground]{};
+\draw (3,0) to [short,-*,l=$V_{out}$] (5,0);
+\end{circuitikz}
+\caption{Circuit diagram for a RL high pass filter.} \label{fig:RL_high_pass_circuit}
+\end{figure}
+We can see from figure \ref{fig:RL_high_pass_circuit}, that the circuit forms a
+potential divider just with a reactive element instead of purely resistive. The
+attenuation is then given by the standard potential divider result
+\begin{equation}
+  \frac{V_{\text{out}}}{V_{\text{in}}} = \frac{i X_{\text{L}}}{R+iX_{\text{L}}} \label{eq:RL_attenuation_1}
+\end{equation}
+\subsubsection{Cutoff Frequency}
+Let's introduce a new variable called $u$, where
+\begin{align}
+u&=\frac{R}{X_{\text{L}}} \nonumber \\
+&= \frac{R}{\omega L} \label{eq:RL_u}
+\end{align}
+where $\omega = 2 \pi f$. If we look at the frequency when the resulting $u=1$,
+which we will label $f_0$ or $\omega_0$
+\begin{align}
+\frac{R}{\omega_0 L} & = 1 \nonumber \\
+\omega_0 &= \frac{R}{L} \label{eq:RL_cutoff_freq}
+\end{align}
+We call the frequency when $u=1$ the \emph{cutoff frequency}, for reasons that
+will be clear later on. This frequency is when the resistance of the resistor is
+equal to the reactance of the inductor\footnote{by equal here, we mean the magnitudes are equal. If not the phase shift.}
+You can see that we can use the cutoff frequency as a replacement for our $\frac{R}{L}$ value, in equation \ref{eq:RL_u}.
+\begin{align}
+u&=\frac{R}{X_{\text{L}}}\nonumber \\
+ &= \frac{\omega_0}{\omega} = \frac{f_0}{f} \label{eq:RL_u_f}
+\end{align}
