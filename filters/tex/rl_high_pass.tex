@@ -118,3 +118,38 @@ gives us
 \end{equation}
 This is as simple as it gets sadly, however we can study some particular values
 of this equation and the extreame cases.
+For $F<<F_0$
+\begin{align}
+  A(F<<F_0) &= F - F_0  -\frac{1}{2} \ln\left(1+\exp(2\underbrace{(F - F_0)}_{\text{ large and -ve}})\right) \nonumber \\
+  &= F - F_0  -\frac{1}{2} \ln\left(1+\underbrace{\exp(2(F - F_0))}_{\text{ very small and +ve}}\right) \nonumber \\
+  &= F - F_0   -\frac{1}{2} \ln\left(1+\underbrace{\exp(2(F - F_0))}_{\text{so this can be neglected}}\right) \nonumber \\
+  A(F<<F_0) &\approx F - F_0  -\frac{1}{2} \underbrace{\ln 1}_{=0} \nonumber \\
+  &= F - F_0 \label{eq:RL_log_log_small_F}
+\end{align}
+for $F>>F_0$
+\begin{align}
+  A(F>>F_0) &= F - F_0  -\frac{1}{2} \ln\left(1+\exp(2\underbrace{(F - F_0)}_{\text{ large and +ve}})\right) \nonumber \\
+  &= F - F_0 -\frac{1}{2} \ln\left(1+\underbrace{\exp(2(F - F_0))}_{\text{ even larger and +ve}}\right) \nonumber \\
+  &= F - F_0  -\frac{1}{2} \ln\left(\underbrace{1}_{\text{so this can be neglected}}+\exp(2(F - F_0))\right) \nonumber \\
+  A(F>>F_0) &\approx F - F_0  -\frac{1}{2} \ln\left(\exp(2(F - F_0))\right) \nonumber \\
+  &= F - F_0 -F + F_0 = 0 \label{eq:RL_log_log_large_F}
+\end{align}
+and finally when $F=F_0$
+\begin{align}
+  A(F=F_0) &= F_0 - F_0  -\frac{1}{2} \ln\left(1+\exp( 2(F_0 - F_0) )\right) \nonumber \\
+  &=  -\frac{\ln 2}{2}  \label{eq:RL_log_log_equal}
+\end{align}
+
+\begin{framed}
+\subsubsection*{Sumary}
+The equation for the log-log attenuation is given by
+\begin{equation*}
+\ln \left|\frac{V_{\text{out}}}{V_{\text{in}}} \right| = F - F_0  -\frac{1}{2} \ln\left(1+\exp( 2(F - F_0) )\right)
+\end{equation*}
+where $F=\ln f$ and $F_0 = \ln f_0$, and has the following results
+\begin{align*}
+   A(F<<F_0) &\approx F - F_0 \\
+   A(F=F_0) &= -\frac{\ln 2}{2} \\
+   A(F>>F_0) &\approx 0
+\end{align*}
+\end{framed}
