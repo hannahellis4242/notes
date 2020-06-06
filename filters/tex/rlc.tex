@@ -1,0 +1,72 @@
+\subsection{ Filter Attenuation }
+\begin{figure}[h]
+  \centering
+\begin{circuitikz}
+\draw (0,0) to [short,*-,l=$V_{in}$] (1,0)
+  to [european resistor, l=$R$] (3,0)
+  to [american inductor,l=$L$] (3,-2)
+  to [C,l=$C$] (3,-4)
+  to (3,-4) node[ground]{};
+\draw (3,0) to [short,-*,l=$V_{out}$] (5,0);
+\end{circuitikz}
+\caption{Circuit diagram for a RLC filter.} \label{fig:RLC_circuit}
+\end{figure}
+We can see from figure \ref{fig:RLC_circuit}, that the circuit forms a
+potential divider just with a reactive element instead of purely resistive. The
+attenuation is then given by the standard potential divider result
+\begin{equation}
+  \frac{V_{\text{out}}}{V_{\text{in}}} = \frac{i X}{R+iX} \label{eq:RLC_attenuation_1}
+\end{equation}
+Since the reactive part of the filter consists of both an inductor and a capacitor
+it's reactance is
+\begin{align}
+  X &= X_{\text{L}}-X_{\text{C}} \nonumber \\
+    &= \omega L - \frac{1}{\omega C} \nonumber \\
+    &= \frac{\omega^2 LC -1}{\omega C} \label{eq:RLC_reactance}
+\end{align}
+Looking at equation \ref{eq:RLC_reactance}, you will notice it's possible for
+the reactance of the inductor to cancel out the reactance of the capacitor, leaving
+an overall zero reactance. This happens when
+\begin{align}
+  0 &= X_{\text{L}}-X_{\text{C}} \nonumber \\
+    &= \omega_r L - \frac{1}{\omega_r C} \nonumber \\
+    \frac{1}{\omega_r C} &= \omega L \nonumber \\
+    \omega_{r}^2 &= \frac{1}{LC} \nonumber \\
+    \omega_r &= \frac{1}{\sqrt{LC}} \label{eq:LC_resonance}
+\end{align}
+Here we have labeled the frequency at which the reactance is zero as $f_r$, or $\omega_r$,
+where the $r$ stands for resonance, as this is the frequency at which the LC part
+would resonate. This will become useful later. Now if we do the usual thing of
+defining a new variable $u=\frac{R}{X}$ which is the ratio of the resistor value
+and the reactance.
+\begin{align}
+  u &= \frac{R}{X} \nonumber \\
+    &= \frac{\omega R C}{\omega^2 LC -1} \nonumber \\
+    &= \frac{\omega R C}{\left(\frac{\omega}{\omega_r}\right)^2 -1} \label{eq:RLC_u_1}
+\end{align}
+We have used the result from equation \ref{eq:LC_resonance} to replace the $LC$ part
+of equation \ref{eq:RLC_u_1}.
+
+Before going much further, notice the numerator of equation \ref{eq:RLC_u_1} might
+look familiar. It looks a little bit like equation \ref{eq:RC_cutoff_freq}, which we
+shall use here to deal with the $RC$ part, but we will lable it $\omega_c$ where
+ the $c$ stands for cutoff.
+\begin{align}
+    u &= \frac{\frac{\omega}{\omega_c}}{\left(\frac{\omega}{\omega_r}\right)^2 -1} \nonumber \\
+      &= \frac{\frac{f}{f_c}}{\left(\frac{f}{f_r}\right)^2 -1}\label{eq:RLC_u_f}
+\end{align}
+Again we can consider the frequency\footnote{or due to the square term in equation \ref{eq:RLC_u_f}, frequencies}
+when $u=1$, or when the resistance is equal\footnote{at least in magnitude} to the reactance.
+\begin{align}
+    1 &= \frac{\frac{f^*}{f_c}}{\left(\frac{f^*}{f_r}\right)^2 -1}\nonumber \\
+    \frac{1}{{f_{r}}^2} {f^*}^2 - \frac{1}{f_c} f^* -1 & = 0 \label{eq:RLC_cutoff_1}
+\end{align}
+You will notice that equation \ref{eq:RLC_cutoff_1} is a quadratic equation,
+which has a known solution of
+\begin{align}
+    f^* &= \frac{\frac{1}{f_c} \pm \sqrt{\frac{1}{{f_c}^2}+4\frac{1}{{f_{r}}^2}}}{2\frac{1}{{f_{r}}^2}} \nonumber \\
+    &= \frac{\frac{{f_{r}}^2}{f_c} \pm {f_{r}}^2 \sqrt{\frac{1}{{f_c}^2}+4\frac{1}{{f_{r}}^2}}}{2}\nonumber \\
+    &= \frac{\frac{{f_{r}}^2}{f_c} \pm {f_{r}}^2 \sqrt{\frac{1}{{f_c}^2}+4\frac{{f_c}^2}{{f_c}^2{f_{r}}^2}}}{2} \nonumber \\
+    &= \frac{\frac{{f_{r}}^2}{f_c} \pm \frac{{f_{r}}^2}{f_c} \sqrt{1+4\frac{{f_c}^2}{f_{r}^2}}}{2}\nonumber \\
+    &= \frac{{f_{r}}^2}{f_c} \frac{ 1 \pm \sqrt{1+4\left(\frac{f_c}{f_r}\right)^2}}{2}\nonumber \\
+\end{align}
