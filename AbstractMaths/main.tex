@@ -1,0 +1,43 @@
+\documentclass[12pt,a4paper,margin=1cm,twocolumn]{article}
+\usepackage[utf8]{inputenc}
+
+\title{Abstract Maths Cheat Sheet}
+\date{}
+\author{}
+\begin{document}
+\maketitle
+
+\section{Ket-vector Axioms}
+\begin{enumerate}
+    \item The sum of any two ket-vectors is also a ket-vector:
+    \begin{equation}
+        \left | A \right> + \left| B \right> = \left | C \right>
+    \end{equation}
+    \item Vector addition is commutative:
+    \begin{equation}
+        \left| A \right> + \left| B \right> = \left|B\right> + \left|A\right>
+    \end{equation}
+    \item Vector addition is associative:
+    \begin{equation}
+        \left( \left | A \right> + \left| B \right>\right)+ \left | C \right> = \left | A \right> +  \left(\left| B \right>+ \left | C \right>\right)
+    \end{equation}
+    \item There is a unique vector $0$ such that when you add it to any ket, it gives the same ket back:
+    \begin{equation}
+        \left| A \right> + 0 = \left| A \right>
+    \end{equation}
+    \item Given any ket $\left|A\right>$, there is a unique ket $-\left|A\right>$ such that
+    \begin{equation}
+        \left|A\right> + \left( -\left|A\right> \right)
+    \end{equation}
+    \item Given any $\left|A\right>$ and any complex number $z$, you can multiply them to get a new ket. Also, multiplication by a scalar is linear:
+    \begin{equation}
+        \left|zA\right> = z \left| A \right> = \left|B\right>
+    \end{equation}
+    \item The distributive property holds:
+    \begin{align}
+        z\left( \left|A\right> + \left|B\right>\right) &=  z\left|A\right> + z\left|B\right>\\
+        \left( z+w\right)\left|A\right> &= z \left|A\right> + w \left|A\right>
+    \end{align}
+\end{enumerate}  
+
+\end{document}
