@@ -1,0 +1,98 @@
+\documentclass[12pt,a4paper,twocolumn]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[top=1.5cm, bottom=1.5cm, left=1.5cm, right=1.5cm]{geometry}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{footnote}
+\numberwithin{equation}{section}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\usepackage{makeidx}
+\makeindex
+\usepackage{amssymb}
+\usepackage{bm}
+\newcommand{\uveci}{{\bm{\hat{\textnormal{\bfseries\i}}}}}
+\newcommand{\uvecj}{{\bm{\hat{\textnormal{\bfseries\j}}}}}
+\newcommand{\uveck}{{\bm{\hat{\bm{k}}}}}
+\usepackage{framed}
+\usepackage[utf8]{inputenc}
+\usepackage{pgf,tikz}
+\usetikzlibrary{arrows}
+\usepackage{cancel}
+\usepackage{xcolor}
+\newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
+\usepackage{physics}
+
+\title{Abstract Maths Cheat Sheet}
+\date{}
+\author{}
+\begin{document}
+\maketitle
+
+\section{Ket-vector Axioms}
+\begin{enumerate}
+    \item The sum of any two ket-vectors is also a ket-vector:
+    \begin{equation}
+        \ket{A}  + \ket{B} = \ket{C}
+    \end{equation}
+    \item Vector addition is commutative:
+    \begin{equation}
+        \ket{ A } +\ket{ B } =\ket{B} +\ket{A}
+    \end{equation}
+    \item Vector addition is associative:
+    \begin{equation}
+        \left(\ket{ A } +\ket{ B }\right)+\ket{ C } =\ket{ A } +  \left(\ket{B }+\ket{ C }\right)
+    \end{equation}
+    \item There is a unique vector $0$ such that when you add it to any ket, it gives the same ket back:
+    \begin{equation}
+       \ket{ A } + 0 =\ket{ A }
+    \end{equation}
+    \item Given any ket $\ket{A}$, there is a unique ket $-\ket{A}$ such that
+    \begin{equation}
+       \ket{A} + \left( -\ket{A} \right)
+    \end{equation}
+    \item Given any $\ket{A}$ and any complex number $z$, you can multiply them to get a new ket. Also, multiplication by a scalar is linear:
+    \begin{equation}
+       \ket{zA} = z\ket{ A } =\ket{B}
+    \end{equation}
+    \item The distributive property holds:
+    \begin{align}
+        z\left(\ket{A} +\ket{B}\right) &=  z\ket{A} + z\ket{B}\\
+        \left( z+w\right)\ket{A} &= z\ket{A} + w\ket{A}
+    \end{align}
+\end{enumerate}
+
+\section{Bra-vector Axioms}
+\begin{enumerate}
+    \item The sum of any two bra-vectors is also a bra-vector:
+    \begin{equation}
+        \bra{A}  + \bra{B} = \bra{C}
+    \end{equation}
+    \item Vector addition is commutative:
+    \begin{equation}
+        \bra{ A } +\bra{ B } =\bra{B} +\bra{A}
+    \end{equation}
+    \item Vector addition is associative:
+    \begin{equation}
+        \left(\bra{ A } +\bra{ B }\right)+\bra{ C } =\bra{ A } +  \left(\bra{B }+\bra{ C }\right)
+    \end{equation}
+    \item There is a unique vector $0$ such that when you add it to any bra, it gives the same bra back:
+    \begin{equation}
+       \bra{ A } + 0 =\bra{ A }
+    \end{equation}
+    \item Given any bra $\bra{A}$, there is a unique bra $-\bra{A}$ such that
+    \begin{equation}
+       \bra{A} + \left( -\bra{A} \right)
+    \end{equation}
+    \item Given any $\bra{A}$ and any complex number $z$, you can multiply them to get a new bra. Also, multiplication by a scalar is linear:
+    \begin{equation}
+       \bra{zA} = z\bra{ A } =\bra{B}
+    \end{equation}
+    \item The distributive property holds:
+    \begin{align}
+        z\left(\bra{A} +\bra{B}\right) &=  z\bra{A} + z\bra{B}\\
+        \left( z+w\right)\bra{A} &= z\bra{A} + w\bra{A}
+    \end{align}
+\end{enumerate}
+
+\end{document}
