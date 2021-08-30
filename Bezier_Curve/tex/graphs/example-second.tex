@@ -11,14 +11,14 @@
 
 \definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1}
 \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
-    \clip(-0.74,-0.93) rectangle (18.82,9.77);
-    \draw[line width=2pt, smooth,samples=100,domain=0:1] plot[parametric] function{(1-t)**(2)*0+2*t*(1-t)*2+t**(2)*3,(1-t)**(2)*0+2*t*(1-t)*6+t**(2)*2};
+    \clip(-0.74,-0.93) rectangle (4,3);
+    \draw[line width=2pt, smooth,samples=100,domain=0:1] plot[parametric] function{(1-t)**(2)*0+2*t*(1-t)*2+t**(2)*3,(1-t)**(2)*0+2*t*(1-t)*2+t**(2)*1};
     \begin{scriptsize}
         \draw [fill=ududff] (0,0) circle (2.5pt);
         \draw[color=ududff] (-0.5,0.48) node {$A$};
-        \draw [fill=ududff] (3,2) circle (2.5pt);
-        \draw[color=ududff] (3.16,2.42) node {$C$};
-        \draw [fill=ududff] (2,6) circle (2.5pt);
-        \draw[color=ududff] (2.16,6.42) node {$B$};
+        \draw [fill=ududff] (3,1) circle (2.5pt);
+        \draw[color=ududff] (3.16,1.42) node {$C$};
+        \draw [fill=ududff] (2,2) circle (2.5pt);
+        \draw[color=ududff] (2.16,2.42) node {$B$};
     \end{scriptsize}
 \end{tikzpicture}
