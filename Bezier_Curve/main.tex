@@ -19,12 +19,20 @@ Higher order Bezier curves do exist but don't tend to get used much. All Bezier 
     \input{./tex/graphs/example-zeroth.tex}
     \caption{Example of a zeroth order Bezier curve} \label{fig:example-zeroth}
 \end{figure}
+The zeroth order Bezier curve is just a point. It has just one control point which is just where the point is positioned. The equation for this curve is very simple, as shown in \ref{eq:zeroth-order}.
+\begin{equation} \label{eq:zeroth-order}
+    C_{0}(\vec{A})=1\times\vec{A}
+\end{equation}
 \subsection{First Order}
 \begin{figure}[h]
     \centering
     \input{./tex/graphs/example-first.tex}
     \caption{Example of a first order Bezier curve} \label{fig:example-first}
 \end{figure}
+The first order Bezier curve is a staight line between two control points. You might also see this called a linear interpolation or sometimes lerp. The basic equation for this line is shown in \ref{eq:lerp}.
+\begin{equation} \label{eq:lerp}
+    C_{1}(\vec{A},\vec{B},t)=(1-t)\vec{A}+t\vec{B}
+\end{equation}
 \subsection{Second Order}
 \begin{figure}[h]
     \centering
