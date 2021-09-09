@@ -11,8 +11,8 @@
 
 \definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1}
 \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
-    \clip(-1.82,-1.53) rectangle (17.58,9.17);
-    \draw[line width=2pt, smooth,samples=100,domain=0:1] plot[parametric] function{(1-t)**(3)*0+3*t*(1-t)**(2)*0.5+3*t**(2)*(1-t)*3+t**(3)*4,(1-t)**(3)*0+3*t*(1-t)**(2)*4.5+3*t**(2)*(1-t)*2+t**(3)*4};
+    \clip(-0.6,-0.1) rectangle (5,5.1);
+    \draw[line width=2pt, smooth,samples=100,domain=0:1] plot[parametric] function{3*t*(1-t)**(2)*0.5+3*t**(2)*(1-t)*3+t**(3)*4,3*t*(1-t)**(2)*4.5+3*t**(2)*(1-t)*2+t**(3)*4};
     \begin{scriptsize}
         \draw [fill=ududff] (0,0) circle (2.5pt);
         \draw[color=ududff] (-0.5,0.48) node {$A$};
