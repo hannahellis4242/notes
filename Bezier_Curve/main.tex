@@ -47,6 +47,14 @@ The second order Bezier curve is a quadratic curve that starts at the first cont
     \caption{Example of a third order Bezier curve} \label{fig:example-third}
 \end{figure}
 The third order Bezier curve is a cubic curve that starts at the first control point and ends on the fourth, with the middle two control point controlling the gradient at the two end points separately.
+
+\chapter{Methods of Calculating Bezier Curves}
+\section{De Casteljau's algorithm}
+This method involves building a higher order Bezier curve from first order curves.
+Starting at a first order curve (ie a line), we can calculate new points for more lines and eventually build up our curve.
+\subsubsection{Second Order}
+\subsubsection{Third Order}
+
 \clearpage
 \addcontentsline{toc}{chapter}{Index}
 \printindex
