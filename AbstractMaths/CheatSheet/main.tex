@@ -75,20 +75,35 @@ Taken together 6 and 7 are often call linearity
 \end{enumerate}
 Taken together 6 and 7 are often call linearity
 \section{Bras and Kets}
-As we have seen, the complex numbers have a dual version: in the form of complex conjugate numbers. In the same way, a complex vector space has a dual version that is essentially the complex conjugate vector space.
-
-For every ket-vector $\ket{A}$, there is a bra-vector in the dual space, denoted by $\bra{A}$. Bra and Ket vectors together form inner products of bras and kets, using expressions like <B|A> to form bra-kets or brackets.
-
-Inner products are extremely important in the mathematical machinery of quantum mechanics,and for characterizing vector spaces in general.
-
-Bra-vectors satisfy the same axioms as the ket-vectors, but there are two things to keep in mind about the correspondence between kets and bras:
-
-    Suppose <A| is the bra corresponding to the ket |A>, and <B| is the bra corresponding to the ket |B>. Then the bra corresponding to |A> + |B> is <A| + <B|
-
-    If z is a complex number, then it is not true that the bra corresponding to z|A> is <A|z. You have to remember to complex-conjugate. Thus, the bra corresponding to z|A> is <A|z*
-
+\begin{enumerate}
+	\item For every ket-vector $\ket{A}$, there is a bra-vector in the dual space, denoted by $\bra{A}$.
+	\item Bra and Ket vectors together form inner products of bras and kets, using expressions like $\braket{A}{B}$ to form bra-kets or brackets.
+	\item Suppose $\bra{A}$ is the bra corresponding to the ket $\ket{A}$, and $\bra{B}$ is the bra corresponding to the ket $\ket{B}$. Then the bra corresponding to $\ket{A}+\ket{B}$ is $\bra{A}+\bra{B}$
+	\item If $z$ is a complex number, then it is not true that the bra corresponding to $z\ket{A}$ is $\bra{A}z$. You have to remember to complex-conjugate. Thus, the bra corresponding to $z\ket{A}$ is $\bra{A}z^{*}$
+\end{enumerate}
 \section{Inner Products}
 \begin{enumerate}
-\item placeholder
+\item Inner products are linear: 
+\begin{equation}
+        \bra{C}\left( \ket{A} + \ket{B} \right) = \braket{C}{A} + \braket{C}{B}
+\end{equation}
+\item  Interchanging bras and kets corresponds to complex conjugation:
+\begin{equation}
+	\braket{B}{A} = \braket{B}{A}^{*}
+\end{equation}
 \end{enumerate}
+Additionally we can show that $\left(\bra{A}+\bra{B}\right)\ket{C} = \braket{A}{C}+\braket{B}{C}$ using axiom 2 above we get     \begin{align}
+	\left(\bra{C}\left(\ket{A}+\ket{B}\right)\right)^{*}&=\left(\braket{C}{A} + \braket{C}{B}\right)^{*}\\
+	\bra{C}\left(\ket{A}+\ket{B}\right)&=\braket{C}{A} + \braket{C}{B}
+ \end{align}
+which is the same as axiom 1
+
+Also applying axiom 2 to $\braket{A}{A}$ give that $\braket{A}{A} = \braket{A}{A}^{*}$ which can only be true if $\braket{A}{A}$ is a real number.
+
+\begin{description}
+    \item[Normalized Vector] A vector is said to be normalized if its inner product with itself is 1 ie $\braket{A}{A}=1$
+    \item[Orthogonal Vectors] Two vectors are said to be orthogonal if their inner product is zero ie $\ket{A}$ and $\ket{B}$ are orthogonal if $\braket{B}{A}=0$.
+\end{description}
+
+    : 
 \end{document}
