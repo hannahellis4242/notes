@@ -1,4 +1,4 @@
-\documentclass[12pt,a4paper,twocolumn]{article}
+\documentclass[12pt,a5paper]{article}
 \usepackage{notes}
 
 \title{Abstract Maths Cheat Sheet}
@@ -105,5 +105,12 @@ Also applying axiom 2 to $\braket{A}{A}$ give that $\braket{A}{A} = \braket{A}{A
     \item[Orthogonal Vectors] Two vectors are said to be orthogonal if their inner product is zero ie $\ket{A}$ and $\ket{B}$ are orthogonal if $\braket{B}{A}=0$.
 \end{description}
 
-    : 
+\section{Orthonormal Bases}
+Let's consider an N-dimensional space (one with N possible states) and a particular orthonormal basis of ket-vectors labeled $\ket{i}$. An orthonormal basis is one where each of the basis ket-vectors are normalised and orthogonal to each other, this leads means that inner products between two basis kets obey the following
+\begin{equation}
+\braket{i}{j} =\delta_{ij}= \left\{ \begin{array}{ll}
+1 & i = j \\
+0 & i \neq j
+\end{array}\right.
+\end{equation}
 \end{document}
