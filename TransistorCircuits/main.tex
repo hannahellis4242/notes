@@ -6,11 +6,11 @@
 \author{Hannah Ellis}
 \begin{document}
 \maketitle
+\tableofcontents
 \section{Basic Common Emitter circuit}
 \begin{figure}[h]
 	\centering
 	\begin{circuitikz}
-		
 		\draw (0,0) node[ground]{};
 		\draw (0,1.0) node[npn](Q1){Q1};
 		\draw (Q1.C) -- (0,2.0);
@@ -24,5 +24,14 @@
 		\draw (-3,-0.0) node[ground]{};
 		\draw (-3,4.0) -- (-1,4.0);
 	\end{circuitikz}
+\caption{Basic Common Emitter Circuit\label{fig:BCEC}}
 \end{figure}
+For a transistor in forward active mode, we can use the approximation
+\begin{equation}
+	I_c = \beta I_b
+\end{equation} 
+We can use the fact that the voltage drop across a resistor divided by it's resistance is the current that flows through it to get
+\begin{equation}
+	\frac{V_{in}-V_{ce}}{R_c} = \beta \frac{V_{in}-V_{be}}{R_b}
+\end{equation} 
 \end{document}
