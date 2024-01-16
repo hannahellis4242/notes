@@ -128,3 +128,78 @@ $$\begin{align*}
 \end{align*}$$
 
 ## Solving Analytically
+
+In the range $0<z<1$ we have the time independent part as
+$$\tilde{E} \psi =-\frac{du}{dz}$$
+
+and trying solutions of the form
+
+$$\psi(z) = \exp(\alpha z)$$
+$$\frac{d\psi(z)}{dz} = \alpha \exp(\alpha z)$$
+$$\frac{d^\psi(z)}{dz^2} = \alpha^2\exp(\alpha z)$$
+
+putting these back in leads to
+$$\begin{align*}
+\tilde{E} &=-\alpha^2\\
+\alpha^2 &=-\tilde{E}\\
+\alpha &= \sqrt{-\tilde{E}}\\
+&= \pm i\sqrt{\tilde{E}}
+\end{align*}$$
+if we let
+> $k=\sqrt{\tilde{E}}$
+
+This gives solutions of the form
+$$ \psi = A \exp(ikz) + B \exp(-ikz) $$
+
+### Boundary Conditions
+
+Because of the infinite potential either side of the well, the wavefunction must become zero at the two ends of the well ie
+$$\psi(0) = \psi(1) = 0$$
+
+putting these in gives
+$$\begin{align*}
+\psi(0) &= A  + B = 0 \\
+\psi(1) &= A \exp(ik) + B \exp(-ik) = 0
+\end{align*}$$
+
+From the first line we get that $B = -A$ and putting this into the second line
+$$\begin{align*}
+0 &= A \exp(ik) -A \exp(-ik) \\
+&=A \cos(k) +iA\sin(k) -A\cos(k)+iA\sin(k)\\
+0&= 2iA\sin(k)\\
+\end{align*}$$
+Either we have the trivial solution that $A=0$ or we have that $\sin(k)=0$
+
+$\sin(k)$ is only zero when
+
+> $$k=n\pi$$
+
+which gives
+
+> $$\tilde{E}=\pi^2 n^2$$
+
+so the solutions are
+$$\psi_n = \tilde{A} \sin(n\pi z)$$
+
+### Normalisation
+The normalisation condition is
+$$ \int_0^1 \psi_n \psi_n^* dz = 1 $$
+
+which we can solve by doing the following
+$$\begin{align*} 
+1 &= \int_0^1 \tilde{A}\tilde{A}^* \sin^2(n\pi z)dz \\
+&= \tilde{A}\tilde{A}^*  \int_0^1 \frac {1-\cos(2n\pi z)}{2}dz \\
+&= \frac{\tilde{A}\tilde{A}^*}{2}  \left(\int_0^1 dz - \int_0^1 \cos(2n\pi z)dz\right)\\
+&= \frac{\tilde{A}\tilde{A}^*}{2} \left( 1 - \left[ \frac{\sin(2n \pi z)}{2n \pi}\right]_0^1\right)\\
+1 &=\frac{\tilde{A}\tilde{A}^*}{2}\\
+2 &=\tilde{A}\tilde{A}^*\\
+\tilde{A}&=\sqrt{2}\exp(i\phi)
+\end{align*}$$
+
+where we have used the identity
+$$ \sin ^{2}\theta =\frac {1-\cos(2\theta )}{2} $$
+
+so finally the normalised solutions are
+
+> $$\psi_n = \sqrt{2}\exp(i\phi) \sin(n\pi z)$$
+> $$\tilde{E}_n=\pi^2 n^2$$
