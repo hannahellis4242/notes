@@ -126,3 +126,5 @@ $$\begin{align*}
 \frac{d\psi}{dz} &= u \\
 \frac{du}{dz} &=\left(\tilde{V}(z)-\tilde{E}\right)\psi
 \end{align*}$$
+
+## Solving Analytically
