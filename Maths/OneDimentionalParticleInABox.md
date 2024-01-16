@@ -58,7 +58,7 @@ $$V(x)=
 
 ### Change of variable
 It's possible to have a change of basis to $z$ such that
-$$z=\frac{x}{a}$$
+>$$z=\frac{x}{a}$$
 
 Which means the potential becomes
 $$V(z)=
@@ -99,9 +99,8 @@ $$\begin{align*}
 \end{align*}$$
 
 where 
-$$ \tilde{V} = \frac{2m a^2}{\hbar^2}V(x) $$
-and
-$$\tilde{E}=\frac{2m a^2}{\hbar^2}E$$
+>$$ \tilde{V} = \frac{2m a^2}{\hbar^2}V(x) $$
+>$$\tilde{E}=\frac{2m a^2}{\hbar^2}E$$
 
 With all these changes our equation ends up being
 $$\tilde{E} \psi =-\frac{d^2\psi}{dz^2} + \tilde{V}(z)\psi$$
@@ -201,5 +200,18 @@ $$ \sin ^{2}\theta =\frac {1-\cos(2\theta )}{2} $$
 
 so finally the normalised solutions are
 
-> $$\psi_n = \sqrt{2}\exp(i\phi) \sin(n\pi z)$$
+> $$\psi_n(z) = \sqrt{2}\exp(i\phi) \sin(n\pi z)$$
 > $$\tilde{E}_n=\pi^2 n^2$$
+
+### Changing basis back
+so far we have been using the variables
+
+$$\tilde{E}=\frac{2m a^2}{\hbar^2}E$$
+$$z=\frac{x}{a}$$
+
+so converting back we get
+$$E=\frac{{\hbar^2}}{2ma^2}\tilde{E}$$
+
+> $$k_n=\frac{n\pi}{a}$$
+> $$\psi_n(x) = \sqrt{2}\exp(i\phi) \sin(k_n x)$$
+> $$E_n=\frac{{\hbar^2}}{2m}k_n^2$$
