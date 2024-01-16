@@ -32,6 +32,5 @@ $$ f(x)=\tilde{A}\cos(x)+\tilde{B}\sin(x) $$
 
 Since we are free to choose our basis we can have either form
 
----
-$$ f(x)=A \exp(i x) + B \exp(-i x) = f(x)=\tilde{A}\cos(x)+\tilde{B}\sin(x)$$
----
+> $$ f(x)=A \exp(i x) + B \exp(-i x) = f(x)=\tilde{A}\cos(x)+\tilde{B}\sin(x)$$
+
