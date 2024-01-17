@@ -4,16 +4,20 @@
 
 Sometimes when solving ODE's you'll get a solution of the form
 
-$$ f(x) = A \exp(i x) + B \exp(-i x) $$
+``` math
+f(x) = A \exp(i x) + B \exp(-i x)
+```
 
 where $A$ and $B$ are both complex numbers.
 
 Using Euler's formula $ \exp(ix)=\cos(x)+i\sin(x)$ this can be rewritten as
 
-$$ \begin{align*}
+``` math
+\begin{align*}
 f(x) &= A \cos(x)+Ai\sin(x) + B \cos(x)-Bi\sin(x)\\
 &=(A+B)\cos(x)+(A-B)i\sin(x)
-\end{align*}$$
+\end{align*}
+```
 
 if we let
 ``` math
@@ -26,28 +30,36 @@ if we let
 ```
 
 Then we get
-
-$$ f(x)=\tilde{A}\cos(x)+\tilde{B}\sin(x) $$
-
+``` math
+f(x)=\tilde{A}\cos(x)+\tilde{B}\sin(x)
+```
 Since we are free to choose our basis we can have either form
 
-> $$ f(x)=A \exp(i x) + B \exp(-i x) = f(x)=\tilde{A}\cos(x)+\tilde{B}\sin(x)$$
+---
+``` math
+f(x)=A \exp(i x) + B \exp(-i x) = f(x)=\tilde{A}\cos(x)+\tilde{B}\sin(x)
+```
+---
 
 ## Exponentials and Hyperbolic functions
 
 Sometimes when solving ODE's you'll get a solution of the form
 
-$$ f(x) = A \exp(x) + B \exp(-x) $$
+``` math
+f(x) = A \exp(x) + B \exp(-x)
+```
 
 We can look at the definitions of the hyperbolic functions to build up something akin to the Eular formula used earlier
 
-$$ \begin{align*}
+``` math
+\begin{align*}
 \sinh(x) &= \frac{\exp(x)-\exp(-x)}{2}\\
 \cosh(x) &= \frac{\exp(x)+\exp(-x)}{2}\\
-\end{align*}$$
-
+\end{align*}
+```
 as you can see we can write this in a matrix form
-$$ \begin{pmatrix}
+``` math
+\begin{pmatrix}
 \sinh(x)\\
 \cosh(x)
 \end{pmatrix} =
@@ -69,32 +81,44 @@ $$ \begin{pmatrix}
 \begin{pmatrix}
 \sinh(x)\\
 \cosh(x)
-\end{pmatrix}$$
-
+\end{pmatrix}
+```
 or to make it a little clearer
 
-$$ \begin{align*}
+``` math
+\begin{align*}
 \exp(x) &= \cosh(x)+\sinh(x)\\
 \exp(-i)&= \cosh(x)-\sinh(x)
-\end{align*}$$
+\end{align*}
+```
 
 So again we can rewrite
 
-$$ f(x) = A \exp(x) + B \exp(-x) $$
+``` math
+f(x) = A \exp(x) + B \exp(-x)
+```
 
 as
-$$ \begin{align*}
+``` math
+\begin{align*}
 f(x) &= A \cosh(x)+A\sinh(x) + B \cosh(x)-B\sinh(x)\\
 &=(A+B)\cosh(x)+(A-B)\sinh(x)
-\end{align*}$$
-
+\end{align*}
+```
 if we let
-$$ \begin{pmatrix} \tilde{A} \\ \tilde{B} \end{pmatrix} =
+``` math
+\begin{pmatrix} \tilde{A} \\ \tilde{B} \end{pmatrix} =
 \begin{pmatrix}
  1 & 1 \\
  1 & -1
 \end{pmatrix}
-\begin{pmatrix}A \\ B\end{pmatrix}$$
+\begin{pmatrix}A \\ B\end{pmatrix}
+```
 
 Then we can write
-> $$f(x) = A \exp(x) + B \exp(-x) =\tilde{A}\cosh(x)+\tilde{B}\sinh(x)$$
+
+---
+``` math
+f(x) = A \exp(x) + B \exp(-x) =\tilde{A}\cosh(x)+\tilde{B}\sinh(x)
+```
+---
