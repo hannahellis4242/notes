@@ -319,11 +319,33 @@ so converting back we get
 E=\frac{{\hbar^2}}{2ma^2}\tilde{E}
 ```
 
+we also have to renormalise the wavefunctions to allow for the change of basis again
+``` math
+\psi_n(x) = \hat{A} \sin\left(\frac{n\pi}{a} x \right)
+```
+where $\hat{A}$ is our new normalisation constant
+``` math
+\begin{align*}
+1&=\int_0^a \psi_n(x) \psi_n^*(x) dx \\
+&=\int_0^a \hat{A} \hat{A}^* \sin^2\left(\frac{n\pi}{a} x \right) dx \\
+&=\hat{A} \hat{A}^* \int_0^a \sin^2\left(\frac{n\pi}{a} x \right) dx \\
+&=\frac{\hat{A} \hat{A}^*}{2} \left( \int_0^a dx + \int_0^a \cos\left(\frac{2n\pi}{a} x \right)dx \right) \\
+&=\frac{\hat{A} \hat{A}^*}{2} \left( a+ \frac{a}{2\pi n}\left[ \sin\left(\frac{2n\pi}{a} x \right) \right]_0^a \right) \\
+1 &=\frac{a \hat{A} \hat{A}^*}{2}
+\hat{A} \hat{A}^* &=\frac{2}{a}
+\hat{A} = \sqrt{\frac{2}{a}} \exp(i\phi)
+\end{align*}
+```
+giving us normalised solutions as
+``` math
+\psi_n(x) = \sqrt{\frac{2}{a}}\exp(i\phi) \sin\left(\frac{n\pi}{a} x \right)
+```
+
 ---
 ``` math
 \begin{align*}
 k_n&=\frac{n\pi}{a} \\
-\psi_n(x) &= \sqrt{2}\exp(i\phi) \sin(k_n x) \\
+\psi_n(x) &= \sqrt{\frac{2}{a}}\exp(i\phi) \sin(k_n x) \\
 E_n&=\frac{{\hbar^2}}{2m}k_n^2
 \end{align*}
 ```
