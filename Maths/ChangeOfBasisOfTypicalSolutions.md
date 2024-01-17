@@ -8,9 +8,7 @@ $$ f(x) = A \exp(i x) + B \exp(-i x) $$
 
 where $A$ and $B$ are both complex numbers.
 
-Using Euler's formula
-$$ \exp(ix)=\cos(x)+i\sin(x)$$
-this can be rewritten as
+Using Euler's formula $ \exp(ix)=\cos(x)+i\sin(x)$ this can be rewritten as
 
 $$ \begin{align*}
 f(x) &= A \cos(x)+Ai\sin(x) + B \cos(x)-Bi\sin(x)\\
@@ -18,13 +16,14 @@ f(x) &= A \cos(x)+Ai\sin(x) + B \cos(x)-Bi\sin(x)\\
 \end{align*}$$
 
 if we let
-$$
+``` math
 \begin{pmatrix} \tilde{A} \\ \tilde{B} \end{pmatrix} =
 \begin{pmatrix}
  1 & 1 \\
  i & -i
 \end{pmatrix}
-\begin{pmatrix}A \\ B\end{pmatrix}$$
+\begin{pmatrix}A \\ B\end{pmatrix}
+```
 
 Then we get
 
