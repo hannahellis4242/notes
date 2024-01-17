@@ -4,10 +4,14 @@
 
 Starting with the Shrodinger Equation
 
-$$ i \hbar \frac{\partial \Psi}{\partial t} = -\frac{\hbar^2}{2m}\frac{\partial^2 \Psi}{\partial x^2} + V(x,t)\Psi$$
+``` math
+i \hbar \frac{\partial \Psi}{\partial t} = -\frac{\hbar^2}{2m}\frac{\partial^2 \Psi}{\partial x^2} + V(x,t)\Psi
+```
 
 We can separate variables by assuming that
-$$ \Psi(x,t) = \psi(x)T(t)$$
+``` math
+\Psi(x,t) = \psi(x)T(t)
+```
 
 First the time part
 ``` math
@@ -173,71 +177,107 @@ And with some rearrangement
 
 Leading to the coupled ODE being
 
-$$ \begin{align*}
+``` math
+\begin{align*}
 \frac{d\psi}{dz} &= u \\
 \frac{du}{dz} &=\left(\tilde{V}(z)-\tilde{E}\right)\psi
-\end{align*}$$
+\end{align*}
+```
 
 ## Solving Analytically
 
-In the range $0<z<1$ we have the time independent part as
-$$ \tilde{E} \psi =-\frac{du}{dz}$$
+In the range $0 < z < 1$ we have the time independent part as
+``` math
+\tilde{E} \psi =-\frac{du}{dz}
+```
 
 and trying solutions of the form
 
-$$ \psi(z) = \exp(\alpha z)$$
-$$ \frac{d\psi(z)}{dz} = \alpha \exp(\alpha z)$$
-$$ \frac{d^\psi(z)}{dz^2} = \alpha^2\exp(\alpha z)$$
+``` math
+\begin{align*}
+\psi(z) &= \exp(\alpha z) \\
+\frac{d\psi(z)}{dz} &= \alpha \exp(\alpha z)\\
+\frac{d^\psi(z)}{dz^2} &= \alpha^2\exp(\alpha z)
+\end{align*}
+```
 
 putting these back in leads to
-$$ \begin{align*}
+``` math
+\begin{align*}
 \tilde{E} &=-\alpha^2\\
 \alpha^2 &=-\tilde{E}\\
 \alpha &= \sqrt{-\tilde{E}}\\
 &= \pm i\sqrt{\tilde{E}}
-\end{align*}$$
+\end{align*}
+```
 if we let
-> $k=\sqrt{\tilde{E}}$
+
+---
+``` math
+k=\sqrt{\tilde{E}}
+```
+---
 
 This gives solutions of the form
-$$ \psi = A \exp(ikz) + B \exp(-ikz) $$
+``` math
+\psi = A \exp(ikz) + B \exp(-ikz)
+```
 
 ### Boundary Conditions
 
 Because of the infinite potential either side of the well, the wavefunction must become zero at the two ends of the well ie
-$$ \psi(0) = \psi(1) = 0$$
+``` math
+\psi(0) = \psi(1) = 0
+```
 
 putting these in gives
-$$ \begin{align*}
+``` math
+\begin{align*}
 \psi(0) &= A  + B = 0 \\
 \psi(1) &= A \exp(ik) + B \exp(-ik) = 0
-\end{align*}$$
+\end{align*}
+```
 
 From the first line we get that $B = -A$ and putting this into the second line
-$$ \begin{align*}
+``` math
+\begin{align*}
 0 &= A \exp(ik) -A \exp(-ik) \\
 &=A \cos(k) +iA\sin(k) -A\cos(k)+iA\sin(k)\\
 0&= 2iA\sin(k)\\
-\end{align*}$$
+\end{align*}
+```
 Either we have the trivial solution that $A=0$ or we have that $\sin(k)=0$
 
 $\sin(k)$ is only zero when
 
-> $$k=n\pi$$
+---
+``` math
+k=n\pi
+```
+---
 
 which gives
 
-> $$ \tilde{E}=\pi^2 n^2$$
+---
+``` math
+\tilde{E}=\pi^2 n^2
+```
+---
 
 so the solutions are
-$$ \psi_n = \tilde{A} \sin(n\pi z)$$
+``` math
+\psi_n = \tilde{A} \sin(n\pi z)
+```
 
 ### Normalisation
 The normalisation condition is
-$$ \int_0^1 \psi_n \psi_n^* dz = 1 $$
+``` math
+\int_0^1 \psi_n \psi_n^* dz = 1
+```
 
 which we can solve by doing the following
-$$ \begin{align*} 
+``` math
+\begin{align*} 
 1 &= \int_0^1 \tilde{A}\tilde{A}^* \sin^2(n\pi z)dz \\
 &= \tilde{A}\tilde{A}^*  \int_0^1 \frac {1-\cos(2n\pi z)}{2}dz \\
 &= \frac{\tilde{A}\tilde{A}^*}{2}  \left(\int_0^1 dz - \int_0^1 \cos(2n\pi z)dz\right)\\
@@ -245,25 +285,46 @@ $$ \begin{align*}
 1 &=\frac{\tilde{A}\tilde{A}^*}{2}\\
 2 &=\tilde{A}\tilde{A}^*\\
 \tilde{A}&=\sqrt{2}\exp(i\phi)
-\end{align*}$$
+\end{align*}
+```
 
 where we have used the identity
-$$ \sin ^{2}\theta =\frac {1-\cos(2\theta )}{2} $$
+``` math
+\sin ^{2}\theta =\frac {1-\cos(2\theta )}{2}
+```
 
 so finally the normalised solutions are
 
-> $$ \psi_n(z) = \sqrt{2}\exp(i\phi) \sin(n\pi z)$$
-> $$ \tilde{E}_n=\pi^2 n^2$$
+---
+``` math
+\begin{align*}
+\psi_n(z) &= \sqrt{2}\exp(i\phi) \sin(n\pi z) \\
+\tilde{E}_n &=\pi^2 n^2
+\end{align*}
+```
+---
 
 ### Changing basis back
 so far we have been using the variables
 
-$$ \tilde{E}=\frac{2m a^2}{\hbar^2}E$$
-$$z=\frac{x}{a}$$
+``` math
+\begin{align*}
+\tilde{E}&=\frac{2m a^2}{\hbar^2}E\\
+z&=\frac{x}{a}
+\end{align*}
+```
 
 so converting back we get
-$$E=\frac{{\hbar^2}}{2ma^2}\tilde{E}$$
+``` math
+E=\frac{{\hbar^2}}{2ma^2}\tilde{E}
+```
 
-> $$k_n=\frac{n\pi}{a}$$
-> $$ \psi_n(x) = \sqrt{2}\exp(i\phi) \sin(k_n x)$$
-> $$E_n=\frac{{\hbar^2}}{2m}k_n^2$$
+---
+``` math
+\begin{align*}
+k_n&=\frac{n\pi}{a} \\
+\psi_n(x) &= \sqrt{2}\exp(i\phi) \sin(k_n x) \\
+E_n&=\frac{{\hbar^2}}{2m}k_n^2
+\end{align*}
+```
+---
