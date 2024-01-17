@@ -9,7 +9,7 @@ $$ f(x) = A \exp(i x) + B \exp(-i x) $$
 where $A$ and $B$ are both complex numbers.
 
 Using Euler's formula
-$$\exp(ix)=\cos(x)+i\sin(x)$$
+$$ \exp(ix)=\cos(x)+i\sin(x)$$
 this can be rewritten as
 
 $$ \begin{align*}
@@ -84,13 +84,13 @@ So again we can rewrite
 $$ f(x) = A \exp(x) + B \exp(-x) $$
 
 as
-$$\begin{align*}
+$$ \begin{align*}
 f(x) &= A \cosh(x)+A\sinh(x) + B \cosh(x)-B\sinh(x)\\
 &=(A+B)\cosh(x)+(A-B)\sinh(x)
 \end{align*}$$
 
 if we let
-$$\begin{pmatrix} \tilde{A} \\ \tilde{B} \end{pmatrix} =
+$$ \begin{pmatrix} \tilde{A} \\ \tilde{B} \end{pmatrix} =
 \begin{pmatrix}
  1 & 1 \\
  1 & -1

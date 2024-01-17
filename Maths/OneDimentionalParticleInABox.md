@@ -7,20 +7,20 @@ Starting with the Shrodinger Equation
 $$ i \hbar \frac{\partial \Psi}{\partial t} = -\frac{\hbar^2}{2m}\frac{\partial^2 \Psi}{\partial x^2} + V(x,t)\Psi$$
 
 We can separate variables by assuming that
-$$\Psi(x,t) = \psi(x)T(t)$$
+$$ \Psi(x,t) = \psi(x)T(t)$$
 
 First the time part
-$$\begin{align*}
+$$ \begin{align*}
 \frac{\partial\Psi}{\partial t} &= \frac{\partial\psi(x)T(t)}{\partial t}\\
 &= \psi\frac{dT}{dt}
 \end{align*}$$
 
 Then the spacial part
-$$\begin{align*}
+$$ \begin{align*}
 \frac{\partial\Psi}{\partial x} &= \frac{\partial\psi(x)T(t)}{\partial x}\\
 &= T\frac{d\psi}{dx}
 \end{align*}$$
-$$\begin{align*}
+$$ \begin{align*}
 \frac{\partial^2\Psi}{\partial x^2} &= \frac{\partial}{\partial x}\frac{\partial\Psi}{\partial x}\\
 &= \frac{\partial}{\partial x}\left(T\frac{d\psi}{dx}\right)\\
 &=T \frac{d^2\psi}{dx^2}
@@ -69,13 +69,13 @@ $$V(z)=
 
 additionally
 
-$$\begin{align*}
+$$ \begin{align*}
 \frac{d\psi}{dx}&=\frac{dz}{dx}\frac{d\psi}{dz}\\
 &=\frac{1}{a}\frac{d\psi}{dz}
 \end{align*}$$
 
 and
-$$\begin{align*}
+$$ \begin{align*}
 \frac{d^2\psi}{dx^2}&=\frac{d}{dx}\frac{d\psi}{dx}\\
 &=\frac{d}{dx}\left(\frac{1}{a}\frac{d\psi}{dz}\right)\\
 &=\frac{dz}{dx}\frac{d}{dz}\left(\frac{1}{a}\frac{d\psi}{dz}\right)\\
@@ -85,7 +85,7 @@ $$\begin{align*}
 
 So we can replace the terms in the time independent equation
 
-$$\begin{align*}
+$$ \begin{align*}
 E \psi &= -\frac{\hbar^2}{2m} \frac{d^2\psi}{dx^2} + V(x)\psi \\
 &=-\frac{\hbar^2}{2m a^2}\frac{d^2\psi}{dz^2} + V(z)\psi 
 \end{align*}$$
@@ -93,17 +93,17 @@ E \psi &= -\frac{\hbar^2}{2m} \frac{d^2\psi}{dx^2} + V(x)\psi \\
 ### Even Simpler
 We can further simplify this by dividing through by $\frac{\hbar^2}{2m a^2}$
 
-$$\begin{align*}
+$$ \begin{align*}
 \frac{2m a^2}{\hbar^2}E \psi &= - \frac{d^2\psi}{dx^2} + \frac{2m a^2}{\hbar^2}V(x)\psi \\
 \tilde{E} \psi &=-\frac{d^2\psi}{dz^2} + \tilde{V}(z)\psi 
 \end{align*}$$
 
 where 
 >$$ \tilde{V} = \frac{2m a^2}{\hbar^2}V(x) $$
->$$\tilde{E}=\frac{2m a^2}{\hbar^2}E$$
+>$$ \tilde{E}=\frac{2m a^2}{\hbar^2}E$$
 
 With all these changes our equation ends up being
-$$\tilde{E} \psi =-\frac{d^2\psi}{dz^2} + \tilde{V}(z)\psi$$
+$$ \tilde{E} \psi =-\frac{d^2\psi}{dz^2} + \tilde{V}(z)\psi$$
 
 ## Lowering the order
 
@@ -113,15 +113,15 @@ In this case we introduce a variable
 $$u = \frac{d\psi}{dz}$$
 
 so that our equation becomes
-$$\tilde{E} \psi =-\frac{du}{dz} + \tilde{V}(z)\psi$$
+$$ \tilde{E} \psi =-\frac{du}{dz} + \tilde{V}(z)\psi$$
 
 And with some rearrangement
 
-$$\frac{du}{dz} =\left(\tilde{V}(z)-\tilde{E}\right)\psi$$
+$$ \frac{du}{dz} =\left(\tilde{V}(z)-\tilde{E}\right)\psi$$
 
 Leading to the coupled ODE being
 
-$$\begin{align*}
+$$ \begin{align*}
 \frac{d\psi}{dz} &= u \\
 \frac{du}{dz} &=\left(\tilde{V}(z)-\tilde{E}\right)\psi
 \end{align*}$$
@@ -129,16 +129,16 @@ $$\begin{align*}
 ## Solving Analytically
 
 In the range $0<z<1$ we have the time independent part as
-$$\tilde{E} \psi =-\frac{du}{dz}$$
+$$ \tilde{E} \psi =-\frac{du}{dz}$$
 
 and trying solutions of the form
 
-$$\psi(z) = \exp(\alpha z)$$
-$$\frac{d\psi(z)}{dz} = \alpha \exp(\alpha z)$$
-$$\frac{d^\psi(z)}{dz^2} = \alpha^2\exp(\alpha z)$$
+$$ \psi(z) = \exp(\alpha z)$$
+$$ \frac{d\psi(z)}{dz} = \alpha \exp(\alpha z)$$
+$$ \frac{d^\psi(z)}{dz^2} = \alpha^2\exp(\alpha z)$$
 
 putting these back in leads to
-$$\begin{align*}
+$$ \begin{align*}
 \tilde{E} &=-\alpha^2\\
 \alpha^2 &=-\tilde{E}\\
 \alpha &= \sqrt{-\tilde{E}}\\
@@ -153,16 +153,16 @@ $$ \psi = A \exp(ikz) + B \exp(-ikz) $$
 ### Boundary Conditions
 
 Because of the infinite potential either side of the well, the wavefunction must become zero at the two ends of the well ie
-$$\psi(0) = \psi(1) = 0$$
+$$ \psi(0) = \psi(1) = 0$$
 
 putting these in gives
-$$\begin{align*}
+$$ \begin{align*}
 \psi(0) &= A  + B = 0 \\
 \psi(1) &= A \exp(ik) + B \exp(-ik) = 0
 \end{align*}$$
 
 From the first line we get that $B = -A$ and putting this into the second line
-$$\begin{align*}
+$$ \begin{align*}
 0 &= A \exp(ik) -A \exp(-ik) \\
 &=A \cos(k) +iA\sin(k) -A\cos(k)+iA\sin(k)\\
 0&= 2iA\sin(k)\\
@@ -175,17 +175,17 @@ $\sin(k)$ is only zero when
 
 which gives
 
-> $$\tilde{E}=\pi^2 n^2$$
+> $$ \tilde{E}=\pi^2 n^2$$
 
 so the solutions are
-$$\psi_n = \tilde{A} \sin(n\pi z)$$
+$$ \psi_n = \tilde{A} \sin(n\pi z)$$
 
 ### Normalisation
 The normalisation condition is
 $$ \int_0^1 \psi_n \psi_n^* dz = 1 $$
 
 which we can solve by doing the following
-$$\begin{align*} 
+$$ \begin{align*} 
 1 &= \int_0^1 \tilde{A}\tilde{A}^* \sin^2(n\pi z)dz \\
 &= \tilde{A}\tilde{A}^*  \int_0^1 \frac {1-\cos(2n\pi z)}{2}dz \\
 &= \frac{\tilde{A}\tilde{A}^*}{2}  \left(\int_0^1 dz - \int_0^1 \cos(2n\pi z)dz\right)\\
@@ -200,18 +200,18 @@ $$ \sin ^{2}\theta =\frac {1-\cos(2\theta )}{2} $$
 
 so finally the normalised solutions are
 
-> $$\psi_n(z) = \sqrt{2}\exp(i\phi) \sin(n\pi z)$$
-> $$\tilde{E}_n=\pi^2 n^2$$
+> $$ \psi_n(z) = \sqrt{2}\exp(i\phi) \sin(n\pi z)$$
+> $$ \tilde{E}_n=\pi^2 n^2$$
 
 ### Changing basis back
 so far we have been using the variables
 
-$$\tilde{E}=\frac{2m a^2}{\hbar^2}E$$
+$$ \tilde{E}=\frac{2m a^2}{\hbar^2}E$$
 $$z=\frac{x}{a}$$
 
 so converting back we get
 $$E=\frac{{\hbar^2}}{2ma^2}\tilde{E}$$
 
 > $$k_n=\frac{n\pi}{a}$$
-> $$\psi_n(x) = \sqrt{2}\exp(i\phi) \sin(k_n x)$$
+> $$ \psi_n(x) = \sqrt{2}\exp(i\phi) \sin(k_n x)$$
 > $$E_n=\frac{{\hbar^2}}{2m}k_n^2$$
