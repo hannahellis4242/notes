@@ -1,77 +1,10 @@
-# Node
-
-These notes go along with the node crash course videos that are on the knowledge base.
-
-## Setting Up
-
-### Editors
-
-You will need an editor for this course if you wish to follow along with the videos.
-Provided below are links to some of the more popular editors.
-
-- [Visual Studio Code](https://code.visualstudio.com/).
-- [Atom](https://atom-editor.cc/)
-- [Sublime Text](https://www.sublimetext.com/)
-
-I personally recommend Visual Studio Code (as it's the editor I use in the videos) but feel free to use any editor you prefer, including one that's not listed here.
-
-## Using Node
-
-### Installing Node
-
-You can download and install node [here](https://nodejs.org/en)
-
-### What is Node
-
-Node is a JavaScript engine very similar to the one built into your browser that parses and runs JavaScript from a website. Node however runs on your system rather than your browser, so it can do some things that your browser can't (such as process command line arguments and read files off your machine) but it also can't do something that your browser can (for example making a button submit a form on a website). Node even uses the V8 JavaScript Engine, which is the same JavaScript parsing engine that the Chrome Browser uses.
-
-Node offers a way for developers more familiar with front end coding (ie JavaScript for a website) to write backend services or other programs.
-
-### Setting up a Node Project
-
-Node comes with it's own package manager, the _node package manager_ or _npm_ for short.
-
-As well as managing the packages in your project _npm_ can do some extra things. Importantly for us, you can use it to set up a blank project.
-
-Use you terminal and navigate to the directory you wish to put your project in. Once you are there, you can put in the command
-
-``` bash
-npm init
-```
-
-_npm_ will then ask you a series of questions about your project (you can just press enter to get the default answer if you aren't sure how to answer). Once you have done this, you will have a _project.json_ file in your directory. This file keeps a record of the packages you are using in your project as well as any scripts for _npm_ to run. We will talk about scripts more later but you will see the default test script in this file.
-
-Additionally if you want to just accept the default answers when creating a new project you can use the _-y_ flag.
-
-```bash 
-npm init -y
-```
-
-You should remember the _npm_ command, you'll be using it a lot in this course and any time you work with a node project.
-
-### Your First Node Program
-
-Hello World is a typical starting point for many developers learning a new language (and even the starting point for some projects). We will continue the tradition by writing a new file called _hello.js_ with the following content
-
-``` javascript
-console.log("Hello World")
-```
-
-You can run this by typing the following command into your terminal
-
-``` bash
-node hello.js
-```
-
-This will run you JavaScript file and print Hello World to the terminal.
-
-## Introducing TypeScript
+# Introducing TypeScript
 
 You may have noticed in the hello world example that it was a JavaScript file, which makes sense with Node being a JavaScript engine. However due to Node's increasing popularity, there have been other languages built on top of it. One language is TypeScript.
 
 TypeScript extends JavaScript to offer type safety as well as other features (many but not all of these additional features have made their way into JavaScript due to the growing usage of TypeScript).
 
-### Why TypeScript
+## Why TypeScript
 
 So if Node is a JavaScript Engine, you might be asking why I am using TypeScript for this course and not just raw JavaScript.
 
@@ -81,7 +14,7 @@ Additionally if you know TypeScript then you know JavaScript. TypeScript is a su
 
 Also TypeScript is still used on client projects, so it's worth knowing just for that.
 
-### Hello TypeScript
+## Hello TypeScript
 
 We are once again going to write the hello world program, but this time in TypeScript.
 
@@ -99,7 +32,7 @@ npm install --save-dev typescript
 
 >Note: the --save-dev tells npm to save the package as a development dependency. There are short forms for both the install command and the --save-dev flag (i and -D respectively) that you will see in later commands.
 
-#### Dealing with dependencies more generally
+### Dealing with dependencies more generally
 
 This is a good time to mention that JavaScript packages don't come with their types defined. This includes Node's core libraries too. Luckily for us using TypeScript, there are packages that contain just the types for JavaScript packages. These usually begin with _@types_. It's a good idea if you're going to be using Node to run your TypeScript code to also include _@types/node_ as a development dependency by using the command below.
 
@@ -113,7 +46,7 @@ If you look at your _package.json_ file now, you will see there is now a devDepe
 
 Additionally you will notice a directory called _node_modules_, this is the directory where all the dependency code is kept so that the node engine can access the code to run them with your code.
 
-#### Reinstalling dependencies
+### Reinstalling dependencies
 
 It is sometimes required to reinstall all your dependencies from scratch when updates come out. You can do this by deleting both the node_modules directory and the lock file then running
 
@@ -123,7 +56,7 @@ npm i
 
 If you don't specify any particular package to install, the install command will look for a lock file to find the list of dependencies to install, if it cannot find a lock file, then it will generate one from your existing package.json file.
 
-### Hello TypeScript Continued
+## Hello TypeScript Continued
 
 Now that you have TypeScript installed, it is time to set it up. The TypeScript transpiler uses a file called _tsconfig.json_ to control where it will look for files to compile and where it will put the resulting JavaScript and also to configure other features. You can create the default configuration file by typing the following command into your terminal.
 
@@ -139,7 +72,7 @@ _tsc_ has various flags, but here we are using the --init flag to tell it to gen
 
 Once you have run this command, you will see a _tsconfig.json_ file in your project directory.
 
-#### Tweaking the Config
+### Tweaking the Config
 
 The most of the defaults in the configuration are suitable for our project, we just have to change two things. Firstly we need to change the _rootDir_ to be _./src_, so that _tsc_ knows to read from the /src directory within our project. Secondly we should change the _outDir_ to be _./dist_ so that _tsc_ knows we want it to create the dist directory within our project and to put the JavaScript files it creates there.
 
@@ -147,7 +80,7 @@ Once this is all done, we just need to create a src directory, and move our hell
 
 Now we are ready to compile, and since we're likely to do this a lot, it's a good time to introduce npm scripts.
 
-#### Compilation Script
+### Compilation Script
 
 In your package.json file you will see a scripts object. You can go ahead now and change it to say the following
 
