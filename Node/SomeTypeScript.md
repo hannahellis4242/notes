@@ -36,6 +36,23 @@ You can make an array of any type by putting square brackets after the type.
 
 Arrays have many methods on them, including but not limited to, push, concat, map, filter and fold.
 
+You can also destructure an array.
+
+``` typescript
+const xs = [1,2,3,4,5];
+const [a,b,c,d,e] = xs;
+console.log(c);
+```
+
+you can also use something called a rest parameter
+
+``` typescript
+const xs = [1,2,3,4,5];
+const [head,...tail] = xs;
+console.log(head);
+console.log(tail);
+```
+
 ### Objects
 
 Objects are at their most basic collection of key value pairs.
