@@ -14,4 +14,3 @@ I personally recommend Visual Studio Code (as it's the editor I use in the video
 ### Installing Node
 
 You can download and install node [here](https://nodejs.org/en)
-
