@@ -36,23 +36,6 @@ You can make an array of any type by putting square brackets after the type.
 
 Arrays have many methods on them, including but not limited to, push, concat, map, filter and fold.
 
-You can also destructure an array.
-
-``` typescript
-const xs = [1,2,3,4,5];
-const [a,b,c,d,e] = xs;
-console.log(c);
-```
-
-you can also use something called a rest parameter
-
-``` typescript
-const xs = [1,2,3,4,5];
-const [head,...tail] = xs;
-console.log(head);
-console.log(tail);
-```
-
 ### Objects
 
 Objects are at their most basic collection of key value pairs.
@@ -63,19 +46,6 @@ const person = { name:"Alice" , age:34 };
 ```
 
 Objects can also be made from Classes and can be checked to conform to a particular interface if it is required. We shall talk interfaces and classes later. Additionally objects can take functions as values to their parameters.
-
-You can destructure an object by using {}
-
-``` typescript 
-const favourites = {
-    myFavouriteNumber:42,
-    myFavouritePhase:"Hello World",
-    myFavouriteBoolean:true,
-};
-
-const {myFavouriteNumber,myFavouritePhase} = favourites;
-console.log(myFavouritePhase);
-```
 
 ### Functions
 
@@ -281,7 +251,92 @@ class Chihuahua extends Dog{
 }
 ```
 
+## Type Inference
 
+TypeScript can work out for itself what type a variable should be when it is initialised, so you don't have to always include a type annotation when creating new variables, so long as you initialise the variable too.
+
+For example, this works
+``` typescript
+const theAnswer = 42;
+```
+
+but this won't
+``` typescript
+let theQuestion ;
+theQuestion = "Life, the Universe and Everything";
+```
+as TypeScript can't look ahead to see what the variable type should be.
+
+This works for objects and arrays too.
+
+Try it with this array and see what type you get back
+
+``` typescript
+const array = ["Hello World",42] ;
+```
+
+## Destructuring
+
+Destructuring allows you to access elements or properties without having to use a dot. It's very useful for functions that take in objects but you only want to use some of the properties of that object.
+
+### Destructuring an Array
+
+You can destructure an array by using square brackets, like this
+
+``` typescript
+const xs = [1,2,3,4,5];
+const [a,b,c,d,e] = xs;
+console.log(c);
+```
+
+you can also use something called a rest parameter, that gives you the rest of the elements in the array as an array
+
+``` typescript
+const xs = [1,2,3,4,5];
+const [head,...tail] = xs;
+console.log(head);
+console.log(tail);
+```
+
+You can use this to destructure an array passed into an object like this
+
+``` typescript
+const getFirst = <T>([head,...]:T[]):T|undefined => head
+```
+
+> Note: I used a generic type in the function above. You should look at these later once you understand everything else as they are useful when you have a function that should accept any type but you want to ensure type safety. If you find it confusing just remove the __\<T\>__ and replace all the places you see a __T__ with a number or some other type you like. Oh look, you just learned how generics work.
+
+### Destructuring an Object
+
+You can destructure an object by using {}
+
+``` typescript 
+const favourites = {
+    myFavouriteNumber:42,
+    myFavouritePhase:"Hello World",
+    myFavouriteBoolean:true,
+};
+
+const {myFavouriteNumber,myFavouritePhase} = favourites;
+console.log(myFavouritePhase);
+```
+
+Again like array destructing you can use this in a function
+
+``` typescript
+interface Favourites{
+    aNumber:number;
+    aString:string;
+    aBoolean:boolean;
+}
+const favourites = {
+    aNumber:42,
+    aString:"Hello World",
+    aBoolean:true,
+};
+
+const describe = ({aNumber,aString}:Favourites):string => "number = ${aNumber}\nphrase = ${aString}";
+```
 
 ## The TypeScript Handbook
 
