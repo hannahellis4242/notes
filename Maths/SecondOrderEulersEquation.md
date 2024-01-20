@@ -55,6 +55,47 @@ Putting these back into the equation
 0 &= x^2 \frac{d^2y}{dx^2} + a x \frac{dy}{dx}+ b y \\
 0 &= x^2 \frac{1}{x^2} \left( \frac{d^2 y}{dt^2} -  \frac{dy}{dt} \right) + a x \frac{1}{x} \frac{dy}{dt} + b y \\
 0 &=  \left( \frac{d^2 y}{dt^2} - \frac{dy}{dt} \right) + a \frac{dy}{dt} + b y \\
-0 &=  \frac{d^2 y}{dt^2} + (a-1) \frac{dy}{dt} + b y \\
+0 &=  \frac{d^2 y}{dt^2} + (a-1) \frac{dy}{dt} + b y 
+\end{align*}
+```
+
+### Solving the Changed Varables
+
+We now have the equation in the form
+
+``` math
+\frac{d^2 y}{dt^2} + (a-1) \frac{dy}{dt} + b y = 0
+```
+with the change of variables $t=\exp(x)$
+
+So now we can try solutions of the form
+``` math
+\begin{align*}
+y &=  \exp(kt)\\
+\frac{dy}{dt} &= k \exp(kt) = ky \\
+\frac{d^2 y}{dt^2} &= k^2 \exp(kt) = k^2 y
+\end{align*}
+```
+Feeding this back into our equation give
+``` math
+k^2 y + (a-1) k y + b y = 0
+```
+either $y = 0$ or 
+``` math
+k^2 + (a-1) k + b = 0
+```
+which occurs when
+``` math
+k = \frac{1-a \pm \sqrt{(a-1)^2 - 4b}}{4}
+```
+Which means we have 3 possibilities
+
+### 2 roots
+If we have two roots $k_1$ and $k_2$ then we get the solution
+``` math
+\begin{align*}
+y(t) &= A \exp(k_1 t) + B \exp(k_2 t)\\
+y(x) &= A \left(\exp(\ln(x))\right)^{k_1} + B \left(\exp(\ln(x))\right)^{k_2}\\
+&= A x^{k_1} + B x^{k_2}\\
 \end{align*}
 ```
