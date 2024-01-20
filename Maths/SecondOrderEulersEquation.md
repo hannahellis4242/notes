@@ -99,3 +99,26 @@ y(x) &= A \left(\exp(\ln(x))\right)^{k_1} + B \left(\exp(\ln(x))\right)^{k_2}\\
 &= A x^{k_1} + B x^{k_2}\\
 \end{align*}
 ```
+
+### 1 repeated root
+If we only get 1 root then we need to find another solution. Starting with the first solution
+``` math
+y_1(x)=\exp(kt)
+```
+we construct a second solution by multiplying the first by function $v(x)$
+``` math
+\begin{align*}
+y_2(t)&=v(x)y_1(x)=v(t)\exp(kt) \\
+\frac{d y_2}{dt} &= \frac{dv}{dt}\exp(kt)+v(t)k\exp(kt) \\
+\frac{d^2 y_2}{dt^2} &= \frac{d}{dt}\left(\frac{dv}{dt}\exp(kt)+v(t)k\exp(kt)\right) \\
+&=\frac{d^2v}{dt^2}\exp(kt) + \frac{dv}{dt}k\exp(kt) +\frac{dv}{dt}k\exp(kt) + v(t)k^2\exp(kt) \\
+&=\frac{d^2v}{dt^2}\exp(kt) + 2 \frac{dv}{dt}k\exp(kt) + v(t)k^2\exp(kt)
+\end{align*}
+```
+Feeding this back into our ODE
+``` math
+\begin{align*}
+0 &= \frac{d^2 y}{dt^2} + (a-1) \frac{dy}{dt} + b y \\
+0 &= \frac{d^2v}{dt^2}\exp(kt) + 2 \frac{dv}{dt}k\exp(kt) + v(t)k^2\exp(kt) + (a-1) \left( \frac{dv}{dt}\exp(kt)+v(t)k\exp(kt) \right) + v(t)\exp(kt)
+\end{align*}
+```
