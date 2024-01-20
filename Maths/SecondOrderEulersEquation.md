@@ -25,3 +25,27 @@ u' &= - \frac{a u}{x} - \frac{b y}{x^2} = 0 \\
 y' &= u
 \end{align*}
 ```
+### Analytical Solution
+
+We start with a change of variable $x=\exp(t)$ so that $\frac{dx}{dt}=x$. Looking at our derivitives of x
+``` math
+\frac{dy}{dx} = \frac{dy}{dt} \frac{dt}{dx} 
+```
+and by the inverse rule
+```math
+\frac{dt}{dx}= \frac{1}{\frac{dx}{dt}}=\frac{1}{x}
+```
+so we are left with
+``` math
+\frac{dy}{dx} = \frac{1}{x} \frac{dy}{dt}
+```
+Then differentating again gives
+``` math
+\begin{align*}
+\frac{d^2y}{dx^2} &= \frac{d}{dx} \left( \frac{1}{x} \frac{dy}{dt} \right) \\
+\frac{d^2y}{dx^2} &= \frac{d}{dx}\left( \frac{1}{x} \right) \frac{dy}{dt} + \frac{1}{x} \frac{d}{dx} \left( \frac{dy}{dt} \right)\\
+\frac{d^2y}{dx^2} &=  -\frac{1}{x^2} \frac{dy}{dt} + \frac{1}{x} \frac{dt}{dx}\frac{d}{dt} \left( \frac{dy}{dt} \right)\\
+\frac{d^2y}{dx^2} &=  -\frac{1}{x^2} \frac{dy}{dt} + \frac{1}{x^2} \frac{d^2 y}{dt^2} \\
+\frac{d^2y}{dx^2} &=  \frac{1}{x^2} \left( \frac{d^2 y}{dt^2} -  \frac{dy}{dt} \right)
+\end{align*}
+```
