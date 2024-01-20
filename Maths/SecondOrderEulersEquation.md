@@ -49,3 +49,12 @@ Then differentating again gives
 \frac{d^2y}{dx^2} &=  \frac{1}{x^2} \left( \frac{d^2 y}{dt^2} -  \frac{dy}{dt} \right)
 \end{align*}
 ```
+Putting these back into the equation
+``` math
+\begin{align*}
+0 &= x^2 \frac{d^2y}{dx^2} + a x \frac{dy}{dx}+ b y \\
+0 &= x^2 \frac{1}{x^2} \left( \frac{d^2 y}{dt^2} -  \frac{dy}{dt} \right) + a x \frac{1}{x} \frac{dy}{dt} + b y \\
+0 &=  \left( \frac{d^2 y}{dt^2} - \frac{dy}{dt} \right) + a \frac{dy}{dt} + b y \\
+0 &=  \frac{d^2 y}{dt^2} + (a-1) \frac{dy}{dt} + b y \\
+\end{align*}
+```
