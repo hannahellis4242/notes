@@ -151,6 +151,8 @@ Feeding this back into our ODE
 ``` math
 \begin{align*}
 0 &= \frac{d^2 y}{dt^2} -4k \frac{dy}{dt} + 4k^2 y \\
-0 &= \frac{d^2v}{dt^2}\exp(kt) + 2 \frac{dv}{dt}k\exp(kt) + v(t)k^2\exp(kt) -4k \left( \frac{dv}{dt}\exp(kt)+v(t)k\exp(kt) \right) + 4k^2 v(t)\exp(kt)
+0 &= \frac{d^2v}{dt^2}\exp(kt) + 2 \frac{dv}{dt}k\exp(kt) + v(t)k^2\exp(kt) -4k \left( \frac{dv}{dt}\exp(kt)+v(t)k\exp(kt) \right) + 4k^2 v(t)\exp(kt)\\
+0 &= \frac{d^2v}{dt^2}\exp(kt) + (2k-4k) \frac{dv}{dt}\exp(kt) + (k^2 -4k^2 + 4k^2)v(t)\exp(kt) \\
+0 &= \frac{d^2v}{dt^2}\exp(kt) -2k \frac{dv}{dt}\exp(kt) + k^2 v(t)\exp(kt) \\
 \end{align*}
 ```
