@@ -175,5 +175,6 @@ putting back in $t=\ln(x)$ gives us finally that
 y(x) &= A \ln(x)\exp(k\ln(x)) + B \exp(k\ln(x)) \\
 &= A \ln(x)\left(\exp(\ln(x))\right)^k + B \left(\exp(\ln(x))\right)^k \\
 &= A \ln(x) x^k + B x^k \\
+&= \left( A \ln(x) + B \right) x^k \\
 \end{align*}
 ```
