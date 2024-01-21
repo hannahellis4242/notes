@@ -20,7 +20,7 @@ This course is mainly to give you enough of a taste of Node, TypeScript, Express
 2. [What Is Node](./WhatIsNode.md)
 3. [Hello World](./HelloWorld.md)
 4. [Setting Up Your First TypeScript Project](./SettingUpYourFirstTypeScriptProject.md)
-5. [Some TypeScript](./SomeTypeScript.md)
+5. [TypeScript](./TypeScript/TypeScript.md)
 6. [Hello Express](.)
 7. [What is a REST API](.)
 8. [GET with path and query parameters](.)

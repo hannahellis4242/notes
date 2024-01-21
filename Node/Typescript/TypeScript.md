@@ -1,4 +1,4 @@
-# Some TypeScript
+# TypeScript
 
 Here I aim to give you just enough understanding of TypeScript so that you can understand the code we're about to write.
 
