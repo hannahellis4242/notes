@@ -86,7 +86,7 @@ k^2 + (a-1) k + b = 0
 ```
 which occurs when
 ``` math
-k = \frac{1-a \pm \sqrt{(a-1)^2 - 4b}}{4}
+k = \frac{1-a \pm \sqrt{(a-1)^2 - 4b}}{2}
 ```
 Which means we have 3 possibilities
 
@@ -104,9 +104,9 @@ y(x) &= A \left(\exp(\ln(x))\right)^{k_1} + B \left(\exp(\ln(x))\right)^{k_2}\\
 If we have only one root then we must have that the square root term must be zero leading to our root being
 ``` math
 \begin{align*}
-k &= \frac{1-a}{4} \\
-4k &= 1 - a \\
-a & = 1 - 4k
+k &= \frac{1-a}{2} \\
+2k &= 1 - a \\
+a & = 1 - 2k
 \end{align*}
 ```
 and for the square root to be zero
@@ -114,9 +114,9 @@ and for the square root to be zero
 \begin{align*}
 0 &= (a-1)^2 - 4b \\
 b &= \frac{(a-1)^2}{4} \\
-&= \frac{(1-4k-1)^2}{4} \\
-&= \frac{(-4k)^2}{4} \\
-b &= 4k^2
+&= \frac{(1-2k-1)^2}{4} \\
+&= \frac{(-2k)^2}{4} \\
+b &= k^2
 \end{align*}
 ```
 
@@ -125,8 +125,8 @@ This means we can rewrite our ODE with coefficents in terms of the root k
 ``` math
 \begin{align*}
 \frac{d^2 y}{dt^2} + (a-1) \frac{dy}{dt} + b y  &= 0 \\
-\frac{d^2 y}{dt^2} + (1-4k-1) \frac{dy}{dt} + 4k^2 y  &= 0 \\
-\frac{d^2 y}{dt^2} - 4k \frac{dy}{dt} + 4k^2 y  &= 0 \\
+\frac{d^2 y}{dt^2} + (1-2k-1) \frac{dy}{dt} + k^2 y  &= 0 \\
+\frac{d^2 y}{dt^2} - 2k \frac{dy}{dt} + k^2 y  &= 0 \\
 \end{align*}
 ```
 
@@ -150,9 +150,8 @@ y_2(t)&=v(x)y_1(x)=v(t)\exp(kt) \\
 Feeding this back into our ODE
 ``` math
 \begin{align*}
-0 &= \frac{d^2 y}{dt^2} -4k \frac{dy}{dt} + 4k^2 y \\
-0 &= \frac{d^2v}{dt^2}\exp(kt) + 2 \frac{dv}{dt}k\exp(kt) + v(t)k^2\exp(kt) -4k \left( \frac{dv}{dt}\exp(kt)+v(t)k\exp(kt) \right) + 4k^2 v(t)\exp(kt)\\
-0 &= \frac{d^2v}{dt^2}\exp(kt) + (2k-4k) \frac{dv}{dt}\exp(kt) + (k^2 -4k^2 + 4k^2)v(t)\exp(kt) \\
-0 &= \frac{d^2v}{dt^2}\exp(kt) -2k \frac{dv}{dt}\exp(kt) + k^2 v(t)\exp(kt) \\
+0 &= \frac{d^2 y}{dt^2} -2k \frac{dy}{dt} + k^2 y \\
+0 &= \frac{d^2v}{dt^2}\exp(kt) + 2 \frac{dv}{dt}k\exp(kt) + v(t)k^2\exp(kt) -2k \left( \frac{dv}{dt}\exp(kt)+v(t)k\exp(kt) \right) + k^2 v(t)\exp(kt)\\
+
 \end{align*}
 ```
