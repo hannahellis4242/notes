@@ -157,3 +157,23 @@ Feeding this back into our ODE
 0 &= \frac{d^2v}{dt^2}
 \end{align*}
 ```
+We then have the solution
+``` math
+v(t) = m t + c
+```
+so we end up with
+``` math
+y_2(t) = m t \exp(kt) + c \exp(kt)
+```
+the second part of the above equation of course gets absorbed into the $y_1$ term when we add them together but leads to the result
+```math
+y(t) = A t\exp(kt) + B \exp(kt)
+```
+putting back in $t=\ln(x)$ gives us finally that
+```math
+\begin{align*}
+y(x) &= A \ln(x)\exp(k\ln(x)) + B \exp(k\ln(x)) \\
+&= A \ln(x)\left(\exp(\ln(x))\right)^k + B \left(\exp(\ln(x))\right)^k \\
+&= A \ln(x) x^k + B x^k \\
+\end{align*}
+```
