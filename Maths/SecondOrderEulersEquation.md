@@ -152,6 +152,8 @@ Feeding this back into our ODE
 \begin{align*}
 0 &= \frac{d^2 y}{dt^2} -2k \frac{dy}{dt} + k^2 y \\
 0 &= \frac{d^2v}{dt^2}\exp(kt) + 2 \frac{dv}{dt}k\exp(kt) + v(t)k^2\exp(kt) -2k \left( \frac{dv}{dt}\exp(kt)+v(t)k\exp(kt) \right) + k^2 v(t)\exp(kt)\\
-
+0 &= \frac{d^2v}{dt^2}\exp(kt) + 2k \frac{dv}{dt}\exp(kt) - 2k \frac{dv}{dt}\exp(kt)  + k^2v(t)\exp(kt) - 2k v(t)k\exp(kt) + k^2 v(t)\exp(kt)\\
+0 &= \frac{d^2v}{dt^2}\exp(kt) \\
+0 &= \frac{d^2v}{dt^2}
 \end{align*}
 ```
