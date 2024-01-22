@@ -58,5 +58,5 @@ const favourites = {
     aBoolean:true,
 };
 
-const describe = ({aNumber,aString}:Favourites):string => "number = ${aNumber}\nphrase = ${aString}";
+const describe = ({aNumber,aString}:Favourites):string => `number = ${aNumber}\nphrase = ${aString}``;
 ```
