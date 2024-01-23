@@ -18,21 +18,21 @@ f(r,\theta) = R(r)\Theta(\theta)
 then
 ``` math
 \begin{align*}
-0 &=  \Theta\frac{d^2 R}{dr^2} + \Theta\frac{1}{r} \frac{df}{dr}+ R\frac{1}{r^2}\frac{d^2 \Theta}{d\theta^2} \\
--R\frac{1}{r^2}\frac{d^2 \Theta}{d\theta^2} &=  \Theta\frac{d^2 R}{dr^2} + \Theta\frac{1}{r} \frac{df}{dr}
+0 &=  \Theta\frac{d^2 R}{dr^2} + \Theta\frac{1}{r} \frac{dR}{dr}+ R\frac{1}{r^2}\frac{d^2 \Theta}{d\theta^2} \\
+-R\frac{1}{r^2}\frac{d^2 \Theta}{d\theta^2} &=  \Theta\frac{d^2 R}{dr^2} + \Theta\frac{1}{r} \frac{dR}{dr}
 \end{align*}
 ```
 Then multiplying through by $\frac{r^2}{R\Theta}$ gives
 then
 ``` math
--\frac{1}{T}\frac{d^2 \Theta}{d\theta^2} =  \frac{r^2}{R}\frac{d^2 R}{dr^2} + \frac{r}{R} \frac{df}{dr}
+-\frac{1}{T}\frac{d^2 \Theta}{d\theta^2} =  \frac{r^2}{R}\frac{d^2 R}{dr^2} + \frac{r}{R} \frac{dR}{dr}
 ```
 Because the only way two equations in different variable can be equal is if they are both equal to a constant, we introduce the separation constant $\lambda$
 
 ``` math
 \begin{align*}
 \frac{d^2 \Theta}{d\theta^2} &=  -\lambda \Theta\\
-r^2\frac{d^2 R}{dr^2} + r \frac{df}{dr} &= \lambda R
+r^2\frac{d^2 R}{dr^2} + r \frac{dR}{dr} &= \lambda R
 \end{align*}
 ```
 
@@ -47,10 +47,11 @@ The angular part is
 
 The radial part is
 ``` math
-r^2\frac{d^2 R}{dr^2} + r \frac{df}{dr} = \lambda R
+r^2\frac{d^2 R}{dr^2} + r \frac{dR}{dr} = \lambda R
 ```
 which can be rewritten as
 ``` math
-r^2\frac{d^2 R}{dr^2} + r \frac{df}{dr} - \lambda R = 0
+r^2\frac{d^2 R}{dr^2} + r \frac{dR}{dr} - \lambda R = 0
 ```
-Which is a second order Euler equation. With
+Which is a [second order Euler equation](./SecondOrderEulersEquation.md) $x^2 y'' + a x y' + b y = 0$. Where $x=r$ , $y=R$ , $a=1$ and $b=-\lambda$
+
