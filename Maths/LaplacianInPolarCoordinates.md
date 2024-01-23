@@ -42,3 +42,15 @@ The angular part is
 ``` math
 \frac{d^2 \Theta}{d\theta^2} =  -\lambda \Theta
 ```
+
+## Radial Part
+
+The radial part is
+``` math
+r^2\frac{d^2 R}{dr^2} + r \frac{df}{dr} = \lambda R
+```
+which can be rewritten as
+``` math
+r^2\frac{d^2 R}{dr^2} + r \frac{df}{dr} - \lambda R = 0
+```
+Which is a second order Euler equation. With
