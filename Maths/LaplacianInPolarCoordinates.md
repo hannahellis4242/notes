@@ -55,3 +55,15 @@ r^2\frac{d^2 R}{dr^2} + r \frac{dR}{dr} - \lambda R = 0
 ```
 Which is a [second order Euler equation](./SecondOrderEulersEquation.md) $x^2 y'' + a x y' + b y = 0$. Where $x=r$ , $y=R$ , $a=1$ and $b=-\lambda$
 
+This gives us two kinds of solutions
+### when $\lambda > 0$
+
+``` math
+R_{\lambda}(r) = A r^{\sqrt{\lambda}} + \frac{B}{r^{\sqrt{\lambda}}}
+```
+
+### when $\lambda = 0$
+
+``` math
+R_{0}(r) = A \ln(r) + B
+```
