@@ -5,10 +5,28 @@
 The forward difference approximations to the first and second order derivative are obtained by looking at the Taylor series for a single forward and a double forward step.
 ``` math
 \begin{align*}
-f(x+2h) &= f(x)+h \frac{df}{dx}(x)+\frac{h^2}{2} \frac{d^2f}{dx^2}(x) +O(h^3)\\
-f(x+h) &= f(x) + h \frac{df}{dx}(x)+\frac{h^2}{2}\frac{d^2f}{dx^2}(x) - O(h^3) \\
+f(x+2h) &= f(x)+2h \frac{df}{dx}(x)+\frac{4h^2}{2} \frac{d^2f}{dx^2}(x) + 8O(h^3)\\
+f(x+h) &= f(x) + h \frac{df}{dx}(x)+\frac{h^2}{2}\frac{d^2f}{dx^2}(x) + O(h^3) \\
 f(x) &= f(x)
 \end{align*}
+```
+which we can make into a matrix form as follows
+``` math
+\begin{bmatrix}
+f(x+2h) - 8O(h^3)\\
+f(x+h)\\
+f(x-h) - O(h^3)
+\end{bmatrix} =
+\begin{bmatrix}
+1 & 2h & \frac{4h^2}{2}\\
+1 & h & \frac{h^2}{2}\\
+1 & 0 & 0
+\end{bmatrix}
+\begin{bmatrix}
+f(x)\\
+\frac{df}{dx}(x)\\
+\frac{d^2f}{dx^2}(x)
+\end{bmatrix}
 ```
 
 ## Central
