@@ -34,12 +34,23 @@ taking the inverse gives
 f(x)\\
 \frac{df}{dx}(x)\\
 \frac{d^2f}{dx^2}(x)
-\end{bmatrix} = \begin{bmatrix}0&0&1\\ -\frac{1}{2h}&\frac{2}{h}&-\frac{3}{2h}\\ \frac{1}{h^2}&-\frac{2}{h^2}&\frac{1}{h^2}\end{bmatrix}
+\end{bmatrix} = \begin{bmatrix}
+0&0&1\\
+ -\frac{1}{2h}&\frac{2}{h}&-\frac{3}{2h}\\
+ \frac{1}{h^2}&-\frac{2}{h^2}&\frac{1}{h^2}
+\end{bmatrix}
 \begin{bmatrix}
 f(x+2h) - 8O(h^3)\\
 f(x+h)- O(h^3)\\
 f(x)
 \end{bmatrix}
+```
+Leaving us with
+
+``` math
+\begin{align*}
+\frac{df}{dx}(x) &=  -\frac{1}{2h}\left(f(x+2h) - 8O(h^3)\right) +\frac{2}{h}\left( f(x+h)- O(h^3) \right) -\frac{3}{2h}f(x)
+\end{align*}
 ```
 
 ## Central
