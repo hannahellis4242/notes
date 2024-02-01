@@ -49,7 +49,9 @@ Leaving us with
 
 ``` math
 \begin{align*}
-\frac{df}{dx}(x) &=  -\frac{1}{2h}\left(f(x+2h) - 8O(h^3)\right) +\frac{2}{h}\left( f(x+h)- O(h^3) \right) -\frac{3}{2h}f(x)
+\frac{df}{dx}(x) &= -\frac{1}{2h}\left(f(x+2h) - 8O(h^3)\right) +\frac{2}{h}\left( f(x+h)- O(h^3) \right) -\frac{3}{2h}f(x) \\
+&=  -\frac{f(x+2h)}{2h}+ \frac{8O(h^3)}{2h} + \frac{2f(x+h)}{h}- \frac{2O(h^3)}{h} -\frac{3}{2h}f(x) \\
+&= \frac{-f(x+2h)+4f(x+h)-3f(x)}{2h} + O(h^2)
 \end{align*}
 ```
 
