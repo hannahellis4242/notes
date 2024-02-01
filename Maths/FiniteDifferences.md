@@ -14,8 +14,8 @@ which we can make into a matrix form as follows
 ``` math
 \begin{bmatrix}
 f(x+2h) - 8O(h^3)\\
-f(x+h)\\
-f(x-h) - O(h^3)
+f(x+h)- O(h^3)\\
+f(x) 
 \end{bmatrix} =
 \begin{bmatrix}
 1 & 2h & \frac{4h^2}{2}\\
@@ -26,6 +26,19 @@ f(x-h) - O(h^3)
 f(x)\\
 \frac{df}{dx}(x)\\
 \frac{d^2f}{dx^2}(x)
+\end{bmatrix}
+```
+taking the inverse gives
+``` math
+\begin{bmatrix}
+f(x)\\
+\frac{df}{dx}(x)\\
+\frac{d^2f}{dx^2}(x)
+\end{bmatrix} = \begin{bmatrix}0&0&1\\ -\frac{1}{2h}&\frac{2}{h}&-\frac{3}{2h}\\ \frac{1}{h^2}&-\frac{2}{h^2}&\frac{1}{h^2}\end{bmatrix}
+\begin{bmatrix}
+f(x+2h) - 8O(h^3)\\
+f(x+h)- O(h^3)\\
+f(x)
 \end{bmatrix}
 ```
 
