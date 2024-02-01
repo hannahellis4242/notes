@@ -58,7 +58,10 @@ and
 ``` math
 \begin{align*}
 \frac{d^2f}{dx^2}(x) &= \frac{1}{h^2} \left( f(x+2h) - 8O(h^3) \right)-\frac{2}{h^2} \left( f(x+h)- O(h^3) \right) + \frac{1}{h^2}f(x) \\
-&=
+&= \frac{1}{h^2}f(x+2h) -\frac{1}{h^2} 8O(h^3) -\frac{2}{h^2} f(x+h)+\frac{2}{h^2}  O(h^3) + \frac{1}{h^2}f(x) \\
+&= \frac{f(x+2h)}{h^2} -\frac{8O(h^3)}{h^2} -\frac{2f(x+h)}{h^2} +\frac{2O(h^3)}{h^2} + \frac{f(x)}{h^2} \\
+&= \frac{f(x+2h)-2f(x+h)+f(x)}{h^2} -\frac{6O(h^3)}{h^2}\\
+&= \frac{f(x+2h)-2f(x+h)+f(x)}{h^2} -O(h)
 \end{align*}
 ```
 
