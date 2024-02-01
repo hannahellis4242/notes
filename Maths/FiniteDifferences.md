@@ -1,4 +1,17 @@
-# Central Differences
+# Finite Differences
+
+## Forward
+
+The forward difference approximations to the first and second order derivative are obtained by looking at the Taylor series for a single forward and a double forward step.
+``` math
+\begin{align*}
+f(x+2h) &= f(x)+h \frac{df}{dx}(x)+\frac{h^2}{2} \frac{d^2f}{dx^2}(x) +O(h^3)\\
+f(x+h) &= f(x) + h \frac{df}{dx}(x)+\frac{h^2}{2}\frac{d^2f}{dx^2}(x) - O(h^3) \\
+f(x) &= f(x)
+\end{align*}
+```
+
+## Central
 
 The central difference approximations to the first and second order derivative are obtained by looking at the Taylor series for forward and backward step.
 ``` math
