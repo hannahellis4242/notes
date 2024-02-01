@@ -52,3 +52,22 @@ Leaving us with
 &= \frac{f(x+h) - f(x-h) }{2h} - O(h^2)
 \end{align*}
 ```
+and
+``` math
+\begin{align*}
+\frac{d^2f}{dx^2}(x) &= \frac{f(x+h) - O(h^3) - 2f(x) + f(x-h) + O(h^3) }{h^2} \\
+&= \frac{f(x+h) - 2f(x) + f(x-h) + O(h^4) }{h^2} \\
+&= \frac{f(x+h) - 2f(x) + f(x-h) }{h^2} +O(h^2)\\
+\end{align*}
+```
+With the order terms telling us the result is accurate to the second power of h
+
+---
+
+``` math
+\begin{align*}
+\frac{df}{dx}(x) &= \frac{f(x+h) - f(x-h) }{2h} - O(h^2) \\
+\frac{d^2f}{dx^2}(x) &= \frac{f(x+h) - 2f(x) + f(x-h) }{h^2} +O(h^2)\\
+\end{align*}
+```
+---
