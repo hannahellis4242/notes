@@ -47,6 +47,8 @@ Leaving us with
 
 ``` math
 \begin{align*}
-\frac{df}{dx}(x) &= 
+\frac{df}{dx}(x) &= \frac{f(x+h) - O(h^3) - f(x-h) - O(h^3) }{2h} \\
+&= \frac{f(x+h) - f(x-h) - O(h^3) }{2h} \\
+&= \frac{f(x+h) - f(x-h) }{2h} - O(h^2)
 \end{align*}
 ```
