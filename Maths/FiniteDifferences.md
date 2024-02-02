@@ -112,68 +112,9 @@ because we only really care about the solution for the second derivative here, w
 1 & h &\frac{h^2}{2}& \frac{h^3}{6}\\
 1&0&0&0
 \end{vmatrix}} \\
-\frac{d^2f}{dx^2}(x) &= \frac{
-1
-\begin{vmatrix}
-2h&f(x+2h) - 16O(h^3)&\frac{8h^3}{6}\\
-h &f(x+h)- O(h^3)& \frac{h^3}{6}\\
-0&f(x)&0
-\end{vmatrix}
-
--3h
-
-\begin{vmatrix}
-1&f(x+2h) - 16O(h^3)&\frac{8h^3}{6}\\
-1 &f(x+h)- O(h^3)& \frac{h^3}{6}\\
-1&f(x)&0
-\end{vmatrix}
-
-+ \left( f(x+3h) - 81(h^4) \right)
-
-
-\begin{vmatrix}
-1&2h&\frac{8h^3}{6}\\
-1 & h & \frac{h^3}{6}\\
-1&0&0
-\end{vmatrix}
-
--\frac{27h^3}{6}
-
-\begin{vmatrix}
-1&2h&f(x+2h) - 16O(h^3)\\
-1 & h &f(x+h)- O(h^3)\\
-1&0&f(x)
-\end{vmatrix}
-
-}{
-1
-\begin{vmatrix}
-2h&\frac{4h^2}{2}&\frac{8h^3}{6}\\
-h &\frac{h^2}{2}& \frac{h^3}{6}\\
-0&0&0
-\end{vmatrix}
--3h
-\begin{vmatrix}
-1&\frac{4h^2}{2}&\frac{8h^3}{6}\\
-1 &\frac{h^2}{2}& \frac{h^3}{6}\\
-1&0&0
-\end{vmatrix}
-+\frac{9h^2}{2}
-\begin{vmatrix}
-1&2h&\frac{8h^3}{6}\\
-1 & h & \frac{h^3}{6}\\
-1&0&0
-\end{vmatrix}
--\frac{27h^3}{6}
-\begin{vmatrix}
-1&2h&\frac{4h^2}{2}\\
-1 & h &\frac{h^2}{2}\\
-1&0&0
-\end{vmatrix}
-}
+\frac{d^2f}{dx^2}(x) &=\frac{-h^4\left( f(x+3h) - 81(h^4) \right) +4h^4 \left( f(x+2h) - 16O(h^3) \right) -5h^4 \left( f(x+h)- O(h^3)\right)+2h^4f(x)}{h^6}
 \end{align*}
 ```
-
 ## Central
 
 The central difference approximations to the first and second order derivative are obtained by looking at the Taylor series for forward and backward step.
