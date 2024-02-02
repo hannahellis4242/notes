@@ -305,3 +305,14 @@ picking out just the row for $\frac{d^2f}{dx^2}$
 &= \frac{2f(x)-5 f(x-h) +4f(x-2h)  - f(x-3h)}{h^2}+ O(h^2)\\
 \end{align*}
 ```
+
+---
+
+```math
+\begin{align*}
+\frac{df}{dx}(x) &= \frac{ f(x-2h) - 4f(x-h)+3f(x)}{2h}-O(h^2)\\
+\frac{d^2f}{dx^2}(x) &= \frac{2f(x)-5 f(x-h) +4f(x-2h)  - f(x-3h)}{h^2}+ O(h^2)
+\end{align*}
+```
+
+---
