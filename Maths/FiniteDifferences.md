@@ -201,3 +201,14 @@ With the order terms telling us the result is accurate to the second power of h
 \end{align*}
 ```
 ---
+
+## Backwards
+
+The backwards difference approximations to the first order derivative are obtained by looking at the Taylor series for a single backward and a double backward step.
+``` math
+\begin{align*}
+f(x) &= f(x)\\
+f(x-h) &= f(x) -h \frac{df}{dx}(x)+\frac{h^2}{2}\frac{d^2f}{dx^2}(x) + O(h^3) \\
+f(x-2h) &= f(x)-2h \frac{df}{dx}(x)+\frac{4h^2}{2} \frac{d^2f}{dx^2}(x) - 8O(h^3)
+\end{align*}
+```
