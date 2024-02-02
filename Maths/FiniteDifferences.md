@@ -146,12 +146,31 @@ h &f(x+h)- O(h^3)& \frac{h^3}{6}\\
 \end{vmatrix}
 
 }{
+1
 \begin{vmatrix}
-1&3h&\frac{9h^2}{2} &  \frac{27h^3}{6}\\
-1&2h&\frac{4h^2}{2}&\frac{8h^3}{6}\\
-1 & h &\frac{h^2}{2}& \frac{h^3}{6}\\
-1&0&0&0
-\end{vmatrix}} \\
+2h&\frac{4h^2}{2}&\frac{8h^3}{6}\\
+h &\frac{h^2}{2}& \frac{h^3}{6}\\
+0&0&0
+\end{vmatrix}
+-3h
+\begin{vmatrix}
+1&\frac{4h^2}{2}&\frac{8h^3}{6}\\
+1 &\frac{h^2}{2}& \frac{h^3}{6}\\
+1&0&0
+\end{vmatrix}
++\frac{9h^2}{2}
+\begin{vmatrix}
+1&2h&\frac{8h^3}{6}\\
+1 & h & \frac{h^3}{6}\\
+1&0&0
+\end{vmatrix}
+-\frac{27h^3}{6}
+\begin{vmatrix}
+1&2h&\frac{4h^2}{2}\\
+1 & h &\frac{h^2}{2}\\
+1&0&0
+\end{vmatrix}
+}
 \end{align*}
 ```
 
