@@ -278,7 +278,7 @@ f(x)\\
 \frac{d^3f}{dx^3}(x)
 \end{bmatrix}
 ```
-inverting gives
+inverting gives us
 ``` math
 \begin{bmatrix}
 f(x)\\
@@ -286,10 +286,20 @@ f(x)\\
 \frac{d^2f}{dx^2}(x)\\
 \frac{d^3f}{dx^3}(x)
 \end{bmatrix} = 
-\begin{bmatrix}1&0&0&0\\ \frac{11}{6h}&-\frac{3}{h}&\frac{3}{2h}&-\frac{1}{3h}\\ \frac{2}{h^2}&-\frac{5}{h^2}&\frac{4}{h^2}&-\frac{1}{h^2}\\ \frac{1}{h^3}&-\frac{3}{h^3}&\frac{3}{h^3}&-\frac{1}{h^3}\end{bmatrix}\begin{bmatrix}
+\begin{bmatrix}
+1&0&0&0\\
+\frac{11}{6h}&-\frac{3}{h}&\frac{3}{2h}&-\frac{1}{3h}\\
+\frac{2}{h^2}&-\frac{5}{h^2}&\frac{4}{h^2}&-\frac{1}{h^2}\\
+ \frac{1}{h^3}&-\frac{3}{h^3}&\frac{3}{h^3}&-\frac{1}{h^3}\end{bmatrix}\begin{bmatrix}
 f(x) \\
 f(x-h)- O(h^4)\\
 f(x-2h) - 16O(h^4)\\
 f(x-3h) - 81O(h^4) 
 \end{bmatrix}
+```
+picking out just the row for $\frac{d^2f}{dx^2}$
+``` math
+\begin{align*}
+\frac{d^2f}{dx^2}(x) &= \frac{2f(x)-5 \left(f(x-h)- O(h^4)\right) +4 \left( f(x-2h) - 16O(h^4)\right) - f(x-3h) + 81O(h^4)  }{h^2} \\
+\end{align*}
 ```
