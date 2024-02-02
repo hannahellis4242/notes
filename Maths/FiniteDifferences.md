@@ -72,7 +72,7 @@ As you can see the first derivative we get accuracy to the second power of h, in
 \begin{align*}
 f(x+3h) &= f(x)+3h \frac{df}{dx}(x)+\frac{9h^2}{2} \frac{d^2f}{dx^2}(x) + \frac{27h^3}{6}\frac{d^3f}{dx^3}(x) + 81O(h^4)\\
 f(x+2h) &= f(x)+2h \frac{df}{dx}(x)+\frac{4h^2}{2} \frac{d^2f}{dx^2}(x) + \frac{8h^3}{6}\frac{d^3f}{dx^3}(x) + 16O(h^4)\\
-f(x+h) &= f(x) + h \frac{df}{dx}(x)+\frac{h^2}{2}\frac{d^2f}{dx^2}(x) ++ \frac{h^3}{6}\frac{d^3f}{dx^3}(x) + O(h^4)\\
+f(x+h) &= f(x) + h \frac{df}{dx}(x)+\frac{h^2}{2}\frac{d^2f}{dx^2}(x) + \frac{h^3}{6}\frac{d^3f}{dx^3}(x) + O(h^4)\\
 f(x) &= f(x)
 \end{align*}
 ```
@@ -245,4 +245,36 @@ And with Cramer's rule again
 &= \frac{\frac{-h^2\left( f(x-2h) + 8O(h^3) \right)-3h^2f(x)}{2}+2h^2 \left( f(x-h)- O(h^3) \right)}{-h^3}\\
 &= \frac{ f(x-2h) - 4f(x-h)+3f(x)}{2h}-O(h^2)\\
 \end{align*}
+```
+
+As for the forward case if we want the same accuracy in the second derivative, we need to take another point
+
+``` math
+\begin{align*}
+f(x) &= f(x) \\
+f(x-h) &= f(x) - h \frac{df}{dx}(x)+\frac{h^2}{2}\frac{d^2f}{dx^2}(x) - \frac{h^3}{6}\frac{d^3f}{dx^3}(x) + O(h^4)\\
+f(x-2h) &= f(x)-2h \frac{df}{dx}(x)+\frac{4h^2}{2} \frac{d^2f}{dx^2}(x) - \frac{8h^3}{6}\frac{d^3f}{dx^3}(x) + 16O(h^4)\\
+f(x-3h) &= f(x)-3h \frac{df}{dx}(x)+\frac{9h^2}{2} \frac{d^2f}{dx^2}(x) - \frac{27h^3}{6}\frac{d^3f}{dx^3}(x) + 81O(h^4)
+\end{align*}
+```
+
+``` math
+\begin{bmatrix}
+f(x) \\
+f(x-h)- O(h^4)\\
+f(x-2h) - 16O(h^4)\\
+f(x-3h) - 81O(h^4) 
+\end{bmatrix} =
+\begin{bmatrix}
+1&0&0&0\\
+1 & -h &\frac{h^2}{2}& -\frac{h^3}{6}\\
+1&-2h&\frac{4h^2}{2}&-\frac{8h^3}{6}\\
+1&-3h&\frac{9h^2}{2} &-\frac{27h^3}{6}
+\end{bmatrix}
+\begin{bmatrix}
+f(x)\\
+\frac{df}{dx}(x)\\
+\frac{d^2f}{dx^2}(x)\\
+\frac{d^3f}{dx^3}(x)
+\end{bmatrix}
 ```
