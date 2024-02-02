@@ -79,9 +79,9 @@ f(x) &= f(x)
 
 ``` math
 \begin{bmatrix}
-f(x+3h) - 81(h^4) \\
-f(x+2h) - 16O(h^3)\\
-f(x+h)- O(h^3)\\
+f(x+3h) - 81O(h^4) \\
+f(x+2h) - 16O(h^4)\\
+f(x+h)- O(h^4)\\
 f(x) 
 \end{bmatrix} =
 \begin{bmatrix}
@@ -102,9 +102,9 @@ because we only really care about the solution for the second derivative here, w
 ```math
 \begin{align*}
 \frac{d^2f}{dx^2}(x) &= \frac{\begin{vmatrix}
-1&3h&f(x+3h) - 81(h^4) &  \frac{27h^3}{6}\\
-1&2h&f(x+2h) - 16O(h^3)&\frac{8h^3}{6}\\
-1 & h &f(x+h)- O(h^3)& \frac{h^3}{6}\\
+1&3h&f(x+3h) - 81O(h^4) &  \frac{27h^3}{6}\\
+1&2h&f(x+2h) - 16O(h^4)&\frac{8h^3}{6}\\
+1 & h &f(x+h)- O(h^4)& \frac{h^3}{6}\\
 1&0&f(x)&0
 \end{vmatrix}}{\begin{vmatrix}
 1&3h&\frac{9h^2}{2} &  \frac{27h^3}{6}\\
@@ -112,9 +112,22 @@ because we only really care about the solution for the second derivative here, w
 1 & h &\frac{h^2}{2}& \frac{h^3}{6}\\
 1&0&0&0
 \end{vmatrix}} \\
-\frac{d^2f}{dx^2}(x) &=\frac{-h^4\left( f(x+3h) - 81(h^4) \right) +4h^4 \left( f(x+2h) - 16O(h^3) \right) -5h^4 \left( f(x+h)- O(h^3)\right)+2h^4f(x)}{h^6}
+ &=\frac{-h^4\left( f(x+3h) - 81O(h^4) \right) +4h^4 \left( f(x+2h) - 16O(h^4) \right) -5h^4 \left( f(x+h)- O(h^4)\right)+2h^4f(x)}{h^6} \\
+ &=\frac{ -h^4f(x+3h) + h^4 81O(h^4) +4h^4f(x+2h) - 4h^4 16O(h^4) -5h^4f(x+h) + 5h^4 O(h^4)+2h^4f(x)}{h^6} \\
+ &=\frac{ -f(x+3h) +4f(x+2h) -5f(x+h) +2f(x)}{h^2} + O(h^2)
 \end{align*}
 ```
+
+---
+
+``` math
+\begin{align*}
+\frac{df}{dx}(x) &= \frac{-f(x+2h)+4f(x+h)-3f(x)}{2h} + O(h^2)\\
+\frac{d^2f}{dx^2}(x) &=\frac{ -f(x+3h) +4f(x+2h) -5f(x+h) +2f(x)}{h^2} + O(h^2)
+\end{align*}
+```
+
+---
 ## Central
 
 The central difference approximations to the first and second order derivative are obtained by looking at the Taylor series for forward and backward step.
