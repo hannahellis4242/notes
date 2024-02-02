@@ -212,3 +212,35 @@ f(x-h) &= f(x) -h \frac{df}{dx}(x)+\frac{h^2}{2}\frac{d^2f}{dx^2}(x) + O(h^3) \\
 f(x-2h) &= f(x)-2h \frac{df}{dx}(x)+\frac{4h^2}{2} \frac{d^2f}{dx^2}(x) - 8O(h^3)
 \end{align*}
 ```
+Which once again we can put into matrix form
+``` math
+\begin{bmatrix}
+f(x) \\
+f(x-h)- O(h^3)\\
+f(x-2h) + 8O(h^3)
+\end{bmatrix} =
+\begin{bmatrix}
+1 & 0 & 0\\
+1 & -h & \frac{h^2}{2}\\
+1 & -2h & \frac{4h^2}{2}
+\end{bmatrix}
+\begin{bmatrix}
+f(x)\\
+\frac{df}{dx}(x)\\
+\frac{d^2f}{dx^2}(x)
+\end{bmatrix}
+```
+And with Cramer's rule again
+```math
+\begin{align*}
+\frac{df}{dx}(x) &= \frac{\begin{vmatrix}
+1 & f(x) & 0\\
+1 & f(x-h)- O(h^3) & \frac{h^2}{2}\\
+1 & f(x-2h) + 8O(h^3) & \frac{4h^2}{2}
+\end{vmatrix}}{\begin{vmatrix}
+1 & 0 & 0\\
+1 & -h & \frac{h^2}{2}\\
+1 & -2h & \frac{4h^2}{2}
+\end{vmatrix}}\\
+\end{align*}
+```
