@@ -243,5 +243,6 @@ And with Cramer's rule again
 1 & -2h & \frac{4h^2}{2}
 \end{vmatrix}}\\
 &= \frac{\frac{-h^2\left( f(x-2h) + 8O(h^3) \right)-3h^2f(x)}{2}+2h^2 \left( f(x-h)- O(h^3) \right)}{-h^3}\\
+&= \frac{ f(x-2h) - 4f(x-h)+3f(x)}{2h}-O(h^2)\\
 \end{align*}
 ```
