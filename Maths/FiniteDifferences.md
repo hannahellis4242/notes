@@ -70,11 +70,32 @@ As you can see the first derivative we get accuracy to the second power of h, in
 
 ``` math
 \begin{align*}
-f(x+3h) &= f(x)+3h \frac{df}{dx}(x)+\frac{9h^2}{2} \frac{d^2f}{dx^2}(x) + \frac{27h^3}{6}\frac{d^3f}{dx^3} + 81O(h^4)\\
-f(x+2h) &= f(x)+2h \frac{df}{dx}(x)+\frac{4h^2}{2} \frac{d^2f}{dx^2}(x) + \frac{8h^3}{6}\frac{d^3f}{dx^3} + 16O(h^4)\\
-f(x+h) &= f(x) + h \frac{df}{dx}(x)+\frac{h^2}{2}\frac{d^2f}{dx^2}(x) ++ \frac{h^3}{6}\frac{d^3f}{dx^3} + O(h^4)\\
+f(x+3h) &= f(x)+3h \frac{df}{dx}(x)+\frac{9h^2}{2} \frac{d^2f}{dx^2}(x) + \frac{27h^3}{6}\frac{d^3f}{dx^3}(x) + 81O(h^4)\\
+f(x+2h) &= f(x)+2h \frac{df}{dx}(x)+\frac{4h^2}{2} \frac{d^2f}{dx^2}(x) + \frac{8h^3}{6}\frac{d^3f}{dx^3}(x) + 16O(h^4)\\
+f(x+h) &= f(x) + h \frac{df}{dx}(x)+\frac{h^2}{2}\frac{d^2f}{dx^2}(x) ++ \frac{h^3}{6}\frac{d^3f}{dx^3}(x) + O(h^4)\\
 f(x) &= f(x)
 \end{align*}
+```
+
+``` math
+\begin{bmatrix}
+f(x+3h) - 81(h^4) \\
+f(x+2h) - 16O(h^3)\\
+f(x+h)- O(h^3)\\
+f(x) 
+\end{bmatrix} =
+\begin{bmatrix}
+1&3h&\frac{9h^2}{2} &  \frac{27h^3}{6}\\
+1&2h&\frac{4h^2}{2}&\frac{8h^3}{6}\\
+1 & h &\frac{h^2}{2}& \frac{h^3}{6}\\
+1&0&0&0
+\end{bmatrix}
+\begin{bmatrix}
+f(x)\\
+\frac{df}{dx}(x)\\
+\frac{d^2f}{dx^2}(x)\\
+\frac{d^3f}{dx^3}(x)
+\end{bmatrix}
 ```
 
 ## Central
