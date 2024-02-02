@@ -100,7 +100,8 @@ f(x)\\
 because we only really care about the solution for the second derivative here, we will use [Cramer's rule](https://en.wikipedia.org/wiki/Cramer%27s_rule) to get just this solution.
 
 ```math
-\frac{d^2f}{dx^2}(x) = \frac{\begin{vmatrix}
+\begin{align*}
+\frac{d^2f}{dx^2}(x) &= \frac{\begin{vmatrix}
 1&3h&f(x+3h) - 81(h^4) &  \frac{27h^3}{6}\\
 1&2h&f(x+2h) - 16O(h^3)&\frac{8h^3}{6}\\
 1 & h &f(x+h)- O(h^3)& \frac{h^3}{6}\\
@@ -110,7 +111,48 @@ because we only really care about the solution for the second derivative here, w
 1&2h&\frac{4h^2}{2}&\frac{8h^3}{6}\\
 1 & h &\frac{h^2}{2}& \frac{h^3}{6}\\
 1&0&0&0
-\end{vmatrix}}
+\end{vmatrix}} \\
+\frac{d^2f}{dx^2}(x) &= \frac{
+1
+\begin{vmatrix}
+2h&f(x+2h) - 16O(h^3)&\frac{8h^3}{6}\\
+h &f(x+h)- O(h^3)& \frac{h^3}{6}\\
+0&f(x)&0
+\end{vmatrix}
+
+-3h
+
+\begin{vmatrix}
+1&f(x+2h) - 16O(h^3)&\frac{8h^3}{6}\\
+1 &f(x+h)- O(h^3)& \frac{h^3}{6}\\
+1&f(x)&0
+\end{vmatrix}
+
++ \left( f(x+3h) - 81(h^4) \right)
+
+
+\begin{vmatrix}
+1&2h&\frac{8h^3}{6}\\
+1 & h & \frac{h^3}{6}\\
+1&0&0
+\end{vmatrix}
+
+-\frac{27h^3}{6}
+
+\begin{vmatrix}
+1&2h&f(x+2h) - 16O(h^3)\\
+1 & h &f(x+h)- O(h^3)\\
+1&0&f(x)
+\end{vmatrix}
+
+}{
+\begin{vmatrix}
+1&3h&\frac{9h^2}{2} &  \frac{27h^3}{6}\\
+1&2h&\frac{4h^2}{2}&\frac{8h^3}{6}\\
+1 & h &\frac{h^2}{2}& \frac{h^3}{6}\\
+1&0&0&0
+\end{vmatrix}} \\
+\end{align*}
 ```
 
 ## Central
