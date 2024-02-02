@@ -97,6 +97,21 @@ f(x)\\
 \frac{d^3f}{dx^3}(x)
 \end{bmatrix}
 ```
+because we only really care about the solution for the second derivative here, we will use [Cramer's rule](https://en.wikipedia.org/wiki/Cramer%27s_rule) to get just this solution.
+
+```math
+\frac{d^2f}{dx^2}(x) = \frac{\begin{vmatrix}
+1&3h&f(x+3h) - 81(h^4) &  \frac{27h^3}{6}\\
+1&2h&f(x+2h) - 16O(h^3)&\frac{8h^3}{6}\\
+1 & h &f(x+h)- O(h^3)& \frac{h^3}{6}\\
+1&0&f(x)&0
+\end{vmatrix}}{\begin{vmatrix}
+1&3h&\frac{9h^2}{2} &  \frac{27h^3}{6}\\
+1&2h&\frac{4h^2}{2}&\frac{8h^3}{6}\\
+1 & h &\frac{h^2}{2}& \frac{h^3}{6}\\
+1&0&0&0
+\end{vmatrix}}
+```
 
 ## Central
 
