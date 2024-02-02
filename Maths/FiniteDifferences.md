@@ -301,6 +301,7 @@ picking out just the row for $\frac{d^2f}{dx^2}$
 ``` math
 \begin{align*}
 \frac{d^2f}{dx^2}(x) &= \frac{2f(x)-5 \left(f(x-h)- O(h^4)\right) +4 \left( f(x-2h) - 16O(h^4)\right) - f(x-3h) + 81O(h^4)  }{h^2} \\
-\frac{d^2f}{dx^2}(x) &= \frac{2f(x)-5 f(x-h)+5 O(h^4) +4f(x-2h) +4\cdot16O(h^4) - f(x-3h) + 81O(h^4)  }{h^2} \\
+&= \frac{2f(x)-5 f(x-h) +4f(x-2h)  - f(x-3h)}{h^2}+ \frac{5 O(h^4) + 81O(h^4) -4\cdot16O(h^4) }{h^2} \\
+&= \frac{2f(x)-5 f(x-h) +4f(x-2h)  - f(x-3h)}{h^2}+ O(h^2)\\
 \end{align*}
 ```
