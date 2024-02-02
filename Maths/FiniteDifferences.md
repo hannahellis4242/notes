@@ -61,7 +61,19 @@ and
 &= \frac{1}{h^2}f(x+2h) -\frac{1}{h^2} 8O(h^3) -\frac{2}{h^2} f(x+h)+\frac{2}{h^2}  O(h^3) + \frac{1}{h^2}f(x) \\
 &= \frac{f(x+2h)}{h^2} -\frac{8O(h^3)}{h^2} -\frac{2f(x+h)}{h^2} +\frac{2O(h^3)}{h^2} + \frac{f(x)}{h^2} \\
 &= \frac{f(x+2h)-2f(x+h)+f(x)}{h^2} -\frac{6O(h^3)}{h^2}\\
-&= \frac{f(x+2h)-2f(x+h)+f(x)}{h^2} -O(h)
+&= \frac{f(x+2h)-2f(x+h)+f(x)}{h^2} - O(h)
+\end{align*}
+```
+As you can see the first derivative we get accuracy to the second power of h, in the second derivative we only get accuracy to the first power of h. We have to introduce an extra point if we wish this to be more accurate.
+
+### Increasing Accuracy
+
+``` math
+\begin{align*}
+f(x+3h) &= f(x)+3h \frac{df}{dx}(x)+\frac{9h^2}{2} \frac{d^2f}{dx^2}(x) + \frac{27h^3}{6}\frac{d^3f}{dx^3} + 81O(h^4)\\
+f(x+2h) &= f(x)+2h \frac{df}{dx}(x)+\frac{4h^2}{2} \frac{d^2f}{dx^2}(x) + \frac{8h^3}{6}\frac{d^3f}{dx^3} + 16O(h^4)\\
+f(x+h) &= f(x) + h \frac{df}{dx}(x)+\frac{h^2}{2}\frac{d^2f}{dx^2}(x) ++ \frac{h^3}{6}\frac{d^3f}{dx^3} + O(h^4)\\
+f(x) &= f(x)
 \end{align*}
 ```
 
