@@ -6,7 +6,7 @@ In polar coordinates the Laplacian is
 ```
 or expanded out
 ``` math
-\nabla ^2 f =  \frac{\partial^2 f}{\partial r^2} + \frac{1}{r} \frac{\partial f}{\partial r}+ \frac{1}{r^2}\frac{\partial^2 f}{\partial \theta^2} = 9
+\nabla ^2 f =  \frac{\partial^2 f}{\partial r^2} + \frac{1}{r} \frac{\partial f}{\partial r}+ \frac{1}{r^2}\frac{\partial^2 f}{\partial \theta^2} = 0
 ```
 
 ## Separation
