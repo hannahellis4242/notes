@@ -29,3 +29,12 @@ This leads to the equation within the well being
 ``` math
 -\frac{\hbar^2}{2m}\left( \frac{\partial^2 u}{\partial r^2} + \frac{1}{r}\frac{\partial u}{\partial r} + \frac{1}{r^2}\frac{\partial^2 u}{\partial \theta^2} \right) -E u = 0
 ```
+Dividing by $-\frac{\hbar^2}{2m}$ gives
+``` math
+\frac{\partial^2 u}{\partial r^2} + \frac{1}{r}\frac{\partial u}{\partial r} + \frac{1}{r^2}\frac{\partial^2 u}{\partial \theta^2} + \frac{2mE}{\hbar^2} u = 0
+```
+and we will now introduce $\tilde{E}=\frac{2mE}{\hbar^2}$ to help keep things a little more tidy.
+
+``` math
+\frac{\partial^2 u}{\partial r^2} + \frac{1}{r}\frac{\partial u}{\partial r} + \frac{1}{r^2}\frac{\partial^2 u}{\partial \theta^2} + \tilde{E} u = 0
+```
