@@ -62,6 +62,7 @@ Once again there are many options of basis in three dimentions so I will only co
 ``` math
 \begin{align*}
 \nabla^2 f &= \frac{1}{r^2}\frac{\partial}{\partial r}\left(r^2 \frac{\partial f}{\partial r}\right)+ \frac{1}{r^2 \sin \theta} \frac{\partial}{\partial \theta}\left(\sin \theta \frac{\partial f}{\partial \theta}\right)+\frac{1}{r^2 \sin^2 \theta} \frac{\partial^2 f}{\partial \phi^2} \\
-&=\frac {1}{r}\frac {\partial^2}{\partial r^2}\left(rf\right)+\frac{1}{r^2 \sin \theta}\frac{\partial}{\partial \theta}\left(\sin \theta \frac {\partial f}{\partial \theta}\right)+\frac{1}{r^2 \sin^2\theta}\frac {\partial^2 f}{\partial \phi^2}
+&=\frac {1}{r}\frac {\partial^2}{\partial r^2}\left(rf\right)+\frac{1}{r^2 \sin \theta}\frac{\partial}{\partial \theta}\left(\sin \theta \frac {\partial f}{\partial \theta}\right)+\frac{1}{r^2 \sin^2\theta}\frac {\partial^2 f}{\partial \phi^2} \\
+&= \frac {\partial^2 f}{\partial r^2}+\frac{2}{r}\frac{\partial f}{\partial r}+\frac{1}{r^2 \sin \theta}\frac{\partial}{\partial \theta}\left(\sin \theta \frac{\partial f}{\partial \theta}\right)+\frac {1}{r^2 \sin^2 \theta}\frac{\partial^2 f}{\partial \phi^2}
 \end{align*}
 ```
