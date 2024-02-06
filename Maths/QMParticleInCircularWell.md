@@ -158,5 +158,6 @@ with the change of varable $x=\alpha r$ where $\alpha=\sqrt{\tilde{E}}=\frac{\sq
 
 This has the solution
 ``` math
-R(x) = A \text{J}_{m}(x) + B \text{Y}_m(x)
+R(x) = A \text{J}_m (x) + B \text{Y}_m (x)
 ```
+Where $\text{J}_m (x)$ is the mth Bessel function of the first kind and $\text{Y}_m (x)$ is the mth Bessel function of the second kind.
