@@ -161,3 +161,15 @@ This has the solution
 R(x) = A \text{J}_m (x) + B \text{Y}_m (x)
 ```
 Where $\text{J}_m (x)$ is the mth Bessel function of the first kind and $\text{Y}_m (x)$ is the mth Bessel function of the second kind.
+
+## Normalising solutions
+
+To have a valid wavefunction it must satisfy
+
+```math
+\iint_A \bar{\Psi} \Psi dA = 1
+```
+Where $\bar{\Psi}$ is the complex conjugate of $\Psi$. Since we are working in plane polars, and our solutions are fixed to being within a radius of a, we get
+```math
+\int_{\theta=0}^{2\pi} \int_{r=0}^{a} \bar{\Psi} \Psi r dr d\theta = 1
+```
