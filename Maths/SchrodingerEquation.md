@@ -26,7 +26,7 @@ Putting this back into the equations gives
 \begin{align*}
 i \hbar \frac{\partial \Psi}{\partial t} &= -\frac{\hbar^2}{2m}\nabla^2 \Psi+ V(x,t)\Psi \\
 i \hbar u \frac{d T}{d t} &= -\frac{\hbar^2}{2m} T \nabla^2 u + V(\mathbf{r})uT \\
-i \hbar \frac{1}{T} \frac{d T}{d t} &= -\frac{\hbar^2}{2m} \frac{1}{u}\nabla^2 u + V(\mathbf{r}) \\
+i \hbar \frac{1}{T} \frac{d T}{d t} &= -\frac{\hbar^2}{2m} \frac{1}{u}\nabla^2 u + V(\mathbf{r})
 \end{align*}
 ```
 > Note: Notice that in order for this separation to work, we have to assume that $V$ is now just a function of space and does not change with time. If there was also a time component we would not be able to perform the separation. Because of this assumption for the rest of this text we will take $V$ to imply $V(\mathbf{r})$.
@@ -65,5 +65,13 @@ Or even in the form where the rhs has been zeroed
 We will focus on just the time dependant part of the separation here and leave the time independent part to other texts more focused on a particular problem.
 
 ``` math
-\frac{E}{i \hbar }T=\frac{d T}{d t}
+\begin{align*}
+\frac{d T}{d t} &= \frac{E}{i \hbar }T\\
+\frac{d T}{d t} &= -i \frac{E}{\hbar}T
+\end{align*}
+```
+This is one of our common ODE's in [here](./CommonODEs.md) and has solution
+
+``` math
+T(t) = c e^{-i \frac{E}{\hbar} t}
 ```
