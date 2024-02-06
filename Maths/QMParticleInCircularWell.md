@@ -67,10 +67,17 @@ Which is once again one of our [common ODEs](./CommonODEs.md) with solutions
 ``` math
 \Theta = 
 \begin{cases}
-    A \cosh(\sqrt{-\lambda}x) + B \sinh(\sqrt{-\lambda}x) & \lambda < 0 \\
-    m \theta +c & \lambda = 0 \\
-    A \cos(\sqrt{\lambda}x) + B \sin(\sqrt{\lambda}x) & \lambda > 0 
+    A \cosh(\sqrt{-\lambda}\theta) + B \sinh(\sqrt{-\lambda}\theta) & \lambda < 0 \\
+    A \theta +B & \lambda = 0 \\
+    A \cos(\sqrt{\lambda}\theta) + B \sin(\sqrt{\lambda}\theta) & \lambda > 0 
 \end{cases}
 ```
-But being angular we have the boundary condition that $\Theta(\theta+2\pi)=\Theta(\theta)$. This rules out solutions where $\lambda < 0$. In the case for $\lambda = 0$ it implys that $m=0$ and so this solution can be rolled into the case $\lambda > 0$ provided we keep the $\cos$ term. Investigating the case that $\lambda >= 0$ gives
+But being angular we have the boundary condition that $\Theta(\theta+2\pi)=\Theta(\theta)$. This rules out solutions where $\lambda < 0$. In the case for $\lambda = 0$ it implys that $A=0$ and so this solution can be rolled into the case $\lambda > 0$ provided we keep the $\cos$ term. Because there are no negative cases for $\lambda$ now, we will introduce $m^2 = \lambda$ to help save some typing.
 
+Investigating the case that $\lambda >= 0$ gives
+
+``` math
+\begin{align*}
+\Theta(\theta+2\pi) &= A \cos(m(\theta+2\pi)) + B \sin(m(\theta+2\pi))
+\end{align*}
+```
