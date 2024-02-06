@@ -59,3 +59,10 @@ Or even in the form where the rhs has been zeroed
 0 &= -\frac{\hbar^2}{2m}\nabla^2 u + \left(V-E\right)u
 \end{align*}
 ```
+
+## Solution to time dependant part
+
+We will focus on just the time dependant part of the separation here and leave the time independant part to other texts more focused on a particular problem.
+``` math
+\frac{E}{i \hbar }T=\frac{d T}{d t}
+```
