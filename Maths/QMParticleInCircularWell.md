@@ -134,6 +134,8 @@ Putting these back into our equation gives
 ``` math
 \begin{align*}
 0&= r^2 \frac{d^2 R}{dr^2} + r\frac{dR}{dr} + r^2 \tilde{E} R - m^2 R \\
-0&= \frac{x^2}{\alpha^2} \frac{d^2 R}{dr^2} + \frac{x}{\alpha}\frac{dR}{dr} + \left( \frac{x^2}{\alpha^2} \tilde{E} - m^2 \right) R \\
+&= \frac{x^2}{\alpha^2} \frac{d^2 R}{dr^2} + \frac{x}{\alpha}\frac{dR}{dr} + \left( \frac{x^2}{\alpha^2} \tilde{E} - m^2 \right) R \\
+&= \frac{x^2}{\alpha^2} \alpha^2\frac{d^2 R}{dx^2} + \frac{x}{\alpha}\alpha \frac{dR}{dx} + \left( \frac{x^2}{\alpha^2} \tilde{E} - m^2 \right) R \\
+&= x^2 \frac{d^2 R}{dx^2} + x\frac{dR}{dx} + \left( x^2 \frac{\tilde{E}}{\alpha^2} - m^2 \right) R \\
 \end{align*}
 ```
