@@ -91,4 +91,7 @@ so to satisfy our boundary condition we need
 \end{align*}
 ```
 
-Which is only satisfied when $m \in \mathbb{I}^+$
+Which is only satisfied when $m \in \mathbb{I}^+$ rememering we can include the $m=0$ case. So we finally have solutions
+``` math
+\Theta(\theta) = A \cos(m\theta) + B \sin(m\theta)
+```
