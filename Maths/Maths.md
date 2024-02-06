@@ -1,5 +1,7 @@
 # Maths
 
+[up](../README.md)
+
 - [Change of Basis of Typical Solutions](./ChangeOfBasisOfTypicalSolutions.md)
 - [Common Ordinary Differential Equations](./CommonODEs.md)
 - [Finite Differences](./FiniteDifferences.md)
