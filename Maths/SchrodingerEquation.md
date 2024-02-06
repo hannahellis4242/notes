@@ -70,6 +70,7 @@ We will focus on just the time dependant part of the separation here and leave t
 \frac{d T}{d t} &= -i \frac{E}{\hbar}T
 \end{align*}
 ```
+
 This is one of our common ODE's in [here](./CommonODEs.md) and has solution
 
 ``` math
