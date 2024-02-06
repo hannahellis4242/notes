@@ -111,6 +111,9 @@ m^2 R&= r^2 \frac{d^2 R}{dr^2} + r\frac{dR}{dr} + r^2 \tilde{E} R \\
 
 In this form the equation looks almost like the Bessel Equation, we just need to make a suitable change of variable. So letting $x=\alpha r$ we then get
 ``` math
+r = \frac{x}{\alpha}
+```
+``` math
 \begin{align*}
 \frac{dR}{dr} &= \frac{dR}{dx}\frac{dx}{dr} \\
  &= \alpha \frac{dR}{dx}
@@ -125,5 +128,12 @@ and
 &= \alpha \frac{d}{dx}\left( \alpha \frac{dR}{dx} \right) \\
 &= \alpha^2\frac{d}{dx}\left( \frac{dR}{dx} \right) \\
 &= \alpha^2\frac{d^2 R}{dx^2}
+\end{align*}
+```
+Putting these back into our equation gives
+``` math
+\begin{align*}
+0&= r^2 \frac{d^2 R}{dr^2} + r\frac{dR}{dr} + r^2 \tilde{E} R - m^2 R \\
+0&= \frac{x^2}{\alpha^2} \frac{d^2 R}{dr^2} + \frac{x}{\alpha}\frac{dR}{dr} + \left( \frac{x^2}{\alpha^2} \tilde{E} - m^2 \right) R \\
 \end{align*}
 ```
