@@ -78,7 +78,17 @@ Investigating the case that $\lambda >= 0$ gives
 
 ``` math
 \begin{align*}
-\Theta(\theta+2\pi) &= A \cos(m(\theta+2\pi)) + B \sin(m(\theta+2\pi))\\
- &= A (\cos(m\theta)\cos(2\pi m)-\sin(m\theta)\sin(2\pi m)) + B (\sin(m\theta)\cos(2\pi m)+ \sin(2\pi m)\cos(m\theta)) 
+\Theta(\theta+2\pi) &= \Theta(\theta) \\
+A \cos(m(\theta+2\pi)) + B \sin(m(\theta+2\pi)) &= A \cos(m\theta) + B \sin(m\theta))\\
+A (\cos(m\theta)\cos(2\pi m)-\sin(m\theta)\sin(2\pi m)) + B (\sin(m\theta)\cos(2\pi m)+ \sin(2\pi m)\cos(m\theta)) &= A \cos(m\theta) + B \sin(m\theta))
 \end{align*}
 ```
+so to satisfy our boundary condition we need
+``` math
+\begin{align*}
+\sin(2\pi m) &= 0 & \text{and}\\
+\cos(2\pi m) &= 1
+\end{align*}
+```
+
+Which is only satisfied when $m \in \mathbb{I}^+$
