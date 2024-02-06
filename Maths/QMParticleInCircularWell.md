@@ -155,3 +155,8 @@ We then end up with
 x^2 \frac{d^2 R}{dx^2} + x\frac{dR}{dx} + \left( x^2 - m^2 \right) R = 0
 ```
 with the change of varable $x=\alpha r$ where $\alpha=\sqrt{\tilde{E}}=\frac{\sqrt{2mE}}{\hbar}$.
+
+This has the solution
+``` math
+R(x) = A \text{J}_{m}(x) + B \text{Y}_m(x)
+```
