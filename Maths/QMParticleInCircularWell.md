@@ -2,6 +2,8 @@
 
 [up](./Maths.md)
 
+## Set up
+
 From the [full Schrödinger Equation](./SchrodingerEquation.md) we find that the time independent equation looks like this.
 
 ``` math
@@ -38,3 +40,14 @@ and we will now introduce $\tilde{E}=\frac{2mE}{\hbar^2}$ to help keep things a 
 ``` math
 \frac{\partial^2 u}{\partial r^2} + \frac{1}{r}\frac{\partial u}{\partial r} + \frac{1}{r^2}\frac{\partial^2 u}{\partial \theta^2} + \tilde{E} u = 0
 ```
+## Separation
+
+So again we can assume that $u$ is a product of two other functions $R(r)$ and $\Theta(\theta)$ ie $u(r,\theta)=R(r)\Theta(\theta)$. Putting this through gives
+``` math
+\begin{align*}
+0&=\Theta \frac{d^2 R}{dr^2} + \Theta \frac{1}{r}\frac{dR}{dr} + R\frac{1}{r^2}\frac{d^2 \Theta}{d\theta^2} + \tilde{E} R\Theta\\
+0&=\frac{r^2}{R} \frac{d^2 R}{dr^2} + \frac{r}{R}\frac{dR}{dr} + r^2 \tilde{E} + \frac{1}{\Theta}\frac{d^2 \Theta}{d\theta^2}\\
+- \frac{1}{\Theta}\frac{d^2 \Theta}{d\theta^2}&=\frac{r^2}{R} \frac{d^2 R}{dr^2} + \frac{r}{R}\frac{dR}{dr} + r^2 \tilde{E}
+\end{align*}
+```
+where we have multiplied through by $\frac{r^2}{R\Theta}$ on the second line
