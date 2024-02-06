@@ -51,3 +51,15 @@ y(x) &= A \exp(kx)+B\exp(-kx) \\
 \end{align*}
 ```
 Where we have used the result from [here](./ChangeOfBasisOfTypicalSolutions.md) to change the form.
+
+## Common ODE 2
+
+``` math
+\frac{dy}{dx} = k y
+```
+
+with solution
+``` math
+y=c \exp(kx)
+```
+where $c$ is the integration constant.
