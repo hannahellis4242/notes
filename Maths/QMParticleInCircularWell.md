@@ -50,4 +50,15 @@ So again we can assume that $u$ is a product of two other functions $R(r)$ and $
 - \frac{1}{\Theta}\frac{d^2 \Theta}{d\theta^2}&=\frac{r^2}{R} \frac{d^2 R}{dr^2} + \frac{r}{R}\frac{dR}{dr} + r^2 \tilde{E}
 \end{align*}
 ```
-where we have multiplied through by $\frac{r^2}{R\Theta}$ on the second line
+where we have multiplied through by $\frac{r^2}{R\Theta}$ on the second line. We end up with two independant equations being equal to each other. The only way for this to be valid is if they are both equal to a constant, which we will call $\lambda$.
+
+### Angular part
+
+For the angular part we get
+
+``` math
+\begin{align*}
+- \frac{1}{\Theta}\frac{d^2 \Theta}{d\theta^2}&=\lambda \\
+\frac{d^2 \Theta}{d\theta^2} = - \lambda \Theta
+\end{align*}
+```
