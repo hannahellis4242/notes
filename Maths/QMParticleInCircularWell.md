@@ -62,3 +62,5 @@ For the angular part we get
 \frac{d^2 \Theta}{d\theta^2} = - \lambda \Theta
 \end{align*}
 ```
+
+Which is once again one of our [common ODEs](./CommonODEs.md) with solutions
