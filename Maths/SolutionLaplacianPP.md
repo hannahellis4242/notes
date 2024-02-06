@@ -1,4 +1,4 @@
-# Laplacian in Polar Coordinates
+# Solutions to the Laplacian in Plane Polar Coordinates
 
 [up](./Maths.md)
 
