@@ -139,3 +139,13 @@ Putting these back into our equation gives
 &= x^2 \frac{d^2 R}{dx^2} + x\frac{dR}{dx} + \left( x^2 \frac{\tilde{E}}{\alpha^2} - m^2 \right) R \\
 \end{align*}
 ```
+This then matches the Bessel equation exactly if
+``` math
+\begin{align*}
+\frac{\tilde{E}}{\alpha^2}&=1\\
+\tilde{E}&=\alpha^2\\
+\alpha&=\sqrt{\tilde{E}}\\
+&=\sqrt{\frac{2mE}{\hbar^2}}\\
+&=\frac{\sqrt{2mE}}{\hbar}\\
+\end{align*}
+```
