@@ -29,3 +29,13 @@ i \hbar u \frac{d T}{d t} &= -\frac{\hbar^2}{2m} T \nabla^2 u + V(x,t)uT \\
 i \hbar \frac{1}{T} \frac{d T}{d t} &= -\frac{\hbar^2}{2m} \frac{1}{u}\nabla^2 u + V(x,t) \\
 \end{align*}
 ```
+Where in the last step we have divided by $uT$ to give two equations that are independant of each other. The only way for these to be equal is if both of them equal the same constant which for physics reasons we will call $E$.
+
+So now we have two separate equations
+
+``` math
+\begin{align*}
+E&=i \hbar \frac{1}{T} \frac{d T}{d t} \\
+E &= -\frac{\hbar^2}{2m} \frac{1}{u}\nabla^2 u + V(x,t)
+\end{align*}
+```
