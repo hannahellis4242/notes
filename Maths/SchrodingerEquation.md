@@ -4,7 +4,7 @@
 
 ## General form
 
-The general form of the Schrödinger Equation is 
+The general form of the Schrödinger Equation is
 
 ``` math
 i \hbar \frac{\partial \Psi}{\partial t} = -\frac{\hbar^2}{2m}\nabla^2 \Psi + V(\mathbf{r},t)\Psi
@@ -62,7 +62,8 @@ Or even in the form where the rhs has been zeroed
 
 ## Solution to time dependant part
 
-We will focus on just the time dependant part of the separation here and leave the time independant part to other texts more focused on a particular problem.
+We will focus on just the time dependant part of the separation here and leave the time independent part to other texts more focused on a particular problem.
+
 ``` math
 \frac{E}{i \hbar }T=\frac{d T}{d t}
 ```
