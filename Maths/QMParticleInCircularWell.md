@@ -149,3 +149,9 @@ This then matches the Bessel equation exactly if
 &=\frac{\sqrt{2mE}}{\hbar}\\
 \end{align*}
 ```
+
+We then end up with
+``` math
+x^2 \frac{d^2 R}{dx^2} + x\frac{dR}{dx} + \left( x^2 - m^2 \right) R = 0
+```
+with the change of varable $\alpha=\sqrt{\tilde{E}}=\frac{\sqrt{2mE}}{\hbar}$
