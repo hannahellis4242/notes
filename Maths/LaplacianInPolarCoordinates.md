@@ -1,5 +1,7 @@
 # Laplacian in Polar Coordinates
 
+[up](./Maths.md)
+
 In polar coordinates the Laplacian is
 ``` math
 \nabla ^2 f = \frac{1}{r} \frac{\partial}{\partial r}\left(r \frac{\partial f}{\partial r}\right) + \frac{1}{r^2}\frac{\partial^2 f}{\partial \theta^2} = 0

@@ -1,4 +1,6 @@
-# Common ODEs
+# Common Ordinary Differential Equations
+
+- [up](./Maths.md)
 
 ## Common ODE 1
 

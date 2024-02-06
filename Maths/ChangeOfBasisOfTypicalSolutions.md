@@ -1,5 +1,7 @@
 # Change of Basis for Typical Solutions
 
+[up](./Maths.md)
+
 ## Complex Exponentials and Trigonometric functions
 
 Sometimes when solving ODE's you'll get a solution of the form

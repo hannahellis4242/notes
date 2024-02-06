@@ -1,5 +1,7 @@
 # Finite Differences
 
+[up](./Maths.md)
+
 ## Forward
 
 The forward difference approximations to the first and second order derivative are obtained by looking at the Taylor series for a single forward and a double forward step.

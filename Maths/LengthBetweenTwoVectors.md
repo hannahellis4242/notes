@@ -1,5 +1,7 @@
 # Length Between Two Vectors
 
+[up](./Maths.md)
+
 ## Defining the length between two vectors
 
 If we have two vectors $\mathbf{u}$ and $\mathbf{v}$ then the distance between them is given by the length of a vector starting at $\mathbf{u}$ and ending at $\mathbf{v}$. We will call this vector $\mathbf{l}$

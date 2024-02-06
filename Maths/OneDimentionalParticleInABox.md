@@ -1,5 +1,7 @@
 # One Dimensional Particle in a box
 
+[up](./Maths.md)
+
 ## Introduction
 
 Starting with the Shrodinger Equation
