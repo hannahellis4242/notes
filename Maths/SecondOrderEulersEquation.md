@@ -1,5 +1,7 @@
 # Second Order Euler's Equation
 
+[up](./Maths.md)
+
 The Euler Equation is a linear homogeneous ordinary differential equation with variable coefficients and is also known as the Euler–Cauchy equation, or Cauchy–Euler equation.
 
 The general form is as follows
