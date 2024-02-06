@@ -64,3 +64,11 @@ For the angular part we get
 ```
 
 Which is once again one of our [common ODEs](./CommonODEs.md) with solutions
+``` math
+\Theta = 
+\begin{cases}
+    A \cosh(\sqrt{-\lambda}x) \sinh(\sqrt{-\lambda}x) & \lambda < 0 \\
+    m \theta +c & \lambda = 0 \\
+    A \cos(\sqrt{\lambda}x) + B \sin(\sqrt{\lambda}x) & \lambda > 0 
+\end{cases}
+```
