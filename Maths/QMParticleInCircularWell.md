@@ -95,3 +95,16 @@ Which is only satisfied when $m \in \mathbb{I}^+$ rememering we can include the 
 ``` math
 \Theta(\theta) = A \cos(m\theta) + B \sin(m\theta)
 ```
+
+### Raidial part
+
+So now we have that $\lambda = m^2$ and $m \in \mathbb{I}^+$ we can rewrite our radial equation as
+
+``` math
+\begin{align*}
+\lambda &= \frac{r^2}{R} \frac{d^2 R}{dr^2} + \frac{r}{R}\frac{dR}{dr} + r^2 \tilde{E} \\
+m^2 &= \frac{r^2}{R} \frac{d^2 R}{dr^2} + \frac{r}{R}\frac{dR}{dr} + r^2 \tilde{E} \\
+m^2 R&= r^2 \frac{d^2 R}{dr^2} + \frac{dR}{dr} + r^2 \tilde{E} R \\
+0&= r^2 \frac{d^2 R}{dr^2} + \frac{dR}{dr} + r^2 \tilde{E} R - m^2 R \\
+\end{align*}
+```
