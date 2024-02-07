@@ -80,6 +80,7 @@ f(x-2h) +32O(h^5)
 ``` math
 \begin{align*}
 \frac{df}{dx}(x) &= -\frac{1}{12h}\left( f(x+2h) -32O(h^5) \right) + \frac{2}{3h} \left( f(x+h) -O(h^5) \right) - \frac{2}{3h} \left(f(x-h) + O(h^5) \right) + \frac{1}{12h}\left( f(x-2h) +32O(h^5) \right) \\
- &= -\frac{1}{12h} f(x+2h) + \frac{2}{3h} f(x+h) - \frac{2}{3h}f(x-h)+ \frac{1}{12h} f(x-2h) +\frac{32O(h^5)}{12h} - \frac{2O(h^5)}{3h}  - \frac{2O(h^5)}{3h} + \frac{32O(h^5)}{12h}\\
+ &= -\frac{f(x+2h)}{12h}  + \frac{2f(x+h)}{3h}  - \frac{2f(x-h)}{3h}+ \frac{f(x-2h) }{12h} +\frac{32O(h^5)}{12h} - \frac{2O(h^5)}{3h}  - \frac{2O(h^5)}{3h} + \frac{32O(h^5)}{12h}\\
+ &= \frac{-f(x+2h)+8f(x+h)-8f(x-h)+f(x-2h)}{12h} +O(h^4)
 \end{align*}
 ```
