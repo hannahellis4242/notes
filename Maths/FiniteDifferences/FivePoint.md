@@ -59,7 +59,13 @@ f(x) \\
 \frac{d^3 f}{dx^3}(x) \\
 \frac{d^4 f}{dx^4}(x)
 \end{pmatrix} = 
-\begin{bmatrix}0&0&1&0&0\\ -\frac{1}{12h}&\frac{2}{3h}&0&-\frac{2}{3h}&\frac{1}{12h}\\ -\frac{1}{12h^2}&\frac{4}{3h^2}&-\frac{5}{2h^2}&\frac{4}{3h^2}&-\frac{1}{12h^2}\\ \frac{1}{2h^3}&-\frac{1}{h^3}&0&\frac{1}{h^3}&-\frac{1}{2h^3}\\ \frac{1}{h^4}&-\frac{4}{h^4}&\frac{6}{h^4}&-\frac{4}{h^4}&\frac{1}{h^4}\end{bmatrix}
+\begin{bmatrix}
+0&0&1&0&0\\
+ -\frac{1}{12h}&\frac{2}{3h}&0&-\frac{2}{3h}&\frac{1}{12h}\\
+ -\frac{1}{12h^2}&\frac{4}{3h^2}&-\frac{5}{2h^2}&\frac{4}{3h^2}&-\frac{1}{12h^2}\\
+ \frac{1}{2h^3}&-\frac{1}{h^3}&0&\frac{1}{h^3}&-\frac{1}{2h^3}\\
+ \frac{1}{h^4}&-\frac{4}{h^4}&\frac{6}{h^4}&-\frac{4}{h^4}&\frac{1}{h^4}
+\end{bmatrix}
 \begin{pmatrix}
 f(x+2h) -32O(h^5) \\
 f(x+h) -O(h^5)\\
@@ -67,4 +73,12 @@ f(x) \\
 f(x-h) + O(h^5)\\
 f(x-2h) +32O(h^5)
 \end{pmatrix}
+```
+
+#### First Derivative
+
+``` math
+\begin{align*}
+\frac{df}{dx}(x) &= -\frac{1}{12h}\left( f(x+2h) -32O(h^5) \right) + \frac{2}{3h} \left( f(x+h) -O(h^5) \right) - \frac{2}{3h} \left(f(x-h) + O(h^5) \right) + \frac{1}{12h}\left( f(x-2h) +32O(h^5) \right) \\
+\end{align*}
 ```
