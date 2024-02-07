@@ -5,7 +5,7 @@
 ## Summary
 
 | | Forward | Central | Backwards |
-|-|-|-|-|
+|:-:|:-:|:-:|:-:|
 |$\frac{df}{dx}$| $\frac{-f(x+2h)+4f(x+h)-3f(x)}{2h}$ | $\frac{f(x+h) - f(x-h) }{2h}$ | $\frac{ f(x-2h) - 4f(x-h)+3f(x)}{2h}$ |
 |$\frac{d^2f}{dx^2}$| $\frac{ -f(x+3h) +4f(x+2h) -5f(x+h) +2f(x)}{h^2}$| $\frac{f(x+h) - 2f(x) + f(x-h) }{h^2}$ | $\frac{2f(x)-5 f(x-h) +4f(x-2h)  - f(x-3h)}{h^2}$ |
 
