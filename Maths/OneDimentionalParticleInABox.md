@@ -144,11 +144,10 @@ where
 
 ---
 ``` math
-\tilde{V} = \frac{2m a^2}{\hbar^2}V(x)
-```
-
-``` math
-\tilde{E}=\frac{2m a^2}{\hbar^2}E
+\begin{align*}
+\tilde{V} &= \frac{2m a^2}{\hbar^2}V(x)\\
+\tilde{E} &=\frac{2m a^2}{\hbar^2}E
+\end{align*}
 ```
 ---
 
@@ -185,6 +184,42 @@ Leading to the coupled ODE being
 \frac{du}{dz} &=\left(\tilde{V}(z)-\tilde{E}\right)\psi
 \end{align*}
 ```
+
+### Alternative form
+
+If instead of defining $\tilde{E}$ and $\tilde{V}$ as
+``` math
+\begin{align*}
+\tilde{V} &= \frac{2m a^2}{\hbar^2}V(x)\\
+\tilde{E} &=\frac{2m a^2}{\hbar^2}E
+\end{align*}
+```
+
+but instead as
+``` math
+\begin{align*}
+\hat{V} &= \frac{m a^2}{\hbar^2}V(x)\\
+\hat{E} &=\frac{m a^2}{\hbar^2}E
+\end{align*}
+```
+or
+
+``` math
+\begin{align*}
+\tilde{V} = 2\hat{V} \\
+\tilde{E} = 2\hat{E}
+\end{align*}
+```
+
+Where I have given these a hat to distingush them from our original defintions our coupled ODE becomes
+
+``` math
+\begin{align*}
+\frac{d\psi}{dz} &= u \\
+\frac{du}{dz} &=2\left(\hat{V}(z)-\hat{E}\right)\psi
+\end{align*}
+```
+
 
 ## Solving Analytically
 
