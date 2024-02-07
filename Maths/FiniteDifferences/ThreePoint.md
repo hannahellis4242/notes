@@ -1,6 +1,13 @@
-# Finite Differences
+# Three Point Finite Differences
 
-[up](./Maths.md)
+[up](./FiniteDifferences.md)
+
+## Summary
+
+| | Forward | Central | Backwards |
+|-|-|-|
+|$\frac{df}{dx}$| | | |
+|$\frac{d^2f}{dx^2}$| | | |
 
 ## Forward
 
