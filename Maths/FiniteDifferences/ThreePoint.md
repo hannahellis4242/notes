@@ -6,10 +6,14 @@
 
 | | Forward | Central | Backwards |
 |-|-|-|-|
-|$\frac{df}{dx}$| | | |
-|$\frac{d^2f}{dx^2}$| | | |
+|$\frac{df}{dx}$| $\frac{-f(x+2h)+4f(x+h)-3f(x)}{2h}$ | $\frac{f(x+h) - f(x-h) }{2h}$ | $\frac{ f(x-2h) - 4f(x-h)+3f(x)}{2h}$ |
+|$\frac{d^2f}{dx^2}$| $\frac{ -f(x+3h) +4f(x+2h) -5f(x+h) +2f(x)}{h^2}$| $\frac{f(x+h) - 2f(x) + f(x-h) }{h^2}$ | $\frac{2f(x)-5 f(x-h) +4f(x-2h)  - f(x-3h)}{h^2}$ |
 
-## Forward
+These are all accurate up to $h^2$
+
+## Derivations
+
+### Forward
 
 The forward difference approximations to the first and second order derivative are obtained by looking at the Taylor series for a single forward and a double forward step.
 
@@ -84,7 +88,7 @@ and
 
 As you can see the first derivative we get accuracy to the second power of h, in the second derivative we only get accuracy to the first power of h. We have to introduce an extra point if we wish this to be more accurate.
 
-### Increasing Accuracy
+#### Increasing Accuracy
 
 ``` math
 \begin{align*}
@@ -148,7 +152,7 @@ because we only really care about the solution for the second derivative here, w
 
 ---
 
-## Central
+### Central
 
 The central difference approximations to the first and second order derivative are obtained by looking at the Taylor series for forward and backward step.
 
@@ -230,7 +234,7 @@ With the order terms telling us the result is accurate to the second power of h
 
 ---
 
-## Backwards
+### Backwards
 
 The backwards difference approximations to the first order derivative are obtained by looking at the Taylor series for a single backward and a double backward step.
 
