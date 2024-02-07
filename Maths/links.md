@@ -3,6 +3,7 @@
 [up](./Maths.md)
 
 - [Bessel Function Properties](http://flyingv.ucsd.edu/krstic/teaching/287/bess.pdf). Also included as a [pdf](./bess.pdf)
+- [Bessel Function in wave equation](https://www.math.fsu.edu/~bellenot/class/f07/em2/other/bessel.pdf).
 - [Bessel Function](https://en.wikipedia.org/wiki/Bessel_function)
 - [Frobenius method](https://en.wikipedia.org/wiki/Frobenius_method)
 - [Angle addition formulas](https://mathworld.wolfram.com/TrigonometricAdditionFormulas.html)
