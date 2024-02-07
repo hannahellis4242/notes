@@ -6,10 +6,10 @@
 
 | | Forward | Central | Backwards |
 |:-:|:-:|:-:|:-:|
-|$\frac{df}{dx}$|  |  |  |
+|$\frac{df}{dx}$|  | $\frac{-f(x+2h)+8f(x+h)-8f(x-h)+f(x-2h)}{12h}$ |  |
 |$\frac{d^2f}{dx^2}$| |  |  |
 
-These are all accurate up to ???
+These are all accurate up to $h^4$ ???
 
 ## Derivations
 
