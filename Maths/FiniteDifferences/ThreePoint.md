@@ -5,7 +5,7 @@
 ## Summary
 
 | | Forward | Central | Backwards |
-|-|-|-|
+|-|-|-|-|
 |$\frac{df}{dx}$| | | |
 |$\frac{d^2f}{dx^2}$| | | |
 
