@@ -1,0 +1,85 @@
+\documentclass[a5paper,10pt]{book}
+\usepackage{notes}
+\usepackage{hyperref}
+\begin{document}
+
+\title{Some Common Ordinary Differential Equations}
+\author{Hannah Ellis}
+\date{\today}
+
+\maketitle
+\tableofcontents
+\clearpage
+
+\chapter{Linear Ordinary Differential Equations}
+A \href{https://en.wikipedia.org/wiki/Linear_differential_equation}{linear ordinary differential equation} is of the form
+\begin{equation}
+	b(x) = \sum_0^n a_{i}(x) \frac{d^i y}{dx^i} = a_0(x)y + a_1(x)\frac{dy}{dx}+a_2(x)\frac{d^2 y}{dx^2}+\ldots
+\end{equation}
+
+When all of the $a_i(x)$ are constants and $b(x)$ is zero we get the homogeneous linear ordinary differential equation with constant coefficients which looks like this
+\begin{equation}
+	0 = \sum_0^n a_{i} \frac{d^i y}{dx^i} = a_0y + a_1\frac{dy}{dx}+a_2\frac{d^2 y}{dx^2}+\ldots
+\end{equation}
+
+\section{First Order Homogenous Constant Linear Ordinary Differential Equation}
+
+In the case of first order, $n=1$ and we get
+\begin{equation}
+	a_1\frac{dy}{dx}+ a_0 y = 0
+\end{equation}
+which can be rearranged into the more common form
+\begin{equation}
+\frac{dy}{dx} = k y
+\end{equation}
+When using the trial equation $y=exp(\alpha x)$ we get the general solution of
+
+\begin{equation}
+y=c \exp(kx)
+\end{equation}
+where $c$ is the integration constant.
+
+\section{Second Order Homogenous Constant Linear Ordinary Differential Equation}
+
+In the case of second order, $n=2$ and we get
+\begin{equation}
+	a_2 \frac{d^2 y}{dx^2}+a_1\frac{dy}{dx}+ a_0 y = 0
+\end{equation}
+
+\subsection{In the case that $a_1=0$}
+In the case that $a_1=0$ we get the more familiar form as
+\begin{equation}
+\frac{d^2 y}{dx^2}= k y 
+\end{equation}
+
+Using our typical trial equation $y=exp(\alpha x)$ gives
+\begin{equation}
+\alpha=\sqrt{k}
+\end{equation}
+
+\subsubsection{When $k>0$}
+The solution becomes
+\begin{align}
+	y(x) &= A \exp(\alpha x)+B\exp(-\alpha x) \nonumber \\
+	&= \tilde{A} \cosh(\alpha x) + \tilde{B} \sinh(\alpha x)
+\end{align}
+Where we have used the result from \href{../../Maths/ChangeOfBasisOfTypicalSolutions.md}{here} to change the form.
+
+\subsubsection{When $k=0$}
+In the case that $k=0$ the differential equation changes to be
+\begin{equation}
+	\frac{d^2 y}{dx^2}= 0 
+\end{equation}
+which has the solution
+\begin{equation}
+y(x)=mx+c
+\end{equation}
+
+\subsubsection{When $k<0$}
+When $k<0$ then $\alpha$ is imaginary, so letting $\beta = i\sqrt{-k}$ gives a solution of the form
+\begin{align}
+	y(x) &= A \exp(\beta x)+B\exp(-\beta x) \nonumber \\
+	&= \tilde{A} \cos(\beta x) + \tilde{B} \sin(\beta x)
+\end{align}
+
+\end{document}
