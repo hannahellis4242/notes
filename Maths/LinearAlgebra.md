@@ -66,3 +66,6 @@ y
 \end{pmatrix}
 ```
 If you can't see it yet, then feel free to multiply out the matrix equation using either appoach above as you see fit and see that it leads to the same set of simultatous equations. It's almost as if we chose our definition of matrix-vector multiplication to satisfy the condition that it should recreate the equilavent simultanious equations🤔.
+
+Typically we're trying to solve the simulutanious equations we've been given, ie find out what the values of $x$ and $y$ are in our case. This is such a standard problem that there are many many different ways to do it, some attempting to decompose (find products of matrices that give the original matrix) the matrix first to make the problem simplier and others manipulating the matrix directly (Gaussian Elimintaion and Back Substitution as an example).
+
