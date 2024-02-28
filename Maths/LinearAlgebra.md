@@ -36,3 +36,5 @@ is the jth column vector of $\mathbf{M}$ so that
 ``` math
 \mathbf{M} = \begin{bmatrix} \vdots & \vdots & & \vdots \\ \mathbf{M}_0 & \mathbf{M}_1 & \cdots & \mathbf{M}_{n-1} \\ \vdots & \vdots & & \vdots  \end{bmatrix}
 ```
+
+Which means $b$ can also be thought of as a linear combination of the column vectors of $\mathbf{M}$ scaled by the elements of $a$
