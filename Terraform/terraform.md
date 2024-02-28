@@ -76,7 +76,7 @@ Single line comments are written with the # symbol.
     - creates empty state data file
 2. terraform plan
     - Works out the actions to take to go from the current state as represented in the state file to the desired state as represented by the configuration files.
-    - Saves a plan file.
+    - adding a -out flag with a file name after it saves a plan file with the given name.
 3. terraform apply
     - Performs the actions in the given plan file.
 4. terraform destroy
