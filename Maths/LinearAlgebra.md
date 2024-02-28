@@ -38,3 +38,31 @@ is the jth column vector of $\mathbf{M}$ so that
 ```
 
 Which means $b$ can also be thought of as a linear combination of the column vectors of $\mathbf{M}$ scaled by the elements of $a$
+
+## Simultanious Equations Revisited
+
+Now that you know about multiplying a matrix to a vector (also called applying the matrix to a vector), you are in a position to rewrite our simultanious equation from before as a product of a matrix and a vector.
+
+``` math
+\begin{align*}
+x+2y&=19 \\
+-x+3y&=1
+\end{align*}
+```
+Which becomes
+``` math
+\begin{bmatrix}
+1 & 2 \\
+-1 & 3
+\end{bmatrix}
+\begin{pmatrix}
+x\\
+y
+\end{pmatrix}
+=
+\begin{pmatrix}
+19\\
+1
+\end{pmatrix}
+```
+If you can't see it yet, then feel free to multiply out the matrix equation using either appoach above as you see fit and see that it leads to the same set of simultatous equations. It's almost as if we chose our definition of matrix-vector multiplication to satisfy the condition that it should recreate the equilavent simultanious equations🤔.
