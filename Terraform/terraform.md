@@ -59,7 +59,7 @@ If you wish to reference the value from another block in your current block you 
 For example
 
 ``` HCL
-<aws_instance>.<web_server>.<name>
+aws_instance.web_server.name
 ```
 
 would reference the name within the example block above and would have the value "web_server".
