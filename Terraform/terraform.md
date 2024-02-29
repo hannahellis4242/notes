@@ -346,12 +346,22 @@ To validate your configuration you can use the command `terraform validate`. In 
 
 There are several ways to provide values for a variable.
 
-1. Default value
-2. Supply on command when running with the `-var` flag. For example `-var product_tag="my_tag"`.
-3. Supplying a variables file on the command with the `-var-file` flag.
-4. Inside a configuration variables file. These are are any files in your configuration that have the extension with `.tfvars` or `.tfvars.json`.
-5. Inside a configuration automatic variables file. There are any files in your configuration with the extension `.auto.tfvars` or `.auto.tfvars.json`
-6. Environment Variables. Terraform looks for any environment variable that starts with `TF_VAR_`
+- Default value
+- Supply on command when running with the `-var` flag. For example `-var product_tag="my_tag"`.
+- Supplying a variables file on the command with the `-var-file` flag.
+- Inside a configuration variables file. These are are any files in your configuration that have the extension with `.tfvars` or `.tfvars.json`.
+- Inside a configuration automatic variables file. There are any files in your configuration with the extension `.auto.tfvars` or `.auto.tfvars.json`
+- Environment Variables. Terraform looks for any environment variable that starts with `TF_VAR_`
 
-### Order of Evaluation.
+### Order of Evaluation
 
+1. Environment variables `TF_VAR_`
+2. Regular variables file `*.tfvars`
+3. Automatic variables file `*.auto.tfvars`
+4. Variables file given by the command `-var-file` flag
+5. Variables given on the command by the `-var` flag
+6. Command line prompt (if no default is given in the config)
+
+If a variable is repeated then the later step will override it's value.
+
+For example if you have a variable value in both your environment variables and in a `*.tfvars` file, then terraform will read in the value from the environment, then when it reads the value from the `*.tfvars` files, it will overwrite the value from the environment.
