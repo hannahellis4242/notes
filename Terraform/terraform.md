@@ -81,3 +81,135 @@ Single line comments are written with the # symbol.
     - Performs the actions in the given plan file.
 4. terraform destroy
     - destroys all resources defined by the current state file.
+
+### Input Variables and Output
+
+- Input Variables
+  - Used to pass information to terraform at runtime
+  - Defined in the configuration
+- Local Values
+  - Computed values inside configuration
+  - Can be referenced in the configuration
+- Output Values
+  - Defined in the configuration
+  - Output values are references to values in the configuration
+
+#### Inputs
+
+A variable block uses the variable keyword followed by a single label
+
+``` hcl
+variable "name_label" {}
+```
+
+Notice there is no "label" only a "name_label" this is because there is only one type of variable.
+
+An empty block as shown above is valid, as terraform can accept input variable values in many ways, however there are some optional properties that aid both in readability of the configuration but also imposing type checks and even a default value. Here is an example of a more typical block
+
+``` hcl
+variable "name_label" {
+    type=value
+    description="description text"
+    default=value
+    sensitive=true|false
+}
+```
+
+- The type property is the type of the variable.
+- The description property is some text to describe what the variable is and what it is for.
+- The default property gives a default value if no other value is provided to terraform by another method.
+- The sensitive property tells terraform if it should show the value of this property in user output or not. If it is set to true then terraform will treat it as sensitive and not print it's value anywhere. The default is false, so if this property is not included then terraform will just assume the variable is not sensitive and that it can freely print the value in user output if it is required.
+
+Examples
+
+``` hcl
+variable "product_tag" {}
+```
+
+``` hcl
+variable "aws_region"{
+    type=string
+    description="Region to use for AWS resources"
+    default="us-east-1"
+    sensitive=false
+}
+```
+
+##### Terraform Variable Reference
+
+To reference a variable value in a different block, you use the following syntax
+
+``` hcl
+var.<name_label>
+```
+
+so for example
+
+``` hcl
+var.aws_region
+```
+
+#### Terraform Data Types
+
+- Primitive
+  - string
+  - number
+  - bool
+- Collection
+  - list
+  - set
+  - map
+- Structural
+  - tuple
+  - object
+- Any
+  - example: list(any)
+- Null
+
+##### Examples
+
+- List
+
+
+``` hcl
+[1,2,3,4]
+["us-east-1","us-east-2","us-west-1","us-west-2"]
+```
+
+A list can only have one data type in its elements.
+
+- Map
+
+``` hcl
+{
+    small="t2.micro"
+    medium="t2.small"
+    large="t2.large"
+}
+```
+
+Keys have to be unique and values have to be the same data type.
+
+##### Referencing Collection Values
+
+- List
+
+``` hcl
+variable "aws_regions" {
+    type=list(string)
+    description="Regions to use for AWS resources"
+    default=["us-east-1","us-east-2","us-west-1","us-west-2"]
+}
+```
+
+- _For a single element_
+
+``` hcl
+var.<name_label>[<element_index>]
+```
+
+for example
+
+``` hcl
+var.aws_regions[0]
+```
