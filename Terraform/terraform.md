@@ -213,3 +213,145 @@ for example
 ``` hcl
 var.aws_regions[0]
 ```
+
+- _For the whole list_
+
+``` hcl
+var.<name_label>
+```
+
+for example
+
+``` hcl
+var.aws_regions
+```
+
+- Map
+
+``` hcl
+variable "aws_instance_sizes" {
+    type=map(string)
+    description = "Instance sizes to use in AWS"
+    default = {
+    small="t2.micro"
+    medium="t2.small"
+    large="t2.large"
+    }
+}
+```
+
+- _Single item_
+
+``` hcl
+var.<name_label>.<key_name>
+# or
+var.<name_label>["key_name"]
+```
+
+for example
+
+``` hcl
+var.aws_instance_sizes.small
+# or
+var.aws_instance_sizes["small"]
+```
+
+#### Local Values
+
+- Internal to the configuration
+- Typically used for a value with multiple references
+- Can also do data transformation
+
+```hcl
+locals{
+    key=value
+}
+```
+
+example
+
+```hcl
+locals{
+    instance_prefix="parts"
+    common_tags={
+        company="PartsUnlimited"
+        project=var.project
+        billing_code=var.billing_code
+    }
+}
+```
+
+You can have multiple locals blocks within a config and in multiple files.
+
+##### Terraform Locals Reference
+
+To reference a local value anywhere in your config, you use the following syntax
+
+``` hcl
+local.<key>
+```
+
+For example
+
+``` hcl
+local.instance_prefix
+local.common_tags.company
+```
+
+##### Interpolation
+
+Local values can be interpolated from other variables and local values using the following syntax
+
+``` hcl
+"${ref1} - ${ref2}..."
+```
+
+using as many or as few references as you like and can have any other text added too. Just like TypeScript formatted strings. This only works for strings though.
+
+#### Outputs
+
+- Outputs are used to get information from terraform.
+- They are printed to the terminal after a run.
+- Outputs get stored in state data during the run
+- Are used to expose values when a configuration is placed inside a module.
+
+``` hcl
+Output "name_label" {
+    value=value
+    description="a description"
+    sensitive=true|false
+}
+```
+
+The syntax is similar to an input except a value must be specified.
+
+Example
+
+``` hcl
+Output "public_dns_hostname" {
+    value=aws_instance.web_server.public_dns
+    description="public DNS host name of web server"
+}
+```
+
+If you wish to see the current state of the output values, you can run `terraform output`
+
+### Formatting and Validation
+
+You can make your config match a formatting standard by using the `terraform fmt` command. This follows the HashiCorp Standard for formatting and has the flags `-check` if you wish to just see which files have formatting violations and `-recursive` to also format modules in other directories. Note that this tool does not check validity.
+
+To validate your configuration you can use the command `terraform validate`. In order to use it, you must first initialise terraform by running the `terraform init` command as the validation command requires the providers to check against. The command checks both syntax and logic, but does not check the current state. Additionally it cannot guarantee that configuration is actually deployable.
+
+## Supplying Variable Values
+
+There are several ways to provide values for a variable.
+
+1. Default value
+2. Supply on command when running with the `-var` flag. For example `-var product_tag="my_tag"`.
+3. Supplying a variables file on the command with the `-var-file` flag.
+4. Inside a configuration variables file. These are are any files in your configuration that have the extension with `.tfvars` or `.tfvars.json`.
+5. Inside a configuration automatic variables file. There are any files in your configuration with the extension `.auto.tfvars` or `.auto.tfvars.json`
+6. Environment Variables. Terraform looks for any environment variable that starts with `TF_VAR_`
+
+### Order of Evaluation.
+
