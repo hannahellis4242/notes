@@ -365,3 +365,17 @@ There are several ways to provide values for a variable.
 If a variable is repeated then the later step will override it's value.
 
 For example if you have a variable value in both your environment variables and in a `*.tfvars` file, then terraform will read in the value from the environment, then when it reads the value from the `*.tfvars` files, it will overwrite the value from the environment.
+
+## Terraform Documentation
+
+- General: <https://developer.hashicorp.com/terraform>
+- Providers: <https://registry.terraform.io/>
+
+## Terraform State
+
+### Contents
+- Resources,data sources and outputs
+- JSON format ___DO NOT EDIT!___
+- Maps object address to unique ID
+
+### Planning
