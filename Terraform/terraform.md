@@ -370,6 +370,7 @@ For example if you have a variable value in both your environment variables and 
 
 - General: <https://developer.hashicorp.com/terraform>
 - Providers: <https://registry.terraform.io/>
+- CLI : <https://developer.hashicorp.com/terraform/cli>
 
 ## Terraform State
 
@@ -378,4 +379,30 @@ For example if you have a variable value in both your environment variables and 
 - JSON format ___DO NOT EDIT!___
 - Maps object address to unique ID
 
-### Planning
+### When running `terraform plan`
+
+- State data is refreshed on execution
+- Looks at the difference between configuration and state data
+- Locks the state data while making updates to it
+
+See [here](https://developer.hashicorp.com/terraform/cli/commands/plan) for more details of what happens when the plan command runs
+
+### Location of State Data
+
+- Local : This is the default
+- Remote : such as on AWS, Azure, NFS, or Terraform cloud.
+  - Usually done when collaboration is needed and to protect the state data.
+  
+### Scenarios
+
+#### New Resource block in configuration.
+
+Starting fresh with an aws_instance in the configuration, but no entry in the state data and no actual instance in the target environment.
+
+![diagram of the first scenario, three boxes, one for the configuration containing an aws_instance.nginx and two more that are empty, one for state data and the other for AWS](./img/Scenario1.1.svg)
+
+During a plan run, Terraform will analyze the state data. If a resource is missing from the state data, Terraform will plan to create it in the target environment. It will then pan to write an entry to the state data, mapping the AWS instance in the configuration to the unique identifier present in the target environment.
+
+After the plan is applied our scenario looks like this.
+
+![diagram of the first scenario after the plan is applied, three boxes, one for the configuration containing an aws_instance.nginx one fo the state data containing an aws_instance.nginx = id-413951. The final box is for AWS and contains id-41395](./img/Scenario1.2.svg)
