@@ -20,7 +20,7 @@ In two dimensions we have a lot more freedom to to choose our basis, here I will
 #### Cartesian Coordinates
 
 ``` math
-\nabla^2 f = \frac{\partial^2 f}{\partial x^2} + \frac{\partial^2 f}{\partial y^2} 
+\nabla^2 f = \frac{\partial^2 f}{\partial x^2} + \frac{\partial^2 f}{\partial y^2}
 ```
 
 #### Plane Polar Coordinates

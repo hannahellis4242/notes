@@ -12,4 +12,5 @@
 - [Quantum Mechanical One Dimensional Particle in a Box](./OneDimentionalParticleInABox.md)
 - [Second Order Euler's Equation Solution](./SecondOrderEulersEquation.md)
 - [Schrödinger Equation](./SchrodingerEquation.md)
+- [Quantum Mechanical Particle in an Infinite Circular Well](./QMParticleInCircularWell.md)
 - [Taylor Series](./Taylor.md)
