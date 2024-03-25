@@ -4,7 +4,7 @@
 
 - [Change of Basis of Typical Solutions](./ChangeOfBasisOfTypicalSolutions.md)
 - [Common Ordinary Differential Equations](./CommonODEs.md)
-- [Finite Differences](./FiniteDifferences.md)
+- [Finite Differences](./FiniteDifferences/FiniteDifferences.md)
 - [Laplacian Operator in Different Coordinate Systems](./LaplacianOperatorCoordinates.md)
 - [Solutions to the Laplacian in Plane Polar Coordinates](./SolutionLaplacianPP.md)
 - [Length Between Two Vectors](./LengthBetweenTwoVectors.md)
