@@ -51,3 +51,16 @@ If we pick two combinations of points, we can get two equations which we can con
 \left( A_x - C_x \right) O_x  + \left( A_y - C_y \right) O_y  &= \frac{ A_x^2 + A_y^2 - C_x^2 - C_y^2 }{2}
 \end{align*}
 ```
+
+``` math
+\begin{bmatrix}
+ A_x - B_x & A_y - B_y  \\
+ A_x - C_x & A_y - C_y 
+\end{bmatrix}\begin{pmatrix}
+ O_x \\
+ O_y
+\end{pmatrix} = \begin{pmatrix}
+ \frac{ A_x^2 + A_y^2 - B_x^2 - B_y^2 }{2} \\
+\frac{ A_x^2 + A_y^2 - C_x^2 - C_y^2 }{2}
+\end{pmatrix}
+```
