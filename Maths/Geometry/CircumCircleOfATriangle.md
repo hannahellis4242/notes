@@ -35,3 +35,16 @@ R^2 - R^2 &=  \left| P^2 \right| - \left| Q^2 \right|- 2 O \cdot P  + 2 O \cdot 
 O \cdot\left( P  -  Q \right) &= \frac{\left| P^2 \right| - \left| Q^2 \right|}{2}
 \end{align*}
 ```
+We can write this in terms of coordinates as
+``` math
+\left( P_x - Q_x \right) O_x  + \left( P_y - Q_y \right) O_y  = \frac{ P_x^2 + P_y^2 - Q_x^2 - Q_y^2 }{2}
+```
+
+If we pick two combinations of points, we can get two equtations which we can convert into a standard matrix equation.
+
+``` math
+\begin{align*}
+\left( A_x - B_x \right) O_x  + \left( A_y - B_y \right) O_y  &= \frac{ A_x^2 + A_y^2 - B_x^2 - B_y^2 }{2}\\
+\left( A_x - C_x \right) O_x  + \left( A_y - C_y \right) O_y  &= \frac{ A_x^2 + A_y^2 - C_x^2 - C_y^2 }{2}
+\end{align*}
+```
