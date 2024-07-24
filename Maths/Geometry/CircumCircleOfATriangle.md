@@ -19,11 +19,19 @@ The triangle corners are labelled $A$, $B$ and $C$ and the centre of the circumc
 The distance to any point $P$ is given by
 
 ``` math
-\left| O - P \right|^2=\left| O \right|^2 + \left| P^2 \right| - 2 O \cdot P
+\left| O - P \right|^2 = R^2 =\left| O \right|^2 + \left| P^2 \right| - 2 O \cdot P
 ```
+Where R is the radius of the circumcircle.
 
-We can subract any two distances from each other, and since the distances are the same for every courner of the triangle we obtain the following
+We can subract any two distances from each other say between point $P$ and point $Q$, and since the distances are the same for every courner of the triangle we obtain the following
 
 ``` math
-\left| O - P \right|^2=\left| O \right|^2 + \left| P^2 \right| - 2 O \cdot P
+\begin{align*}
+\left| O - P \right|^2 - \left| O - Q \right|^2 &= \left| O \right|^2 + \left| P^2 \right| - 2 O \cdot P - \left| O \right|^2 - \left| Q^2 \right| + 2 O \cdot Q \\
+R^2 - R^2 &=  \left| P^2 \right| - \left| Q^2 \right|- 2 O \cdot P  + 2 O \cdot Q \\
+0 &= \left| P^2 \right| - \left| Q^2 \right| - 2 \left( O \cdot P  - O \cdot Q \right) \\
+2 \left( O \cdot P  - O \cdot Q \right) &= \left| P^2 \right| - \left| Q^2 \right|  \\
+2 O \cdot\left( P  -  Q \right) &= \left| P^2 \right| - \left| Q^2 \right| \\
+O \cdot\left( P  -  Q \right) &= \frac{\left| P^2 \right| - \left| Q^2 \right|}{2}
+\end{align*}
 ```
