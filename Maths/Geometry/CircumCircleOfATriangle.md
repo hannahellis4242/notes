@@ -14,4 +14,16 @@ This method uses the fact that the distance to the centre of the circumcircle to
 
 ![circumcircle](../img/dbf8408a-c61c-4d9e-89ef-02abc84065fe.svg)
 
-The triangle corners are labelled $A$,$B$ and $C$ and the centre of the circumcircle is lablled $O$
+The triangle corners are labelled $A$, $B$ and $C$ and the centre of the circumcircle is lablled $O$
+
+The distance to any point $P$ is given by
+
+``` math
+\left| O - P \right|^2=\left| O \right|^2 + \left| P^2 \right| - 2 O \cdot P
+```
+
+We can subract any two distances from each other, and since the distances are the same for every courner of the triangle we obtain the following
+
+``` math
+\left| O - P \right|^2=\left| O \right|^2 + \left| P^2 \right| - 2 O \cdot P
+```
