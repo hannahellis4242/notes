@@ -64,3 +64,20 @@ If we pick two combinations of points, we can get two equations which we can con
 \frac{ A_x^2 + A_y^2 - C_x^2 - C_y^2 }{2}
 \end{pmatrix}
 ```
+
+Applying the standard 2 by 2 matrix inverse formula gives
+
+``` math
+\begin{pmatrix}
+O_x \\
+O_y
+\end{pmatrix} =
+\frac{1}{\left(A_x-B_x\right)\left(A_y-C_y\right)-\left(A_y - B_y\right)\left(A_x - C_x\right)}\begin{bmatrix}
+ A_y - C_y  & B_y - A_y  \\
+C_x - A_x &  A_x - B_x
+\end{bmatrix} \begin{pmatrix}
+ \frac{ A_x^2 + A_y^2 - B_x^2 - B_y^2 }{2} \\
+\frac{ A_x^2 + A_y^2 - C_x^2 - C_y^2 }{2}
+\end{pmatrix} 
+```
+Which we can tidy up to get 
