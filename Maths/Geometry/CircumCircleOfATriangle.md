@@ -81,3 +81,17 @@ C_x - A_x &  A_x - B_x
 \end{pmatrix} 
 ```
 Which we can tidy up to get 
+
+``` math
+\begin{pmatrix}
+O_x \\
+O_y
+\end{pmatrix} =
+\frac{1}{\left| A \times B \right|  + \left| B \times C \right| + \left| C \times A \right|}\begin{bmatrix}
+ A_y - C_y  & B_y - A_y  \\
+C_x - A_x &  A_x - B_x
+\end{bmatrix} \begin{pmatrix}
+ \frac{ A_x^2 + A_y^2 - B_x^2 - B_y^2 }{2} \\
+\frac{ A_x^2 + A_y^2 - C_x^2 - C_y^2 }{2}
+\end{pmatrix} 
+```
