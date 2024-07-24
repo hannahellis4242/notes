@@ -14,16 +14,17 @@ This method uses the fact that the distance to the centre of the circumcircle to
 
 ![circumcircle](../img/dbf8408a-c61c-4d9e-89ef-02abc84065fe.svg)
 
-The triangle corners are labelled $A$, $B$ and $C$ and the centre of the circumcircle is lablled $O$
+The triangle corners are labelled $A$, $B$ and $C$ and the centre of the circumcircle is labelled $O$
 
 The distance to any point $P$ is given by
 
 ``` math
 \left| O - P \right|^2 = R^2 =\left| O \right|^2 + \left| P^2 \right| - 2 O \cdot P
 ```
+
 Where R is the radius of the circumcircle.
 
-We can subract any two distances from each other say between point $P$ and point $Q$, and since the distances are the same for every courner of the triangle we obtain the following
+We can subtract any two distances from each other say between point $P$ and point $Q$, and since the distances are the same for every corner of the triangle we obtain the following
 
 ``` math
 \begin{align*}
@@ -35,12 +36,14 @@ R^2 - R^2 &=  \left| P^2 \right| - \left| Q^2 \right|- 2 O \cdot P  + 2 O \cdot 
 O \cdot\left( P  -  Q \right) &= \frac{\left| P^2 \right| - \left| Q^2 \right|}{2}
 \end{align*}
 ```
+
 We can write this in terms of coordinates as
+
 ``` math
 \left( P_x - Q_x \right) O_x  + \left( P_y - Q_y \right) O_y  = \frac{ P_x^2 + P_y^2 - Q_x^2 - Q_y^2 }{2}
 ```
 
-If we pick two combinations of points, we can get two equtations which we can convert into a standard matrix equation.
+If we pick two combinations of points, we can get two equations which we can convert into a standard matrix equation.
 
 ``` math
 \begin{align*}
