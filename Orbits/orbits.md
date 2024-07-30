@@ -65,3 +65,22 @@ The equation for angular momentum per unit mass can be rearranged
 &= \frac{\sqrt{GM}}{\left(\sqrt{\frac{2ap}{a+p}}\right)^3} \left(1+e \cos \theta\right)^2
 \end{align*}
 ```
+
+### Separation of variables
+
+Remembering that $\omega=\frac{d \theta}{dt}$ we can separate variables
+
+``` math
+\begin{align*}
+\frac{d \theta}{dt}&= \frac{\sqrt{GM}}{\left(\sqrt{\frac{2ap}{a+p}}\right)^3} \left(1+e \cos \theta\right)^2\\
+\frac{1}{\left(1+e \cos \theta\right)^2}d\theta&= \frac{\sqrt{GM}}{\left(\sqrt{\frac{2ap}{a+p}}\right)^3} dt
+\end{align*}
+```
+Integrating both sides gives
+``` math
+\begin{align*}
+\frac{d \theta}{dt}&= \frac{\sqrt{GM}}{\left(\sqrt{\frac{2ap}{a+p}}\right)^3} \left(1+e \cos \theta\right)^2\\
+\int_{\theta_0}^\theta \frac{1}{\left(1+e \cos x\right)^2}dx &= \int_0^t \frac{\sqrt{GM}}{\left(\sqrt{\frac{2ap}{a+p}}\right)^3} dx\\
+\int_{\theta_0}^\theta \frac{1}{\left(1+e \cos x\right)^2}dx &= \frac{\sqrt{GM}}{\left(\sqrt{\frac{2ap}{a+p}}\right)^3} t
+\end{align*}
+```
