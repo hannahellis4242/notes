@@ -34,3 +34,34 @@ So we obtain
 ``` math
 r(\theta)=\frac{2ap}{a+p}\frac{1}{1+e \cos \theta}
 ```
+
+## Using angular momentum to get angular velocity
+
+The equation for angular momentum per unit mass can be rearranged
+
+``` math
+\begin{align*}
+\frac{l}{m} &= r^2 \omega\\
+\omega &= \frac{l}{m} \frac{1}{r^2}
+\end{align*}
+```
+
+## Putting in the known anlgular momentum value for an eliptical orbit
+
+``` math
+\begin{align*}
+\omega &= \frac{l}{m} \frac{1}{r^2}\\
+ &= \sqrt{GM}\sqrt{\frac{2ap}{a+p}} \frac{1}{r^2}
+\end{align*}
+```
+
+## Using the equation of an elipse in the angular velocity equation
+
+``` math
+\begin{align*}
+\omega &= \sqrt{GM}\sqrt{\frac{2ap}{a+p}} \frac{1}{r^2} \\
+ &= \sqrt{GM}\sqrt{\frac{2ap}{a+p}} \frac{1}{\left(\frac{2ap}{a+p}\frac{1}{1+e \cos \theta}\right)^2} \\
+&= \sqrt{GM}\sqrt{\frac{2ap}{a+p}} \frac{\left(1+e \cos \theta\right)^2}{\left(\frac{2ap}{a+p}\right)^2}\\
+&= \frac{\sqrt{GM}}{\left(\sqrt{\frac{2ap}{a+p}}\right)^3} \left(1+e \cos \theta\right)^2
+\end{align*}
+```
