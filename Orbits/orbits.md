@@ -24,6 +24,13 @@ We can rewrite the numerator in terms of $a$ and $p$
 
 ``` math
 \begin{align*}
-A(1+e)(1-e) &= \frac{a+p}{2}\left(1+ \frac{a-p}{a+p}\right)\left(1- \frac{a-p}{a+p}\right)
+A(1+e)(1-e) &= \frac{a+p}{2}\left(1+ \frac{a-p}{a+p}\right)\left(1- \frac{a-p}{a+p}\right)\\
+ &= \frac{a+p}{2}\frac{a+p +a-p}{a+p}\frac{a+p-a+p}{a+p}\\
+ &= \frac{a+p}{2}\frac{2a}{a+p}\frac{2p}{a+p} \\
+ &= \frac{2ap}{a+p}
 \end{align*}
+```
+So we obtain
+``` math
+r(\theta)=\frac{2ap}{a+p}\frac{1}{1+e \cos \theta}
 ```
