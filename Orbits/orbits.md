@@ -14,3 +14,16 @@ In the orbital plane
    (Note this is different to what is given in the other notes, as that has the apoapsis at $\theta = 0$. Can update this for everything later.)
    Where $A=\frac{a+p}{2}$ and $e=\frac{a-p}{a+p}$
 
+## Rewriting the polar equation
+
+For the polar equation of an elipse we have the following
+``` math
+r(\theta)=\frac{A(1+e)(1-e)}{1+e \cos \theta}
+```
+We can rewrite the numerator in terms of $a$ and $p$
+
+``` math
+\begin{align*}
+A(1+e)(1-e) &= \frac{a+p}{2}\left(1+ \frac{a-p}{a+p}\right)\left(1- \frac{a-p}{a+p}\right)
+\end{align*}
+```
