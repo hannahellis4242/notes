@@ -9,7 +9,7 @@ In the orbital plane
 1. The angular momentum for an orbit is given by
 
 ``` math
-\bm{L} = m r^2 \omega \uveck
+l = m r^2 \omega
 ```
 
-where l is the magnitude of the angular momentum
+where $l$ is the magnitude of the angular momentum (the angular momentum vector is directed along the z axis normal to the plane in a right handed coordinate system)
