@@ -37,3 +37,13 @@ h &= R \sin \left( A + B \right)
 
 ### Vertical Part
 
+Feeding our observations into $h = d+e$ gives us
+
+``` math
+\begin{align*}
+h &= d+e\
+ R \sin \left( A + B \right) &= R \cos B \sin A + R \sin B \cos A \
+\sin \left( A + B \right) &= \sin A \cos B  +  \cos A \sin B
+\end{align*}
+```
+
