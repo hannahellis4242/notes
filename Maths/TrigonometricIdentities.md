@@ -84,3 +84,16 @@ The tangent of an angle can be given by the ratio of sin and cos ie $\tan x = \f
 \end{align*}
 ```
 
+## Double Angle Formulas
+
+The double angle formulas are easily calculated from the angle addition formulas by setting $B=A$ in them
+
+``` math
+\begin{align*}
+\sin \left( 2A \right) &= 2 \sin A \cos A  \
+\cos \left( 2A \right) &= \cos^2 A -  \sin^2 A = 1 - 2 \sin^2 A = 2\cos^2 A - 1 = (\cos A + \sin A)(\cos A - \sin A) \
+\tan \left( 2A\right) &=\frac{2\tan A}{ 1 - \tan^2 A}
+\end{align*}
+```
+
+$\cos \left( 2A \right)$ has a few forms because we can always use the fact that $\sin^2 A + \cos^2 A = 1$ to replace either the $\sin^2 A$ or the $\cos^2 A$ terms. The last version is using the fact that the product of the sum and the difference is the difference of the squares $(x+y)(x-y)=x^2-y^2$.
