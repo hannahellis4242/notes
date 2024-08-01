@@ -47,3 +47,15 @@ h &= d+e\
 \end{align*}
 ```
 
+### Horizontal Part
+
+Feeding our observations into $c = f+g$ gives us
+
+``` math
+\begin{align*}
+c &=  = f+g\
+R \cos B \cos A &= R \sin B \sin A + R \cos \left( A + B \right) \
+\cos \left( A + B \right) &= \cos B \cos A - \sin B \sin A
+\end{align*}
+```
+
