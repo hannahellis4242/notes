@@ -22,5 +22,18 @@ c &= f+g
 
 additionally we can see that
 
+``` math
+\begin{align*}
+a &= R \sin B\
+b &= R \cos B\
+c &= b \cos A = R \cos B \cos A \
+d &= b \sin A = R \cos B \sin A \
+e &= a \cos A = R \sin B \cos A \
+f &= a \sin A = R \sin B \sin A \
+g &= R \cos \left( A + B \right) \
+h &= R \sin \left( A + B \right)
+\end{align*}
+```
+
 ### Vertical Part
 
