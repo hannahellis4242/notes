@@ -9,7 +9,7 @@
 
 ![geometric setup for angle addition formulas](./img/df02d9d5-3c82-44c0-80d1-1862582cfb23.svg)
 
-In the above diagram we have a rectangle formed from two right angled triangles on top of each other and the boundaries.
+In the above diagram we have a rectangle formed from two right angled triangles on top of each other and the boundaries. The second A angle can be determined by the fact the internal angles of a triangle are $180^{\circ}$ and similarly the angles that make up a line also sum up to $180^{\circ}$.
 
 From the edges of the rectangle we can see that
 
@@ -19,3 +19,8 @@ h &= d+e\
 c &= f+g
 \end{align*}
 ```
+
+additionally we can see that
+
+### Vertical Part
+
