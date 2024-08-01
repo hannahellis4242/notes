@@ -53,9 +53,20 @@ Feeding our observations into $c = f+g$ gives us
 
 ``` math
 \begin{align*}
-c &=  = f+g\
+c &= f+g\
 R \cos B \cos A &= R \sin B \sin A + R \cos \left( A + B \right) \
-\cos \left( A + B \right) &= \cos B \cos A - \sin B \sin A
+\cos \left( A + B \right) &= \cos A \cos B -  \sin A \sin B
+\end{align*}
+```
+
+### Tangent
+
+The tangent of an angle can be given by the ratio of sin and cos ie $\tan x = \frac{\sin x}{\cos x}$, so we can get the angle addition formula for tan as follows
+
+``` math
+\begin{align*}
+\tan \left( A+B\right)&=\frac{\sin \left( A+B\right)}{\cos \left( A+B\right)}\
+&=\frac{\sin A \cos B  +  \cos A \sin B}{\cos A \cos B -  \sin A \sin B}
 \end{align*}
 ```
 
