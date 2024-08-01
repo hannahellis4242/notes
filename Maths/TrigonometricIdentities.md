@@ -97,3 +97,7 @@ The double angle formulas are easily calculated from the angle addition formulas
 ```
 
 $\cos \left( 2A \right)$ has a few forms because we can always use the fact that $\sin^2 A + \cos^2 A = 1$ to replace either the $\sin^2 A$ or the $\cos^2 A$ terms. The last version is using the fact that the product of the sum and the difference is the difference of the squares $(x+y)(x-y)=x^2-y^2$.
+
+## Half angle formula
+
+[see here](https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/09%3A_Trigonometric_Identities_and_Equations/9.03%3A_Double-Angle_Half-Angle_and_Reduction_Formulas)
