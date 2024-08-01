@@ -66,7 +66,21 @@ The tangent of an angle can be given by the ratio of sin and cos ie $\tan x = \f
 ``` math
 \begin{align*}
 \tan \left( A+B\right)&=\frac{\sin \left( A+B\right)}{\cos \left( A+B\right)}\
-&=\frac{\sin A \cos B  +  \cos A \sin B}{\cos A \cos B -  \sin A \sin B}
+&=\frac{\sin A \cos B + \cos A \sin B}{\cos A \cos B - \sin A \sin B} \
+&=\frac{\frac{\sin A}{\cos A} \cos B + \sin B}{ \cos B - \frac{\sin A}{\cos A} \sin B} \
+&=\frac{\frac{\sin A}{\cos A} + \frac{\sin B}{\cos B}}{ 1 - \frac{\sin A}{\cos A} \frac{\sin B}{\cos B}} \
+&=\frac{\tan A + \tan B}{ 1 - \tan A \tan B}
+\end{align*}
+```
+
+### Summary
+
+
+``` math
+\begin{align*}
+\sin \left( A + B \right) &= \sin A \cos B  +  \cos A \sin B \
+\cos \left( A + B \right) &= \cos A \cos B -  \sin A \sin B \
+\tan \left( A+B\right) &=\frac{\tan A + \tan B}{ 1 - \tan A \tan B}
 \end{align*}
 ```
 
