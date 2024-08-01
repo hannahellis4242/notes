@@ -84,3 +84,13 @@ Integrating both sides gives
 \int_{\theta_0}^\theta \frac{1}{\left(1+e \cos x\right)^2}dx &= \frac{\sqrt{GM}}{\left(\sqrt{\frac{2ap}{a+p}}\right)^3} t
 \end{align*}
 ```
+
+### Solving the integral
+
+We need to solve the integral
+``` math
+\int_{\theta_0}^\theta \frac{1}{\left(1+k \cos x\right)^2}dx
+```
+where $k=e$, which we have done to avoid any confusion with euler's number for now. We will convert $k$ back later once we have a solution.
+
+
