@@ -1,2 +1,0 @@
-# Triganometic identities with proofs
-
