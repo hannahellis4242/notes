@@ -112,7 +112,15 @@ You might notice that the double angle formulas, the power of the sine or cosine
 \sin^2 A &= \frac{1 - \cos \left( 2A \right)}{2}
 \end{align*}
 ```
+### Cosine
 
+``` math
+\begin{align*}
+\cos \left( 2A \right) &= 2\cos^2 A - 1 \
+\cos \left( 2A \right)+1 &= 2\cos^2 A \
+\cos^2 A &= \frac{\cos \left( 2A \right)+1}{2}
+\end{align*}
+```
 
 ## Half angle formula
 
