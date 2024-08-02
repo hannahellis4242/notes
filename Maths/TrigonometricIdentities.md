@@ -98,6 +98,22 @@ The double angle formulas are easily calculated from the angle addition formulas
 
 $\cos \left( 2A \right)$ has a few forms because we can always use the fact that $\sin^2 A + \cos^2 A = 1$ to replace either the $\sin^2 A$ or the $\cos^2 A$ terms. The last version is using the fact that the product of the sum and the difference is the difference of the squares $(x+y)(x-y)=x^2-y^2$.
 
+
+## Power Reduction Formulas
+
+You might notice that the double angle formulas, the power of the sine or cosine increases by one, so rearanging allows you to rewite even powers of sines and cosines as the next lowest odd power instead.
+
+### Sine
+
+``` math
+\begin{align*}
+\cos \left( 2A \right) &= 1 - 2 \sin^2 A \
+2 \sin^2 A &= 1 - \cos \left( 2A \right)\
+\sin^2 A &= \frac{1 - \cos \left( 2A \right)}{2}
+\end{align*}
+```
+
+
 ## Half angle formula
 
 [see here](https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/09%3A_Trigonometric_Identities_and_Equations/9.03%3A_Double-Angle_Half-Angle_and_Reduction_Formulas)
