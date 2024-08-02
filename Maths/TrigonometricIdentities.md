@@ -128,11 +128,19 @@ You might notice that the double angle formulas, the power of the sine or cosine
 \begin{align*}
 \tan^2 \left( 2A \right) &= \frac{\sin^2 \left( 2A \right)}{\cos^2 \left( 2A \right)}\
  &= \frac{\frac{1 - \cos \left( 2A \right)}{2}}{\frac{1+ \cos \left( 2A \right)}{2}}\
- &= \frac{1 - \cos \left( 2A \right)}{1+\cos \left( 2A \right)}\
+ &= \frac{1-\cos \left( 2A \right)}{1+\cos \left( 2A \right)}\
 \end{align*}
 ```
 
+### Summary
 
-## Half angle formula
+``` math
+\begin{align*}
+\sin^2 A &= \frac{1 - \cos \left( 2A \right)}{2}\
+\cos^2 A &= \frac{1+\cos \left( 2A \right)}{2}\
+\tan^2 \left( 2A \right) &= \frac{1-\cos \left( 2A \right)}{1+\cos \left( 2A \right)}\
+\end{align*}
+```
 
-[see here](https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/09%3A_Trigonometric_Identities_and_Equations/9.03%3A_Double-Angle_Half-Angle_and_Reduction_Formulas)
+## Useful Links
+[libre texts](https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/09%3A_Trigonometric_Identities_and_Equations/9.03%3A_Double-Angle_Half-Angle_and_Reduction_Formulas)
