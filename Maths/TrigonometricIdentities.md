@@ -129,6 +129,8 @@ You might notice that the double angle formulas, the power of the sine or cosine
 \tan^2 \left( 2A \right) &= \frac{\sin^2 \left( 2A \right)}{\cos^2 \left( 2A \right)}\
  &= \frac{\frac{1 - \cos \left( 2A \right)}{2}}{\frac{1+ \cos \left( 2A \right)}{2}}\
  &= \frac{1-\cos \left( 2A \right)}{1+\cos \left( 2A \right)}\
+ &= \frac{\left(1-\cos \left( 2A \right)\right)\left(1+\cos \left( 2A \right)\right)}{\left(1+\cos \left( 2A \right)\right)^2} = \frac{1-\cos^2 \left( 2A \right)}{\left(1+\cos \left( 2A \right)\right)^2} = \frac{\sin^2 \left( 2A \right)}{\left(1+\cos \left( 2A \right)\right)^2}\
+&=\frac{\left(1-\cos \left( 2A \right)\right)^2}{\left(1+\cos \left( 2A \right)\right)\left(1-\cos \left( 2A \right)\right)}=\frac{\left(1-\cos \left( 2A \right)\right)^2}{1-\cos^2 \left( 2A \right)}=\frac{\left(1-\cos \left( 2A \right)\right)^2}{\sin^2 \left( 2A \right)}
 \end{align*}
 ```
 
@@ -138,7 +140,7 @@ You might notice that the double angle formulas, the power of the sine or cosine
 \begin{align*}
 \sin^2 A &= \frac{1 - \cos \left( 2A \right)}{2}\
 \cos^2 A &= \frac{1+\cos \left( 2A \right)}{2}\
-\tan^2 \left( 2A \right) &= \frac{1-\cos \left( 2A \right)}{1+\cos \left( 2A \right)}\
+\tan^2 \left( 2A \right) &= \frac{1-\cos \left( 2A \right)}{1+\cos \left( 2A \right)}=\frac{\sin^2 \left( 2A \right)}{\left(1+\cos \left( 2A \right)\right)^2}=\frac{\left(1-\cos \left( 2A \right)\right)^2}{\sin^2 \left( 2A \right)}\
 \end{align*}
 ```
 
