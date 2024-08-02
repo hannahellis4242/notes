@@ -118,9 +118,20 @@ You might notice that the double angle formulas, the power of the sine or cosine
 \begin{align*}
 \cos \left( 2A \right) &= 2\cos^2 A - 1 \
 \cos \left( 2A \right)+1 &= 2\cos^2 A \
-\cos^2 A &= \frac{\cos \left( 2A \right)+1}{2}
+\cos^2 A &= \frac{1+\cos \left( 2A \right)}{2}
 \end{align*}
 ```
+
+### Tangent
+
+``` math
+\begin{align*}
+\tan^2 \left( 2A \right) &= \frac{\sin^2 \left( 2A \right)}{\cos^2 \left( 2A \right)}\
+ &= \frac{\frac{1 - \cos \left( 2A \right)}{2}}{\frac{1+ \cos \left( 2A \right)}{2}}\
+ &= \frac{1 - \cos \left( 2A \right)}{1+\cos \left( 2A \right)}\
+\end{align*}
+```
+
 
 ## Half angle formula
 
