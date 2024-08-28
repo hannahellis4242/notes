@@ -1,5 +1,19 @@
 # Public Key Infrastructure
 
+PKI is public key infrastructure. It uses a set of different protocols, algorithms, entities and certificates. These allow you to perform communication based on trusted certificates. This allows encryption to be used and authentication of the server data is received from.
+
+There are multiple elements in PKI, for example the certification authority (CA).
+
+The certification authority's role is to either sign certificates or delegate trust to other entities.
+
+The other entities are called intermediate certification authorities. The main responsibility of intermediate CA's is the signature of new certificates that are issued for other entities, for example a website.
+
+There are different owners of certificates for different purposes.
+
+Every entity in the PKI has it's own public key ([see below](#asymmetric-encryption)) included in the certificate. Including websites that own the certificate.
+
+The main goal of the PKI is to ensure that the public key of every entity in the infrastructure is trusted by other entities. Intermediate CAs and CAs verify the public keys of other entities establishing a "chain of trust".
+
 ## Encryption
 
 ### Symmetric Encryption
