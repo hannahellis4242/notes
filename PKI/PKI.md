@@ -51,7 +51,7 @@ If encryption is used, then it is usually done before the hashing occurs. Ie the
 
 A key is not required when doing hashing. Without a key based algorithm we can still do the same data verification check. However if we use a symmetric key, then we can also authenticate the sender of the data. Ie if the same key doesn't hash to the same result then either the data isn't from the sender with that key or the data has an error of some kind, or it has been tampered with somehow.
 
-#### Algorithms
+#### Hashing Algorithms
 
 Some common hashing algorithms are
 
@@ -109,3 +109,19 @@ The owner of the keys knows both public and private keys. The owner sends their 
 Asymmetric encryption can also be used to sign data.
 
 ![signature](./img//signature.svg)
+
+1. The data is hashed.
+2. The hash is then encrypted using the owners private key.
+3. The encrypted hash is then sent along with the original data.
+4. The receiver then can hash the data to get their own copy of the hash.
+5. The encrypted hash is decrypted using the public key of the owner.
+6. The decrypted hash and the local hash can then be compared.
+7. Any differences in the hash value show that this wasn't the data the owner signed.
+
+#### Encryption Algorithms
+
+#### RSA
+
+The RSA api lets you create public and private keys of various lengths as well as encrypting and decrypting data. It also allows you to sign data.
+
+Public and private keys are always the same length but can be chosen to be between 1024 and 4096 bits (with fixed options between those two lengths).
