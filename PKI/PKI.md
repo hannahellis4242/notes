@@ -139,3 +139,36 @@ Asymmetric encryption can also be used to sign data.
 The RSA api lets you create public and private keys of various lengths as well as encrypting and decrypting data. It also allows you to sign data.
 
 Public and private keys are always the same length but can be chosen to be between 1024 and 4096 bits (with fixed options between those two lengths).
+
+## Certificates
+
+A certificate is a file with information about an entity. It includes information about
+
+- The owner of the certificate, things like the url of their website, company name, address etc. Sometimes there will be a serial number for the certificate here.
+- The issuer of the certificate. This is where the information about the entity that signed the certificate exists. It will contain information about the CA or the intermediate CA who signed and issued the certificate.
+- The signature. This is an encrypted hash of the certificate created with the private key of the issuer. The signature is created by the issuer. This signature allows us to create the chain of trust as discussed above. If we trust the issuer of the certificate then we can trust the owner of the certificate too. There are self-signed certificates, which is a certificate signed by the owner, ie the owner is the issuer. There is no chain of trust here unless you trust the owner.
+- Finally and most importantly the certificate contains the __public key__ of the _owner_.
+
+All certificates are publicly accessible, so that you can establish trust. However this is usually done by your browser, so you don't have to do this manually.
+
+## OpenSSL
+
+### Using OpenSSL to generate RSA keys
+
+You can generate RSA keys with OpenSSL by using the following command on your terminal.
+
+``` bash
+openssl genrsa
+```
+
+This will generate a private key and show it on the command line.
+
+You can create an encrypted key (using a symmetric encryption algorithm) by adding the `--aes256` flag
+
+``` bash
+openssl genrsa -aes256
+```
+
+This will then generate a key and then prompt you for a pass phrase for the symmetric encryption.
+
+You can use other symmetric key encryption algorithms if you wish, but AES is recommended.
