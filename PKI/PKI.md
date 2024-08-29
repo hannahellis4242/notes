@@ -161,7 +161,9 @@ You can generate RSA keys with OpenSSL by using the following command on your te
 openssl genrsa
 ```
 
-This will generate a private key and show it on the command line.
+This will generate keys and show it on the command line.
+
+#### Encrypted Key
 
 You can create an encrypted key (using a symmetric encryption algorithm) by adding the `--aes256` flag
 
@@ -172,3 +174,69 @@ openssl genrsa -aes256
 This will then generate a key and then prompt you for a pass phrase for the symmetric encryption.
 
 You can use other symmetric key encryption algorithms if you wish, but AES is recommended.
+
+#### Saving to a file
+
+You can save your key to a file
+
+``` bash
+openssl genrsa -out private.pem
+```
+
+This will save the key to a file called `private.pem`. [What is a .pem file?](https://fileinfo.com/extension/pem)
+
+You can also add encryption like [above](#encrypted-key)by adding the `-aes256` flag.
+
+#### Different Length Key
+
+You can specify the length of the key when generating your key
+
+``` bash
+openssl genrsa 4096
+```
+
+#### Public Key
+
+The public key is mixed in with the private key when generating keys with `genrsa`. Yes secretly we had both keys all along. To extract the public key we can use the following command.
+
+``` bash
+openssl rsa -in private.pem -outform PEM -pubout -out public.pem
+```
+
+- `-in` specifies which file to extract the key from.
+- `-outform` specifies what format to show the public key in.
+- `-pubout` tells rsa we want to extract the public key.
+- `-out` as above, specifies the output file.
+
+### Using OpenSSL to encrypt a file
+
+#### OpenSSL Symmetric Encryption
+
+``` bash
+openssl enc -aes-256-cbc -pass pass:password -pbkdf2 -in plain.txt -out cypherText.txt
+```
+
+This command reads in a file `plain.txt` and outputs an encrypted file `cypherText.txt`. The flags are as follows
+
+- `enc` the encryption command
+- `-aes-256-cbc` specifies to use the aes-256 encryption algorithm.
+- `-pass pass:password` specifies the password. Everything after `pass:` is the password. If not provided, you will get prompted for a password.
+- `-pbkdf2` tells the algorithm to use "password-based key derivation function 2". Required to quieten a warning.
+- `-in` input file
+- `-out` output file
+
+##### OpenSSL Symmetric Decryption
+
+``` bash
+openssl enc -d -aes-256-cbc -pass pass:password -pbkdf2 -in cypherText.txt -out decrypt.txt   
+```
+
+Same as [above](#openssl-symmetric-encryption) except for the `-d` flag for decryption.
+
+Note there are more flags and options not covered in these notes, so check the help information.
+
+### OpenSSL Asymmetric Encryption
+
+``` bash
+openssl pkeyutl -encrypt -pubin -inkey public_key.pem -out encrypted_message.bin
+```
