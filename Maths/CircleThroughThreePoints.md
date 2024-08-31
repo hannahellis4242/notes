@@ -53,4 +53,18 @@ We can solve this. Here we will invert the matrix to get
 {x_3}-{x_2} & {x_1}-{x_3} & {x_2}-{x_1}\\
 {x_2} {y_3}-{x_3} {y_2} & {x_3} {y_1}-{x_1} {y_3} & {x_1} {y_2}-{x_2} {y_1}\end{pmatrix}
 ```
-
+which finally gives
+``` math
+\begin{pmatrix}
+A \\
+B\\
+C
+\end{pmatrix} = - \frac{1}{\left( x_2-x_1\right) y_3+\left( x_1-x_3\right)  y_2+\left( x_3-x_2\right) y_1}
+\begin{pmatrix}{y_2}-{y_3} & {y_3}-{y_1} & {y_1}-{y_2}\\
+{x_3}-{x_2} & {x_1}-{x_3} & {x_2}-{x_1}\\
+{x_2} {y_3}-{x_3} {y_2} & {x_3} {y_1}-{x_1} {y_3} & {x_1} {y_2}-{x_2} {y_1}\end{pmatrix}\begin{pmatrix}
+x_1^2 +y_1^2\\
+x_2^2 +y_2^2 \\
+x_3^2 +y_3^2
+\end{pmatrix}
+```
