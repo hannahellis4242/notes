@@ -27,7 +27,7 @@ r&=\frac{1}{2}\sqrt{A^2+B^2-4C}
 ```
 ## Circle through three points
 
-If we have three points $(x_1,y_1)$,$(x_2,y_2)$ and $(x_3,y_3)$. We can obtain a system of equations like so
+If we have three points $(x_1,y_1)$, $(x_2,y_2)$ and $(x_3,y_3)$. We can obtain a system of equations like so
 
 ```math
 \begin{bmatrix}
@@ -44,5 +44,13 @@ x_1^2 +y_1^2\\
 x_2^2 +y_2^2 \\
 x_3^2 +y_3^2
 \end{pmatrix}
+```
+We can solve this. Here we will invert the matrix to get
+
+``` math
+\frac{1}{\left( x_2-x_1\right) y_3+\left( x_1-x_3\right)  y_2+\left( x_3-x_2\right) y_1}
+\begin{pmatrix}{y_2}-{y_3} & {y_3}-{y_1} & {y_1}-{y_2}\\
+{x_3}-{x_2} & {x_1}-{x_3} & {x_2}-{x_1}\\
+{x_2} {y_3}-{x_3} {y_2} & {x_3} {y_1}-{x_1} {y_3} & {x_1} {y_2}-{x_2} {y_1}\end{pmatrix}
 ```
 
