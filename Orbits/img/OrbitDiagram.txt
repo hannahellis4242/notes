@@ -1,0 +1,39 @@
+\documentclass[10pt]{article}
+\usepackage{pstricks-add}
+\pagestyle{empty}
+\begin{document}
+\newrgbcolor{xdxdff}{0.49019607843137253 0.49019607843137253 1}
+\newrgbcolor{qqwuqq}{0 0.39215686274509803 0}
+\psset{xunit=1cm,yunit=1cm,algebraic=true,dimen=middle,dotstyle=o,dotsize=5pt 0,linewidth=2pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-1.8719549018382733,-0.6841376732367213)(7.042064497122742,5.041771584814745)
+\psaxes[labelFontSize=\scriptstyle,xAxis=true,yAxis=true,labels=none,Dx=0.5,Dy=0.5,ticksize=-2pt 0,subticks=2]{->}(0,0)(-1.8719549018382733,-0.6841376732367213)(7.042064497122742,5.041771584814745)
+\pspolygon[linewidth=2pt,linecolor=qqwuqq,fillcolor=qqwuqq,fillstyle=solid,opacity=0.1](2.555389866222962,0)(2.555389866222962,0.3645067897697463)(2.1908830764532157,0.3645067897697463)(2.1908830764532157,0)
+\rput{0}(0,0){\psellipse[linewidth=2pt](0,0)(5,4)}
+\psline[linewidth=2pt](0,0)(2.1908830764532157,3.59555559837405)
+\psline[linewidth=2pt](3,0)(2.1908830764532157,3.59555559837405)
+\pscustom[linewidth=2pt,linecolor=qqwuqq,fillcolor=qqwuqq,fillstyle=solid,opacity=0.1]{
+\parametricplot{0}{1.023544115422221}{0.6344497792854815*cos(t)+0|0.6344497792854815*sin(t)+0}
+\lineto(0,0)\closepath}
+\pscustom[linewidth=2pt,linecolor=qqwuqq,fillcolor=qqwuqq,fillstyle=solid,opacity=0.1]{
+\parametricplot{0}{1.792141718342933}{0.47583733446411114*cos(t)+3|0.47583733446411114*sin(t)+0}
+\lineto(3,0)\closepath}
+\psline[linewidth=2pt](0,0)(2.1908830764532157,0)
+\psline[linewidth=2pt](2.1908830764532157,0)(2.1908830764532157,3.59555559837405)
+\psline[linewidth=2pt](0,0)(5,0)
+\psline[linewidth=2pt](2.1908830764532157,0)(3,0)
+\begin{scriptsize}
+\psdots[dotstyle=*,linecolor=xdxdff](3,0)
+\rput[bl](2.98158590969566,-0.24795344997795313){\xdxdff{f}}
+\psdots[dotstyle=*,linecolor=xdxdff](-3,0)
+\rput[bl](-1.8085099239097253,0.9019867749769812){\xdxdff{-f}}
+\psdots[dotstyle=*,linecolor=xdxdff](2.1908830764532157,3.59555559837405)
+\psdots[dotsize=4pt 0,dotstyle=*,linecolor=darkgray](0,0)
+\rput[bl](2.6802222645350566,1.6791877546016953){r}
+\rput[bl](0.30103559221450094,0.1485776620754725){\qqwuqq{$E$}}
+\rput[bl](3.148128976758099,0.18030015103974656){\qqwuqq{$\theta$}}
+\rput[bl](1.2527102611427232,0.07720206190585589){x}
+\rput[bl](2.077494974213849,1.6078121544320787){y}
+\rput[bl](2.5612629309190287,0.0851326841469244){d}
+\end{scriptsize}
+\end{pspicture*}
+\end{document}
