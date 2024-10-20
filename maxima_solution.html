@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <title>maxima_solution</title>
+    <meta name="generator" content="wxMaxima" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        displayAlign: "left",
+        context: "MathJax",
+        TeX: {TagSide: "left"}
+      })
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+      async="async"
+    >
+      // A comment that hinders wxWidgets from optimizing this tag too much.
+    </script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="maxima_solution_htmlimg/maxima_solution.css"
+    />
+  </head>
+  <body>
+    <!-- ****************************************************** -->
+    <!-- *        Created with wxMaxima version 20.12.1       * -->
+    <!-- ****************************************************** -->
+    <noscript>
+      <div class="error message">
+        <p>
+          Please enable JavaScript in order to get a 2d display of the equations
+          embedded in this web page.
+        </p>
+      </div>
+    </noscript>
+    <p hidden="hidden">
+      \( \DeclareMathOperator{\abs}{abs}
+      \newcommand{\ensuremath}[1]{\mbox{$#1$}} \)
+    </p>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i1) </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_function">assume</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">k</span>
+            <span class="code_endofline">&gt;</span>
+            <span class="code_number">0</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">k</span>
+            <span class="code_endofline">&lt;</span>
+            <span class="code_number">1</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>
+      \[\operatorname{ }\left[ k\operatorname{&gt;
+      }0\operatorname{,}k\operatorname{&lt; }1\right] \]
+    </p>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i2) </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_function">f</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_operator">:</span>
+            <span class="code_operator">=</span>
+            <span class="code_number">1</span>
+            <span class="code_operator">/</span>
+            <span class="code_operator">(</span>
+            <span class="code_number">1</span>
+            <span class="code_operator">+</span>
+            <span class="code_variable">k</span>
+            <span class="code_operator">·</span>
+            <span class="code_function">cos</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_operator">)</span>
+            <span class="code_operator">^</span>
+            <span class="code_number">2</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>
+      \[\operatorname{ }\operatorname{f}(x)\operatorname{:=}\frac{1}{{{\left(
+      1+k \cos{(x)}\right) }^{2}}}\]
+    </p>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i3) </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_function">integrate</span>
+            <span class="code_operator">(</span>
+            <span class="code_function">f</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>
+      \[\operatorname{ }2 \left( \frac{\operatorname{atan}\left( \frac{\left( 2
+      k-2\right) \sin{(x)}}{2 \sqrt{1-{{k}^{2}}} \left( \cos{(x)}+1\right)
+      }\right) }{\sqrt{1-{{k}^{2}}} \left( {{k}^{2}}-1\right) }-\frac{k
+      \sin{(x)}}{\left( \cos{(x)}+1\right) \, \left( \frac{\left(
+      {{k}^{3}}-{{k}^{2}}-k+1\right) {{\sin{(x)}}^{2}}}{{{\left(
+      \cos{(x)}+1\right) }^{2}}}-{{k}^{3}}-{{k}^{2}}+k+1\right) }\right) \]
+    </p>
+    <hr />
+    <p>
+      <small>
+        Created with
+        <a href="https://wxMaxima-developers.github.io/wxmaxima/">wxMaxima</a
+        >.</small
+      >
+    </p>
+    <small>
+      The source of this Maxima session can be downloaded
+      <a href="maxima_solution_htmlimg/maxima_solution.wxmx">here</a>.</small
+    >
+  </body>
+</html>
