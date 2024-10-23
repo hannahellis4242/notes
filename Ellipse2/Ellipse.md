@@ -105,14 +105,24 @@ The sum becomes
 ``` math
 \begin{align*}
 S=2A&=\sqrt{(x-f)^2+y^2}+\sqrt{(x+f)^2+y^2}\\
-2A-\sqrt{(x-f)^2+y^2} &= \sqrt{(x+f)^2+y^2} \\
+2A-\sqrt{(x-f)^2+y^2} &= \sqrt{(x+f)^2+y^2}
+\end{align*}
+```
+squaring both sides gives
+``` math
+\begin{align*}
 \left( 2A-\sqrt{(x-f)^2+y^2} \right)^2 &= (x+f)^2+y^2\\
 4A^2-4A\sqrt{(x-f)^2+y^2}+(x-f)^2+y^2  &= (x+f)^2+y^2\\
 4A^2-4A\sqrt{(x-f)^2+y^2}+x^2-2xf+f^2  &= x^2+2xf+f^2\\
 4A^2-4A\sqrt{(x-f)^2+y^2} &= 4xf\\
 4A^2-4xf &= 4A\sqrt{(x-f)^2+y^2}\\
 \frac{4A^2-4xf}{4A} &= \sqrt{(x-f)^2+y^2}\\
-\sqrt{(x-f)^2+y^2} &=A-\frac{xf}{A} \\
+\sqrt{(x-f)^2+y^2} &=A-\frac{xf}{A} 
+\end{align*}
+```
+Squaring both sides gives
+``` math
+\begin{align*}
 (x-f)^2+y^2 &=\left(A-\frac{xf}{A}\right)^2 \\
 x^2-2xf+f^2+y^2 &=A^2-2\frac{xfA}{A}+\frac{x^2f^2}{A^2} \\
 x^2-2xf+f^2+y^2 &=A^2-2xf+e^2x^2 \\
@@ -137,7 +147,11 @@ Then starting from the sum
 ``` math
 \begin{align*}
 S = 2A &= r + d\\
-2A -r &= d\\
+2A -r &= d
+\end{align*}
+```
+``` math
+\begin{align*}
 \left(2A -r\right)^2 &= d^2\\
 4A^2 -4Ar +r^2 &= (x+f)^2+y^2\\
 &= x^2+2fx+f^2+y^2\\
@@ -158,7 +172,8 @@ r = \frac{A\left(1-e^2\right)}{ 1+e \cos \theta}
 
 ```
 
-### Point on the ellipse
+### Relationship between $\theta$ and $E$
+
 The point on the ellipse is at $(x,y)$ where $x$ and $y$ are given by
 
 ``` math
@@ -167,11 +182,10 @@ x &= A \cos E \\
 y &= B \sin E
 \end{align*}
 ```
-
-However, we can also measure $x$ and $y$ from the focus. Looking at $x$ first
-
+As seen above though these can also be written as
 ``` math
 \begin{align*}
-x &= r \cos \theta
+x &= f+r \cos \theta\\
+y &= r \sin \theta
 \end{align*}
 ```
