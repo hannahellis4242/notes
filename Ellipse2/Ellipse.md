@@ -179,13 +179,26 @@ The point on the ellipse is at $(x,y)$ where $x$ and $y$ are given by
 ``` math
 \begin{align*}
 x &= A \cos E \\
-y &= B \sin E
+y &= B \sin E = A \sqrt(1-e^2) \sin E
 \end{align*}
 ```
-As seen above though these can also be written as
+
+Looking at the diagram above that $r$ can be given by
+
 ``` math
 \begin{align*}
-x &= f+r \cos \theta\\
-y &= r \sin \theta
+r^2 &= (x-f)^2 + y^2 \\
+&= x^2-2xf+f^2 + y^2 \\
+&= A^2 \cos^2 E-2eA^2\cos E+e^2A^2 + A^2(1-e^2)\sin^2 E \\
+\left(\frac{r}{A}\right)^2 &=  \cos^2 E-2e\cos E+e^2 + (1-e^2)\sin^2 E \\
+\left(\frac{r}{A}\right)^2 &=  \cos^2 E-2e\cos E+e^2 + \sin^2 E-e^2\sin^2 E \\
+\left(\frac{r}{A}\right)^2 &=  \left(\sin^2 E+\cos^2 E\right)-2e\cos E+e^2(1-\sin^2 E) \\
+\left(\frac{r}{A}\right)^2 &=  1-2e\cos E+e^2\cos^2 E \\
+\left(\frac{r}{A}\right)^2 &=  (1)^2-2(1)(e\cos E)+(e\cos E)^2 \\
+\left(\frac{r}{A}\right)^2 &=  \left( 1-e\cos E\right)^2
 \end{align*}
+```
+And so
+``` math
+r = A\left( 1-e\cos E\right)
 ```
