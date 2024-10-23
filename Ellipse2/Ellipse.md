@@ -88,12 +88,74 @@ B^2&=A^2-f^2\\
 \end{align*}
 ```
 
-#### General case.
+#### General case
 
-In general for a point at $(x,y)$ the sum is
+In general for a point at $(x,y)$ we get
+``` math
+\begin{align*}
+r^2&=(x-f)^2+y^2\\
+d^2&=(x+f)^2+y^2
+\end{align*}
+```
+
+##### Cartesian Form
+
+The sum becomes
 
 ``` math
-S=
+\begin{align*}
+S=2A&=\sqrt{(x-f)^2+y^2}+\sqrt{(x+f)^2+y^2}\\
+2A-\sqrt{(x-f)^2+y^2} &= \sqrt{(x+f)^2+y^2} \\
+\left( 2A-\sqrt{(x-f)^2+y^2} \right)^2 &= (x+f)^2+y^2\\
+4A^2-4A\sqrt{(x-f)^2+y^2}+(x-f)^2+y^2  &= (x+f)^2+y^2\\
+4A^2-4A\sqrt{(x-f)^2+y^2}+x^2-2xf+f^2  &= x^2+2xf+f^2\\
+4A^2-4A\sqrt{(x-f)^2+y^2} &= 4xf\\
+4A^2-4xf &= 4A\sqrt{(x-f)^2+y^2}\\
+\frac{4A^2-4xf}{4A} &= \sqrt{(x-f)^2+y^2}\\
+\sqrt{(x-f)^2+y^2} &=A-\frac{xf}{A} \\
+(x-f)^2+y^2 &=\left(A-\frac{xf}{A}\right)^2 \\
+x^2-2xf+f^2+y^2 &=A^2-2\frac{xfA}{A}+\frac{x^2f^2}{A^2} \\
+x^2-2xf+f^2+y^2 &=A^2-2xf+e^2x^2 \\
+(1-e^2)x^2+y^2 &=A^2-f^2 \\
+(1-e^2)x^2+y^2 &=A^2(1-e^2) \\
+\frac{(1-e^2)x^2}{A^2(1-e^2)}+\frac{y^2}{A^2(1-e^2)}&=1\\
+\frac{x^2}{A^2}+\frac{y^2}{B^2}&=1
+\end{align*}
+```
+
+##### Polar Form
+
+Firstly from the diagram we note that
+``` math
+\begin{align*}
+x &= f+r \cos \theta\\
+y &= r \sin \theta
+\end{align*}
+```
+
+Then starting from the sum
+``` math
+\begin{align*}
+S = 2A &= r + d\\
+2A -r &= d\\
+\left(2A -r\right)^2 &= d^2\\
+4A^2 -4Ar +r^2 &= (x+f)^2+y^2\\
+&= x^2+2fx+f^2+y^2\\
+&= \left(f+r \cos \theta\right)^2+2fx+f^2+r^2\sin^2\theta\\
+&= f^2+2fr \cos \theta + r^2 \cos^2\theta+2f\left(f+r \cos \theta\right)+f^2+r^2\sin^2\theta\\
+ &= f^2+2fr \cos \theta +2f^2+2fr \cos\theta+f^2+r^2(\sin^2\theta+\cos^2\theta)\\
+ &= 4f^2+4fr \cos \theta+r^2\\
+A^2 -Ar &= f^2+fr \cos \theta\\
+A^2 -f^2 &= \left( A+f \cos \theta\right) r\\
+A^2 -e^2A^2 &= \left( A+eA \cos \theta\right) r\\
+A^2\left(1-e^2\right)&= A\left( 1+e \cos \theta\right) r\\
+A\left(1-e^2\right)&= \left( 1+e \cos \theta\right) r\\
+\end{align*}
+```
+finally leading to
+``` math
+r = \frac{A\left(1-e^2\right)}{ 1+e \cos \theta}
+
 ```
 
 ### Point on the ellipse
