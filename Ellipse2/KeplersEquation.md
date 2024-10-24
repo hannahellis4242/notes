@@ -101,4 +101,27 @@ we can now use this to remove the $\frac{d\theta}{dt}$ term earlier.
 \end{align*}
 ```
 
-Now you can see that the right hand side is just a constant, which is defined by properties of the orbit. Namely the angular momentum, the mass of the orbiting object, the semi major axis and the eccentricity.
+Now you can see that the right hand side is just a constant, which is defined by properties of the orbit. Namely the angular momentum, the mass of the orbiting object, the semi major axis and the eccentricity. An interesting thing to note is that the term $A^2\sqrt{1-e^2}$ can be rewritten as the product $AB$ instead, so linking the major and minor axes. We will however keep it in it's original form for now. Since the right hand side is a constant we will simplify by choosing the constant $k$ for it.
+
+``` math
+k = \frac{l}{m A^2\sqrt{1-e^2}}
+```
+
+so finally all that is left to do is to integrate our equation with respect to time.
+
+``` math
+\begin{align*}
+\int_{t_0}^t k dt &= \int_{t=t_0}^t\left(1-e \cos E \right)\frac{dE}{dt} dt\\
+k (t-t_0) &=\int_{E=0}^E\left(1-e \cos E \right)dE\\
+&=\int_0^E 1 dE - e \int_0^E \cos E dE\\
+&=E - e \sin E\\
+\end{align*}
+```
+
+Note we have chosen $t_0$ to be the point in time when $E=0$, which is the same as the statement of Kepler's equation.
+
+Leading finally to Kepler's Equation
+
+``` math
+E - e \sin E=k(t-t_0)
+```
