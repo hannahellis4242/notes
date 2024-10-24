@@ -169,7 +169,6 @@ A\left(1-e^2\right)&= \left( 1+e \cos \theta\right) r\\
 finally leading to
 ``` math
 r = \frac{A\left(1-e^2\right)}{ 1+e \cos \theta}
-
 ```
 
 ### Relationship between $\theta$ and $E$
@@ -179,7 +178,7 @@ The point on the ellipse is at $(x,y)$ where $x$ and $y$ are given by
 ``` math
 \begin{align*}
 x &= A \cos E \\
-y &= B \sin E = A \sqrt(1-e^2) \sin E
+y &= B \sin E = A \sqrt{1-e^2} \sin E
 \end{align*}
 ```
 
