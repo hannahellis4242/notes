@@ -223,3 +223,38 @@ E(r,\dot{r}) &= T(\dot{r}) + U(r)\\
 sometimes the last two terms of total energy are put together to form a new potential energy term that is dependent only on the radius and the angular momentum.
 
 #### Conservation of Total Energy
+
+Just like with angular momentum we can show that total energy is conserved by taking the derivative with respect to time.
+
+```math
+\begin{align*}
+\frac{dE}{dt}&=\frac{d}{dt}\left[\frac{1}{2}m \dot{r}^2 +  \frac{l^2}{2mr^2}-\frac{GMm}{r}\right]\\
+&=\frac{1}{2}m \frac{d\dot{r}^2}{dt} +  \frac{l^2}{2m}\frac{dr^{-2}}{dt}-GMm\frac{dr^{-1}}{dt}\\
+&=\frac{1}{2}m \frac{d\dot{r}^2}{d\dot{r}}\frac{d\dot{r}}{dt} +  \frac{l^2}{2m}\frac{dr^{-2}}{dr}\frac{dr}{dt}-GMm\frac{dr^{-1}}{dr}\frac{dr}{dt}\\
+&=\frac{1}{2}m (2\dot{r})\ddot{r}+ \frac{l^2}{2m}\left(\frac{-2}{r^3}\right)\dot{r}+\frac{GMm}{r^2}\dot{r}\\
+&=m \dot{r}\ddot{r}- \frac{l^2}{mr^3}\dot{r}+\frac{GMm}{r^2}\dot{r}\\
+\end{align*}
+```
+
+using $l=mr^2\omega$
+
+```math
+\begin{align*}
+\frac{dE}{dt} &=m \dot{r}\ddot{r}- \frac{l^2}{mr^3}\dot{r}+\frac{GMm}{r^2}\dot{r}\\
+&=m \dot{r}\ddot{r}- \frac{m^2r^4\omega^2}{mr^3}\dot{r}+\frac{GMm}{r^2}\dot{r}\\
+&=m \dot{r}\ddot{r}-mr\omega^2\dot{r}+\frac{GMm}{r^2}\dot{r}\\
+&=m \dot{r}\left[\ddot{r}-r\omega^2+\frac{GM}{r^2}\right]\\
+\end{align*}
+```
+
+using the radial part of the acceleration $-\frac{GM}{r^2}= \ddot{r} -r \omega^2$ we get
+
+```math
+\begin{align*}
+\frac{dE}{dt}&=m \dot{r}\left[-\frac{GM}{r^2}+\frac{GM}{r^2}\right]\\
+&=m \dot{r}\left[0\right]\\
+&=0
+\end{align*}
+```
+
+This then shows that the total energy does not change with respect to time, so is a constant and also conserved.
