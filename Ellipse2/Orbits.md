@@ -331,6 +331,103 @@ Next we recall that $u=\frac{1}{r}$ and that $\frac{l}{m}=r^2\omega$ and substit
 ```math
 \begin{align*}
 GM&=\left(\frac{l}{m}\right)^2\left[\frac{d^2u}{d\theta^2}+u\right]\\
-\frac{d^2u}{d\theta^2}+u & =\frac{GMm^2}{l^2}
+\frac{d^2u}{d\theta^2}+u &=\frac{GMm^2}{l^2}
+\end{align*}
+```
+
+To simplify this equation we will use $\alpha=\frac{GMm^2}{l^2}$
+
+### Solution
+
+The direct solution to
+
+```math
+\frac{d^2u}{d\theta^2}+u =\alpha
+```
+
+is $u=\alpha$
+
+However because there is also a function that results in zero, we must include that
+
+```math
+\begin{align*}
+\frac{d^2u}{d\theta^2}+u &=0\\
+\frac{d^2u}{d\theta^2} &=-u
+\end{align*}
+```
+
+we can take the solution that $u=c\cos\theta$ which gives the general overall solution of
+
+```math
+u(\theta)=\alpha + c \cos \theta
+```
+
+We can pick an initial condition when $\theta=0$ the body is at periapsis or $r=p=A(1-e)$ which gives $u=\frac{1}{A(1-e)}$ (see the ellipse notes for $p=A(1-e)$)
+
+```math
+\begin{align*}
+\frac{1}{A(1-e)}&=\alpha+c\\
+\alpha&=\frac{1}{A(1-e)} - c
+\end{align*}
+```
+
+we could similarly hae picked the condition that when $\theta=\pi$ the body is at apoapsis or $r=a=A(1+e)$ which gives $u=\frac{1}{A(1+e)}$ (see ellipse notes for $a=A(1+e)$)
+
+```math
+\begin{align*}
+\frac{1}{A(1+e)}&=\alpha-c\\
+\alpha&=\frac{1}{A(1+e)} + c
+\end{align*}
+```
+
+we can equate our two initial conditions to get $c$ in terms of just $a$ and $p$
+
+```math
+\begin{align*}
+\alpha=\frac{1}{A(1-e)}-c&=\frac{1}{A(1+e)} + c\\
+\frac{1}{A(1-e)}-\frac{1}{A(1+e)}&=2c\\
+\frac{A(1+e)-A(1-e)}{A^2(1+e)(1-e)}&=2c\\
+\frac{A+eA-A+eA}{A^2(1-e^2)}&=2c\\
+\frac{2eA}{A^2(1-e^2)}&=2c\\
+\frac{e}{A(1-e^2)}&=c\\
+\end{align*}
+```
+
+Now that we have $c$ we can use this to determine $\alpha$ in terms of $A$ and $e$
+
+```math
+\begin{align*}
+\alpha&=\frac{1}{A(1+e)} + c\\
+&=\frac{1}{A(1+e)} + \frac{e}{A(1-e)^2}\\
+&=\frac{(1-e)}{A(1+e)(1-e)} + \frac{e}{A(1-e)^2}\\
+&=\frac{1-e+e}{A(1-e^2)} \\
+&=\frac{1}{A(1-e^2)} \\
+\end{align*}
+```
+
+So feeding all this back in we have
+
+```math
+\begin{align*}
+u(\theta)&=\alpha + c \cos \theta\\
+&=\frac{1}{A(1-e^2)} + \frac{e}{A(1-e^2)} \cos \theta\\
+&=\frac{1+e\cos\theta}{A(1-e^2)}
+\end{align*}
+```
+
+Now we have a simple form for $u$ we can recall that we chose $u=\frac{1}{r}$, so
+
+```math
+r=\frac{1+e\cos\theta}{A(1-e^2)}
+```
+
+which is the equation for a ellipse we saw from the ellipse notes.
+
+We also get the interesting result here that
+
+```math
+\begin{align*}
+\alpha = \frac{GMm^2}{l^2}&=\frac{1}{A(1-e^2)} \\
+A(1-e^2)&=\frac{l^2}{GMm^2}
 \end{align*}
 ```
