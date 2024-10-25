@@ -258,3 +258,79 @@ using the radial part of the acceleration $-\frac{GM}{r^2}= \ddot{r} -r \omega^2
 ```
 
 This then shows that the total energy does not change with respect to time, so is a constant and also conserved.
+
+## Elliptical orbits
+
+Firstly we let $r=\frac{1}{u}$, so that
+
+```math
+\begin{align*}
+\frac{dr}{dt} &= \frac{du^{-1}}{dt}\\
+&= \frac{du^{-1}}{du}\frac{du}{dt}\\
+&= -\frac{1}{u^2}\frac{du}{dt}\\
+&= -r^2\frac{du}{dt}
+\end{align*}
+```
+
+next we introduce an $\omega$ by chain rule
+
+```math
+\begin{align*}
+\frac{dr}{dt}
+&= -r^2\frac{du}{dt}\\
+\frac{dr}{dt}
+&= -r^2\frac{du}{d\theta}\frac{d\theta}{dt}\\
+&= -r^2\omega\frac{du}{d\theta}
+\end{align*}
+```
+
+And using the angular momentum $l=mr^2\omega$ or rearranging $\omega = \frac{l}{mr^2}$
+
+```math
+\begin{align*}
+\frac{dr}{dt}&= -r^2\omega\frac{du}{d\theta}\\
+\frac{dr}{dt}&= -r^2\frac{l}{mr^2}\frac{du}{d\theta}\\
+\frac{dr}{dt}&= -\frac{l}{m}\frac{du}{d\theta}\\
+\frac{dr}{dt}&= -\frac{l}{m}\frac{du}{d\theta}\\
+\end{align*}
+```
+
+Differentiating again with respect to time gives
+
+```math
+\begin{align*}
+\frac{dr^2}{dt^2}&= -\frac{l}{m}\frac{d}{dt}\frac{du}{d\theta}\\
+&= -\frac{l}{m}\frac{d\theta}{dt}\frac{d}{d\theta}\frac{du}{d\theta}\\
+&= -\frac{l}{m}\omega\frac{d^2u}{d\theta^2}
+\end{align*}
+```
+
+We can substitute $l=mr^2\omega$ again to get
+
+```math
+\begin{align*}
+\frac{dr^2}{dt^2}&= -\frac{l}{m}\omega\frac{d^2u}{d\theta^2}\\
+&= -\frac{mr^2\omega}{m}\omega\frac{d^2u}{d\theta^2}\\
+&= -r^2\omega^2\frac{d^2u}{d\theta^2}\\
+\end{align*}
+```
+
+We can now substitute this into the radial part of the acceleration
+
+```math
+\begin{align*}
+-\frac{GM}{r^2}&= \frac{ d^2 r}{d t^2} -r \omega^2  \\
+&=-r^2\omega^2\frac{d^2u}{d\theta^2} -r\omega^2\\
+&=-r^2\omega^2\left[\frac{d^2u}{d\theta^2}+\frac{1}{r}\right]\\
+GM&=r^4\omega^2\left[\frac{d^2u}{d\theta^2}+\frac{1}{r}\right]
+\end{align*}
+```
+
+Next we recall that $u=\frac{1}{r}$ and that $\frac{l}{m}=r^2\omega$ and substitute these in
+
+```math
+\begin{align*}
+GM&=\left(\frac{l}{m}\right)^2\left[\frac{d^2u}{d\theta^2}+u\right]\\
+\frac{d^2u}{d\theta^2}+u & =\frac{GMm^2}{l^2}
+\end{align*}
+```
