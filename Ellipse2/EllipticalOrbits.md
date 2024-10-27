@@ -212,6 +212,8 @@ E - e \sin E=\sqrt{\frac{GM}{A^3}}(t-t_0)
 
 which will need to be solved numerically as it is transcendental.
 
+### Determining position
+
 Once $E$ is determined for a particular time we can then use
 
 ```math
@@ -223,3 +225,26 @@ r\sin\theta &= A\sqrt{1-e^2}\sin E
 ```
 
 to determine the bodies position at at that time.
+
+### Determining velocities
+
+#### Angular velocity
+
+The angular velocity can be determined from the angular momentum,
+
+``` math
+\omega = \frac{1}{r^2}\frac{l}{m}
+```
+
+#### Radial velocity
+
+The radial velocity can be determined from the energy
+
+``` math
+\begin{align*}
+\frac{E}{m}&=\frac{1}{2}\dot{r}^2 + \frac{1}{2r^2}\left(\frac{l}{m}\right)^2-\frac{GM}{r}\\
+\frac{E}{m}- \frac{1}{2r^2}\left(\frac{l}{m}\right)^2+\frac{GM}{r}&=\frac{1}{2}\dot{r}^2\\
+\dot{r}^2 &= 2\frac{E}{m}- \frac{1}{r^2}\left(\frac{l}{m}\right)^2+\frac{2GM}{r}\\
+\dot{r} &= \sqrt{2\frac{E}{m}- \frac{1}{r^2}\left(\frac{l}{m}\right)^2+\frac{2GM}{r}}\\
+\end{align*}
+```
