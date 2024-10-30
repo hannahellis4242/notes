@@ -232,19 +232,61 @@ to determine the bodies position at at that time.
 
 The angular velocity can be determined from the angular momentum,
 
-``` math
+```math
 \omega = \frac{1}{r^2}\frac{l}{m}
 ```
 
 #### Radial velocity
 
-The radial velocity can be determined from the energy
+The radial velocity we obtain from the geometry. Recall that we have
 
-``` math
+```math
+r=A(1-e\cos E)
+```
+
+As we did for the derivation of Kepler's Equation, we can differentiate with respect to time. Which gives the result
+
+```math
+\frac{dr}{dt} =eA \sin E \frac{dE}{dt}
+```
+
+And looking at Kepler's Equation again
+
+```math
 \begin{align*}
-\frac{E}{m}&=\frac{1}{2}\dot{r}^2 + \frac{1}{2r^2}\left(\frac{l}{m}\right)^2-\frac{GM}{r}\\
-\frac{E}{m}- \frac{1}{2r^2}\left(\frac{l}{m}\right)^2+\frac{GM}{r}&=\frac{1}{2}\dot{r}^2\\
-\dot{r}^2 &= 2\frac{E}{m}- \frac{1}{r^2}\left(\frac{l}{m}\right)^2+\frac{2GM}{r}\\
-\dot{r} &= \sqrt{2\frac{E}{m}- \frac{1}{r^2}\left(\frac{l}{m}\right)^2+\frac{2GM}{r}}\\
+E-e\sin E &= k(t-t_0)\\
+t&=\frac{E-e\sin E}{k}+t_0\\
+\frac{dt}{dE}&=\frac{1-e\cos E}{k}
 \end{align*}
+```
+
+which gives us the result that
+
+```math
+\frac{dE}{dt}=\frac{k}{1-e\cos E}
+```
+
+We can put this back in to our earlier equation to get the radial velocity
+
+```math
+\frac{dr}{dt} = \frac{keA \sin E}{1-e\cos E}
+```
+
+We can simplify the $keA$ part a little bit by noting that $k=\sqrt{\frac{GM}{A^3}}$ from earlier.
+
+```math
+\begin{align*}
+keA&=eA\sqrt{\frac{GM}{A^3}}\\
+&=e\sqrt{\frac{GMA^2}{A^3}}\\
+&=e\sqrt{\frac{GM}{A}}\\
+&=e\sqrt{-2\tilde{E}}\\
+\end{align*}
+```
+
+Where we recall that $\tilde{E}=\frac{E}{m}=-\frac{GM}{2A}$ from total energy.
+
+This gives the final result of
+
+```math
+\dot{r}=\frac{e\sqrt{\frac{GM}{A}}\sin E}{1-e\cos E}
 ```
