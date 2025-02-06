@@ -10,19 +10,19 @@ The unit vectors of plain polar coordinates can be determined from the standard 
 
 ```math
 \begin{align*}
-\hat{\bm{r}} &= \bm{\hat{\textnormal{\bf\i}}} \cos( \theta ) + \bm{\hat{\textnormal{\bf\j}}} \sin( \theta ) \\
-\hat{\bm{\theta}}  &= - \bm{\hat{\textnormal{\bf\i}}} \sin( \theta ) + \bm{\hat{\textnormal{\bf\j}}} \cos( \theta )
+\hat{\mathbf{r}} &= \mathbf{\hat{\textnormal{\bf\i}}} \cos( \theta ) + \mathbf{\hat{\textnormal{\bf\j}}} \sin( \theta ) \\
+\hat{\mathbf{\theta}}  &= - \mathbf{\hat{\textnormal{\bf\i}}} \sin( \theta ) + \mathbf{\hat{\textnormal{\bf\j}}} \cos( \theta )
 \end{align*}
 ```
 
-Where $r$ is the distance from the origin to the position or alternatively the length of the position vector, and $\theta$ is the angle between $\bm{\hat{\textnormal{\bf\i}}}$ and $\bm{r}$.
-Since the unit vectors $\hat{\bm{r}}$ and $\hat{\bm{\theta}}$ depend on $\theta$ which changes with time, the unit vectors also change with time. We will begin by looking at the derivative of $\hat{\bm{r}}$ with respect to time.
+Where $r$ is the distance from the origin to the position or alternatively the length of the position vector, and $\theta$ is the angle between $\mathbf{\hat{\textnormal{\bf\i}}}$ and $\mathbf{r}$.
+Since the unit vectors $\hat{\mathbf{r}}$ and $\hat{\mathbf{\theta}}$ depend on $\theta$ which changes with time, the unit vectors also change with time. We will begin by looking at the derivative of $\hat{\mathbf{r}}$ with respect to time.
 
 ```math
 \begin{align*}
-\frac{d {\hat{\bm{r}}}}{d t} &= \frac{ d \theta}{d t}\frac{d}{d \theta} \hat{\bm{r}} \\
-&=  \frac{ d \theta}{d t} \left[ -\bm{\hat{\textnormal{\bf\i}}} \sin( \theta ) + \bm{\hat{\textnormal{\bf\j}}} \cos( \theta ) \right] \\
-&= \frac{ d \theta}{d t} \hat{\bm{\theta}}
+\frac{d {\hat{\mathbf{r}}}}{d t} &= \frac{ d \theta}{d t}\frac{d}{d \theta} \hat{\mathbf{r}} \\
+&=  \frac{ d \theta}{d t} \left[ -\mathbf{\hat{\textnormal{\bf\i}}} \sin( \theta ) + \mathbf{\hat{\textnormal{\bf\j}}} \cos( \theta ) \right] \\
+&= \frac{ d \theta}{d t} \hat{\mathbf{\theta}}
 \end{align*}
 ```
 
@@ -30,22 +30,22 @@ Where we have used replaced the cartesian unit vectors with their corresponding 
 
 ```math
 \begin{align*}
-\frac{d {\hat{\bm{\theta}}}}{d t}&=\frac{d \theta}{d t} \frac{d}{dt}{\hat{\bm{\theta}}}\\
-&=\frac{d \theta}{d t}  \left[ - \bm{\hat{\textnormal{\bf\i}}} \cos( \theta ) - \bm{\hat{\textnormal{\bf\j}}} \sin( \theta ) \right]\\
-&=- \frac{d \theta}{d t} \hat{\bm{r}}
+\frac{d {\hat{\mathbf{\theta}}}}{d t}&=\frac{d \theta}{d t} \frac{d}{dt}{\hat{\mathbf{\theta}}}\\
+&=\frac{d \theta}{d t}  \left[ - \mathbf{\hat{\textnormal{\bf\i}}} \cos( \theta ) - \mathbf{\hat{\textnormal{\bf\j}}} \sin( \theta ) \right]\\
+&=- \frac{d \theta}{d t} \hat{\mathbf{r}}
 \end{align*}
 ```
 
 Where once again we have used replaced the cartesian unit vectors with their corresponding plane polar ones.
 
-Since $\frac{d {\hat{\bm{r}}}}{d t}$ too depends on $\theta$ so is also time dependent. So we can differentiate again.
+Since $\frac{d {\hat{\mathbf{r}}}}{d t}$ too depends on $\theta$ so is also time dependent. So we can differentiate again.
 
 ```math
 \begin{align*}
-\frac{d^2 {\hat{\bm{r}}}}{d t^2} &= \frac{d}{dt}\left[ \frac{ d \theta}{d t} \hat{\bm{\theta}} \right]\\
-&=\frac{d^2 \theta}{d t^2}\hat{\bm{\theta}}+\frac{d \theta}{d t} \frac{d \hat{\bm{\theta}}}{dt}\\
-&=\frac{d^2 \theta}{d t^2}\hat{\bm{\theta}}+\frac{d \theta}{d t} \left[- \frac{d \theta}{d t} \hat{\bm{r}} \right]\\
-&=\frac{d^2 \theta}{d t^2}\hat{\bm{\theta}}-\left(\frac{d \theta}{d t} \right)^2 \hat{\bm{r}}
+\frac{d^2 {\hat{\mathbf{r}}}}{d t^2} &= \frac{d}{dt}\left[ \frac{ d \theta}{d t} \hat{\mathbf{\theta}} \right]\\
+&=\frac{d^2 \theta}{d t^2}\hat{\mathbf{\theta}}+\frac{d \theta}{d t} \frac{d \hat{\mathbf{\theta}}}{dt}\\
+&=\frac{d^2 \theta}{d t^2}\hat{\mathbf{\theta}}+\frac{d \theta}{d t} \left[- \frac{d \theta}{d t} \hat{\mathbf{r}} \right]\\
+&=\frac{d^2 \theta}{d t^2}\hat{\mathbf{\theta}}-\left(\frac{d \theta}{d t} \right)^2 \hat{\mathbf{r}}
 \end{align*}
 ```
 
@@ -63,9 +63,9 @@ Taking the derivative with respect to time gives us the velocity
 
 ```math
 \begin{align*}
-\frac{d \bm{r}}{d t} &= \frac{d r}{d t} \hat{\bm{r}} + r \frac{d \hat{\bm{r}}}{d t}\\
-&=\frac{d r}{d t} \hat{\bm{r}} + r\frac{ d \theta}{d t} \hat{\bm{\theta}}\\
-&=\frac{d r}{d t} \hat{\bm{r}} + r \omega \hat{\bm{\theta}}
+\frac{d \mathbf{r}}{d t} &= \frac{d r}{d t} \hat{\mathbf{r}} + r \frac{d \hat{\mathbf{r}}}{d t}\\
+&=\frac{d r}{d t} \hat{\mathbf{r}} + r\frac{ d \theta}{d t} \hat{\mathbf{\theta}}\\
+&=\frac{d r}{d t} \hat{\mathbf{r}} + r \omega \hat{\mathbf{\theta}}
 \end{align*}
 ```
 
@@ -75,11 +75,11 @@ The acceleration can be obtained by taking the derivative with respect to time o
 
 ```math
 \begin{align*}
-\frac{ d^2 \bm{r}}{ d t^2} &=\frac{d}{d}\left[\frac{d r}{d t} \hat{\bm{r}} + r \omega \hat{\bm{\theta}}\right]\\
-&=\frac{d}{d}\left[\frac{d r}{d t} \hat{\bm{r}}\right] + \frac{d}{dt}\left[r \omega \hat{\bm{\theta}}\right]\\
-&= \left[\frac{ d^2 r}{d t^2} \hat{\bm{r}} + \frac{d r}{d t} \frac{d \hat{\bm{r}}}{d t}\right] +\left[\frac{d r}{d t} \omega \hat{\bm{\theta}} +r \frac{d \omega}{d t} \hat{\bm{\theta}}+r \omega \frac{d \hat{\bm{\theta}}}{d t} \right]\\
-&=  \frac{ d^2 r}{d t^2} \hat{\bm{r}} + \frac{d r}{d t} \omega \hat{\bm{\theta}} +\frac{d r}{d t} \omega \hat{\bm{\theta}} +r \frac{d \omega}{d t} \hat{\bm{\theta}}-r \omega^2 \hat{\bm{r}} \\
-&=\left[  \frac{ d^2 r}{d t^2} -r \omega^2 \right] \hat{\bm{r}} + \left[ 2 \frac{d r}{d t} \omega + r \frac{ d \omega}{d t} \right] \hat{\bm{\theta}}
+\frac{ d^2 \mathbf{r}}{ d t^2} &=\frac{d}{d}\left[\frac{d r}{d t} \hat{\mathbf{r}} + r \omega \hat{\mathbf{\theta}}\right]\\
+&=\frac{d}{d}\left[\frac{d r}{d t} \hat{\mathbf{r}}\right] + \frac{d}{dt}\left[r \omega \hat{\mathbf{\theta}}\right]\\
+&= \left[\frac{ d^2 r}{d t^2} \hat{\mathbf{r}} + \frac{d r}{d t} \frac{d \hat{\mathbf{r}}}{d t}\right] +\left[\frac{d r}{d t} \omega \hat{\mathbf{\theta}} +r \frac{d \omega}{d t} \hat{\mathbf{\theta}}+r \omega \frac{d \hat{\mathbf{\theta}}}{d t} \right]\\
+&=  \frac{ d^2 r}{d t^2} \hat{\mathbf{r}} + \frac{d r}{d t} \omega \hat{\mathbf{\theta}} +\frac{d r}{d t} \omega \hat{\mathbf{\theta}} +r \frac{d \omega}{d t} \hat{\mathbf{\theta}}-r \omega^2 \hat{\mathbf{r}} \\
+&=\left[  \frac{ d^2 r}{d t^2} -r \omega^2 \right] \hat{\mathbf{r}} + \left[ 2 \frac{d r}{d t} \omega + r \frac{ d \omega}{d t} \right] \hat{\mathbf{\theta}}
 \end{align*}
 ```
 
@@ -90,19 +90,19 @@ We have had to use the triple product rule here. (The derivation for this is sho
 The gravitational force between two particles a distance $r$ apart with mass $M$ and $m$ is given by
 
 ```math
-\bm{F}=-\frac{GMm}{r^2}\hat{\bm{r}}
+\mathbf{F}=-\frac{GMm}{r^2}\hat{\mathbf{r}}
 ```
 
 The acceleration of the particle with mass $m$ due to the force of gravity between the two particles is then
 
 ```math
-\frac{d^2\bm{r}}{dt^2}=\frac{\bm{F}}{m}=-\frac{GM}{r^2}\hat{\bm{r}}
+\frac{d^2\mathbf{r}}{dt^2}=\frac{\mathbf{F}}{m}=-\frac{GM}{r^2}\hat{\mathbf{r}}
 ```
 
 We can then equate this to the acceleration in terms of polar coordinates to get
 
 ```math
--\frac{GM}{r^2}\hat{\bm{r}} = \left[  \frac{ d^2 r}{d t^2} -r \omega^2 \right] \hat{\bm{r}} + \left[ 2 \frac{d r}{d t} \omega + r \frac{ d \omega}{d t} \right] \hat{\bm{\theta}}
+-\frac{GM}{r^2}\hat{\mathbf{r}} = \left[  \frac{ d^2 r}{d t^2} -r \omega^2 \right] \hat{\mathbf{r}} + \left[ 2 \frac{d r}{d t} \omega + r \frac{ d \omega}{d t} \right] \hat{\mathbf{\theta}}
 ```
 
 which we can split up into two parts, a radial part and an angular part
@@ -120,17 +120,17 @@ The angular momentum of a particle is given by the cross product of the position
 
 ```math
 \begin{align*}
-\bm{L}&=\bm{r} \times \bm{p}\\
-&=\bm{r} \times \left(m\frac{d\bm{r}}{dt}\right)\\
-&=m \bm{r} \times \frac{d\bm{r}}{dt}\\
-&=m r\hat{\bm{r}} \times \left(\frac{d r}{d t} \hat{\bm{r}} + r \omega \hat{\bm{\theta}}\right)\\
-&=mr\frac{d r}{d t}\hat{\bm{r}} \times \hat{\bm{r}} + mr r \omega \hat{\bm{r}} \times\hat{\bm{\theta}}\\
-&=mr^2 \omega \hat{\bm{r}} \times\hat{\bm{\theta}}\\
-&=mr^2\omega \hat{\bm{k}}
+\mathbf{L}&=\mathbf{r} \times \mathbf{p}\\
+&=\mathbf{r} \times \left(m\frac{d\mathbf{r}}{dt}\right)\\
+&=m \mathbf{r} \times \frac{d\mathbf{r}}{dt}\\
+&=m r\hat{\mathbf{r}} \times \left(\frac{d r}{d t} \hat{\mathbf{r}} + r \omega \hat{\mathbf{\theta}}\right)\\
+&=mr\frac{d r}{d t}\hat{\mathbf{r}} \times \hat{\mathbf{r}} + mr r \omega \hat{\mathbf{r}} \times\hat{\mathbf{\theta}}\\
+&=mr^2 \omega \hat{\mathbf{r}} \times\hat{\mathbf{\theta}}\\
+&=mr^2\omega \hat{\mathbf{k}}
 \end{align*}
 ```
 
-We can also write this as $\bm{L} = l \hat{\bm{k}}$ were
+We can also write this as $\mathbf{L} = l \hat{\mathbf{k}}$ were
 
 ```math
 l=mr^2\omega
@@ -163,8 +163,8 @@ So the work done is given by
 
 ```math
 \begin{align*}
-U(r)&=\int_{\infty}^{r} \bm{F}(r') \cdot d\bm{r}' \\
-&=\int_{\infty}^{r} -\frac{GMm}{r'^2} \hat{\bm{r}} \cdot dr' \hat{\bm{r}}  \\
+U(r)&=\int_{\infty}^{r} \mathbf{F}(r') \cdot d\mathbf{r}' \\
+&=\int_{\infty}^{r} -\frac{GMm}{r'^2} \hat{\mathbf{r}} \cdot dr' \hat{\mathbf{r}}  \\
 &=-GMm\int_{\infty}^{r} \frac{dr'}{r'^2} \\
 &=-GMm \left[ \frac{-1}{r'} \right]_{\infty}^{r} \\
 &=GMm \left[ \frac{1}{\infty} - \frac{1}{r} \right] \\
@@ -177,14 +177,14 @@ U(r)&=\int_{\infty}^{r} \bm{F}(r') \cdot d\bm{r}' \\
 The kinetic energy of a particle is given by
 
 ```math
-T(\dot{r})=\frac{1}{2}m\dot{\bm{r}}\cdot\dot{\bm{r}}
+T(\dot{r})=\frac{1}{2}m\dot{\mathbf{r}}\cdot\dot{\mathbf{r}}
 ```
 
 using this gives us the kinetic energy as
 
 ```math
 \begin{align*}
-T(\dot{r})&=\frac{1}{2}m\left[ \dot{r}\hat{\bm{r}}+r\omega\hat{\bm{\theta}}\right]\cdot\left[ \dot{r}\hat{\bm{r}}+r\omega\hat{\bm{\theta}}\right] \\
+T(\dot{r})&=\frac{1}{2}m\left[ \dot{r}\hat{\mathbf{r}}+r\omega\hat{\mathbf{\theta}}\right]\cdot\left[ \dot{r}\hat{\mathbf{r}}+r\omega\hat{\mathbf{\theta}}\right] \\
 &=\frac{1}{2}m \dot{r}^2 + \frac{1}{2}mr^2 \omega^2
 \end{align*}
 ```
