@@ -10,8 +10,8 @@ The unit vectors of plain polar coordinates can be determined from the standard 
 
 ```math
 \begin{align*}
-\hat{\mathbf{r}} &= \mathbf{\hat{\textnormal{\bf\i}}} \cos( \theta ) + \mathbf{\hat{\textnormal{\bf\j}}} \sin( \theta ) \\
-\hat{\mathbf{\theta}}  &= - \mathbf{\hat{\textnormal{\bf\i}}} \sin( \theta ) + \mathbf{\hat{\textnormal{\bf\j}}} \cos( \theta )
+\hat{\mathbf{r}} &= \mathbf{\hat{\imath}} \cos( \theta ) + \mathbf{\hat{\jmath}} \sin( \theta ) \\
+\hat{\mathbf{\theta}}  &= - \mathbf{\hat{\imath}} \sin( \theta ) + \mathbf{\hat{\jmath}} \cos( \theta )
 \end{align*}
 ```
 
@@ -21,7 +21,7 @@ Since the unit vectors $\hat{\mathbf{r}}$ and $\hat{\mathbf{\theta}}$ depend on 
 ```math
 \begin{align*}
 \frac{d {\hat{\mathbf{r}}}}{d t} &= \frac{ d \theta}{d t}\frac{d}{d \theta} \hat{\mathbf{r}} \\
-&=  \frac{ d \theta}{d t} \left[ -\mathbf{\hat{\textnormal{\bf\i}}} \sin( \theta ) + \mathbf{\hat{\textnormal{\bf\j}}} \cos( \theta ) \right] \\
+&=  \frac{ d \theta}{d t} \left[ -\mathbf{\hat{\imath}} \sin( \theta ) + \mathbf{\hat{\jmath}} \cos( \theta ) \right] \\
 &= \frac{ d \theta}{d t} \hat{\mathbf{\theta}}
 \end{align*}
 ```
@@ -31,7 +31,7 @@ Where we have used replaced the cartesian unit vectors with their corresponding 
 ```math
 \begin{align*}
 \frac{d {\hat{\mathbf{\theta}}}}{d t}&=\frac{d \theta}{d t} \frac{d}{dt}{\hat{\mathbf{\theta}}}\\
-&=\frac{d \theta}{d t}  \left[ - \mathbf{\hat{\textnormal{\bf\i}}} \cos( \theta ) - \mathbf{\hat{\textnormal{\bf\j}}} \sin( \theta ) \right]\\
+&=\frac{d \theta}{d t}  \left[ - \mathbf{\hat{\imath}} \cos( \theta ) - \mathbf{\hat{\jmath}} \sin( \theta ) \right]\\
 &=- \frac{d \theta}{d t} \hat{\mathbf{r}}
 \end{align*}
 ```
