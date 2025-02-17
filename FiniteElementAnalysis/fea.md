@@ -89,8 +89,8 @@ Since the element is on one the boundary conditions, ie $y(0)=0$
 y(0) &= y_0 N_0(0) + y_1 N_1(0) \\
 0 &= y_0\\
 \end{align*}
+```
 so we are left with
 ``` math
 y(x) = y_1 N_1(x)
-```
 ```
