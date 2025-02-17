@@ -66,3 +66,4 @@ Let's start with something we know the solution to then we can compare against a
 ```
 Which we know to have solutions of the form $y=A\sin(kx)+B\cos(kx)$. Let's pick boundary conditions that $y(0)=0$ and $y(1)=0$. We will also choose to have for equally long linear elements.
 
+![The elements](elements.svg)
