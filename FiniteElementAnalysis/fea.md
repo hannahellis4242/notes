@@ -33,3 +33,13 @@ The overall function for the element is
 ``` math
 y(x) = y_0 N_0(x) + y_1 N_1(x)
 ```
+
+### Second Order ODE
+
+``` math
+\begin{align*}
+\frac{d^ y}{dx^2} &= f(y) \\
+u(x)\frac{d^ y}{dx^2} &= u(x)f(y) \\
+\int_a^b u(x)\frac{d^ y}{dx^2} dx &= \int_a^b u(x)f(y) dx
+\end{align*}
+```
