@@ -50,4 +50,10 @@ Now integrating by parts on the left hand side
 \left[ u(x) \frac{dy}{dx}\right]_a^b - \int_a^b \frac{d u(x)}{dx}\frac{d y}{dx} dx &= \int_a^b u(x)f(y) dx 
 \end{align*}
 ```
-We can choose $u(x)$ to be our shape functions
+We can choose $u(x)$ to be our shape functions. This will result in one equation per shape function, but if we choose our shape functions so that they follow the condition $u(a)=N_i(a)=0$ and $u(b)=N_i(b)=0$ then we get the first term on the left hand side being zero, so we end up with the simpler form
+``` math
+\begin{align*}
+\left[ u(x) \frac{dy}{dx}\right]_a^b - \int_a^b \frac{d u(x)}{dx}\frac{d y}{dx} dx &= \int_a^b u(x)f(y) dx \\
+- \int_a^b \frac{d u(x)}{dx}\frac{d y}{dx} dx &= \int_a^b u(x)f(y) dx
+\end{align*}
+```
