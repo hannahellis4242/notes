@@ -81,18 +81,18 @@ N_01(x) &= \frac{-x}{-0.25} = 4x
 
 With the overall function being
 ``` math
-y(x) = y_0 N_0(x) + y_1 N_1(x)
+y(x) = y_0 N_00(x) + y_1 N_01(x)
 ```
 Since the element is on one the boundary conditions, ie $y(0)=0$
 ``` math
 \begin{align*}
-y(0) &= y_0 N_0(0) + y_1 N_1(0) \\
+y(0) &= y_0 N_00(0) + y_1 N_01(0) \\
 0 &= y_0\\
 \end{align*}
 ```
 so we are left with
 ``` math
-y(x) = y_1 N_1(x)
+y_0(x) = y_1 N_01(x)
 ```
 
 ##### For element 1
@@ -108,7 +108,75 @@ N_11(x) &= \frac{0.25-x}{0.25-0.5} = 4x - 1
 
 With the overall function being
 ``` math
-y(x) = y_1 N_10(x) + y_2 N_11(x)
+y_1(x) = y_1 N_10(x) + y_2 N_11(x)
+```
+
+##### For element 2
+
+The shape functions are
+
+``` math
+\begin{align*}
+N_20(x) &= \frac{0.75-x}{0.75-0.5} = 3-4x
+N_21(x) &= \frac{0.5-x}{0.5-0.75} = 4x-2
+\end{align*}
+```
+
+With the overall function being
+``` math
+y_2(x) = y_2 N_20(x) + y_3 N_21(x)
 ```
 
 
+##### For element 3
+
+The shape functions are
+
+``` math
+\begin{align*}
+N_30(x) &= \frac{1-x}{1-0.75} = 4-4x
+N_31(x) &= \frac{0.75-x}{0.75-1} = 4x-3
+\end{align*}
+```
+But again we have a boundary condition here $y(1)=0$
+``` math
+\begin{align*}
+y_3(1) &= y_3 N_30(1) + y_4 N_31(1) \\
+0 &= y_4
+\end{align*}
+```
+With the overall function being
+``` math
+y_3(x) = y_3 N_30(x)
+```
+
+Where $N_ij(x)$ is the shape function for the jth node in the ith element.
+
+#### everything so far
+
+Our shape functions are
+
+``` math
+\begin{align*}
+N_01(x) &= 4x \\
+N_10(x) &= 2-4x \\
+N_11(x) &= 4x - 1 \\
+N_20(x) &= 3-4x \\
+N_21(x) &= 4x-2 \\
+N_30(x) &= 4-4x
+\end{align*}
+```
+
+And our element functions
+
+
+``` math
+\begin{align*}
+y_0(x) &= y_1 N_01(x) \\
+y_1(x) &= y_1 N_10(x) + y_2 N_11(x) \\
+y_2(x) &= y_2 N_20(x) + y_3 N_21(x) \\
+y_3(x) &= y_3 N_30(x) 
+\end{align*}
+```
+
+with boundary conditions that $y_0 = y_4 = 0$
