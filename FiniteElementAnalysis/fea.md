@@ -19,13 +19,14 @@ Consider a linear element with two nodes. Each node at $x_i$ has a shape functio
 
 For a linear element the shape functions are
 
-
 ``` math
 \begin{align*}
 N_0(x) &= \frac{x_1-x}{x_1-x_0}\\
 N_1(x) &= \frac{x_0-x}{x_0-x_1}
 \end{align*}
 ```
+
+![shape functions](shape-functions.svg)
 
 The overall function for the element is
 
