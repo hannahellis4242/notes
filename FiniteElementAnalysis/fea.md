@@ -68,14 +68,14 @@ Which we know to have solutions of the form $y=A\sin(kx)+B\cos(kx)$. Let's pick 
 
 ![The elements](elements.svg)
 
-For element 0
+##### For element 0
 
 The shape functions are
 
 ``` math
 \begin{align*}
-N_0(x) &= \frac{0.25-x}{0.25} = 1-4x\\
-N_1(x) &= \frac{-x}{-0.25} = 4x
+N_00(x) &= \frac{0.25-x}{0.25} = 1-4x\\
+N_01(x) &= \frac{-x}{-0.25} = 4x
 \end{align*}
 ```
 
@@ -94,3 +94,21 @@ so we are left with
 ``` math
 y(x) = y_1 N_1(x)
 ```
+
+##### For element 1
+
+The shape functions are
+
+``` math
+\begin{align*}
+N_10(x) &= \frac{0.5-x}{0.5-0.25} = 2-4x
+N_11(x) &= \frac{0.25-x}{0.25-0.5} = 4x - 1
+\end{align*}
+```
+
+With the overall function being
+``` math
+y(x) = y_1 N_10(x) + y_2 N_11(x)
+```
+
+
