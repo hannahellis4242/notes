@@ -40,6 +40,14 @@ y(x) = y_0 N_0(x) + y_1 N_1(x)
 \begin{align*}
 \frac{d^ y}{dx^2} &= f(y) \\
 u(x)\frac{d^ y}{dx^2} &= u(x)f(y) \\
-\int_a^b u(x)\frac{d^ y}{dx^2} dx &= \int_a^b u(x)f(y) dx
+\int_a^b u(x)\frac{d^2 y}{dx^2} dx &= \int_a^b u(x)f(y) dx
 \end{align*}
 ```
+Now integrating by parts on the left hand side
+``` math
+\begin{align*}
+\int_a^b u(x)\frac{d^2 y}{dx^2} dx &= \int_a^b u(x)f(y) dx \\
+\left[ u(x) \frac{dy}{dx}\right]_a^b - \int_a^b \frac{d u(x)}{dx}\frac{d y}{dx} dx &= \int_a^b u(x)f(y) dx 
+\end{align*}
+```
+We can choose $u(x)$ to be our shape functions
