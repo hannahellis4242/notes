@@ -38,8 +38,8 @@ y(x) = y_0 N_0(x) + y_1 N_1(x)
 
 ``` math
 \begin{align*}
-\frac{d^ y}{dx^2} &= f(y) \\
-u(x)\frac{d^ y}{dx^2} &= u(x)f(y) \\
+\frac{d^2 y}{dx^2} &= f(y) \\
+u(x)\frac{d^2 y}{dx^2} &= u(x)f(y) \\
 \int_a^b u(x)\frac{d^2 y}{dx^2} dx &= \int_a^b u(x)f(y) dx
 \end{align*}
 ```
@@ -57,3 +57,12 @@ We can choose $u(x)$ to be our shape functions. This will result in one equation
 - \int_a^b \frac{d u(x)}{dx}\frac{d y}{dx} dx &= \int_a^b u(x)f(y) dx
 \end{align*}
 ```
+
+#### Example
+
+Let's start with something we know the solution to then we can compare against a known solution
+``` math
+\frac{d^2 y}{dx^2} = -k^2 y
+```
+Which we know to have solutions of the form $y=A\sin(kx)+B\cos(kx)$. Let's pick boundary conditions that $y(0)=0$ and $y(1)=0$. We will also choose to have for equally long linear elements.
+
