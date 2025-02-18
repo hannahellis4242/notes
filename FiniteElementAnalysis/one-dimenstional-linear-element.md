@@ -26,6 +26,16 @@ Taking the derivative
 \right.
 ```
 
+### Products
+
+within the limits $a\leq x\leq b$
+``` math
+\begin{align*}
+f(x,a,b)f(x,a,b)&=\frac{b-x}{b-a}\frac{b-x}{b-a} \\
+&=\frac{b-x}{b-a}\frac{b-x}{b-a} \\
+\end{align*}
+```
+
 ## Element equation
 Unless the element is on a boundary, the equation for an element is
 
