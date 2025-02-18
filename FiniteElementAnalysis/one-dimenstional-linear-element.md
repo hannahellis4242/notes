@@ -40,17 +40,33 @@ f(x,a,b)f(x,a,b)&=\frac{b-x}{b-a}\frac{b-x}{b-a} \\
 
 ``` math
 \begin{align*}
-f(x,a,b)f(x,b,b)&=\frac{b-x}{b-a}\frac{a-x}{a-b} \\
+f(x,a,b)f(x,b,a)&=\frac{b-x}{b-a}\frac{a-x}{a-b} \\
 &=-\frac{(b-x)(a-x)}{(b-a)^2} \\
 &=-\frac{ab -bx -ax +x^2}{b^2-2ab+a^2}\\
 &=-\frac{ab -(a+b)x +x^2}{b^2-2ab+a^2}
 \end{align*}
 ```
 
+``` math
+\begin{align*}
+f(x,b,a)f(x,a,b)&=\frac{a-x}{a-b}\frac{b-x}{b-a} \\
+&=\frac{b-x}{b-a}\frac{a-x}{a-b}\\
+&=f(x,a,b)f(x,b,a)
+\end{align*}
+```
+
+``` math
+\begin{align*}
+f(x,b,a)f(x,b,a)&=\frac{a-x}{a-b}\frac{a-x}{a-b} \\
+&=\frac{(a-x)^2}{(a-b)^2}\\
+&=\frac{a^2-2ax+x^2}{(b-a)^2}\\
+\end{align*}
+```
+
 | | $f(x,a,b)$ | $f(x,b,a)$ | 
 | - | - | - |
 | $f(x,a,b)$ | $\frac{b^2-2bx+x^2}{(b-a)^2}$ | $-\frac{ab -(a+b)x +x^2}{(b-a)^2}$|
-| $f(x,b,a)$ | | |
+| $f(x,b,a)$ | $-\frac{ab -(a+b)x +x^2}{(b-a)^2}$ | $\frac{a^2-2ax+x^2}{(b-a)^2}$|
 
 #### Integrals
 
