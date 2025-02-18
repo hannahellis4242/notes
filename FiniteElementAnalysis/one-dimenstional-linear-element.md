@@ -33,6 +33,7 @@ within the limits $a\leq x\leq b$
 \begin{align*}
 f(x,a,b)f(x,a,b)&=\frac{b-x}{b-a}\frac{b-x}{b-a} \\
 &=\frac{(b-x)^2}{(b-a)^2}\\
+&=\frac{b^2-2bx+x^2}{b^2-2ab+a^2}\\
 \end{align*}
 ```
 
