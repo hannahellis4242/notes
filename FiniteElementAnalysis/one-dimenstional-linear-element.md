@@ -32,9 +32,12 @@ within the limits $a\leq x\leq b$
 ``` math
 \begin{align*}
 f(x,a,b)f(x,a,b)&=\frac{b-x}{b-a}\frac{b-x}{b-a} \\
-&=\frac{b-x}{b-a}\frac{b-x}{b-a} \\
+&=\frac{(b-x)^2}{(b-a)^2}\\
 \end{align*}
 ```
+
+#### Integrals
+
 
 ## Element equation
 Unless the element is on a boundary, the equation for an element is
