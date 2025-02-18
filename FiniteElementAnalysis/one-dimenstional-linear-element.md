@@ -20,7 +20,7 @@ Taking the derivative
 ``` math
 \frac{df(x,a,b)}{dx} = \left\{
 \begin{array}{ll}
-      \frac{-x}{b-a} & a\leq x\leq b \\
+      \frac{-1}{b-a} & a\leq x\leq b \\
       0 & otherwise
 \end{array} 
 \right.
@@ -30,5 +30,21 @@ Taking the derivative
 Unless the element is on a boundary, the equation for an element is
 
 ``` math
-f_n(x)=y_nf(x,x_n,x_{n+1})+y_{n+1}f(x,x_{n+1},x_n)
+f_n(x) = \left\{
+\begin{array}{ll}
+      y_nf(x,x_n,x_{n+1})+y_{n+1}f(x,x_{n+1},x_n) & a\leq x\leq b \\
+      0 & otherwise
+\end{array} 
+\right.
+```
+
+Taking the derivative again
+
+``` math
+\begin{align*}
+\frac{df_n}{dx}&=y_n \frac{df(x,x_n,x_{n+1})}{dx}+y_{n+1} \frac{df(x,x_{n+1},x_n)}{dx}\\
+&=y_n \frac{-1}{x_{n+1}-x_n}+y_{n+1} \frac{-1}{x_n-x_{n+1}} \\
+&=y_n \frac{-1}{x_{n+1}-x_n}+y_{n+1} \frac{1}{x_{n+1}-x_n}+y_{n+1} \\
+&= \frac{y_{n+1} -y_n}{x_{n+1}-x_n}
+\end{align*}
 ```
