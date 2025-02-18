@@ -83,20 +83,18 @@ f(x,b,a)f(x,b,a)&=\frac{a-x}{a-b}\frac{a-x}{a-b} \\
 ```
 Where we have used the fact $(b-a)^3=b^3-3b^2 a+3ba^2-a^3$ by binomial expansion
 
-> v these results are wrong
 ``` math
 \begin{align*}
 \int_{a}^{b} \frac{a^2-2ax+x^2}{(b-a)^2} dx &= \frac{1}{(b-a)^2}\int_{a}^{b} a^2-2ax+x^2 dx \\
- &= \frac{1}{(b-a)^2}\left[ a^2 x -ax^2+\frac{x^3}{3} \right]_{a}^{b}\\
- &= \frac{1}{(b-a)^2}\left( a^2 (b-a) -a(b-a)^2+\frac{(b-a)^3}{3} \right)\\
- &= \frac{a^2}{b-a} -a + \frac{(b-a)}{3}\\
- &= \frac{3a^2}{3(b-a)} -\frac{3(b-a)a}{3(b-a)} + \frac{(b-a)^2}{3(b-a)}\\
- &= \frac{3a^2-3(b-a)a+(b-a)^2}{3(b-a)}\\
- &= \frac{3a^2-3ab + 3a^2+b^2-2ab + a^2}{3(b-a)}\\
-&= \frac{7a^2+b^2-5ab}{3(b-a)}
+ &=\frac{1}{(b-a)^2}\left[a^2x-ax^2+\frac{x^3}{3} \right]_{a}^{b}\\
+&=\frac{1}{(b-a)^2}\left( a^2b-ab^2+\frac{b^3}{3} - a^2a+aa^2-\frac{a^3}{3} \right)\\
+&=\frac{1}{(b-a)^2}\left( a^2b-ab^2+\frac{b^3}{3} - a^3+a^3-\frac{a^3}{3} \right)\\
+&=\frac{b^3 +3a^2b-3ab^2-a^3}{3(b-a)^2}\\
+&=\frac{(b-a)^3}{3(b-a)^2}\\
+&=\frac{b-a}{3}
 \end{align*}
 ```
-
+> v these results are wrong
 ``` math
 \begin{align*}
 \int_{a}^{b} -\frac{ab -(a+b)x +x^2}{(b-a)^2} dx &= -\frac{1}{(b-a)^2} \int_{a}^{b} ab +(a+b)x -x^2 dx\\
