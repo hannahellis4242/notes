@@ -76,7 +76,10 @@ f(x,b,a)f(x,b,a)&=\frac{a-x}{a-b}\frac{a-x}{a-b} \\
 &= \frac{1}{(b-a)^2}\left[ b^2 x -bx^2+\frac{x^3}{3} \right]_{a}^{b} \\
 &= \frac{1}{(b-a)^2}\left( b^2(b-a) -b(b-a)^2+\frac{(b-a)^3}{3} \right)\\
 &= \frac{b^2}{b-a} -b + \frac{b - a}{3}\\
-&= \frac{3b^2}{3(b-a)} - \frac{3b(b-a)}{3(b-a)} + \frac{(b - a)^2}{3(b-a)}
+&= \frac{3b^2}{3(b-a)} - \frac{3b(b-a)}{3(b-a)} + \frac{(b - a)^2}{3(b-a)}\\
+&= \frac{3b^2 - 3b(b-a) + (b - a)^2}{3(b-a)} \\
+&= \frac{3b^2 - 3b^2+3ab + b^2 -2ab + a^2}{3(b-a)}\\
+&= \frac{b^2 +ab + a^2}{3(b-a)}
 \end{align*}
 ```
 
