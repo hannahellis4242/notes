@@ -96,6 +96,14 @@ f(x,b,a)f(x,b,a)&=\frac{a-x}{a-b}\frac{a-x}{a-b} \\
 \end{align*}
 ```
 
+``` math
+\begin{align*}
+\int_{a}^{b} -\frac{ab -(a+b)x +x^2}{(b-a)^2} dx &= -\frac{1}{(b-a)^2} \int_{a}^{b} ab +(a+b)x -x^2 dx\\
+&= -\frac{1}{(b-a)^2} \left[ abx +\frac{a+b}{2}x^2 -\frac{x^3}{3} \right]_{a}^{b}\\
+&= -\frac{1}{(b-a)^2} \left( ab(b-a) +\frac{a+b}{2}(b-a)^2 -\frac{(b-a)^3}{3}  \right)
+\end{align*}
+```
+
 ## Element equation
 Unless the element is on a boundary, the equation for an element is
 
