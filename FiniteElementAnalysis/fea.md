@@ -180,3 +180,31 @@ y_3(x) &= y_3 N_{30}(x)
 ```
 
 with boundary conditions that $y_0 = y_4 = 0$
+
+#### Solving for each element
+
+For each element we need to solve the following, with $u(x)$ being one shape function. 
+``` math
+- \int_0^1 \frac{d u(x)}{dx}\frac{d y}{dx} dx = -k^2 \int_0^1 u(x)y dx
+```
+This means we get two for central elements, and one for edge elements.
+
+#### element 0
+
+``` math
+\begin{align*}
+y_0(x)&= y_1 N_{01}(x)\\
+\frac{d y_0(x)}{dx}&= y_1 \frac{d N_{01}}{dx}\\
+&=4 y_1
+\end{align*}
+```
+Putting this in to the integrals and using $u=N_{01}$
+``` math
+\begin{align*}
+- \int_0^{0.25} \frac{d u(x)}{dx}\frac{d y}{dx} dx&= -k^2 \int_0^{0.25} u(x)y dx\\
+\int_0^{0.25} 4 (4 y_1) dx &= k^2 \int_0^{0.25} 4x (4x y_1) dx\\
+y_1 \int_0^{0.25} 16  dx &= y_1 k^2 \int_0^{0.25} 16 x^2 dx \\
+\int_0^{0.25} 16  dx &= k^2 \int_0^{0.25} 16 x^2 dx
+\end{align*}
+```
+
