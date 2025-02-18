@@ -83,6 +83,19 @@ f(x,b,a)f(x,b,a)&=\frac{a-x}{a-b}\frac{a-x}{a-b} \\
 \end{align*}
 ```
 
+``` math
+\begin{align*}
+\int_{a}^{b} \frac{a^2-2ax+x^2}{(b-a)^2} dx &= \frac{1}{(b-a)^2}\int_{a}^{b} a^2-2ax+x^2 dx \\
+ &= \frac{1}{(b-a)^2}\left[ a^2 x -ax^2+\frac{x^3}{3} \right]_{a}^{b}\\
+ &= \frac{1}{(b-a)^2}\left( a^2 (b-a) -a(b-a)^2+\frac{(b-a)^3}{3} \right)\\
+ &= \frac{a^2}{b-a} -a + \frac{(b-a)}{3}\\
+ &= \frac{3a^2}{3(b-a)} -\frac{3(b-a)a}{3(b-a)} + \frac{(b-a)^2}{3(b-a)}\\
+ &= \frac{3a^2-3(b-a)a+(b-a)^2}{3(b-a)}\\
+ &= \frac{3a^2-3ab + 3a^2+b^2-2ab + a^2}{3(b-a)}\\
+&= \frac{7a^2+b^2-5ab}{3(b-a)}
+\end{align*}
+```
+
 ## Element equation
 Unless the element is on a boundary, the equation for an element is
 
