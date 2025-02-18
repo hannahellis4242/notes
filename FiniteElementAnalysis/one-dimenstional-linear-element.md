@@ -75,11 +75,15 @@ f(x,b,a)f(x,b,a)&=\frac{a-x}{a-b}\frac{a-x}{a-b} \\
 \int_{a}^{b} \frac{b^2-2bx+x^2}{(b-a)^2} dx &= \frac{1}{(b-a)^2}\int_{a}^{b}  b^2-2bx+x^2 dx \\
 &= \frac{1}{(b-a)^2}\left[ b^2 x -bx^2+\frac{x^3}{3} \right]_{a}^{b} \\
 &= \frac{1}{(b-a)^2}\left( b^2 b -b b^2+\frac{b^3}{3} - b^2 a + ba^2-\frac{a^3}{3} \right)\\
-&= \frac{1}{(b-a)^2}\left( \frac{b^3}{3} -\frac{a^3}{3} - b^2 a + ba^2 \right)
+&= \frac{1}{(b-a)^2}\left( \frac{b^3}{3} - \frac{3 b^2 a}{3} + \frac{3ba^2}{3} -\frac{a^3}{3}\right)\\
+&= \frac{b^3-3b^2 a+3ba^2-a^3}{3(b-a)^2}\\
+&= \frac{(b-a)^3}{3(b-a)^2}\\
+&= \frac{b-a}{3}
 \end{align*}
 ```
+Where we have used the fact $(b-a)^3=b^3-3b^2 a+3ba^2-a^3$ by binomial expansion
 
-v these results are wrong
+> v these results are wrong
 ``` math
 \begin{align*}
 \int_{a}^{b} \frac{a^2-2ax+x^2}{(b-a)^2} dx &= \frac{1}{(b-a)^2}\int_{a}^{b} a^2-2ax+x^2 dx \\
