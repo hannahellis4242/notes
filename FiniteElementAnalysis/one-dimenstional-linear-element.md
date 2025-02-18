@@ -14,8 +14,19 @@ f(x,a,b) = \left\{
 \right.
 ```
 
-This is chosen so that $f(a,a,b)=1$ and f(b,a,b)=0$
+This is chosen so that $f(a,a,b)=1$ and $f(b,a,b)=0$.
 
+Taking the derivative
+``` math
+\frac{df(x,a,b)}{dx} = \left\{
+\begin{array}{ll}
+      \frac{-x}{b-a} & a\leq x\leq b \\
+      0 & otherwise
+\end{array} 
+\right.
+```
+
+## Element equation
 Unless the element is on a boundary, the equation for an element is
 
 ``` math
