@@ -94,12 +94,16 @@ Where we have used the fact $(b-a)^3=b^3-3b^2 a+3ba^2-a^3$ by binomial expansion
 &=\frac{b-a}{3}
 \end{align*}
 ```
-> v these results are wrong
+Once again using $(b-a)^3=b^3-3b^2 a+3ba^2-a^3$
 ``` math
 \begin{align*}
 \int_{a}^{b} -\frac{ab -(a+b)x +x^2}{(b-a)^2} dx &= -\frac{1}{(b-a)^2} \int_{a}^{b} ab +(a+b)x -x^2 dx\\
 &= -\frac{1}{(b-a)^2} \left[ abx +\frac{a+b}{2}x^2 -\frac{x^3}{3} \right]_{a}^{b}\\
-&= -\frac{1}{(b-a)^2} \left( ab(b-a) +\frac{a+b}{2}(b-a)^2 -\frac{(b-a)^3}{3}  \right)
+&= -\frac{1}{(b-a)^2} \left( ab^2 +\frac{a+b}{2}b^2 -\frac{b^3}{3}  -  a^2b - \frac{a+b}{2}a^2 + \frac{a^3}{3} \right)\\
+&= -\frac{1}{(b-a)^2} \left( \frac{6ab^2}{6} +\frac{3(a+b)b^2}{6} -\frac{2b^3}{6} - \frac{6a^2b}{6} -\frac{3(a+b)a^2}{6} + \frac{2a^3}{6} \right)\\
+&= -\frac{6ab^2+3(a+b)b^2-2b^3-6a^2b -3(a+b)a^2 + 2a^3}{6(b-a)^2}\\
+&= -\frac{6ab^2+3ab^2+3b^3-2b^3-6a^2b -3a^3 -3a^2b + 2a^3}{6(b-a)^2}\\
+&= -\frac{9ab^2+b^3-9a^2b-a^3}{6(b-a)^2}
 \end{align*}
 ```
 
