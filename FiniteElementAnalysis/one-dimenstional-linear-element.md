@@ -109,6 +109,11 @@ Once again using $(b-a)^3=b^3-3b^2 a+3ba^2-a^3$
 &= \frac{b-a}{6}\\
 \end{align*}
 ```
+##### Integral Summary
+| | $f(x,a,b)$ | $f(x,b,a)$ | 
+| - | - | - |
+| $f(x,a,b)$ | $\frac{b-a}{3}$ | $\frac{b-a}{6}$|
+| $f(x,b,a)$ | $\frac{b-a}{6}$ | $\frac{b-a}{3}$|
 
 ## Element equation
 Unless the element is on a boundary, the equation for an element is
