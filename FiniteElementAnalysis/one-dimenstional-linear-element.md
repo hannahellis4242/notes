@@ -37,6 +37,15 @@ f(x,a,b)f(x,a,b)&=\frac{b-x}{b-a}\frac{b-x}{b-a} \\
 \end{align*}
 ```
 
+``` math
+\begin{align*}
+f(x,a,b)f(x,b,b)&=\frac{b-x}{b-a}\frac{a-x}{a-b} \\
+&=-\frac{(b-x)(a-x)}{(b-a)^2} \\
+&=-\frac{ab -bx -ax +x^2}{b^2-2ab+a^2}\\
+&=-\frac{ab -(a+b)x +x^2}{b^2-2ab+a^2}
+\end{align*}
+```
+
 #### Integrals
 
 
