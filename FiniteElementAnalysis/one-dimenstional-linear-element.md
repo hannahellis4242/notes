@@ -186,3 +186,15 @@ For $n_{n+1}$
 &= \frac{1}{x_{n+1}-x_n} y_{n+1} + \frac{-1}{x_{n+1}-x_n} y_{n} 
 \end{align*}
 ```
+
+Since $x_{n+1}-x_n$ is the length of the element, we'll denote this as $l_n$, ie the length of the nth element.
+
+Leading to
+``` math
+\frac{1}{l_n}\begin{bmatrix}
+ 1 &  -1\\
+ -1 & 1 
+\end{bmatrix}\begin{pmatrix}
+y_n \\ y_{n+1}
+\end{pmatrix}
+```
