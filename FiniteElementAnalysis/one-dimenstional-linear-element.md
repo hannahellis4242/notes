@@ -116,15 +116,34 @@ Once again using $(b-a)^3=b^3-3b^2 a+3ba^2-a^3$
 | $f(x,b,a)$ | $\frac{b-a}{6}$ | $\frac{b-a}{3}$|
 
 ## Element equation
-Unless the element is on a boundary, the equation for an element is
 
+The nth element has nodes $n_n$ at $(x_n,y_n)$ and $n_{n+1}$ at $(x_{n+1},y_{n+1})$.
+
+### Shape functions
+The shape functions for the nth element and corresponding to the ith node are denoted $N_{n,i}(x)$.
+The corresponding shape function for node $n_n$ is
 ``` math
-f_n(x) = \left\{
+N_{n,n}(x)=f(x,x_n,x_{n+1})=\left\{
 \begin{array}{ll}
-      y_nf(x,x_n,x_{n+1})+y_{n+1}f(x,x_{n+1},x_n) & a\leq x\leq b \\
+      \frac{x_{n+1}-x}{x_{n+1}-x_n} & x_n\leq x\leq x_{n+1}\\
       0 & otherwise
 \end{array} 
 \right.
+```
+and the corresponding function for node $n_{n+1}$ is
+``` math
+N_{n,n+1}(x)=f(x,x_{n+1},x_{n})=\left\{
+\begin{array}{ll}
+      -\frac{x_{n}-x}{x_{n+1}-x_n} & x_n\leq x\leq x_{n+1} \\
+      0 & otherwise
+\end{array} 
+\right.
+```
+
+Unless the element is on a boundary, the equation for an element is
+
+``` math
+f_n(x) = y_n N_{n,n}(x) + y_{n+1} N_{n,n+1}(x)
 ```
 
 Taking the derivative again
@@ -135,5 +154,35 @@ Taking the derivative again
 &=y_n \frac{-1}{x_{n+1}-x_n}+y_{n+1} \frac{-1}{x_n-x_{n+1}} \\
 &=y_n \frac{-1}{x_{n+1}-x_n}+y_{n+1} \frac{1}{x_{n+1}-x_n}+y_{n+1} \\
 &= \frac{y_{n+1} -y_n}{x_{n+1}-x_n}
+\end{align*}
+```
+
+## Stiffness matrix
+
+The stiffness matrix comes from the integration by parts for our govenerning equation. For second order derivative terms the integral we need to solve for each node is
+
+``` math
+\int_{x_n}^{x_{n+1}} \frac{dN_{n,i}}{dx} \frac{df_n}{dx} dx
+```
+
+For $n_n$
+``` math
+\begin{align*}
+\int_{x_n}^{x_{n+1}} \frac{dN_{n,n}}{dx} \frac{df_n}{dx} dx &= \int_{x_n}^{x_{n+1}} \frac{-1}{x_{n+1}-x_n}\frac{y_{n+1} -y_n}{x_{n+1}-x_n} dx\\
+&= \frac{-1}{x_{n+1}-x_n}\frac{y_{n+1} -y_n}{x_{n+1}-x_n} \int_{x_n}^{x_{n+1}} dx \\
+&= \frac{-1}{x_{n+1}-x_n}\frac{y_{n+1} -y_n}{x_{n+1}-x_n} (x_{n+1}-x_n)\\
+&= -\frac{y_{n+1} -y_n}{x_{n+1}-x_n}\\
+&= \frac{1}{x_{n+1}-x_n} y_n + \frac{-1}{x_{n+1}-x_n} y_{n+1} 
+\end{align*}
+```
+
+For $n_{n+1}$
+``` math
+\begin{align*}
+\int_{x_n}^{x_{n+1}} \frac{dN_{n,n+'}}{dx} \frac{df_n}{dx} dx &= \int_{x_n}^{x_{n+1}} \frac{1}{x_{n+1}-x_n}\frac{y_{n+1} -y_n}{x_{n+1}-x_n} dx\\
+&= \frac{1}{x_{n+1}-x_n}\frac{y_{n+1} -y_n}{x_{n+1}-x_n} \int_{x_n}^{x_{n+1}} dx \\
+&= \frac{-}{x_{n+1}-x_n}\frac{y_{n+1} -y_n}{x_{n+1}-x_n} (x_{n+1}-x_n)\\
+&= \frac{y_{n+1} -y_n}{x_{n+1}-x_n}\\
+&= \frac{1}{x_{n+1}-x_n} y_{n+1} + \frac{-1}{x_{n+1}-x_n} y_{n} 
 \end{align*}
 ```
