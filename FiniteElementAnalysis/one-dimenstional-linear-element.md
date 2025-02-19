@@ -179,7 +179,7 @@ For $n_n$
 For $n_{n+1}$
 ``` math
 \begin{align*}
-\int_{x_n}^{x_{n+1}} \frac{dN_{n,n+'}}{dx} \frac{df_n}{dx} dx &= \int_{x_n}^{x_{n+1}} \frac{1}{x_{n+1}-x_n}\frac{y_{n+1} -y_n}{x_{n+1}-x_n} dx\\
+\int_{x_n}^{x_{n+1}} \frac{dN_{n,n+1}}{dx} \frac{df_n}{dx} dx &= \int_{x_n}^{x_{n+1}} \frac{1}{x_{n+1}-x_n}\frac{y_{n+1} -y_n}{x_{n+1}-x_n} dx\\
 &= \frac{1}{x_{n+1}-x_n}\frac{y_{n+1} -y_n}{x_{n+1}-x_n} \int_{x_n}^{x_{n+1}} dx \\
 &= \frac{-}{x_{n+1}-x_n}\frac{y_{n+1} -y_n}{x_{n+1}-x_n} (x_{n+1}-x_n)\\
 &= \frac{y_{n+1} -y_n}{x_{n+1}-x_n}\\
