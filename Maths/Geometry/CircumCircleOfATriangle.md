@@ -72,3 +72,58 @@ d & e \\
 g & h
 \end{bmatrix} = aei - afh - bdi +bfg + cdh - ceg
 ```
+
+and that Cramer's rule for the matrix equation
+``` math
+\begin{bmatrix}
+a & b & c \\
+d & e & f \\
+g & h & i
+\end{bmatrix}\begin{pmatrix}
+x \\
+y \\
+z
+\end{pmatrix} =
+\begin{pmatrix}
+u \\
+v \\
+w
+\end{pmatrix}
+```
+is
+
+``` math
+x = \frac{\det \begin{bmatrix}
+u & b & c \\
+v & e & f \\
+w & h & i
+\end{bmatrix}}{\det \begin{bmatrix}
+a & b & c \\
+d & e & f \\
+g & h & i
+\end{bmatrix}}
+```
+
+``` math
+y = \frac{\det \begin{bmatrix}
+a & u & c \\
+d & v & f \\
+g & w & i
+\end{bmatrix}}{\det \begin{bmatrix}
+a & b & c \\
+d & e & f \\
+g & h & i
+\end{bmatrix}}
+```
+
+``` math
+z = \frac{\det \begin{bmatrix}
+a & b & u \\
+d & e & v \\
+g & h & w
+\end{bmatrix}}{\det \begin{bmatrix}
+a & b & c \\
+d & e & f \\
+g & h & i
+\end{bmatrix}}
+```
