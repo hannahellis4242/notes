@@ -6,92 +6,19 @@ Since you can construct a circle that goes through any three points, the circumc
 
 This means constructing the circumcircle is the same as constructing a circle through three points.
 
-## Finding the centre
+## Equation of Circle
 
-### Method 1
-
-This method uses the fact that the distance to the centre of the circumcircle to each corner is the same for every corner.
-
-![circumcircle](../img/dbf8408a-c61c-4d9e-89ef-02abc84065fe.svg)
-
-The triangle corners are labelled $A$, $B$ and $C$ and the centre of the circumcircle is labelled $O$
-
-The distance to any point $P$ is given by
-
+The equation for a circle centred at (a,b) with radius c is given by
 ``` math
-\left| O - P \right|^2 = R^2 =\left| O \right|^2 + \left| P^2 \right| - 2 O \cdot P
+(x-a)^2+(y-b)^2=c^2
 ```
 
-Where R is the radius of the circumcircle.
-
-We can subtract any two distances from each other say between point $P$ and point $Q$, and since the distances are the same for every corner of the triangle we obtain the following
-
+This can be expanded and rearranged to give
 ``` math
 \begin{align*}
-\left| O - P \right|^2 - \left| O - Q \right|^2 &= \left| O \right|^2 + \left| P^2 \right| - 2 O \cdot P - \left| O \right|^2 - \left| Q^2 \right| + 2 O \cdot Q \\
-R^2 - R^2 &=  \left| P^2 \right| - \left| Q^2 \right|- 2 O \cdot P  + 2 O \cdot Q \\
-0 &= \left| P^2 \right| - \left| Q^2 \right| - 2 \left( O \cdot P  - O \cdot Q \right) \\
-2 \left( O \cdot P  - O \cdot Q \right) &= \left| P^2 \right| - \left| Q^2 \right|  \\
-2 O \cdot\left( P  -  Q \right) &= \left| P^2 \right| - \left| Q^2 \right| \\
-O \cdot\left( P  -  Q \right) &= \frac{\left| P^2 \right| - \left| Q^2 \right|}{2}
+(x-a)^2+(y-b)^2&=c^2 \\
+x^2 -2ax-a^2+y^2-2by+b^2 &= c^2 \\
+-2ax-2by+a^2+b^2-c^2 &= -x^2 -y^2 \\
+-2ax-2by+a^2+b^2-c^2 &= -x^2 -y^2 \\
 \end{align*}
-```
-
-We can write this in terms of coordinates as
-
-``` math
-\left( P_x - Q_x \right) O_x  + \left( P_y - Q_y \right) O_y  = \frac{ P_x^2 + P_y^2 - Q_x^2 - Q_y^2 }{2}
-```
-
-If we pick two combinations of points, we can get two equations which we can convert into a standard matrix equation.
-
-``` math
-\begin{align*}
-\left( A_x - B_x \right) O_x  + \left( A_y - B_y \right) O_y  &= \frac{ A_x^2 + A_y^2 - B_x^2 - B_y^2 }{2}\\
-\left( A_x - C_x \right) O_x  + \left( A_y - C_y \right) O_y  &= \frac{ A_x^2 + A_y^2 - C_x^2 - C_y^2 }{2}
-\end{align*}
-```
-
-``` math
-\begin{bmatrix}
- A_x - B_x & A_y - B_y  \\
- A_x - C_x & A_y - C_y 
-\end{bmatrix}\begin{pmatrix}
- O_x \\
- O_y
-\end{pmatrix} = \begin{pmatrix}
- \frac{ A_x^2 + A_y^2 - B_x^2 - B_y^2 }{2} \\
-\frac{ A_x^2 + A_y^2 - C_x^2 - C_y^2 }{2}
-\end{pmatrix}
-```
-
-Applying the standard 2 by 2 matrix inverse formula gives
-
-``` math
-\begin{pmatrix}
-O_x \\
-O_y
-\end{pmatrix} =
-\frac{1}{\left(A_x-B_x\right)\left(A_y-C_y\right)-\left(A_y - B_y\right)\left(A_x - C_x\right)}\begin{bmatrix}
- A_y - C_y  & B_y - A_y  \\
-C_x - A_x &  A_x - B_x
-\end{bmatrix} \begin{pmatrix}
- \frac{ A_x^2 + A_y^2 - B_x^2 - B_y^2 }{2} \\
-\frac{ A_x^2 + A_y^2 - C_x^2 - C_y^2 }{2}
-\end{pmatrix} 
-```
-Which we can tidy up to get 
-
-``` math
-\begin{pmatrix}
-O_x \\
-O_y
-\end{pmatrix} =
-\frac{1}{\left| A \times B \right|  + \left| B \times C \right| + \left| C \times A \right|}\begin{bmatrix}
- A_y - C_y  & B_y - A_y  \\
-C_x - A_x &  A_x - B_x
-\end{bmatrix} \begin{pmatrix}
- \frac{ A_x^2 + A_y^2 - B_x^2 - B_y^2 }{2} \\
-\frac{ A_x^2 + A_y^2 - C_x^2 - C_y^2 }{2}
-\end{pmatrix} 
 ```
