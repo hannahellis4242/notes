@@ -51,3 +51,24 @@ x_1^2 + y_1^2\\
 x_2^2 + y_2^2
 \end{pmatrix}
 ```
+
+### Solving matrix equation
+
+We can use Cramer's rule with the fact the determinant of a 3 by 3 matrix is
+
+``` math
+\det \begin{bmatrix}
+a & b & c \\
+d & e & f \\
+g & h & i
+\end{bmatrix} = a \det \begin{bmatrix}
+e & f \\
+ h & i
+\end{bmatrix} - b \det \begin{bmatrix}
+d  & f \\
+g & i
+\end{bmatrix} + c \det \begin{bmatrix}
+d & e \\
+g & h
+\end{bmatrix} = aei - afh - bdi +bfg + cdh - ceg
+```
