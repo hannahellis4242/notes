@@ -127,3 +127,18 @@ d & e & f \\
 g & h & i
 \end{bmatrix}}
 ```
+
+#### Solutions
+
+Since it's common, we'll start with
+``` math
+\begin{align*}
+\det \begin{bmatrix}
+2x_0 & 2y_0 & 1 \\
+2x_1 & 2y_1 & 1 \\
+2x_2 & 2y_2 & 1
+\end{bmatrix} &= 2x_0 2y_1 - 2x_0 2y_2 - 2y_0 2x_1 +2y_0 2x_2 + 2x_1 2y_2 - 2y_1 2x_2 \\
+&= 4 ( x_0 y_1 - x_0 y_2 + x_1 y_2 - x_1 y_0+ x_2 y_0  - x_2 y_1  )\\
+&= 4 ( x_0 (y_1 - y_2 ) + x_1 (y_2 - y_0)+ x_2 (y_0  -  y_1 ) )\\
+\end{align*}
+```
