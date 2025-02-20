@@ -19,6 +19,35 @@ This can be expanded and rearranged to give
 (x-a)^2+(y-b)^2&=c^2 \\
 x^2 -2ax-a^2+y^2-2by+b^2 &= c^2 \\
 -2ax-2by+a^2+b^2-c^2 &= -x^2 -y^2 \\
--2ax-2by+a^2+b^2-c^2 &= -x^2 -y^2 \\
+2ax+2by+c^2-a^2-b^2 &= +x^2 +y^2 \\
+2ax+2by+k &= +x^2 +y^2 \\
 \end{align*}
+```
+Where $k=c^2-a^2-b^2$
+
+With our three points we get the system of equations
+
+``` math
+\begin{align*}
+2ax_0+2by_0+k &= +x_0^2 +y_0^2 \\
+2ax_1+2by_1+k &= +x_1^2 +y_1^2 \\
+2ax_2+2by_2+k &= +x_2^2 +y_2^2
+\end{align*}
+```
+which can be written as a matrix equation
+``` math
+\begin{bmatrix}
+2x_0 & 2y_0 & 1 \\
+2x_1 & 2y_1 & 1 \\
+2x_2 & 2y_2 & 1
+\end{bmatrix}\begin{pmatrix}
+a \\
+b \\
+k
+\end{pmatrix} =
+\begin{pmatrix}
+x_0^2 + y_0^2 \\
+x_1^2 + y_1^2\\
+x_2^2 + y_2^2
+\end{pmatrix}
 ```
