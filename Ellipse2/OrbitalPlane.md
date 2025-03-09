@@ -1,5 +1,17 @@
 # The Orbital Plane
 
+Here we will develop the orbital elements in terms of planes. We should be able to translate a set of orbital elemnts to their coresponding plane and then any postition along an orbit within the orbital plane to it's position relative to the reference plane.
+
+## The Reference Plane
+
+Since we could choose any plane we liked as a reference plane, we'll make some convention choices now. When setting up axes for our reference plane[^1]. We will choose our x axis[^2] to be our "reference direction"
+
+
+[^1]:Any plane and it's normal forms a reference frame.
+[^2]:And correspondingly our i unit vector
+
+## Equations of a Plane
+
 Since the Orbital Plane is a plane like any other we can start with the typical vector equation that forms a plane.
 
 ``` math
@@ -35,3 +47,4 @@ In the case where the plane passes through the origin, $\mathbf{a}=\mathbf{0}$, 
 n_x x + n_y y +n_z z=0
 ```
 
+## The 
