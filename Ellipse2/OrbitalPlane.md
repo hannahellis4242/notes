@@ -387,6 +387,24 @@ The orbital plane normal can be calculated from the Longitude of the Ascending N
 \end{pmatrix}
 ```
 
+The Ascending Node Vector is then
+``` math
+\hat{\mathbf{u}} = \begin{pmatrix}
+\cos \Omega \\
+\sin \Omega\\
+0
+\end{pmatrix}
+```
+
+The Ascending Perpendicular Vector is
+``` math
+\hat{\mathbf{v}} = \begin{pmatrix}
+-\sin \Omega \cos i \\
+\cos \Omega \cos i\\
+-\sin i
+\end{pmatrix}
+```
+
 ### Argument of Periapsis
 
 Although the orbital plane is correctly orientated, there is nothing stopping the orbit itself to be rotated within the plane. To account for this a third element called the _Argument of Periapsis_ is used. This is the angle between the _Ascending Node_ and the periapsis of the orbit. It is given the symbol $\omega$.
@@ -417,3 +435,5 @@ So we can get the position within the plane to be
 &= (x \cos \omega- y\sin \omega) \hat{\mathbf{u}} + (x \sin \omega + y \cos \omega)\hat{\mathbf{v}}
 \end{align*}
 ```
+
+## 
