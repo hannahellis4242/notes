@@ -303,3 +303,30 @@ Since the angle can be any angle within a full circle, rather than using the dot
 ``` math
 \tan \Omega = \frac{u_x}{u_y} = - \frac{n_y}{n_x}
 ```
+
+Since we will wish to work backwards from a given Longitude of the Ascending Node, we can always split this up a little bit into sines and cosines.
+
+
+``` math
+\begin{align*}
+\cos \Omega &= u_x = \frac{n_y}{\sqrt{n_x^2+n_y^2}} \\
+\sin \Omega &= u_y = -n_x \\
+\end{align*}
+```
+
+### Inclination
+
+The _Inclination_ is the angle the orbital plane makes with the reference plane at the ascending node, and is given the symbol $i$. 
+
+![The Inclination looking down the ascending node](./img/plane-inclination.png)
+
+This is the same as the angle the normal makes with the reference plane's normal vector.
+
+![Angle between the orbital plane normal and the reference plane normal](./img/plane-inclination2.png)
+
+so this can be obtained by taking the dot product
+
+``` math
+\hat{\mathbf{n}} \cdot \hat{k} = \frac{n_z}{\sqrt{n_x^2 + n_y^2 + n_z^2 \\}} = \cos i
+```
+
