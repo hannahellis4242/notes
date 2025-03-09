@@ -51,7 +51,13 @@ Since our orbital plane crosses through the origin of the refence plane also, we
 
 ## The Normal of the Plane
 
-Since it is often easier to think about a plane going through based on it's normal vector[^3]. We will start from the normal vector and use it to describe the orbital elements, so that for a given normal we can calculate the orbital elements or if given a set of orbital elements, we can work backwards to a plane normal.
+Since it is often easier to think about a plane going through based on it's normal vector[^3]. We will start from the normal vector and use it to describe the orbital elements, so that for a given normal we can calculate the orbital elements or if given a set of orbital elements, we can work backwards to a plane normal. Thoughtout this text we will assume the normal vector is a unit vector, if it is not, we can replace it with $\hat{\mathbf{n}}$ given by
+
+``` math
+\hat{\mathbf{n}}= \frac{\mathbf{n}}{|\mathbf{n}|}=\frac{\mathbf{n}}{\sqrt{\mathbf{n} \cdot \mathbf{n} }}
+```
+
+Thoughout the rest of this text any reference to the orbital plane normal will assume it to be normal and so we will drop the hat notation for ease.
 
 [^3]: As we saw earlier, the equation of a plane through the origin is fully defined by the normal
 
@@ -66,5 +72,21 @@ The Ascending Node is the point at which the path of an orbiting body goes throu
 y&=\frac{-n_x}{n_y} x
 \end{align*}
 ```
+This gives the equation of the line, but to get the direction of the ascending node, we need to consider the vector form
+``` math
+\mathbf{r} = \mathbf{a} + \mu \mathbf{b}
+```
+Where $\mathbf{a}$ is the vector between the origin and any point on the line, and $\mathbf{b}$ is a vector in the direction of the line. $\mathbf{a}$ is zero because the planes pass through the origin so the shared line of intersection between them will also go through the origins. We can introduce a parameter $\mu$ into the equation for the line by initially taking $x=\mu$ so that the $y$ part becomes $y=\frac{-n_x}{n_y} x$, so we get the vector for being
 
+``` math
+\begin{pmatrix}
+x \\
+y\\
+z
+\end{pmatrix} = \mu \begin{pmatrix}
+1 \\
+-\frac{n_y}{n_x}\\
+0
+\end{pmatrix}
+```
 
