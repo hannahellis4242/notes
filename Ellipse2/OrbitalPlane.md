@@ -59,7 +59,7 @@ Since it is often easier to think about a plane going through based on it's norm
 
 Thoughout the rest of this text any reference to the orbital plane normal will assume it to be normal and so we will drop the hat notation for ease.
 
-![Orbital plane and normal shown against the reference plane](./img/plane1.png)
+![Orbital plane and normal shown against the reference plane](./img/plain2.png)
 
 [^3]: As we saw earlier, the equation of a plane through the origin is fully defined by the normal
 
