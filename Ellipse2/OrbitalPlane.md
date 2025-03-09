@@ -231,7 +231,7 @@ n_y n_z\\
 \end{pmatrix}
 ```
 
-## Orbital Elements
+## Translating Between Orbital Plane and Reference Plane
 
 Now we have a set of basis vectors established that are in the orbital plane, can start by working out the translation between a point in the plane and a point in our reference plane. Points in the orbital plane will be given coordinates $(u,v)$, so that a point is given by
 ``` math
@@ -253,3 +253,20 @@ n_y n_z\\
 -(n_x^2 + n_y^2)
 \end{pmatrix}
 ```
+
+``` math
+\begin{pmatrix}
+x \\
+y \\
+z
+\end{pmatrix}=\begin{bmatrix}
+\frac{n_y}{\sqrt{n_x^2+n_y^2}} & \frac{n_xn_z}{\sqrt{n_x^2+n_y^2}\sqrt{n_x^2+n_y^2+n_z^2}} \\
+-\frac{n_x}{\sqrt{n_x^2+n_y^2}} & \frac{n_yn_z}{\sqrt{n_x^2+n_y^2}\sqrt{n_x^2+n_y^2+n_z^2}} \\
+0 & -\frac{\sqrt{n_x^2+n_y^2}}{\sqrt{n_x^2+n_y^2+n_z^2}}   
+\end{bmatrix}\begin{pmatrix}
+u \\
+v
+\end{pmatrix}
+```
+
+## Orbital Elements
