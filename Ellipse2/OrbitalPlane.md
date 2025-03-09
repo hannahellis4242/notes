@@ -59,7 +59,7 @@ Since it is often easier to think about a plane going through based on it's norm
 
 Thoughout the rest of this text any reference to the orbital plane normal will assume it to be normal and so we will drop the hat notation for ease.
 
-![Orbital plane and normal shown against the reference plane](./img/plain2.png)
+![Orbital plane and normal shown against the reference plane](./img/plane1.png)
 
 [^3]: As we saw earlier, the equation of a plane through the origin is fully defined by the normal
 
@@ -67,7 +67,7 @@ Thoughout the rest of this text any reference to the orbital plane normal will a
 
 The Ascending Node is the point at which the path of an orbiting body goes through the reference plane in the same direction as the reference plane's normal. For our calculations, it's just the direction to the orbital node that maters as it helps us establish an axis we can use within our orbital plane. The Ascending Node direction is the shared direction of both the orbital plane and the reference plane.
 
-![Orbital plane and normal shown against the reference plane showing the direction to the ascending node](./img/plane2.png)
+![Orbital plane and normal shown against the reference plane showing the direction to the ascending node](./img/plain2.png)
 
 Using our eqution for a plane based on the normal, we can work out when this crosses the reference plane by noting that a line is formed when they cross, when $z=0$ for the orbital plane.
 ``` math
