@@ -387,3 +387,6 @@ The orbital plane normal can be calculated from the Longitude of the Ascending N
 \end{pmatrix}
 ```
 
+### Argument of Periapsis
+
+Although the orbital plane is correctly orientated, there is nothing stopping the orbit itself to be rotated within the plane. 
