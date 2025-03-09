@@ -202,7 +202,7 @@ Which is a bit nicer, but not a lot.
 
 This third vector doesn't really have an established name, it is the vector that would point towards the periapsis point, if the _argument of periapsis_ is 90 degrees. However it always perpendicular to the _Ascending Node_ so in this text we shall call it the _Ascending Perpendicular Vector_. If we were to create a _Nodal Plane_, which is the plane normal to the _Ascending Node_, then the _Ascending Perpendicular Vector_ would be in the direction of the line intersecting the Orbital Plane and the Nodal Plane.
 
-![All three planes](Ellipse2/img/planes.png)
+![All three planes](./img/planes.png)
 
 ## SUMARY SO FAR
 
