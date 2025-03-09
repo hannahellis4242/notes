@@ -150,7 +150,23 @@ We now need a third vector to describe the orbial plane, we already have $\hat{\
 \hat{\mathbf{v}}= \hat{\mathbf{n}} \times \hat{\mathbf{u}}
 ```
 
-For now we won't worry about having a unit vector, just caculate the direction first, so the cross product can be set up as
+For now we won't worry about having a unit vector, just caculate the direction first. The [cross product](Maths/CrossProduct.md) is then 
 ``` math
-\hat{\mathbf{v}}= \hat{\mathbf{n}} \times \hat{\mathbf{u}}
+{\mathbf{v}} = {\mathbf{n}} \times {\mathbf{u}} = \begin{vmatrix}
+\hat{\imath} & \hat{\jmath} & \hat{k} \\
+n_x & n_y & n_z \\
+n_y & -n_x & 0 
+\end{vmatrix} = \begin{pmatrix}
+n_x n_z \\
+n_y n_z\\
+-(n_x^2 + n_y^2)
+\end{pmatrix}
+```
+Now we will normalise so that we get a unit vector
+``` math
+\hat{\mathbf{v}} = \frac{1}{\sqrt{n_x^2 n_z^2 + n_y^2 n_z^2 + (n_x^2 + n_y^2)^2}} \begin{pmatrix}
+n_x n_z \\
+n_y n_z\\
+-(n_x^2 + n_y^2)
+\end{pmatrix}
 ```
