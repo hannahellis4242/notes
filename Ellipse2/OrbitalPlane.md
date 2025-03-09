@@ -389,4 +389,31 @@ The orbital plane normal can be calculated from the Longitude of the Ascending N
 
 ### Argument of Periapsis
 
-Although the orbital plane is correctly orientated, there is nothing stopping the orbit itself to be rotated within the plane. 
+Although the orbital plane is correctly orientated, there is nothing stopping the orbit itself to be rotated within the plane. To account for this a third element called the _Argument of Periapsis_ is used. This is the angle between the _Ascending Node_ and the periapsis of the orbit. It is given the symbol $\omega$.
+
+[The Argument of Periapsis as the angle between the ascending node and the periapsis](./img/plane-aop.png)
+
+In the derivations ([here](./Ellipse.md), [here](./KeplersEquation.md) and [here](./EllipticalOrbits.md) so far we have taken the periapsis to be on the positive x axis. This was chosen so that we can reference the periapsis in the orbital plane.
+
+Since this is just a plane rotation, it should be fairly easy to establish the transformation. Firstly we note that for any point $(x,y)$ within the orbit is defined so that
+``` math
+\mathbf{r}=x \hat{\mathbf{p}} + y \hat{\mathbf{q}}
+```
+![Showing the orientation between the ascending node vector, u, and the periapsis vector, p](./img/AOP.svg)
+
+where $p$ is the vector from the origin to the periapsis, and $u$ is the ascending node. In the above diagram we are looking down the normal of the orbital plane. $p$ and $q$ can be calculated from the Argument of Periapsis, as such
+``` math
+\begin{align*}
+\hat{\mathbf{p}} &= \cos \omega \hat{\mathbf{u}} + \sin \omega \hat{\mathbf{v}}\\
+\hat{\mathbf{q}} &= -\sin \omega \hat{\mathbf{u}} + \cos \omega \hat{\mathbf{v}}
+\end{align*}
+```
+
+So we can get the position within the plane to be
+``` math
+\begin{align*}
+\mathbf{r}&=x \hat{\mathbf{p}} + y \hat{\mathbf{q}}\\
+&= x (\cos \omega \hat{\mathbf{u}} + \sin \omega \hat{\mathbf{v}}) + y(-\sin \omega \hat{\mathbf{u}} + \cos \omega \hat{\mathbf{v}})\\
+&= (x \cos \omega- y\sin \omega) \hat{\mathbf{u}} + (x \sin \omega + y \cos \omega)\hat{\mathbf{v}}
+\end{align*}
+```
