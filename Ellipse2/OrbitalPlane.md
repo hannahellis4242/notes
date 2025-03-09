@@ -170,3 +170,57 @@ n_y n_z\\
 -(n_x^2 + n_y^2)
 \end{pmatrix}
 ```
+so when simplifying lets start with the contents of the square root
+
+``` math
+\begin{align*}
+n_x^2 n_z^2 + n_y^2 n_z^2 + (n_x^2 + n_y^2)^2 &= (n_x^2 + n_y^2) n_z^2 + (n_x^2 + n_y^2)^2\\
+&=( n_x^2 + n_y^2) n_z^2 + (n_x^2 + n_y^2)(n_x^2 + n_y^2)\\
+&=( n_x^2 + n_y^2)(n_z^2+(n_x^2 + n_y^2))\\
+&= ( n_x^2 + n_y^2)(n_x^2 + n_y^2 +n_z^2)
+\end{align*}
+```
+now the square root itself
+``` math
+\begin{align*}
+\sqrt{n_x^2 n_z^2 + n_y^2 n_z^2 + (n_x^2 + n_y^2)^2 }&= \sqrt{( n_x^2 + n_y^2)(n_x^2 + n_y^2 +n_z^2)}
+&= \sqrt{n_x^2 + n_y^2}\sqrt{n_x^2 + n_y^2 +n_z^2}
+\end{align*}
+```
+Which finally gives us
+``` math
+\hat{\mathbf{v}} = \frac{1}{\sqrt{n_x^2 + n_y^2}\sqrt{n_x^2 + n_y^2 +n_z^2}} \begin{pmatrix}
+n_x n_z \\
+n_y n_z\\
+-(n_x^2 + n_y^2)
+\end{pmatrix}
+```
+
+Which is a bit nicer, but not a lot.
+
+## SUMARY SO FAR
+
+Given the unit normal vector for the orbital plane
+``` math
+\hat{\mathbf{n}} = \begin{pmatrix}
+n_x\\
+n_y\\
+n_z
+\end{pmatrix}
+```
+The direction of the _Ascending Node_ is 
+``` math
+\hat{\mathbf{u}} = \frac{1}{\sqrt{n_x^2+n_y^2}}\begin{pmatrix}
+n_y \\
+-n_x\\
+0
+\end{pmatrix}
+```
+The third vector to compte a right handed coordinate system is
+``` math
+\hat{\mathbf{v}} = \frac{1}{\sqrt{n_x^2 + n_y^2}\sqrt{n_x^2 + n_y^2 +n_z^2}} \begin{pmatrix}
+n_x n_z \\
+n_y n_z\\
+-(n_x^2 + n_y^2)
+\end{pmatrix}
+```
