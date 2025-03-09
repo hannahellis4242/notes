@@ -269,4 +269,25 @@ v
 \end{pmatrix}
 ```
 
+For a full transformation that is invertable, you would need to include the normal vector so that points off the orbital plane could also be described
+``` math
+\mathbf{r} = u \hat{\mathbf{u}} + v \hat{\mathbf{v}} + n \hat{\mathbf{n}}
+```
+``` math
+\begin{pmatrix}
+x \\
+y \\
+z
+\end{pmatrix}=\begin{bmatrix}
+\frac{n_y}{\sqrt{n_x^2+n_y^2}} & \frac{n_xn_z}{\sqrt{n_x^2+n_y^2}\sqrt{n_x^2+n_y^2+n_z^2}} & \frac{n_x}{\sqrt{n_x^2+n_y^2+n_z^2}}\\
+-\frac{n_x}{\sqrt{n_x^2+n_y^2}} & \frac{n_yn_z}{\sqrt{n_x^2+n_y^2}\sqrt{n_x^2+n_y^2+n_z^2}} &
+\frac{n_y}{\sqrt{n_x^2+n_y^2+n_z^2}}  \\
+0 & -\frac{\sqrt{n_x^2+n_y^2}}{\sqrt{n_x^2+n_y^2+n_z^2}} & \frac{n_z}{\sqrt{n_x^2+n_y^2+n_z^2}}
+\end{bmatrix}\begin{pmatrix}
+u \\
+v \\
+n
+\end{pmatrix}
+```
+
 ## Orbital Elements
