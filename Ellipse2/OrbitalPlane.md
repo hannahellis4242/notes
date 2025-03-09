@@ -76,7 +76,7 @@ This gives the equation of the line, but to get the direction of the ascending n
 ``` math
 \mathbf{r} = \mathbf{a} + \mu \mathbf{b}
 ```
-Where $\mathbf{a}$ is the vector between the origin and any point on the line, and $\mathbf{b}$ is a vector in the direction of the line. $\mathbf{a}$ is zero because the planes pass through the origin so the shared line of intersection between them will also go through the origins. We can introduce a parameter $\mu$ into the equation for the line by initially taking $x=\mu$ so that the $y$ part becomes $y=\frac{-n_x}{n_y} x$, so we get the vector for being
+Where $\mathbf{a}$ is the vector between the origin and any point on the line, and $\mathbf{b}$ is a vector in the direction of the line. $\mathbf{a}$ is zero because the planes pass through the origin so the shared line of intersection between them will also go through the origins. We can introduce a parameter $\mu$ into the equation for the line by initially taking $x=\mu$ so that the $y$ part becomes $y=\frac{-n_x}{n_y} x$, so we get the vector form being
 
 ``` math
 \begin{pmatrix}
@@ -85,8 +85,33 @@ y\\
 z
 \end{pmatrix} = \mu \begin{pmatrix}
 1 \\
--\frac{n_y}{n_x}\\
+-\frac{n_x}{n_y}\\
 0
 \end{pmatrix}
 ```
+Our direction to the ascending node is then 
+``` math
+\begin{pmatrix}
+1 \\
+-\frac{n_x}{n_y}\\
+0
+\end{pmatrix}
+```
+We would like this to be a unit vector so we do that by dividing by the length of the vector, we will call the unit vector in the direction of the ascending node $\hat{\mathbf{u}}$
 
+``` math
+\hat{\mathbf{u}} = \frac{1}{\sqrt{1+\frac{n_x^2}{n_y^2}}}\begin{pmatrix}
+1 \\
+-\frac{n_x}{n_y}\\
+0
+\end{pmatrix}
+```
+This can be simplifed to
+
+``` math
+\hat{\mathbf{u}} = \frac{1}{\sqrt{1+\frac{n_x^2}{n_y^2}}}\begin{pmatrix}
+1 \\
+-\frac{n_x}{n_y}\\
+0
+\end{pmatrix}
+```
