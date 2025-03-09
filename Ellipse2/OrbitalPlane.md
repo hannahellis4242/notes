@@ -198,6 +198,8 @@ n_y n_z\\
 
 Which is a bit nicer, but not a lot.
 
+This third vector doesn't really have an established name, it is the vector that would point towards the periapsis point, if the _argument of periapsis_ was zero. So to help with the text, the point of periapsis when the argument of periapsis is zero will be called the "Ascending Periapsis Node", it is also the point of highest evelvation of the orbiting body by the reference plane. So we could name the vector the "Ascending Periapsis Vector".
+
 ## SUMARY SO FAR
 
 Given the unit normal vector for the orbital plane
