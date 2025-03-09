@@ -138,6 +138,8 @@ n_y \\
 \end{pmatrix}
 ```
 
+For the rest of this text we shall call $\hat{\mathbf{u}}$ the "Ascending Node Vector".
+
 ## Establishing a Third Vector
 
 We now need a third vector to describe the orbial plane, we already have $\hat{\mathbf{n}}$ and $\hat{\mathbf{u}}$, so we can establish the a third vector by taking their cross product to form a new set of axes. We would like our new set of axes to form a right handed coordinate system, so we should think of $\hat{\mathbf{u}}$ and $\hat{\mathbf{n}}$ as the new coordinate systems $\hat{\imath}$ and $\hat{k}$ respectively, however to avoid confusion we will still with $\hat{\mathbf{u}}$ and $\hat{\mathbf{n}}$. However since for a right handed coordinate system
@@ -198,7 +200,7 @@ n_y n_z\\
 
 Which is a bit nicer, but not a lot.
 
-This third vector doesn't really have an established name, it is the vector that would point towards the periapsis point, if the _argument of periapsis_ was zero. So to help with the text, the point of periapsis when the argument of periapsis is zero will be called the "Ascending Periapsis Node", it is also the point of highest evelvation of the orbiting body by the reference plane. So we could name the vector the "Ascending Periapsis Vector".
+This third vector doesn't really have an established name, it is the vector that would point towards the periapsis point, if the _argument of periapsis_ is 90 degrees. However it always perpendicular to the _Ascending Node_ so in this text we shall call it the _Ascending Perpendicular Vector_. If we were to create a _Nodal Plane_, which is the plane normal to the _Ascending Node_, then the _Ascending Perpendicular Vector_ would be in the direction of the line intersecting the Orbital Plane and the Nodal Plane.
 
 ## SUMARY SO FAR
 
@@ -210,7 +212,7 @@ n_y\\
 n_z
 \end{pmatrix}
 ```
-The direction of the _Ascending Node_ is 
+The _Ascending Node Vector_ is 
 ``` math
 \hat{\mathbf{u}} = \frac{1}{\sqrt{n_x^2+n_y^2}}\begin{pmatrix}
 n_y \\
