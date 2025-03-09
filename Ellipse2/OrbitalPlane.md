@@ -1,6 +1,6 @@
 # The Orbital Plane
 
-Here we will develop the orbital elements in terms of planes. We should be able to translate a set of orbital elemnts to their coresponding plane and then any postition along an orbit within the orbital plane to it's position relative to the reference plane.
+Here we will develop the [orbital elements](https://en.wikipedia.org/wiki/Orbital_elements) in terms of planes. We should be able to translate a set of orbital elemnts to their coresponding plane and then any postition along an orbit within the orbital plane to it's position relative to the reference plane.
 
 ## The Reference Plane
 
@@ -47,4 +47,24 @@ In the case where the plane passes through the origin, $\mathbf{a}=\mathbf{0}$, 
 n_x x + n_y y +n_z z=0
 ```
 
-## The 
+Since our orbital plane crosses through the origin of the refence plane also, we can fully describe the orbital plane by it's normal vector.
+
+## The Normal of the Plane
+
+Since it is often easier to think about a plane going through based on it's normal vector[^3]. We will start from the normal vector and use it to describe the orbital elements, so that for a given normal we can calculate the orbital elements or if given a set of orbital elements, we can work backwards to a plane normal.
+
+[^3]: As we saw earlier, the equation of a plane through the origin is fully defined by the normal
+
+## The Ascending Node
+
+The Ascending Node is the point at which the path of an orbiting body goes through the reference plane in the same direction as the reference plane's normal. For our calculations, it's just the direction to the orbital node that maters as it helps us establish an axis we can use within our orbital plane. The Ascending Node direction is the shared direction of both the orbital plane and the reference plane. Using our eqution for a plane based on the normal, we can work out when this crosses the reference plane by noting that a line is formed when they cross, when $z=0$ for the orbital plane.
+``` math
+\begin{align*}
+0&=n_x x + n_y y +n_z 0\\
+0&=n_x x + n_y y\\
+-n_y y &= n_x x \\
+y&=\frac{-n_x}{n_y} x
+\end{align*}
+```
+
+
