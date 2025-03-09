@@ -149,3 +149,8 @@ We now need a third vector to describe the orbial plane, we already have $\hat{\
 ``` math
 \hat{\mathbf{v}}= \hat{\mathbf{n}} \times \hat{\mathbf{u}}
 ```
+
+For now we won't worry about having a unit vector, just caculate the direction first, so the cross product can be set up as
+``` math
+\hat{\mathbf{v}}= \hat{\mathbf{n}} \times \hat{\mathbf{u}}
+```
