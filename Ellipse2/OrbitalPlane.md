@@ -291,3 +291,11 @@ n
 ```
 
 ## Orbital Elements
+
+### Longitude of the Ascending Node
+
+The _Longitude of the Ascending Node_ is given the symbol $\Omega$ and is the angle between the reference direction within the reference plane and the _Ascending Node_. In our case it's the angle between the x axis and the Ascending Node Vector $\hat{\mathbf{u}}$. Since the angle can be any angle within a full circle, rather than using the dot product, we will just use the fact $\tan \theta = \frac{y}{x}$ (you can use _atan2_ in most programming languges for this)
+
+``` math
+\tan \Omega = \frac{u_x}{u_y} = - \frac{n_y}{n_x}
+```
