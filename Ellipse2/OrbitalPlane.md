@@ -222,9 +222,32 @@ n_y \\
 0
 \end{pmatrix}
 ```
-The third vector to compte a right handed coordinate system is
+The _Ascending Perpendicular Vector_ is
 ``` math
 \hat{\mathbf{v}} = \frac{1}{\sqrt{n_x^2 + n_y^2}\sqrt{n_x^2 + n_y^2 +n_z^2}} \begin{pmatrix}
+n_x n_z \\
+n_y n_z\\
+-(n_x^2 + n_y^2)
+\end{pmatrix}
+```
+
+## Orbital Elements
+
+Now we have a set of basis vectors established that are in the orbital plane, can start by working out the translation between a point in the plane and a point in our reference plane. Points in the orbital plane will be given coordinates $(u,v)$, so that a point is given by
+``` math
+\mathbf{r} = u \hat{\mathbf{u}} + v \hat{\mathbf{v}}
+```
+Or
+``` math
+\begin{pmatrix}
+x \\
+y\\
+z
+\end{pmatrix} = u \frac{1}{\sqrt{n_x^2+n_y^2}}\begin{pmatrix}
+n_y \\
+-n_x\\
+0
+\end{pmatrix}+ v \frac{1}{\sqrt{n_x^2 + n_y^2}\sqrt{n_x^2 + n_y^2 +n_z^2}} \begin{pmatrix}
 n_x n_z \\
 n_y n_z\\
 -(n_x^2 + n_y^2)
