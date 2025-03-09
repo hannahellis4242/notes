@@ -106,12 +106,28 @@ We would like this to be a unit vector so we do that by dividing by the length o
 0
 \end{pmatrix}
 ```
-This can be simplifed to
+Firstly we can simplify the root
 
 ``` math
-\hat{\mathbf{u}} = \frac{1}{\sqrt{1+\frac{n_x^2}{n_y^2}}}\begin{pmatrix}
+\begin{align*}
+\sqrt{1+\frac{n_x^2}{n_y^2}} &= \sqrt{\frac{n_y^2}{n_y^2}+\frac{n_x^2}{n_y^2}}\\
+ &= \sqrt{\frac{n_x^2+n_y^2}{n_y^2}}\\
+ &= \frac{1}{n_y}\sqrt{n_x^2+n_y^2}\\
+\end{align*}
+```
+Putting this back in we get
+``` math
+\hat{\mathbf{u}} = \frac{n_y}{\sqrt{n_x^2+n_y^2}}\begin{pmatrix}
 1 \\
 -\frac{n_x}{n_y}\\
+0
+\end{pmatrix}
+```
+Feeding the $n_y$ into the vector gives
+``` math
+\hat{\mathbf{u}} = \frac{1}{\sqrt{n_x^2+n_y^2}}\begin{pmatrix}
+n_y \\
+-n_x\\
 0
 \end{pmatrix}
 ```
