@@ -338,6 +338,52 @@ Both these two elements together establish the normal of the orbital plane.
 \begin{align*}
 \cos \Omega &= \frac{n_y}{\sqrt{n_x^2+n_y^2}} \\
 \sin \Omega &= -\frac{n_x}{\sqrt{n_x^2+n_y^2}} \\
-\cos i = &= \frac{n_z}{\sqrt{n_x^2 + n_y^2 + n_z^2 \\}}
+\cos i &= \frac{n_z}{\sqrt{n_x^2 + n_y^2 + n_z^2 }}
 \end{align*}
 ```
+
+If we're aiming for a unit normal vector, we of course choose $\sqrt{n_x^2 + n_y^2 + n_z^2}$ so that it is 1, so that
+``` math
+\begin{align*}
+1 &=\sqrt{n_x^2 + n_y^2 + n_z^2 }\\
+1 &=n_x^2 + n_y^2 + n_z^2\\
+1 -n_z^2&=n_x^2 + n_y^2\\
+\sqrt{n_x^2 + n_y^2}&=\sqrt{1-n_z^2}
+\end{align*}
+```
+since $n_z = \cos i$, we can substitute that in
+``` math
+\begin{align*}
+\sqrt{n_x^2 + n_y^2}&=\sqrt{1-n_z^2}=\sqrt{1-\cos^2 i}
+\sqrt{n_x^2 + n_y^2}&=\sin i
+\end{align*}
+```
+where we have used the identity $\sin^2 x + \cos^2 x = 1$. So we get 
+``` math
+\begin{align*}
+\cos \Omega &= \frac{n_y}{\sin i} \\
+\sin \Omega &= -\frac{n_x}{\sin i} \\
+n_z &= \cos i
+\end{align*}
+```
+rearanging gives
+``` math
+\begin{align*}
+n_x &= -\sin i \sin \Omega & \\
+n_y &= \sin i \cos \Omega &\\
+n_z &= \cos i
+\end{align*}
+```
+
+#### Summary
+
+The orbital plane normal can be calculated from the Longitude of the Ascending Node $\Omega$ and the Inclination $i$ as follows
+
+``` math
+\hat{\mathbf{n}} = \begin{pmatrix}
+-\sin i \sin \Omega \\
+\sin i \cos \Omega \\
+\cos i
+\end{pmatrix}
+```
+
