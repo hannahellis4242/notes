@@ -436,4 +436,16 @@ So we can get the position within the plane to be
 \end{align*}
 ```
 
-## 
+## Postion based on orbital plane normal
+
+``` math
+\mathbf{r}= (x \cos \omega- y\sin \omega) \frac{1}{\sqrt{n_x^2+n_y^2}}\begin{pmatrix}
+n_y \\
+-n_x\\
+0
+\end{pmatrix} + (x \sin \omega + y \cos \omega)\frac{1}{\sqrt{n_x^2 + n_y^2}\sqrt{n_x^2 + n_y^2 +n_z^2}} \begin{pmatrix}
+n_x n_z \\
+n_y n_z\\
+-(n_x^2 + n_y^2)
+\end{pmatrix}
+```
