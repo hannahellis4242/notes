@@ -310,7 +310,7 @@ Since we will wish to work backwards from a given Longitude of the Ascending Nod
 ``` math
 \begin{align*}
 \cos \Omega &= u_x = \frac{n_y}{\sqrt{n_x^2+n_y^2}} \\
-\sin \Omega &= u_y = -n_x \\
+\sin \Omega &= u_y = -\frac{n_x}{\sqrt{n_x^2+n_y^2}} \\
 \end{align*}
 ```
 
@@ -330,3 +330,14 @@ so this can be obtained by taking the dot product
 \hat{\mathbf{n}} \cdot \hat{k} = \frac{n_z}{\sqrt{n_x^2 + n_y^2 + n_z^2 \\}} = \cos i
 ```
 
+### Longitude of the Ascending Node and Inclination
+
+Both these two elements together establish the normal of the orbital plane.
+
+``` math
+\begin{align*}
+\cos \Omega &= \frac{n_y}{\sqrt{n_x^2+n_y^2}} \\
+\sin \Omega &= -\frac{n_x}{\sqrt{n_x^2+n_y^2}} \\
+\cos i = &= \frac{n_z}{\sqrt{n_x^2 + n_y^2 + n_z^2 \\}}
+\end{align*}
+```
