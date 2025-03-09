@@ -137,3 +137,15 @@ n_y \\
 0
 \end{pmatrix}
 ```
+
+## Establishing a Third Vector
+
+We now need a third vector to describe the orbial plane, we already have $\hat{\mathbf{n}}$ and $\hat{\mathbf{u}}$, so we can establish the a third vector by taking their cross product to form a new set of axes. We would like our new set of axes to form a right handed coordinate system, so we should think of $\hat{\mathbf{u}}$ and $\hat{\mathbf{n}}$ as the new coordinate systems $\hat{\imath}$ and $\hat{k}$ respectively, however to avoid confusion we will still with $\hat{\mathbf{u}}$ and $\hat{\mathbf{n}}$. However since for a right handed coordinate system
+``` math
+\hat{\jmath} = \hat{k} \times \hat{\imath}
+```
+ we can get our third vector simarly, we will call it $\hat{\mathbf{v}}$.
+
+``` math
+\hat{\mathbf{v}}= \hat{\mathbf{n}} \times \hat{\mathbf{u}}
+```
