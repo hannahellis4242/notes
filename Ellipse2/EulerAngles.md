@@ -21,6 +21,22 @@ The first rotation is about the $\hat{k}$ vector by angle $\alpha$ and gives us 
 \hat{\mathbf{n}} &= \hat{k}
 \end{align*}
 ```
+or in matrix form
+``` math
+\begin{pmatrix}
+\hat{\mathbf{u}} \\
+\hat{\mathbf{v}}  \\
+\hat{\mathbf{n}} 
+\end{pmatrix} = \begin{bmatrix}
+\cos \alpha & \sin \alpha & 0 \\
+-\sin \alpha & \cos \alpha & 0  \\
+0 & 0 & 1
+\end{bmatrix}\begin{pmatrix}
+\hat{\imath} \\
+\hat{\jmath}  \\
+\hat{k} 
+\end{pmatrix}
+```
 
 ## Second Rotation
 
