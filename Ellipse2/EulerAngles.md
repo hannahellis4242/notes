@@ -108,6 +108,18 @@ or as our matrix form
 \hat{k} 
 \end{pmatrix}
 ```
+when multiplied out gives
+``` math
+\begin{pmatrix}
+\hat{\mathbf{u}}' \\
+\hat{\mathbf{v}}'  \\
+\hat{\mathbf{n}}' 
+\end{pmatrix} = \begin{bmatrix}\cos \left(α\right)&\sin \left(α\right)&0\\ -\cos \left(β\right)\sin \left(α\right)&\cos \left(β\right)\cos \left(α\right)&\sin \left(β\right)\\ \sin \left(β\right)\sin \left(α\right)&-\sin \left(β\right)\cos \left(α\right)&\cos \left(β\right)\end{bmatrix}\begin{pmatrix}
+\hat{\imath} \\
+\hat{\jmath}  \\
+\hat{k} 
+\end{pmatrix}
+```
 
 ### Third Rotation
 
