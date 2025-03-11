@@ -24,7 +24,7 @@ The first rotation is about the $\hat{k}$ vector by angle $\alpha$ and gives us 
 
 ## Second Rotation
 
-The first rotation is about the $\hat{\mathbf{u}}$ vector by angle $\beta$ and gives us our $\hat{\mathbf{u}}'$, $\hat{\mathbf{v}}'$ and $\hat{\mathbf{n}}'$ vectors.
+The second rotation is about the $\hat{\mathbf{u}}$ vector by angle $\beta$ and gives us our $\hat{\mathbf{u}}'$, $\hat{\mathbf{v}}'$ and $\hat{\mathbf{n}}'$ vectors.
 
 ![The second rotation looking down the u axis]()
 
@@ -50,5 +50,37 @@ which simplifies to give
 \hat{\mathbf{u}}' &= \cos \alpha \hat{\imath} + \sin \alpha \hat{\jmath} \\
 \hat{\mathbf{v}}' &= -\sin \alpha \cos \beta  \hat{\imath} + \cos \alpha \cos \beta  \hat{\jmath} + \sin \beta \hat{k}\\
 \hat{\mathbf{n}}' &=  \sin \alpha \sin \beta\hat{\imath} - \cos \alpha \sin \beta \hat{\jmath}+ \cos \beta \hat{k}
+\end{align*}
+```
+
+### Third Rotation
+
+The third rotation is about the $\hat{\mathbf{n}}'$ vector by angle $\gamma$ and gives us our $\hat{\mathbf{u}}''$, $\hat{\mathbf{v}}''$ and $\hat{\mathbf{n}}''$ vectors.
+
+![The third rotation looking down the n' axis]()
+
+``` math
+\begin{align*}
+\hat{\mathbf{u}}'' &= \cos \gamma \hat{\mathbf{u}}' + \sin \gamma \hat{\mathbf{v}}'\\
+\hat{\mathbf{v}}'' &= -\sin \gamma \hat{\mathbf{u}}' + \cos \gamma \hat{\mathbf{v}}'\\
+\hat{\mathbf{n}}'' &= \hat{\mathbf{n}}'
+\end{align*}
+```
+
+Feeding our second rotation vectors in gives
+
+``` math
+\begin{align*}
+\hat{\mathbf{u}}'' &= \cos \gamma \left( \cos \alpha \hat{\imath} + \sin \alpha \hat{\jmath} \right) + \sin \gamma \left( -\sin \alpha \cos \beta  \hat{\imath} + \cos \alpha \cos \beta  \hat{\jmath} + \sin \beta \hat{k}\right) \\
+\hat{\mathbf{v}}'' &= -\sin \gamma \left( \cos \alpha \hat{\imath} + \sin \alpha \hat{\jmath} \right) + \cos \gamma \left( -\sin \alpha \cos \beta  \hat{\imath} + \cos \alpha \cos \beta  \hat{\jmath} + \sin \beta \hat{k}\right) \\
+\hat{\mathbf{n}}'' &= \sin \alpha \sin \beta\hat{\imath} - \cos \alpha \sin \beta \hat{\jmath}+ \cos \beta \hat{k}'
+\end{align*}
+```
+expanding the brackets gives
+``` math
+\begin{align*}
+\hat{\mathbf{u}}'' &=  \cos \alpha \cos \gamma \hat{\imath} + \sin \alpha \cos \gamma \hat{\jmath} -\sin \alpha \cos \beta  \sin \gamma  \hat{\imath} + \cos \alpha \cos \beta \sin \gamma  \hat{\jmath} + \sin \beta \sin \gamma \hat{k} \\
+\hat{\mathbf{v}}'' &=  -\cos \alpha \sin \gamma\hat{\imath} - \sin \alpha \sin \gamma\hat{\jmath} -\sin \alpha \cos \beta \cos \gamma  \hat{\imath} + \cos \alpha \cos \beta \cos \gamma  \hat{\jmath} + \sin \beta \cos \gamma \hat{k}\\
+\hat{\mathbf{n}}'' &= \sin \alpha \sin \beta\hat{\imath} - \cos \alpha \sin \beta \hat{\jmath}+ \cos \beta \hat{k}'
 \end{align*}
 ```
