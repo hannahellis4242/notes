@@ -135,6 +135,24 @@ The third rotation is about the $\hat{\mathbf{n}}'$ vector by angle $\gamma$ and
 \end{align*}
 ```
 
+or in matrix form
+
+``` math
+\begin{pmatrix}
+\hat{\mathbf{u}''} \\
+\hat{\mathbf{v}''}  \\
+\hat{\mathbf{n}''} 
+\end{pmatrix} = \begin{bmatrix}
+\cos \gamma & \sin \gamma & 0 \\
+-\sin \gamma & \cos \gamma & 0  \\
+0 & 0 & 1
+\end{bmatrix}\begin{pmatrix}
+\hat{\mathbf{u}'} \\
+\hat{\mathbf{v}'}  \\
+\hat{\mathbf{n}'} 
+\end{pmatrix}
+```
+
 Feeding our second rotation vectors in gives
 
 ``` math
@@ -159,4 +177,30 @@ collecting terms
 \hat{\mathbf{v}}'' &=  -\left(\cos \alpha \sin \gamma\hat{\imath} +\sin \alpha \cos \beta \cos \gamma \right) + \left( \cos \alpha \cos \beta \cos \gamma - \sin \alpha \sin \gamma \right)\hat{\jmath} + \sin \beta \cos \gamma \hat{k}\\
 \hat{\mathbf{n}}'' &= \sin \alpha \sin \beta\hat{\imath} - \cos \alpha \sin \beta \hat{\jmath}+ \cos \beta \hat{k}'
 \end{align*}
+```
+
+Or in matrix form
+
+``` math
+\begin{pmatrix}
+\hat{\mathbf{u}''} \\
+\hat{\mathbf{v}''}  \\
+\hat{\mathbf{n}''} 
+\end{pmatrix} = \begin{bmatrix}
+\cos \gamma & \sin \gamma & 0 \\
+-\sin \gamma & \cos \gamma & 0  \\
+0 & 0 & 1
+\end{bmatrix}\begin{bmatrix}
+1 & 0 & 0 \\
+0 & \cos \beta & \sin \beta  \\
+0 & -\sin \beta & \cos \beta
+\end{bmatrix} \begin{bmatrix}
+\cos \alpha & \sin \alpha & 0 \\
+-\sin \alpha & \cos \alpha & 0  \\
+0 & 0 & 1
+\end{bmatrix}\begin{pmatrix}
+\hat{\imath} \\
+\hat{\jmath}  \\
+\hat{k} 
+\end{pmatrix}
 ```
