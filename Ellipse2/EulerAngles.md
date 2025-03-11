@@ -84,3 +84,11 @@ expanding the brackets gives
 \hat{\mathbf{n}}'' &= \sin \alpha \sin \beta\hat{\imath} - \cos \alpha \sin \beta \hat{\jmath}+ \cos \beta \hat{k}'
 \end{align*}
 ```
+collecting terms
+``` math
+\begin{align*}
+\hat{\mathbf{u}}'' &=  \left(\cos \alpha \cos \gamma -\sin \alpha \cos \beta  \sin \gamma \right) \hat{\imath} + \left( \sin \alpha \cos \gamma + \cos \alpha \cos \beta \sin \gamma \right) \hat{\jmath} + \sin \beta \sin \gamma \hat{k} \\
+\hat{\mathbf{v}}'' &=  -\left(\cos \alpha \sin \gamma\hat{\imath} +\sin \alpha \cos \beta \cos \gamma \right) + \left( \cos \alpha \cos \beta \cos \gamma - \sin \alpha \sin \gamma \right)\hat{\jmath} + \sin \beta \cos \gamma \hat{k}\\
+\hat{\mathbf{n}}'' &= \sin \alpha \sin \beta\hat{\imath} - \cos \alpha \sin \beta \hat{\jmath}+ \cos \beta \hat{k}'
+\end{align*}
+```
