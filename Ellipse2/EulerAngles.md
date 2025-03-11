@@ -204,3 +204,54 @@ Or in matrix form
 \hat{k} 
 \end{pmatrix}
 ```
+
+## Transformation of coordinates
+
+A point in space can be described by our rotated vectors as so
+``` math
+\mathbf{r} = x'' \hat{\mathbf{u}''} + y'' \hat{\mathbf{v}''} + z'' \hat{\mathbf{n}''}
+```
+or in matrix form
+``` math
+\begin{pmatrix}
+x'' \\
+y'' \\
+z''
+\end{pmatrix}= \begin{bmatrix}
+x'' & 0 & 0 \\
+0 & y'' &  0 \\
+0 & 0 & z''
+\end{bmatrix} \begin{pmatrix}
+\hat{\mathbf{u}''} \\
+\hat{\mathbf{v}''} \\
+\hat{\mathbf{n}''}
+\end{pmatrix}
+```
+we can feed in our transformation of the vectors
+``` math
+\begin{pmatrix}
+x'' \\
+y'' \\
+z''
+\end{pmatrix}= \begin{bmatrix}
+x'' & 0 & 0 \\
+0 & y'' &  0 \\
+0 & 0 & z''
+\end{bmatrix} \begin{bmatrix}
+\cos \gamma & \sin \gamma & 0 \\
+-\sin \gamma & \cos \gamma & 0  \\
+0 & 0 & 1
+\end{bmatrix}\begin{bmatrix}
+1 & 0 & 0 \\
+0 & \cos \beta & \sin \beta  \\
+0 & -\sin \beta & \cos \beta
+\end{bmatrix} \begin{bmatrix}
+\cos \alpha & \sin \alpha & 0 \\
+-\sin \alpha & \cos \alpha & 0  \\
+0 & 0 & 1
+\end{bmatrix}\begin{pmatrix}
+\hat{\imath} \\
+\hat{\jmath}  \\
+\hat{k} 
+\end{pmatrix}
+```
