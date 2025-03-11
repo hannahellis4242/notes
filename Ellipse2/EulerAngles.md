@@ -52,6 +52,24 @@ The second rotation is about the $\hat{\mathbf{u}}$ vector by angle $\beta$ and 
 \end{align*}
 ```
 
+Or in matrix form
+
+``` math
+\begin{pmatrix}
+\hat{\mathbf{u}}' \\
+\hat{\mathbf{v}}'  \\
+\hat{\mathbf{n}}' 
+\end{pmatrix} = \begin{bmatrix}
+1 & 0 & 0 \\
+0 & \cos \beta & \sin \beta  \\
+0 & -\sin \beta & \cos \beta
+\end{bmatrix}\begin{pmatrix}
+\hat{\mathbf{u}} \\
+\hat{\mathbf{v}}  \\
+\hat{\mathbf{n}} 
+\end{pmatrix}
+```
+
 Feeding in our first rotation gives
 ``` math
 \begin{align*}
@@ -67,6 +85,28 @@ which simplifies to give
 \hat{\mathbf{v}}' &= -\sin \alpha \cos \beta  \hat{\imath} + \cos \alpha \cos \beta  \hat{\jmath} + \sin \beta \hat{k}\\
 \hat{\mathbf{n}}' &=  \sin \alpha \sin \beta\hat{\imath} - \cos \alpha \sin \beta \hat{\jmath}+ \cos \beta \hat{k}
 \end{align*}
+```
+
+or as our matrix form
+
+``` math
+\begin{pmatrix}
+\hat{\mathbf{u}}' \\
+\hat{\mathbf{v}}'  \\
+\hat{\mathbf{n}}' 
+\end{pmatrix} = \begin{bmatrix}
+1 & 0 & 0 \\
+0 & \cos \beta & \sin \beta  \\
+0 & -\sin \beta & \cos \beta
+\end{bmatrix} \begin{bmatrix}
+\cos \alpha & \sin \alpha & 0 \\
+-\sin \alpha & \cos \alpha & 0  \\
+0 & 0 & 1
+\end{bmatrix}\begin{pmatrix}
+\hat{\imath} \\
+\hat{\jmath}  \\
+\hat{k} 
+\end{pmatrix}
 ```
 
 ### Third Rotation
