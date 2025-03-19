@@ -35,3 +35,7 @@ As we have seen [here](./TransformationOfVectorsAndCoordinates.md), if we know t
 \end{bmatrix}
 \begin{pmatrix} x' \\ y' \\ z' \end{pmatrix}
 ```
+
+## Rotation 2
+
+The second rotation is a rotation about the $\hat{\imath}'$ axis with angle being $
