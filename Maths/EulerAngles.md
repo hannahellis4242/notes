@@ -161,7 +161,7 @@ The transformation of the basis vectors is
 \sin \alpha & \cos \alpha & 0 \\
 0 & 0 & 1
 \end{bmatrix}
-\begin{bmatrix}1 &  & 0 \\
+\begin{bmatrix}1 & 0 & 0 \\
 0&\cos \beta & -\sin \beta \\
 0&\sin \beta & \cos \beta
 \end{bmatrix}
@@ -171,7 +171,7 @@ The transformation of the basis vectors is
 \sin \alpha & \cos \alpha & 0 \\
 0 & 0 & 1
 \end{bmatrix}
-\begin{bmatrix}1 &  & 0 \\
+\begin{bmatrix}1 & 0 & 0 \\
 0&\cos \beta & -\sin \beta \\
 0&\sin \beta & \cos \beta
 \end{bmatrix}
