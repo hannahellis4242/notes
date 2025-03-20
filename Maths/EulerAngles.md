@@ -5,6 +5,7 @@ Using what we found with transformations [here](./TransformationOfVectorsAndCoor
 ## Rotation 1
 
 The first rotation is a rotation about the $\hat{k}$ axis by an angle of $\alpha$.
+
 ![first rotation looking down k axis](./img/EulerRotation1.svg)
 
 ### Basis Vector Transformation for Rotation 1
