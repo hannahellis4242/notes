@@ -16,7 +16,7 @@ The transformation of the basis vectors is
 \begin{bmatrix}
 \cos \alpha & \sin \alpha & 0 \\
 -\sin \alpha & \cos \alpha & 0 \\
-0 &  & 1 \\
+0 &  & 1
 \end{bmatrix}
 \begin{pmatrix} \hat{\imath} \\ \hat{\jmath} \\ \hat{k} \end{pmatrix} \tag{1.1}
 ```
@@ -30,7 +30,7 @@ As we have seen [here](./TransformationOfVectorsAndCoordinates.md), if we know t
 \begin{bmatrix}
 \cos \alpha & -\sin \alpha & 0 \\
 \sin \alpha & \cos \alpha & 0 \\
-0 &  & 1 \\
+0 &  & 1
 \end{bmatrix}
 \begin{pmatrix} x' \\ y' \\ z' \end{pmatrix} \tag{1.2}
 ```
@@ -50,7 +50,7 @@ The transformation of the basis vectors is
 \begin{bmatrix}
 1 & 0 & 0 \\
 0 &\cos \beta & \sin \beta \\
-0 &-\sin \beta & \cos \beta \\
+0 &-\sin \beta & \cos \beta
 \end{bmatrix}
 \begin{pmatrix} \hat{\imath}' \\ \hat{\jmath}' \\ \hat{k}' \end{pmatrix} \tag{2.1}
 ```
@@ -61,7 +61,7 @@ The transformation of the basis vectors is
 \begin{pmatrix} x' \\ y' \\ z' \end{pmatrix} =
 \begin{bmatrix}1 &  & 0 \\
 0&\cos \beta & -\sin \beta \\
-0&\sin \beta & \cos \beta \\
+0&\sin \beta & \cos \beta
 \end{bmatrix}
 \begin{pmatrix} x'' \\ y'' \\ z'' \end{pmatrix} \tag{2.2}
 ```
@@ -81,7 +81,7 @@ The transformation of the basis vectors is
 \begin{bmatrix}
 \cos \gamma & \sin \gamma & 0 \\
 -\sin \gamma & \cos \gamma & 0 \\
-0 &  & 1 \\
+0 &  & 1
 \end{bmatrix}
 \begin{pmatrix} \hat{\imath}'' \\ \hat{\jmath}'' \\ \hat{k}'' \end{pmatrix} \tag{3.1}
 ```
@@ -93,7 +93,7 @@ The transformation of the basis vectors is
 \begin{bmatrix}
 \cos \gamma & -\sin \gamma & 0 \\
 \sin \gamma &  \cos \gamma & 0 \\
-0 &  & 1 \\
+0 &  & 1
 \end{bmatrix}
 \begin{pmatrix} x''' \\ y''' \\ z''' \end{pmatrix} \tag{3.2}
 ```
@@ -112,34 +112,34 @@ The transformation of the basis vectors is
 \begin{bmatrix}
 \cos \gamma & \sin \gamma & 0 \\
 -\sin \gamma & \cos \gamma & 0 \\
-0 &  & 1 \\
+0 &  & 1
 \end{bmatrix}
 \begin{pmatrix} \hat{\imath}'' \\ \hat{\jmath}'' \\ \hat{k}'' \end{pmatrix}\\
 &=
 \begin{bmatrix}
 \cos \gamma & \sin \gamma & 0 \\
 -\sin \gamma & \cos \gamma & 0 \\
-0 &  & 1 \\
+0 &  & 1
 \end{bmatrix}
 \begin{bmatrix}
 1 & 0 & 0 \\
 0 &\cos \beta & \sin \beta \\
-0 &-\sin \beta & \cos \beta \\
+0 &-\sin \beta & \cos \beta
 \end{bmatrix}
 \begin{pmatrix} \hat{\imath}' \\ \hat{\jmath}' \\ \hat{k}' \end{pmatrix} \\
 &= \begin{bmatrix}
 \cos \gamma & \sin \gamma & 0 \\
 -\sin \gamma & \cos \gamma & 0 \\
-0 &  & 1 \\
+0 &  & 1
 \end{bmatrix}
 \begin{bmatrix}
 1 & 0 & 0 \\
 0 &\cos \beta & \sin \beta \\
-0 &-\sin \beta & \cos \beta \\
+0 &-\sin \beta & \cos \beta
 \end{bmatrix}\begin{bmatrix}
 \cos \alpha & \sin \alpha & 0 \\
 -\sin \alpha & \cos \alpha & 0 \\
-0 &  & 1 \\
+0 &  & 1
 \end{bmatrix}
 \begin{pmatrix} \hat{\imath} \\ \hat{\jmath} \\ \hat{k} \end{pmatrix}
 \end{align*}
@@ -153,32 +153,32 @@ The transformation of the basis vectors is
 \begin{bmatrix}
 \cos \alpha & -\sin \alpha & 0 \\
 \sin \alpha & \cos \alpha & 0 \\
-0 &  & 1 \\
+0 &  & 1
 \end{bmatrix}
 \begin{pmatrix} x' \\ y' \\ z' \end{pmatrix} \\
 &=\begin{bmatrix}
 \cos \alpha & -\sin \alpha & 0 \\
-\sin \alpha & \cos \alpha & 0 \\
+\sin \alpha & \cos \alpha & 0
 0 &  & 1 \\
 \end{bmatrix}
 \begin{bmatrix}1 &  & 0 \\
 0&\cos \beta & -\sin \beta \\
-0&\sin \beta & \cos \beta \\
+0&\sin \beta & \cos \beta
 \end{bmatrix}
 \begin{pmatrix} x'' \\ y'' \\ z'' \end{pmatrix} \\
 &=\begin{bmatrix}
 \cos \alpha & -\sin \alpha & 0 \\
 \sin \alpha & \cos \alpha & 0 \\
-0 &  & 1 \\
+0 &  & 1
 \end{bmatrix}
 \begin{bmatrix}1 &  & 0 \\
 0&\cos \beta & -\sin \beta \\
-0&\sin \beta & \cos \beta \\
+0&\sin \beta & \cos \beta
 \end{bmatrix}
 \begin{bmatrix}
 \cos \gamma & -\sin \gamma & 0 \\
 \sin \gamma &  \cos \gamma & 0 \\
-0 &  & 1 \\
+0 &  & 1
 \end{bmatrix}
 \begin{pmatrix} x''' \\ y''' \\ z''' \end{pmatrix}
 \end{align*}
