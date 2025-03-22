@@ -71,9 +71,13 @@ as you can see we can write this in a matrix form
 \begin{pmatrix}
 \exp(x)\\
 \exp(-x)
-\end{pmatrix}$$
+\end{pmatrix}
+```
+
 which we can invert to get
-$$ \begin{pmatrix}
+
+``` math
+\begin{pmatrix}
 \exp(x)\\
 \exp(-x)
 \end{pmatrix} =
@@ -90,7 +94,7 @@ or to make it a little clearer
 ``` math
 \begin{align*}
 \exp(x) &= \cosh(x)+\sinh(x)\\
-\exp(-i)&= \cosh(x)-\sinh(x)
+\exp(-x) &= \cosh(x)-\sinh(x)
 \end{align*}
 ```
 
