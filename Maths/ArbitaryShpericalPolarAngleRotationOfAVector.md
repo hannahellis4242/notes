@@ -142,3 +142,51 @@ Or
 \hat{k}
 \end{bmatrix}
 ```
+
+## Putting things together
+
+So before we had our transformation for our normal vector as
+
+```math
+\hat{\mathbf{n}'} = \sin \theta \cos \phi \hat{\imath}' + \sin \theta \sin \phi \hat{\jmath}' + \cos \theta \hat{k}'
+```
+
+You will notice this is just the result of applying our matrix twice, so we can work out all axes of the new rotation as such
+
+```math
+\begin{bmatrix}
+\hat{\imath}'' \\
+\hat{\jmath}'' \\
+\hat{k}''
+\end{bmatrix} = \begin{bmatrix}
+\sin \phi & - \cos \phi & 0 \\
+\cos \theta \cos \phi &  \cos \theta \sin \phi & - \sin \theta \\
+\sin \theta \cos \phi & \sin \theta \sin \phi & \cos \theta
+\end{bmatrix}\begin{bmatrix}
+\hat{\imath}' \\
+\hat{\jmath}' \\
+\hat{k}'
+\end{bmatrix}
+```
+
+which then gives
+
+```math
+\begin{bmatrix}
+\hat{\imath}'' \\
+\hat{\jmath}'' \\
+\hat{k}''
+\end{bmatrix} = \begin{bmatrix}
+\sin \phi & - \cos \phi & 0 \\
+\cos \theta \cos \phi &  \cos \theta \sin \phi & - \sin \theta \\
+\sin \theta \cos \phi & \sin \theta \sin \phi & \cos \theta
+\end{bmatrix}\begin{bmatrix}
+\sin\beta & - \cos \beta & 0 \\
+\cos \alpha \cos \beta &  \cos \alpha \sin\beta & - \sin \alpha \\
+\sin \alpha \cos \beta & \sin\alpha \sin\beta & \cos \alpha
+\end{bmatrix}\begin{bmatrix}
+\hat{\imath} \\
+\hat{\jmath} \\
+\hat{k}
+\end{bmatrix}
+```
