@@ -27,7 +27,7 @@ A=\frac{a+p}{2}
 ```
 
 ```math
-f=\frac{a-p}{2}\\
+f=\frac{a-p}{2}
 ```
 
 ```math
