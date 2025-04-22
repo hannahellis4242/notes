@@ -22,6 +22,7 @@
 - [DeepSpeech](https://github.com/mozilla/DeepSpeech)
 - [Top 15 Open Source Speech Recognition/TTS/STT/ Systems](https://fosspost.org/open-source-speech-recognition)
 - [Build a computer starting from basic components](https://nandgame.com/)
+- [NandGame solutions](https://github.com/timlg07/NandGame-Solutions)
 
 ### Games
 
