@@ -9,3 +9,7 @@
 ## Physics
 
 -[The math of how atomic nuclei stay together is surprisingly beautifu](https://www.youtube.com/watch?v=FL3ImtGcHqQ)
+
+## Stuff
+
+- [Humans Generate an 'Oxidation Field', And It Changes The Air Chemistry Around Us](https://www.sciencealert.com/humans-generate-an-oxidation-field-and-it-changes-the-air-chemistry-around-us?utm_source=pocket-newtab-global-en-GB)
