@@ -4,6 +4,8 @@
 
 - [Functional Parsing](https://www.youtube.com/watch?v=dDtZLm7HIJs)
 - [Introduction to Monads](https://www.youtube.com/watch?v=C2w45qRc3aU&list=WL&index=29)
+- [What is the MVVM pattern](https://www.youtube.com/watch?v=AXpTeiWtbC8)
+- [MVVMS... A Better MVVM?](https://www.youtube.com/watch?v=ve0DFu-arD8)
 
 ## Books
 
