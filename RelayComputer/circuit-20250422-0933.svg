@@ -1,0 +1,727 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   width="668"
+   height="196"
+   id="svg59"
+   sodipodi:docname="circuit-20250422-0933.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview59"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="2.1231187"
+     inkscape:cx="514.33771"
+     inkscape:cy="90.904008"
+     inkscape:window-width="1512"
+     inkscape:window-height="831"
+     inkscape:window-x="0"
+     inkscape:window-y="38"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg59" />
+  <defs
+     id="defs6">
+    <rect
+       x="518.57675"
+       y="94.201045"
+       width="136.59152"
+       height="35.798955"
+       id="rect59" />
+    <linearGradient
+       id="CvxDUXGuJiPq"
+       x1="0px"
+       x2="32px"
+       y1="0px"
+       y2="0px"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#807f7f"
+         id="stop1" />
+      <stop
+         offset="1"
+         stop-color="#807f7f"
+         id="stop2" />
+    </linearGradient>
+    <linearGradient
+       id="XmrUQQNitvQE"
+       x1="0px"
+       x2="32px"
+       y1="0px"
+       y2="0px"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#807f7f"
+         id="stop3" />
+      <stop
+         offset="1"
+         stop-color="#807f7f"
+         id="stop4" />
+    </linearGradient>
+    <linearGradient
+       id="sPkesyIUrIzD"
+       x1="0px"
+       x2="32px"
+       y1="0px"
+       y2="0px"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#02fc02"
+         id="stop5" />
+      <stop
+         offset="1"
+         stop-color="#807f7f"
+         id="stop6" />
+    </linearGradient>
+  </defs>
+  <g
+     id="g59">
+    <rect
+       fill="#ffffff"
+       stroke="none"
+       x="0"
+       y="0"
+       width="668"
+       height="196"
+       id="rect6" />
+    <g
+       transform="scale(1,1) translate(-314,-158)"
+       id="g58">
+      <path
+         fill="none"
+         stroke="#807f7f"
+         paint-order="fill stroke markers"
+         d=" M 456 272 L 416 272"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-width="3"
+         stroke-dasharray=""
+         id="path6" />
+      <path
+         fill="none"
+         stroke="#807f7f"
+         paint-order="fill stroke markers"
+         d=" M 488 272 L 528 272"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-width="3"
+         stroke-dasharray=""
+         id="path7" />
+      <g
+         transform="matrix(1,0,0,1,456,272) scale(1,1)"
+         id="g10">
+        <path
+           fill="none"
+           stroke="url(#CvxDUXGuJiPq)"
+           paint-order="fill stroke markers"
+           d=" M 0 0 L 0 6.53144959545255e-16 A 5.333333333333333 5.333333333333333 0 0 1 10.666666666666666 0 L 10.666666666666666 0"
+           stroke-linecap="round"
+           stroke-miterlimit="10"
+           stroke-width="3"
+           stroke-dasharray=""
+           id="path8" />
+        <path
+           fill="none"
+           stroke="url(#CvxDUXGuJiPq)"
+           paint-order="fill stroke markers"
+           d=" M 10.666666666666666 0 L 10.666666666666668 6.53144959545255e-16 A 5.333333333333333 5.333333333333333 0 0 1 21.333333333333332 0 L 21.333333333333332 0"
+           stroke-linecap="round"
+           stroke-miterlimit="10"
+           stroke-width="3"
+           stroke-dasharray=""
+           id="path9" />
+        <path
+           fill="none"
+           stroke="url(#CvxDUXGuJiPq)"
+           paint-order="fill stroke markers"
+           d=" M 21.333333333333332 0 L 21.333333333333336 6.53144959545255e-16 A 5.333333333333333 5.333333333333333 0 0 1 32 0 L 32 0"
+           stroke-linecap="round"
+           stroke-miterlimit="10"
+           stroke-width="3"
+           stroke-dasharray=""
+           id="path10" />
+      </g>
+      <path
+         fill="none"
+         stroke="#000000"
+         paint-order="fill stroke markers"
+         d=" M 447 280 L 497 280"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-width="3"
+         stroke-dasharray=""
+         id="path11" />
+      <path
+         fill="none"
+         stroke="#000000"
+         paint-order="fill stroke markers"
+         d=" M 497 280 L 497 216"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-width="3"
+         stroke-dasharray=""
+         id="path12" />
+      <path
+         fill="none"
+         stroke="#000000"
+         paint-order="fill stroke markers"
+         d=" M 497 216 L 447 216"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-width="3"
+         stroke-dasharray=""
+         id="path13" />
+      <path
+         fill="none"
+         stroke="#000000"
+         paint-order="fill stroke markers"
+         d=" M 447 216 L 447 280"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-width="3"
+         stroke-dasharray=""
+         id="path14" />
+      <path
+         fill="none"
+         stroke="#404040"
+         paint-order="fill stroke markers"
+         d=" M 472 263 L 472 237"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-dasharray="4,4"
+         id="path15" />
+      <path
+         fill="none"
+         stroke="#807f7f"
+         paint-order="fill stroke markers"
+         d=" M 416 240 L 456 240"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-width="3"
+         id="path16" />
+      <path
+         fill="none"
+         stroke="#807f7f"
+         paint-order="fill stroke markers"
+         d=" M 528 224 L 488 224"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-width="3"
+         id="path17" />
+      <path
+         fill="none"
+         stroke="#807f7f"
+         paint-order="fill stroke markers"
+         d=" M 528 256 L 488 256"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-width="3"
+         id="path18" />
+      <path
+         fill="none"
+         stroke="#c0c0c0"
+         paint-order="fill stroke markers"
+         d=" M 456 240 L 488 224"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-width="3"
+         id="path19" />
+      <path
+         fill="none"
+         stroke="#807f7f"
+         paint-order="fill stroke markers"
+         d=" M 648 256 L 576 256"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-width="3"
+         id="path20" />
+      <path
+         fill="none"
+         stroke="#807f7f"
+         paint-order="fill stroke markers"
+         d=" M 680 256 L 752 256"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-width="3"
+         id="path21" />
+      <g
+         transform="matrix(1,0,0,1,648,256) scale(1,1)"
+         id="g24">
+        <path
+           fill="none"
+           stroke="url(#XmrUQQNitvQE)"
+           paint-order="fill stroke markers"
+           d=" M 0 0 L 0 6.53144959545255e-16 A 5.333333333333333 5.333333333333333 0 0 1 10.666666666666666 0 L 10.666666666666666 0"
+           stroke-linecap="round"
+           stroke-miterlimit="10"
+           stroke-width="3"
+           id="path22" />
+        <path
+           fill="none"
+           stroke="url(#XmrUQQNitvQE)"
+           paint-order="fill stroke markers"
+           d=" M 10.666666666666666 0 L 10.666666666666668 6.53144959545255e-16 A 5.333333333333333 5.333333333333333 0 0 1 21.333333333333332 0 L 21.333333333333332 0"
+           stroke-linecap="round"
+           stroke-miterlimit="10"
+           stroke-width="3"
+           id="path23" />
+        <path
+           fill="none"
+           stroke="url(#XmrUQQNitvQE)"
+           paint-order="fill stroke markers"
+           d=" M 21.333333333333332 0 L 21.333333333333336 6.53144959545255e-16 A 5.333333333333333 5.333333333333333 0 0 1 32 0 L 32 0"
+           stroke-linecap="round"
+           stroke-miterlimit="10"
+           stroke-width="3"
+           id="path24" />
+      </g>
+      <path
+         fill="none"
+         stroke="#000000"
+         paint-order="fill stroke markers"
+         d=" M 639 264 L 689 264"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-width="3"
+         id="path25" />
+      <path
+         fill="none"
+         stroke="#000000"
+         paint-order="fill stroke markers"
+         d=" M 689 264 L 689 200"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-width="3"
+         id="path26" />
+      <path
+         fill="none"
+         stroke="#000000"
+         paint-order="fill stroke markers"
+         d=" M 689 200 L 639 200"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-width="3"
+         id="path27" />
+      <path
+         fill="none"
+         stroke="#000000"
+         paint-order="fill stroke markers"
+         d=" M 639 200 L 639 264"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-width="3"
+         id="path28" />
+      <path
+         fill="none"
+         stroke="#404040"
+         paint-order="fill stroke markers"
+         d=" M 664 247 L 664 221"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-dasharray="4,4"
+         id="path29" />
+      <path
+         fill="none"
+         stroke="#01fd01"
+         paint-order="fill stroke markers"
+         d=" M 576 224 L 648 224"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-width="3"
+         id="path30" />
+      <path
+         fill="none"
+         stroke="#02fc02"
+         paint-order="fill stroke markers"
+         d=" M 752 208 L 680 208"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-width="3"
+         id="path31" />
+      <path
+         fill="none"
+         stroke="#01fd01"
+         paint-order="fill stroke markers"
+         d=" M 752 240 L 680 240"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-width="3"
+         id="path32" />
+      <path
+         fill="none"
+         stroke="#c0c0c0"
+         paint-order="fill stroke markers"
+         d=" M 648 224 L 680 208"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-width="3"
+         id="path33" />
+      <path
+         fill="none"
+         stroke="#807f7f"
+         paint-order="fill stroke markers"
+         d=" M 528 272 L 528 304"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-width="3"
+         id="path34" />
+      <path
+         fill="none"
+         stroke="#807f7f"
+         paint-order="fill stroke markers"
+         d=" M 538 304 L 518 304"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-width="3"
+         id="path35" />
+      <path
+         fill="none"
+         stroke="#807f7f"
+         paint-order="fill stroke markers"
+         d=" M 534 309 L 522 309"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-width="3"
+         id="path36" />
+      <path
+         fill="none"
+         stroke="#807f7f"
+         paint-order="fill stroke markers"
+         d=" M 530 314 L 526 314"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-width="3"
+         id="path37" />
+      <path
+         fill="none"
+         stroke="#01fd01"
+         paint-order="fill stroke markers"
+         d=" M 576 224 L 561 224"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-width="3"
+         id="path38" />
+      <g
+         id="g38">
+        <text
+           fill="#000000"
+           stroke="none"
+           font-family="sans-serif"
+           font-size="10px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration="normal"
+           x="539"
+           y="224"
+           text-anchor="start"
+           dominant-baseline="central"
+           id="text38">+5V</text>
+      </g>
+      <g
+         id="g40">
+        <g
+           id="g39">
+          <text
+             fill="#000000"
+             stroke="none"
+             font-family="sans-serif"
+             font-size="20px"
+             font-style="normal"
+             font-weight="bold"
+             text-decoration="normal"
+             x="384"
+             y="240"
+             text-anchor="middle"
+             dominant-baseline="central"
+             id="text39">L</text>
+        </g>
+        <path
+           fill="none"
+           stroke="#807f7f"
+           paint-order="fill stroke markers"
+           d=" M 416 240 L 396 240"
+           stroke-linecap="round"
+           stroke-miterlimit="10"
+           stroke-width="3"
+           id="path39" />
+      </g>
+      <g
+         id="g42">
+        <g
+           id="g41">
+          <text
+             fill="#000000"
+             stroke="none"
+             font-family="sans-serif"
+             font-size="20px"
+             font-style="normal"
+             font-weight="bold"
+             text-decoration="normal"
+             x="384"
+             y="272"
+             text-anchor="middle"
+             dominant-baseline="central"
+             id="text40">L</text>
+        </g>
+        <path
+           fill="none"
+           stroke="#807f7f"
+           paint-order="fill stroke markers"
+           d=" M 416 272 L 396 272"
+           stroke-linecap="round"
+           stroke-miterlimit="10"
+           stroke-width="3"
+           id="path41" />
+      </g>
+      <path
+         fill="none"
+         stroke="#807f7f"
+         paint-order="fill stroke markers"
+         d=" M 752 256 L 752 288"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-width="3"
+         id="path42" />
+      <path
+         fill="none"
+         stroke="#807f7f"
+         paint-order="fill stroke markers"
+         d=" M 762 288 L 742 288"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-width="3"
+         id="path43" />
+      <path
+         fill="none"
+         stroke="#807f7f"
+         paint-order="fill stroke markers"
+         d=" M 758 293 L 746 293"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-width="3"
+         id="path44" />
+      <path
+         fill="none"
+         stroke="#807f7f"
+         paint-order="fill stroke markers"
+         d=" M 754 298 L 750 298"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-width="3"
+         id="path45" />
+      <g
+         id="g46">
+        <g
+           id="g45">
+          <text
+             fill="#000000"
+             stroke="none"
+             font-family="sans-serif"
+             font-size="20px"
+             font-style="normal"
+             font-weight="bold"
+             text-decoration="normal"
+             x="912"
+             y="208"
+             text-anchor="middle"
+             dominant-baseline="central"
+             id="text45">H</text>
+        </g>
+        <path
+           fill="none"
+           stroke="#02fc02"
+           paint-order="fill stroke markers"
+           d=" M 864 208 L 900 208"
+           stroke-linecap="round"
+           stroke-miterlimit="10"
+           stroke-width="3"
+           id="path46" />
+      </g>
+      <path
+         fill="none"
+         stroke="#807f7f"
+         paint-order="fill stroke markers"
+         d=" M 528 256 L 576 256"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-width="3"
+         id="path47" />
+      <text
+         fill="#000000"
+         stroke="none"
+         font-family="sans-serif"
+         font-size="12px"
+         font-style="normal"
+         font-weight="normal"
+         text-decoration="normal"
+         x="552"
+         y="250"
+         text-anchor="start"
+         dominant-baseline="alphabetic"
+         id="text47" />
+      <path
+         fill="none"
+         stroke="#02fc02"
+         paint-order="fill stroke markers"
+         d=" M 800 208 L 800 224"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-width="3"
+         id="path48" />
+      <path
+         fill="none"
+         stroke="#807f7f"
+         paint-order="fill stroke markers"
+         d=" M 800 256 L 800 272"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-width="3"
+         id="path49" />
+      <g
+         transform="matrix(0,1,-1,0,800,224)"
+         id="g49">
+        <rect
+           fill="none"
+           stroke="url(#sPkesyIUrIzD)"
+           x="0"
+           y="-6"
+           width="32"
+           height="12"
+           stroke-linecap="round"
+           stroke-miterlimit="10"
+           stroke-width="3"
+           id="rect49" />
+      </g>
+      <text
+         fill="#000000"
+         stroke="none"
+         font-family="sans-serif"
+         font-size="12px"
+         font-style="normal"
+         font-weight="normal"
+         text-decoration="normal"
+         x="810"
+         y="246"
+         text-anchor="start"
+         dominant-baseline="alphabetic"
+         id="text49">1k</text>
+      <path
+         fill="none"
+         stroke="#807f7f"
+         paint-order="fill stroke markers"
+         d=" M 800 272 L 800 304"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-width="3"
+         id="path50" />
+      <path
+         fill="none"
+         stroke="#807f7f"
+         paint-order="fill stroke markers"
+         d=" M 810 304 L 790 304"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-width="3"
+         id="path51" />
+      <path
+         fill="none"
+         stroke="#807f7f"
+         paint-order="fill stroke markers"
+         d=" M 806 309 L 794 309"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-width="3"
+         id="path52" />
+      <path
+         fill="none"
+         stroke="#807f7f"
+         paint-order="fill stroke markers"
+         d=" M 802 314 L 798 314"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-width="3"
+         id="path53" />
+      <path
+         fill="none"
+         stroke="#02fc02"
+         paint-order="fill stroke markers"
+         d=" M 752 208 L 800 208"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-width="3"
+         id="path54" />
+      <text
+         fill="#000000"
+         stroke="none"
+         font-family="sans-serif"
+         font-size="12px"
+         font-style="normal"
+         font-weight="normal"
+         text-decoration="normal"
+         x="776"
+         y="202"
+         text-anchor="start"
+         dominant-baseline="alphabetic"
+         id="text54" />
+      <path
+         fill="none"
+         stroke="#02fc02"
+         paint-order="fill stroke markers"
+         d=" M 800 208 L 864 208"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-width="3"
+         id="path55" />
+      <text
+         fill="#000000"
+         stroke="none"
+         font-family="sans-serif"
+         font-size="12px"
+         font-style="normal"
+         font-weight="normal"
+         text-decoration="normal"
+         x="832"
+         y="202"
+         text-anchor="start"
+         dominant-baseline="alphabetic"
+         id="text55" />
+      <path
+         fill="#000000"
+         stroke="none"
+         paint-order="stroke fill markers"
+         d=" M 531 224 A 3 3 0 1 1 530.9999999999577 223.99998407846124 Z"
+         id="path56" />
+      <path
+         fill="#000000"
+         stroke="none"
+         paint-order="stroke fill markers"
+         d=" M 755 240 A 3 3 0 1 1 754.9999999999577 239.99998407846124 Z"
+         id="path57" />
+      <path
+         fill="#000000"
+         stroke="none"
+         paint-order="stroke fill markers"
+         d=" M 803 208 A 3 3 0 1 1 802.9999999999577 207.99998407846124 Z"
+         id="path58" />
+    </g>
+  </g>
+  <text
+     xml:space="preserve"
+     id="text59"
+     style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:16px;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect59);fill:#000000;fill-opacity:0.979798;stroke-width:0.377953;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.348101"
+     transform="translate(-15.68257,-1.9131719)"><tspan
+       x="518.57617"
+       y="107.68917"
+       id="tspan1">Pull Down Resistor</tspan></text>
+</svg>
