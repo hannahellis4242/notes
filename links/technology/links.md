@@ -13,6 +13,7 @@
 - [Fully documented source code for Elite, Revs, Lander, Aviator and more](https://www.bbcelite.com/)
 - [Big Rewrite](https://dylanbeattie.net/songs/big_rewrite.html)
 - [Refactor](https://www.youtube.com/watch?v=SETnK2ny1R0)
+- [Tinker With a Neural Network](https://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=circle&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=0&networkShape=4,2&seed=0.55346&showTestData=false&discretize=false&percTrainData=50&x=true&y=true&xTimesY=false&xSquared=false&ySquared=false&cosX=false&sinX=false&cosY=false&sinY=false&collectStats=false&problem=classification&initZero=false&hideText=false)
 
 ### Games
 
