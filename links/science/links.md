@@ -8,7 +8,7 @@
 
 ## Physics
 
--[The math of how atomic nuclei stay together is surprisingly beautifu](https://www.youtube.com/watch?v=FL3ImtGcHqQ)
+- [The math of how atomic nuclei stay together is surprisingly beautifu](https://www.youtube.com/watch?v=FL3ImtGcHqQ)
 
 ## Stuff
 
