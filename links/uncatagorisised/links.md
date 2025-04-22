@@ -8,3 +8,5 @@
 - [NaturalReader](https://www.naturalreaders.com/online/)
 - [Voice Maker](https://voicemaker.in/)
 - [These psychologists found a better way to teach people to spot misinformation](https://www.popsci.com/health/misinformation-inoculation-theory-videos/?utm_source=pocket-newtab-global-en-GB)
+- [Play as Bowser! - New Super Bowser World](https://www.youtube.com/watch?v=2r8KVDv7OkM)
+- [The Amazing Math behind Colours!](https://www.youtube.com/watch?v=gnUYoQ1pwes)
