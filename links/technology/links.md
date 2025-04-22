@@ -14,6 +14,11 @@
 - [Big Rewrite](https://dylanbeattie.net/songs/big_rewrite.html)
 - [Refactor](https://www.youtube.com/watch?v=SETnK2ny1R0)
 
+### Games
+
+- [Making a Game with Java with No Java Experience ](https://www.youtube.com/watch?v=iOeebAM_C5g)
+- [Pokémon JavaScript Game Tutorial with HTML Canvas](https://www.youtube.com/watch?v=yP5DKzriqXA)
+
 ## Books
 
 ### Refactoring
