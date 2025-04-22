@@ -18,6 +18,7 @@
 
 - [Making a Game with Java with No Java Experience ](https://www.youtube.com/watch?v=iOeebAM_C5g)
 - [Pokémon JavaScript Game Tutorial with HTML Canvas](https://www.youtube.com/watch?v=yP5DKzriqXA)
+- [How NOT to make an indie game ](https://www.youtube.com/watch?v=NnI_1DOYt2A)
 
 ## Books
 
