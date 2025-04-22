@@ -10,3 +10,4 @@
 - [These psychologists found a better way to teach people to spot misinformation](https://www.popsci.com/health/misinformation-inoculation-theory-videos/?utm_source=pocket-newtab-global-en-GB)
 - [Play as Bowser! - New Super Bowser World](https://www.youtube.com/watch?v=2r8KVDv7OkM)
 - [The Amazing Math behind Colours!](https://www.youtube.com/watch?v=gnUYoQ1pwes)
+- [How to search for images you can (legally) use for free](https://www.theverge.com/23308003/image-search-free-legal-use-how-to-wikimedia-creative-commons)
