@@ -12,6 +12,7 @@
 
 - [Fully documented source code for Elite, Revs, Lander, Aviator and more](https://www.bbcelite.com/)
 - [Big Rewrite](https://dylanbeattie.net/songs/big_rewrite.html)
+- [Refactor](https://www.youtube.com/watch?v=SETnK2ny1R0)
 
 ## Books
 
