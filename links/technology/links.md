@@ -16,3 +16,12 @@
 
 ## Node
 - [Two Factor Auth with node.js](https://medium.com/@pdlsandesh144/a-step-by-step-guide-on-using-node-js-to-implement-two-factor-authentication-059c7bcb220c)
+- [Javascript is Weird](https://www.youtube.com/watch?v=sRWE5tnaxlI)
+
+## Tesseract
+
+- [Unstalling and using tesseract on windows 10](https://medium.com/quantrium-tech/installing-and-using-tesseract-4-on-windows-10-4f7930313f82)
+
+## Coding Train
+
+- [Wavefunction Collapse](https://www.youtube.com/watch?v=rI_y2GAlQFM)
