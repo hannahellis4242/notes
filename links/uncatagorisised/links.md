@@ -7,3 +7,4 @@
 - [Can You Actually Drive To The South Pole In Kerbal Space Program?](https://www.youtube.com/watch?v=Ssq1O6WMN7s)
 - [NaturalReader](https://www.naturalreaders.com/online/)
 - [Voice Maker](https://voicemaker.in/)
+- [These psychologists found a better way to teach people to spot misinformation](https://www.popsci.com/health/misinformation-inoculation-theory-videos/?utm_source=pocket-newtab-global-en-GB)
