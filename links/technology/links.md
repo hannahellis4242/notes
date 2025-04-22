@@ -8,6 +8,10 @@
 - [MVVMS... A Better MVVM?](https://www.youtube.com/watch?v=ve0DFu-arD8)
 - [Object-Oriented Programming is Bad ](https://www.youtube.com/watch?v=QM1iUe6IofM)
 
+## Linux
+
+- [How to create compressed encrypted archives with tar and gpg](https://linuxconfig.org/how-to-create-compressed-encrypted-archives-with-tar-and-gpg)
+
 ## Stuff
 
 - [Fully documented source code for Elite, Revs, Lander, Aviator and more](https://www.bbcelite.com/)
