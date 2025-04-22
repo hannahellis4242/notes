@@ -25,7 +25,8 @@
 
 - [Unstalling and using tesseract on windows 10](https://medium.com/quantrium-tech/installing-and-using-tesseract-4-on-windows-10-4f7930313f82)
 
-## Algorithms
+## Algorithms And Datastructures
 
 - [Wavefunction Collapse](https://www.youtube.com/watch?v=rI_y2GAlQFM)
 - [How Computers Draw Weird Shapes - Marching Squares](https://www.youtube.com/watch?v=6oMZb3yP_H8)
+- [Fibonacci Heaps](https://www.youtube.com/watch?v=6JxvKfSV9Ns)
