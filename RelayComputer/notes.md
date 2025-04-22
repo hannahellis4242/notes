@@ -6,3 +6,4 @@
 
 ## Nand Gate
 
+![Nand gate circuit](./img/nand.svg)
