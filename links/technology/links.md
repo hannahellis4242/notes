@@ -42,3 +42,8 @@
 - [Wavefunction Collapse](https://www.youtube.com/watch?v=rI_y2GAlQFM)
 - [How Computers Draw Weird Shapes - Marching Squares](https://www.youtube.com/watch?v=6oMZb3yP_H8)
 - [Fibonacci Heaps](https://www.youtube.com/watch?v=6JxvKfSV9Ns)
+
+## Other
+
+- [DIY Solar Tracker](https://www.youtube.com/watch?v=_6QIutZfsFs)
+- [Why does WATER change the speed of electricity?](https://www.youtube.com/watch?v=rQIg5XeIgQ0&t=27s)
