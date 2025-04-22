@@ -21,6 +21,7 @@
 - [Where Can I Find Free Online Data Sets to Practice SQL?](https://learnsql.com/blog/free-online-datasets-to-practice-sql)
 - [DeepSpeech](https://github.com/mozilla/DeepSpeech)
 - [Top 15 Open Source Speech Recognition/TTS/STT/ Systems](https://fosspost.org/open-source-speech-recognition)
+- [Build a computer starting from basic components](https://nandgame.com/)
 
 ### Games
 
