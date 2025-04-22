@@ -6,3 +6,4 @@
 - [Autogynephilia and The Sexualization of Trans Women](https://www.youtube.com/watch?v=wr9O_HlxpuI)
 - [Gender Identity, Science, And Sex Hierarchy](https://www.youtube.com/watch?v=ksPU0SG022I)
 - [The Mental Illness Argument Against Trans Healthcare](https://www.youtube.com/watch?v=oPpXv-__APw)
+- [GCs Don’t Understand Female-Only Spaces](https://www.youtube.com/watch?v=jbPyBqthhH8)
