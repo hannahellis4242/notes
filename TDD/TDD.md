@@ -10,4 +10,21 @@
 
 ### When refactoring
 
-- If renaming variables, think about the domain.
+- If renaming variables:
+  - does the variable have a meaning within the domain? For Example
+
+``` java
+public class PaginationHelper<I> {
+  List<I> collection;
+  int itemsPerPage;
+  public PaginationHelper(List<I> collection, int itemsPerPage) {
+    this.collection=collection;
+    this.itemsPerPage=itemsPerPage;
+  }
+  public int pageCount() {
+    var numberOfFullPages = collection.size()/itemsPerPage;
+    var numberOfPartPages = collection.size()%itemsPerPage == 0 ? 0 : 1;
+    return numberOfFullPages + numberOfPartPages;
+  }
+}
+```
