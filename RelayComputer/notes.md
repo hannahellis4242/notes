@@ -34,6 +34,13 @@
 
 ![not gate circuit](./img/not.svg)
 
+### NOT Gate Truth Table
+
+| A   | Q   |                                      |
+| --- | --- | ------------------------------------ |
+| 0   | 1   | ![Not gate circuit](./img/not_0.svg) |
+| 1   | 0   | ![Not gate circuit](./img/not_1.svg) |
+
 ## OR Gate
 
 ![or gate circuit](./img/or.svg)
