@@ -4,11 +4,11 @@
 
 - [pull up/down resistors](https://en.wikipedia.org/wiki/Pull-up_resistor)
 
-## Nand Gate
+## NAND Gate
 
 ![Nand gate circuit](./img/nand.svg)
 
-### Nand Gate Truth Table
+### NAND Gate Truth Table
 
 | A   | B   | Q   |                                         |
 | --- | --- | --- | --------------------------------------- |
@@ -17,11 +17,11 @@
 | 1   | 0   | 1   | ![Nand gate circuit](./img/nand_10.svg) |
 | 1   | 1   | 0   | ![Nand gate circuit](./img/nand_11.svg) |
 
-## And Gate
+## AND Gate
 
 ![And gate circuit](./img/and.svg)
 
-### And Gate Truth Table
+### AND Gate Truth Table
 
 | A   | B   | Q   |                                       |
 | --- | --- | --- | ------------------------------------- |
@@ -30,14 +30,22 @@
 | 1   | 0   | 0   | ![And gate circuit](./img/and_10.svg) |
 | 1   | 1   | 1   | ![And gate circuit](./img/and_11.svg) |
 
-## Not Gate
+## NOT Gate
 
 ![not gate circuit](./img/not.svg)
 
-## Or Gate
+## OR Gate
 
 ![or gate circuit](./img/or.svg)
 
-## Nor Gate
+## NOR Gate
 
 ![nor gate circuit](./img/nor.svg)
+
+## XOR Gate
+
+![xor gate circuit](./img/xor.svg)
+
+## XNOR Gate
+
+![xnor gate circuit](./img/xnor.svg)
