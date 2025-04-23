@@ -3,6 +3,7 @@
 ## Useful Links
 
 - [pull up/down resistors](https://en.wikipedia.org/wiki/Pull-up_resistor)
+- [instruction cycle](https://en.wikipedia.org/wiki/Instruction_cycle)
 
 ## NAND Gate
 
