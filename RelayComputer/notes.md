@@ -13,9 +13,9 @@
 
 | A | B | Q | |
 | - | - | - |-|
-| 0 | 0 | | |
-| 0 | 1 | ||
-| 1 | 0 | ||
-| 1 | 1 | ||
+| 0 | 0 | 1 | ![Nand gate circuit](./img/nand_00.svg) |
+| 0 | 1 | 1 |![Nand gate circuit](./img/nand_01.svg)|
+| 1 | 0 | 1 |![Nand gate circuit](./img/nand_10.svg)|
+| 1 | 1 | 0 |![Nand gate circuit](./img/nand_11.svg)|
 
 
