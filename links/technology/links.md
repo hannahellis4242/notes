@@ -57,6 +57,11 @@
 
 - [DIY Solar Tracker](https://www.youtube.com/watch?v=_6QIutZfsFs)
 - [Why does WATER change the speed of electricity?](https://www.youtube.com/watch?v=rQIg5XeIgQ0&t=27s)
+- [How to Convert Speech to Text in Python](https://thepythoncode.com/article/using-speech-recognition-to-convert-speech-to-text-python)
+- [Python: Convert Speech to text and text to Speech](https://www.geeksforgeeks.org/python-convert-speech-to-text-and-text-to-speech/)
+- [Converting speech to text with Node.js](https://www.youtube.com/watch?v=naZ8oEKuR44)
+- [Real-time Speech to Text with DeepSpeech](https://www.youtube.com/watch?v=c_0Q3T0XYTA)
+- [WaveNet Text to Speech in Node JS](https://www.youtube.com/watch?v=uxjPTalCCT0)
 
 ## Database
 
