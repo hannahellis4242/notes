@@ -8,6 +8,13 @@
 - [MVVMS... A Better MVVM?](https://www.youtube.com/watch?v=ve0DFu-arD8)
 - [Object-Oriented Programming is Bad ](https://www.youtube.com/watch?v=QM1iUe6IofM)
 
+## Katas
+
+### Refactoring 
+
+- [5 coding exercises to practice refactoring Legacy Code](https://understandlegacycode.com/blog/5-coding-exercises-to-practice-refactoring-legacy-code/)
+- [How to efficiently practice refactoring katas](https://understandlegacycode.com/blog/efficiently-practice-refactoring-katas/)
+
 ## Linux
 
 - [How to create compressed encrypted archives with tar and gpg](https://linuxconfig.org/how-to-create-compressed-encrypted-archives-with-tar-and-gpg)
