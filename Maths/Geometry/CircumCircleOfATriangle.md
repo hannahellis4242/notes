@@ -6,92 +6,181 @@ Since you can construct a circle that goes through any three points, the circumc
 
 This means constructing the circumcircle is the same as constructing a circle through three points.
 
-## Finding the centre
+## Equation of Circle
 
-### Method 1
-
-This method uses the fact that the distance to the centre of the circumcircle to each corner is the same for every corner.
-
-![circumcircle](../img/dbf8408a-c61c-4d9e-89ef-02abc84065fe.svg)
-
-The triangle corners are labelled $A$, $B$ and $C$ and the centre of the circumcircle is labelled $O$
-
-The distance to any point $P$ is given by
-
+The equation for a circle centred at (a,b) with radius c is given by
 ``` math
-\left| O - P \right|^2 = R^2 =\left| O \right|^2 + \left| P^2 \right| - 2 O \cdot P
+(x-a)^2+(y-b)^2=c^2
 ```
 
-Where R is the radius of the circumcircle.
+This can be expanded and rearranged to give
+``` math
+\begin{align*}
+(x-a)^2+(y-b)^2&=c^2 \\
+x^2 -2ax-a^2+y^2-2by+b^2 &= c^2 \\
+-2ax-2by+a^2+b^2-c^2 &= -x^2 -y^2 \\
+2ax+2by+c^2-a^2-b^2 &= +x^2 +y^2 \\
+2ax+2by+k &= +x^2 +y^2 \\
+\end{align*}
+```
+Where $k=c^2-a^2-b^2$
 
-We can subtract any two distances from each other say between point $P$ and point $Q$, and since the distances are the same for every corner of the triangle we obtain the following
+With our three points we get the system of equations
 
 ``` math
 \begin{align*}
-\left| O - P \right|^2 - \left| O - Q \right|^2 &= \left| O \right|^2 + \left| P^2 \right| - 2 O \cdot P - \left| O \right|^2 - \left| Q^2 \right| + 2 O \cdot Q \\
-R^2 - R^2 &=  \left| P^2 \right| - \left| Q^2 \right|- 2 O \cdot P  + 2 O \cdot Q \\
-0 &= \left| P^2 \right| - \left| Q^2 \right| - 2 \left( O \cdot P  - O \cdot Q \right) \\
-2 \left( O \cdot P  - O \cdot Q \right) &= \left| P^2 \right| - \left| Q^2 \right|  \\
-2 O \cdot\left( P  -  Q \right) &= \left| P^2 \right| - \left| Q^2 \right| \\
-O \cdot\left( P  -  Q \right) &= \frac{\left| P^2 \right| - \left| Q^2 \right|}{2}
+2ax_0+2by_0+k &= +x_0^2 +y_0^2 \\
+2ax_1+2by_1+k &= +x_1^2 +y_1^2 \\
+2ax_2+2by_2+k &= +x_2^2 +y_2^2
 \end{align*}
 ```
-
-We can write this in terms of coordinates as
-
-``` math
-\left( P_x - Q_x \right) O_x  + \left( P_y - Q_y \right) O_y  = \frac{ P_x^2 + P_y^2 - Q_x^2 - Q_y^2 }{2}
-```
-
-If we pick two combinations of points, we can get two equations which we can convert into a standard matrix equation.
-
-``` math
-\begin{align*}
-\left( A_x - B_x \right) O_x  + \left( A_y - B_y \right) O_y  &= \frac{ A_x^2 + A_y^2 - B_x^2 - B_y^2 }{2}\\
-\left( A_x - C_x \right) O_x  + \left( A_y - C_y \right) O_y  &= \frac{ A_x^2 + A_y^2 - C_x^2 - C_y^2 }{2}
-\end{align*}
-```
-
+which can be written as a matrix equation
 ``` math
 \begin{bmatrix}
- A_x - B_x & A_y - B_y  \\
- A_x - C_x & A_y - C_y 
+2x_0 & 2y_0 & 1 \\
+2x_1 & 2y_1 & 1 \\
+2x_2 & 2y_2 & 1
 \end{bmatrix}\begin{pmatrix}
- O_x \\
- O_y
-\end{pmatrix} = \begin{pmatrix}
- \frac{ A_x^2 + A_y^2 - B_x^2 - B_y^2 }{2} \\
-\frac{ A_x^2 + A_y^2 - C_x^2 - C_y^2 }{2}
+a \\
+b \\
+k
+\end{pmatrix} =
+\begin{pmatrix}
+x_0^2 + y_0^2 \\
+x_1^2 + y_1^2\\
+x_2^2 + y_2^2
 \end{pmatrix}
 ```
 
-Applying the standard 2 by 2 matrix inverse formula gives
+### Solving matrix equation
+
+We can use Cramer's rule with the fact the determinant of a 3 by 3 matrix is
 
 ``` math
-\begin{pmatrix}
-O_x \\
-O_y
-\end{pmatrix} =
-\frac{1}{\left(A_x-B_x\right)\left(A_y-C_y\right)-\left(A_y - B_y\right)\left(A_x - C_x\right)}\begin{bmatrix}
- A_y - C_y  & B_y - A_y  \\
-C_x - A_x &  A_x - B_x
-\end{bmatrix} \begin{pmatrix}
- \frac{ A_x^2 + A_y^2 - B_x^2 - B_y^2 }{2} \\
-\frac{ A_x^2 + A_y^2 - C_x^2 - C_y^2 }{2}
-\end{pmatrix} 
+\det \begin{bmatrix}
+a & b & c \\
+d & e & f \\
+g & h & i
+\end{bmatrix} = a \det \begin{bmatrix}
+e & f \\
+ h & i
+\end{bmatrix} - b \det \begin{bmatrix}
+d  & f \\
+g & i
+\end{bmatrix} + c \det \begin{bmatrix}
+d & e \\
+g & h
+\end{bmatrix} = aei - afh - bdi +bfg + cdh - ceg
 ```
-Which we can tidy up to get 
+
+and that Cramer's rule for the matrix equation
+``` math
+\begin{bmatrix}
+a & b & c \\
+d & e & f \\
+g & h & i
+\end{bmatrix}\begin{pmatrix}
+x \\
+y \\
+z
+\end{pmatrix} =
+\begin{pmatrix}
+u \\
+v \\
+w
+\end{pmatrix}
+```
+is
 
 ``` math
-\begin{pmatrix}
-O_x \\
-O_y
-\end{pmatrix} =
-\frac{1}{\left| A \times B \right|  + \left| B \times C \right| + \left| C \times A \right|}\begin{bmatrix}
- A_y - C_y  & B_y - A_y  \\
-C_x - A_x &  A_x - B_x
-\end{bmatrix} \begin{pmatrix}
- \frac{ A_x^2 + A_y^2 - B_x^2 - B_y^2 }{2} \\
-\frac{ A_x^2 + A_y^2 - C_x^2 - C_y^2 }{2}
-\end{pmatrix} 
+x = \frac{\det \begin{bmatrix}
+u & b & c \\
+v & e & f \\
+w & h & i
+\end{bmatrix}}{\det \begin{bmatrix}
+a & b & c \\
+d & e & f \\
+g & h & i
+\end{bmatrix}}
+```
+
+``` math
+y = \frac{\det \begin{bmatrix}
+a & u & c \\
+d & v & f \\
+g & w & i
+\end{bmatrix}}{\det \begin{bmatrix}
+a & b & c \\
+d & e & f \\
+g & h & i
+\end{bmatrix}}
+```
+
+``` math
+z = \frac{\det \begin{bmatrix}
+a & b & u \\
+d & e & v \\
+g & h & w
+\end{bmatrix}}{\det \begin{bmatrix}
+a & b & c \\
+d & e & f \\
+g & h & i
+\end{bmatrix}}
+```
+
+#### Solutions
+
+Since it's common, we'll start with
+``` math
+\begin{align*}
+\det \begin{bmatrix}
+2x_0 & 2y_0 & 1 \\
+2x_1 & 2y_1 & 1 \\
+2x_2 & 2y_2 & 1
+\end{bmatrix} &= 2x_0 2y_1 - 2x_0 2y_2 - 2y_0 2x_1 +2y_0 2x_2 + 2x_1 2y_2 - 2y_1 2x_2 \\
+&= 4 ( x_0 y_1 - x_0 y_2 + x_1 y_2 - x_1 y_0+ x_2 y_0  - x_2 y_1  )\\
+&= 4 ( x_0 (y_1 - y_2 ) + x_1 (y_2 - y_0)+ x_2 (y_0  -  y_1 ) )\\
+\end{align*}
+```
+
+##### solution for $a$
+
+``` math
+\begin{align*}
+\det \begin{bmatrix}
+x_0^2 + y_0^2 & 2y_0 & 1 \\
+x_1^2 + y_1^2 & 2y_1 & 1 \\
+x_2^2 + y_2^2 & 2y_2 & 1
+\end{bmatrix} &= (x_0^2 + y_0^2)2y_1 - (x_0^2 + y_0^2)2y_2 - 2y_0(x_1^2 + y_1^2) +2y_0(x_2^2 + y_2^2 ) + (x_1^2 + y_1^2)2y_2 - 2y_1(x_2^2 + y_2^2 )\\
+&= 2(y_1(x_0^2 + y_0^2)- y_2(x_0^2 + y_0^2) - y_0(x_1^2 + y_1^2) +y_0(x_2^2 + y_2^2 ) + y_2(x_1^2 + y_1^2) - y_1(x_2^2 + y_2^2 ))\\
+&= 2((y_1- y_2) (x_0^2 + y_0^2) + (y_2-y_0)(x_1^2 + y_1^2)  +(y_0-y_1)(x_2^2 + y_2^2 ) )
+\end{align*}
+```
+so
+``` math
+\begin{align*}
+a &= \frac{2((y_1- y_2) (x_0^2 + y_0^2) + (y_2-y_0)(x_1^2 + y_1^2)  +(y_0-y_1)(x_2^2 + y_2^2 ) )}{4 ( x_0 (y_1 - y_2 ) + x_1 (y_2 - y_0)+ x_2 (y_0  -  y_1 ) )}\\
+&=\frac{(y_1- y_2) (x_0^2 + y_0^2) + (y_2-y_0)(x_1^2 + y_1^2)  +(y_0-y_1)(x_2^2 + y_2^2 ) }{2 ( x_0 (y_1 - y_2 ) + x_1 (y_2 - y_0)+ x_2 (y_0  -  y_1 ) )} \\
+&=\frac{1}{2}\frac{(y_1- y_2) (x_0^2 + y_0^2) + (y_2-y_0)(x_1^2 + y_1^2)  +(y_0-y_1)(x_2^2 + y_2^2 ) }{ x_0 (y_1 - y_2 ) + x_1 (y_2 - y_0)+ x_2 (y_0  -  y_1 )}
+\end{align*}
+```
+
+##### solution for $b$
+
+``` math
+\begin{align*}
+\det \begin{bmatrix}
+2x_0 & x_0^2 + y_0^2 & 1 \\
+2x_1 & x_1^2 + y_1^2 & 1 \\
+2x_2 & x_2^2 + y_2^2 & 1
+\end{bmatrix} &= 2x_0 (x_1^2 + y_1^2) - 2x_0 (x_2^2 + y_2^2) - 2x_1 (x_0^2 + y_0^2) +2x_2 (x_0^2 + y_0^2) + 2x_1 (x_2^2 + y_2^2) - 2x_2 (x_1^2 + y_1^2)\\
+&= 2((x_0-x_2) (x_1^2 + y_1^2) + (x_1-x_0) (x_2^2 + y_2^2)  + (x_2-x_1) (x_0^2 + y_0^2) )
+\end{align*}
+```
+so
+``` math
+\begin{align*}
+b &= \frac{2((x_0-x_2) (x_1^2 + y_1^2) + (x_1-x_0) (x_2^2 + y_2^2)  + (x_2-x_1) (x_0^2 + y_0^2) )}{4 ( x_0 (y_1 - y_2 ) + x_1 (y_2 - y_0)+ x_2 (y_0  -  y_1 ) )}\\
+&= \frac{1}{2}\frac{(x_2-x_1) (x_0^2 + y_0^2)+(x_0-x_2) (x_1^2 + y_1^2) + (x_1-x_0) (x_2^2 + y_2^2) }{x_0 (y_1 - y_2 ) + x_1 (y_2 - y_0)+ x_2 (y_0  -  y_1 ) }
+\end{align*}
 ```
