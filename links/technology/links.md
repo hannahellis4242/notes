@@ -51,6 +51,7 @@
 - [Javascript is Weird](https://www.youtube.com/watch?v=sRWE5tnaxlI)
 - [Inheritance in JavaScript - Prototypal Inheritance tutorial](https://www.youtube.com/watch?v=jnME98ckDbQ&list=PL1PqvM2UQiMoGNTaxFMSK2cih633lpFKP)
 - [npm libcurl](https://www.npmjs.com/package/node-libcurl)
+- [JavaScript IIFE Design Pattern](https://www.codeproject.com/Articles/1110916/JavaScript-IIFE-Design-Pattern)
 
 ## Tesseract
 
