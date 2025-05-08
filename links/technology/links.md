@@ -7,6 +7,7 @@
 - [What is the MVVM pattern](https://www.youtube.com/watch?v=AXpTeiWtbC8)
 - [MVVMS... A Better MVVM?](https://www.youtube.com/watch?v=ve0DFu-arD8)
 - [Object-Oriented Programming is Bad ](https://www.youtube.com/watch?v=QM1iUe6IofM)
+- [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS)
 
 ## Katas
 
