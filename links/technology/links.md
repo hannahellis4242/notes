@@ -7,6 +7,7 @@
 - [What is the MVVM pattern](https://www.youtube.com/watch?v=AXpTeiWtbC8)
 - [MVVMS... A Better MVVM?](https://www.youtube.com/watch?v=ve0DFu-arD8)
 - [Object-Oriented Programming is Bad ](https://www.youtube.com/watch?v=QM1iUe6IofM)
+- [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS)
 
 ## Katas
 
@@ -46,9 +47,30 @@
 ### Design Patterns
 - [From callbacks to design patterns](https://wstomv.win.tue.nl/edu/2ip15/downloads/Series_04/callbacks.pdf)
 
+## Java
+
+- [aspose pdf](https://mvnrepository.com/artifact/com.aspose/aspose-pdf)
+- [aspose docs how to get the number of pages in a pdf file](https://docs.aspose.com/pdf/java/get-and-set-page-properties/#:~:text=lines%20of%20code.-,To%20get%20the%20number%20of%20pages%20in%20a%20PDF%20file,of%20pages%20in%20the%20document)
+- [hamcrest tutorial](https://hamcrest.org/JavaHamcrest/tutorial)
+
+## Scala
+
+- [Scala](https://www.youtube.com/watch?v=DzFt0YkZo8M)
+
 ## Node
 - [Two Factor Auth with node.js](https://medium.com/@pdlsandesh144/a-step-by-step-guide-on-using-node-js-to-implement-two-factor-authentication-059c7bcb220c)
 - [Javascript is Weird](https://www.youtube.com/watch?v=sRWE5tnaxlI)
+- [Inheritance in JavaScript - Prototypal Inheritance tutorial](https://www.youtube.com/watch?v=jnME98ckDbQ&list=PL1PqvM2UQiMoGNTaxFMSK2cih633lpFKP)
+- [npm libcurl](https://www.npmjs.com/package/node-libcurl)
+- [JavaScript IIFE Design Pattern](https://www.codeproject.com/Articles/1110916/JavaScript-IIFE-Design-Pattern)
+- [IIFE](https://developer.mozilla.org/en-US/docs/Glossary/IIFE)
+
+## Web
+- [JavaScript Modal Popup: Create a modal using HTML, CSS and JavaScript](https://www.youtube.com/watch?v=KX0NR5HtQ1Q)
+- [Flexbox design patterns you can use in your projects](https://www.youtube.com/watch?v=vQAvjof1oe4)
+- [Learn CSS Grid in 20 Minutes ](https://www.youtube.com/watch?v=9zBsdzdE4sM)
+- [solitare-js](https://codepen.io/bfa/pen/ggGYeE)
+- [How to get the browser viewport dimensions?](https://stackoverflow.com/questions/1248081/how-to-get-the-browser-viewport-dimensions)
 
 ## Tesseract
 
