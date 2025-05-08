@@ -70,6 +70,7 @@
 - [Flexbox design patterns you can use in your projects](https://www.youtube.com/watch?v=vQAvjof1oe4)
 - [Learn CSS Grid in 20 Minutes ](https://www.youtube.com/watch?v=9zBsdzdE4sM)
 - [solitare-js](https://codepen.io/bfa/pen/ggGYeE)
+- [How to get the browser viewport dimensions?](https://stackoverflow.com/questions/1248081/how-to-get-the-browser-viewport-dimensions)
 
 ## Tesseract
 
