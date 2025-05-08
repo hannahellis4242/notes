@@ -52,6 +52,7 @@
 - [aspose pdf](https://mvnrepository.com/artifact/com.aspose/aspose-pdf)
 - [aspose docs how to get the number of pages in a pdf file](https://docs.aspose.com/pdf/java/get-and-set-page-properties/#:~:text=lines%20of%20code.-,To%20get%20the%20number%20of%20pages%20in%20a%20PDF%20file,of%20pages%20in%20the%20document)
 - [hamcrest tutorial](https://hamcrest.org/JavaHamcrest/tutorial)
+- [API Snapshot testing in Java using REST-assured and jUnit](https://medium.com/@hbahuguna/api-snapshot-testing-in-java-using-rest-assured-and-junit-6b88b0a96c55)
 
 ## Scala
 
