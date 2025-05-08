@@ -53,6 +53,10 @@
 - [Inheritance in JavaScript - Prototypal Inheritance tutorial](https://www.youtube.com/watch?v=jnME98ckDbQ&list=PL1PqvM2UQiMoGNTaxFMSK2cih633lpFKP)
 - [npm libcurl](https://www.npmjs.com/package/node-libcurl)
 - [JavaScript IIFE Design Pattern](https://www.codeproject.com/Articles/1110916/JavaScript-IIFE-Design-Pattern)
+- [IIFE](https://developer.mozilla.org/en-US/docs/Glossary/IIFE)
+
+## Web
+- [JavaScript Modal Popup: Create a modal using HTML, CSS and JavaScript](https://www.youtube.com/watch?v=KX0NR5HtQ1Q)
 
 ## Tesseract
 
