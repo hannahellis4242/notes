@@ -49,6 +49,7 @@
 ## Node
 - [Two Factor Auth with node.js](https://medium.com/@pdlsandesh144/a-step-by-step-guide-on-using-node-js-to-implement-two-factor-authentication-059c7bcb220c)
 - [Javascript is Weird](https://www.youtube.com/watch?v=sRWE5tnaxlI)
+- [Inheritance in JavaScript - Prototypal Inheritance tutorial](https://www.youtube.com/watch?v=jnME98ckDbQ&list=PL1PqvM2UQiMoGNTaxFMSK2cih633lpFKP)
 - [npm libcurl](https://www.npmjs.com/package/node-libcurl)
 
 ## Tesseract
