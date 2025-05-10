@@ -138,3 +138,15 @@ x = 2R \frac{1+\cos \theta}{\sin \theta}
 ```
 
 It might be useful to note that $\frac{1+\cos \theta}{\sin \theta}$ is also the ratio of point $B$'s $\frac{y}{x}$
+
+At this point it might be useful to have the reverse function, ie from an $x$ value to a $\theta$ value
+
+```math
+\begin{align*}
+x &= 2R \cot \left(\frac{\theta}{2}\right)\\
+\frac{x}{2R} &= \cot \left(\frac{\theta}{2}\right) \\
+\frac{2R}{x} &= \tan\left(\frac{\theta}{2}\right)\\
+\arctan \frac{2R}{x} &= \frac{\theta}{2}\\
+\theta &= 2 \arctan \frac{2R}{x}
+\end{align*}
+```
