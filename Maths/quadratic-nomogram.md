@@ -34,6 +34,7 @@ We can substitute the equation for our line $y=b'-\frac{b'}{a'}x$ into the equti
 R^2&=x^2+(y-R)^2\\
 R^2&=x^2+\left(b'-\frac{b'}{a'}x-R\right)^2\\
 R^2&=x^2+\left(b'-R-\frac{b'}{a'}x\right)^2\\
-R^2&=x^2+(b-R)^2 -2(b-R)\frac{b'}{a'}x + \left(\frac{b'}{a'}\right)^2x^2\\
+R^2&=x^2+(b'-R)^2 -2(b'-R)\frac{b'}{a'}x + \left(\frac{b'}{a'}\right)^2x^2\\
+0&=\left(1+\left(\frac{b'}{a'}\right)^2\right)x^2 -2(b'-R)\frac{b'}{a'}x+(b'-R)^2-R^2
 \end{align*}
 ```
