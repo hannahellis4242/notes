@@ -24,3 +24,14 @@ The circle is a circle of radius $R$ is centered at the point $(0,R)$ and so the
 ``` math
 x^2+(y-R)^2=R^2
 ```
+
+### Intersection of the circle and our line
+
+We can substitute the equation for our line $y=b'-\frac{b'}{a'}x$ into the eqution for the circle $x^2+(y-R)^2=R^2$ and solve for $x$
+
+``` math
+\begin{align*}
+R^2&=x^2+(y-R)^2\\
+R^2&=x^2+\left(b'-\frac{b'}{a'}x-R\right)^2\\
+\end{align*}
+```
