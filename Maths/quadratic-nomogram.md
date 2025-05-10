@@ -150,3 +150,52 @@ x &= 2R \cot \left(\frac{\theta}{2}\right)\\
 \theta &= 2 \arctan \frac{2R}{x}
 \end{align*}
 ```
+
+### Intersection of line through circle
+
+![intersection of line through a circle](./img/quad4.svg)
+
+We start with two intersections $I_1 = (x_1,y_1)$ and $I_2 = (x_2,y_2)$ that sit both on our line and on the circle.
+
+We now wish to work out the intersections with the axes. Ie $D_x$ and $E_y$.
+
+The equation of the line is given by
+
+```math
+\frac{y-y_1}{x-x_1}=\frac{y_2-y_1}{x_2-x_1}
+```
+
+### Intersection with x axis
+
+The intersection is at $D_x$ which is when $y=0$ and $x=D_x$. Putting this through the equation for a line
+
+```math
+\begin{align*}
+\frac{0-y_1}{D_x-x_1}&=\frac{y_2-y_1}{x_2-x_1}\\
+-y_1&=\frac{y_2-y_1}{x_2-x_1}(D_x-x_1)\\
+-y_1 \frac{x_2-x_1}{y_2-y_1} &=D_x-x_1\\
+D_x &=x_1-y_1 \frac{x_2-x_1}{y_2-y_1}
+\end{align*}
+```
+
+### Intersection with y axis
+
+The intersection is at $E_y$ which is when $x=0$ and $y=E_y$. Putting this through the equation for a line
+
+```math
+\begin{align*}
+\frac{E_y-y_1}{0-x_1}&=\frac{y_2-y_1}{x_2-x_1}\\
+E_y-y_1&=-x_1\frac{y_2-y_1}{x_2-x_1}\\
+E_y&=y_1-x_1\frac{y_2-y_1}{x_2-x_1}\\
+\end{align*}
+```
+
+So the intersections are
+
+```math
+D_x =x_1-y_1 \frac{x_2-x_1}{y_2-y_1}
+```
+
+```math
+E_y=y_1-x_1\frac{y_2-y_1}{x_2-x_1}
+```
