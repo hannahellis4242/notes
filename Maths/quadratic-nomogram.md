@@ -87,3 +87,54 @@ Can then combine the two results for the inside of the square root
 &= 4a'^2b'((b'-2R)(b'^2- a'^2 -a'^2b'^2)+b'R^2)\\
 \end{align*}
 ```
+
+## Ray from the top of the circle
+
+Firstly lets look at a ray from the top of the circle at point $A=(0,2R)$ going through a point on the circle $B=(R \sin(\theta),R(1+\cos(\theta)))$ and then through to point $C=(x,0)$ where the ray crosses the x axis.
+
+![Ray from top of circle through a point on the circle](./img/quad3.svg)
+
+There are two triangles. The triangle with the points $A,B,P$, where $P$ is the centre of the circle at $(0,R)$. There is also a right angled triangle $AOC$ where $O$ is the origin. Both triangles share a point and an angle. Namely the point $A$ and the angle (which we label as $\alpha$) $OAC$ which is also the angle $PAC$
+
+### Triangle $OAC$
+
+Looking at the triangle made of the point $OAC$, where the points are $O=(0,0)$, $A=(0,2R)$ and $C=(x,0)$, we can use tangent of the angle $\alpha$ to get an equation for $x$ based on $R$ and $\alpha$
+
+```math
+\begin{align*}
+\tan \alpha &= \frac{x}{2R}\\
+x &= 2R \tan \alpha
+\end{align*}
+```
+
+### Triangle $PAB$
+
+We can use the triangle formed by the points $PAC$, where the points are $P=(0,R)$, $A=(0,2R)$ and $B=(R \sin \theta,R(1+\cos \theta))$
+
+Because two sides of this triangle are radii of the circle, the triangle is isosceles, and so has two equal angles also, namely the angle $\alpha$, Since we have chose the angle $\theta$ to be the angle $APB$ which is also the angle between the two equal sides, the internal angles are such that $\pi = \theta + 2 \alpha$ or rearranged to get $\alpha$.
+
+```math
+\alpha = \frac{\pi-\theta}{2} = \frac{\pi}{2} - \frac{\theta}{2}
+```
+
+### Combining triangle information
+
+We can combine what we have gathered from both triangles to get
+
+```math
+x = 2R \tan \left(\frac{\pi}{2} - \frac{\theta}{2}\right)
+```
+
+We can simplify this a little bit more by noting that $\tan \left( \frac{\pi}{2}-\theta \right) = \cot \theta$ so
+
+```math
+x = 2R \cot \left(\frac{\theta}{2}\right)
+```
+
+which can further be simplified by using $\cot \left(\frac{\theta}{2}\right) = \frac{1+\cos \theta}{\sin \theta}$
+
+```math
+x = 2R \frac{1+\cos \theta}{\sin \theta}
+```
+
+It might be useful to note that $\frac{1+\cos \theta}{\sin \theta}$ is also the ratio of point $B$'s $\frac{y}{x}$
