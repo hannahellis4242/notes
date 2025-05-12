@@ -65,6 +65,7 @@
 - [npm libcurl](https://www.npmjs.com/package/node-libcurl)
 - [JavaScript IIFE Design Pattern](https://www.codeproject.com/Articles/1110916/JavaScript-IIFE-Design-Pattern)
 - [IIFE](https://developer.mozilla.org/en-US/docs/Glossary/IIFE)
+- https://dev.to/ruppysuppy/9-tricks-that-separate-a-[typescript tips](pro-typescript-developer-from-an-noob-jpd)
 
 ## Web
 - [JavaScript Modal Popup: Create a modal using HTML, CSS and JavaScript](https://www.youtube.com/watch?v=KX0NR5HtQ1Q)
