@@ -11,7 +11,7 @@
 7. Workshop1
 8. Maths3
 9. Maths4
-10. NAG2 (TODO)
+10. NAG2
 11. Libraries3
 12. CaseStudy2
 13. Maths5
