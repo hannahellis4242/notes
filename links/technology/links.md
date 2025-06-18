@@ -69,6 +69,7 @@
 
 - [rss](https://www.npmjs.com/package/rss)
 - [rss-parser](https://www.npmjs.com/package/rss-parser)
+- [turndown](https://www.npmjs.com/package/turndown)
 
 ## Web
 - [JavaScript Modal Popup: Create a modal using HTML, CSS and JavaScript](https://www.youtube.com/watch?v=KX0NR5HtQ1Q)
