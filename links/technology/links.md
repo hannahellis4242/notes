@@ -65,6 +65,11 @@
 - [JavaScript IIFE Design Pattern](https://www.codeproject.com/Articles/1110916/JavaScript-IIFE-Design-Pattern)
 - [IIFE](https://developer.mozilla.org/en-US/docs/Glossary/IIFE)
 
+### Useful packages
+
+- [rss](https://www.npmjs.com/package/rss)
+- [rss-parser](https://www.npmjs.com/package/rss-parser)
+
 ## Web
 - [JavaScript Modal Popup: Create a modal using HTML, CSS and JavaScript](https://www.youtube.com/watch?v=KX0NR5HtQ1Q)
 - [Flexbox design patterns you can use in your projects](https://www.youtube.com/watch?v=vQAvjof1oe4)
