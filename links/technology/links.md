@@ -103,3 +103,7 @@
 ## Database
 
 - [Learn Database Normalization - 1NF, 2NF, 3NF, 4NF, 5NF](https://youtu.be/GFQaEYEc8_8?si=Xr8HSTaBIyKFggKb)
+
+## DevOps Tools
+
+- [installing minikube on mac with podman](https://www.cncf.io/blog/2025/05/13/how-to-install-and-run-minikube-with-rootless-podman-on-arm-based-macbooks/)
