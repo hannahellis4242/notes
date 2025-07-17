@@ -6,7 +6,7 @@
 - [Introduction to Monads](https://www.youtube.com/watch?v=C2w45qRc3aU&list=WL&index=29)
 - [What is the MVVM pattern](https://www.youtube.com/watch?v=AXpTeiWtbC8)
 - [MVVMS... A Better MVVM?](https://www.youtube.com/watch?v=ve0DFu-arD8)
-- [Object-Oriented Programming is Bad ](https://www.youtube.com/watch?v=QM1iUe6IofM)
+- [Object-Oriented Programming is Bad](https://www.youtube.com/watch?v=QM1iUe6IofM)
 - [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS)
 
 ## Katas
@@ -70,7 +70,7 @@
 - [npm libcurl](https://www.npmjs.com/package/node-libcurl)
 - [JavaScript IIFE Design Pattern](https://www.codeproject.com/Articles/1110916/JavaScript-IIFE-Design-Pattern)
 - [IIFE](https://developer.mozilla.org/en-US/docs/Glossary/IIFE)
-- https://dev.to/ruppysuppy/9-tricks-that-separate-a-[typescript tips](pro-typescript-developer-from-an-noob-jpd)
+- [9 tricks](https://dev.to/ruppysuppy/9-tricks-that-separate-a-pro-typescript-developer-from-an-noob-jpd)
 
 ### Useful packages
 
