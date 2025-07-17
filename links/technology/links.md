@@ -54,6 +54,11 @@
 - [hamcrest tutorial](https://hamcrest.org/JavaHamcrest/tutorial)
 - [API Snapshot testing in Java using REST-assured and jUnit](https://medium.com/@hbahuguna/api-snapshot-testing-in-java-using-rest-assured-and-junit-6b88b0a96c55)
 
+### Netty
+
+- [simple tcp server](https://thebackendguy.medium.com/netty-simple-tcp-server-51fa8537fad5)
+- [project reactor tcp client](https://projectreactor.io/docs/netty/snapshot/reference/tcp-client.html)
+
 ## Scala
 
 - [Scala](https://www.youtube.com/watch?v=DzFt0YkZo8M)
