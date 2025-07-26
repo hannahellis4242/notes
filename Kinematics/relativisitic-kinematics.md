@@ -57,4 +57,50 @@ E^2 - (pc)^2  = (mc^2)^2
 ```
 where $p=\left|\mathbf{p}\right|$
 
-Additionally 
+Additionally we have that the energy is given by
+
+``` math
+E = m \gamma c^2
+```
+where $c$ is the speed of light and
+
+``` math
+\gamma = \frac{1}{\sqrt{1-\left(\frac{v}{c}\right)^2}}
+```
+
+The momentum is given by
+
+``` math
+p = m \gamma v
+```
+where $v$ is the velocity of the particle.
+
+If we use 
+
+``` math
+\beta = \frac{v}{c}
+```
+we get
+``` math
+\gamma = \frac{1}{\sqrt{1-\beta^2}}
+```
+
+``` math
+\begin{align*}
+p &= m \gamma\beta c \
+pc &= \gamma\beta  mc^2 \
+E &= \gamma mc^2
+\end{align*}
+```
+
+We can rearrange the last few equations to get new equations for $\gamma$ and $\beta$ in terms of $E$, $m$ and $p$.
+
+
+``` math
+\begin{align*}
+\gamma &= \frac{E}{mc^2} \
+\gamma\beta &= \frac{pc}{mc^2} \
+\beta &= \frac{1}{\gamma}\frac{pc}{mc^2} =\frac{mc^2}{E}\frac{pc}{mc^2} = \frac{pc}{E}
+\end{align*}
+```
+
