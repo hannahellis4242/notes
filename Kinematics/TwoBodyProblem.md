@@ -9,6 +9,7 @@ The frame of reference where the parent particle is at rest is called the rest f
 ### Parent Particle
 
 In the rest frame the parent particle has four momentum
+
 ``` math
 P_p = \begin{pmatrix}
 M \\
@@ -23,11 +24,12 @@ M \\
 ``` math
 P_a = \begin{pmatrix}
 E_a \\
-p_a \sin(\theta_a} \cos(\phi_a) \\
-p_a \sin(\theta_a} \sin(\pha_a) \\
-p_a \cos(\theta_a)
+p_a \sin \theta_a \cos \phi_a  \\
+p_a \sin \theta_a \sin \phi_a \\
+p_a \cos \theta_a
 \end{pmatrix}
 ```
+
 Where I am using spherical polar coordinates, as this helps separate out the magnitute of the momentum from it's direction. It will also help when doing a lorentz boost into the lab frame later.
 
 ### Daughter B
@@ -35,9 +37,9 @@ Where I am using spherical polar coordinates, as this helps separate out the mag
 ``` math
 P_b = \begin{pmatrix}
 E_b \\
-p_b \sin(\theta_b} \cos(\phi_b) \\
-p_b \sin(\theta_b} \sin(\pha_b) \\
-p_b \cos(\theta_b)
+p_b \sin \theta_b \cos \phi_b  \\
+p_b \sin \theta_b \sin \phi_b \\
+p_b \cos \theta_b
 \end{pmatrix}
 ```
 Where I am using spherical polar coordinates.
