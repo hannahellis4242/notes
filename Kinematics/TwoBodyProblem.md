@@ -43,7 +43,7 @@ p_b \cos \theta_b
 \end{pmatrix}
 ```
 
-## Energy of the daughter a
+## Energy of daughter a
 
 Starting by equating the momentum before with momentum after we get
 
@@ -97,7 +97,7 @@ E_a &= \frac{M^2c^4 + m_a^2c^4 - m_b^2 c^4}{2 M c^2}
 \end{align*}
 ```
 
-## Energy of the daughter b
+## Energy of daughter b
 
 Starting by equating the momentum before with momentum after we get
 
@@ -148,5 +148,18 @@ So we're left with
 \begin{align*}
 2 M E_b &= M^2c^4 + m_b^2c^4 - m_a^2 c^4\\
 E_b &= \frac{M^2c^4 + m_b^2c^4 - m_a^2 c^4}{2 M c^2}
+\end{align*}
+```
+
+## Momentum of daughter a
+
+``` math
+\begin{align*}
+p^2c^2 &= E_a^2 - m_a^2 c^4 \\
+&= \left(\frac{M^2c^4 + m_a^2c^4 - m_b^2 c^4}{2 M c^2}\right)^2 - m_a^2 c^4\\
+&= \frac{\left(M^2c^4 + m_a^2c^4 - m_b^2 c^4\right)^2}{4M^2c^4} - m_a^2 c^4 \\
+&= \frac{M^4c^8+m_a^4c^8+m_b^4c^8+2M^2c^4m_a^2c^4-2M^2c^4m_b^2c^4-2m_a^2c^4m_b^2c^4}{4M^2c^4} - m_a^2 c^4\\
+&= \frac{M^4c^8+m_a^4c^8+m_b^4c^8+2M^2c^4m_a^2c^4-2M^2c^4m_b^2c^4-2m_a^2c^4m_b^2c^4- 4M^2c^4m_a^2 c^4}{4M^2c^4}\\
+&= \frac{M^4c^8+m_a^4c^8+m_b^4c^8-2M^2c^4m_a^2c^4-2M^2c^4m_b^2c^4-2m_a^2c^4m_b^2c^4}{4M^2c^4}\\
 \end{align*}
 ```
