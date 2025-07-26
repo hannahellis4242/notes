@@ -13,6 +13,8 @@ p_z c
 \end{pmatrix}
 ```
 
+Where $E$ is the energy of the particle, and $\mathbf{p}$ is the momentum of the particle with the subscript defining the direction.
+
 Where the dot product of two four mometum vectors is defined to be
 
 ``` math
@@ -44,6 +46,7 @@ p_y c \\
 p_z c
 \end{pmatrix}\ = E^2 - \left|\mathbf{p}\right|^2 c^2 = m^2c^4 = (mc^2)^2
 ```
+where $m$ is the rest mass of the particle.
 
 ## Individual particle
 
@@ -53,3 +56,5 @@ As we've already seen for an individual particle
 E^2 - (pc)^2  = (mc^2)^2
 ```
 where $p=\left|\mathbf{p}\right|$
+
+Additionally 
