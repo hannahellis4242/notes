@@ -16,3 +16,6 @@ who introduced it as a short-hand in his textbook Elementary Particle Physics.
 ``` math
 \lambda(a,b,c) = a^2 + b^2 + c^2 - 2ab -2ac -2bc
 ```
+
+## Relationship with Triangles
+
