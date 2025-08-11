@@ -104,6 +104,7 @@ E_a &= \frac{\tilde{M}^2 + \tilde{m}_a^2 - \tilde{m}_b^2}{2 \tilde{M}}
 \tilde{p}_a = \frac{\sqrt{\lambda(\tilde{M}^2,\tilde{m}_a^2,\tilde{m}_b^2)}}{2 \tilde{M}}
 \end{align*}
 ```
+where $\lamba$ is the Kallen Function
 
 ### Daughter B
 
