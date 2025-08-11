@@ -6,13 +6,15 @@ In the two body problem, we have a parent particle that decays into two daughter
 
 The frame of reference where the parent particle is at rest is called the rest frame.
 
+> Will introduce some shorthand here. $\tilde{m}=mc^2$ and $\tilde{p} = p c$. So that c's aren't so easily lost.
+
 ### Parent Particle
 
 In the rest frame the parent particle has four momentum
 
 ``` math
 P_p = \begin{pmatrix}
-Mc^2 \\
+\tilde{M} \\
 0 \\
 0\\
 0
@@ -24,9 +26,9 @@ Mc^2 \\
 ``` math
 P_a = \begin{pmatrix}
 E_a \\
-p_a \sin \theta_a \cos \phi_a  \\
-p_a \sin \theta_a \sin \phi_a \\
-p_a \cos \theta_a
+\tilde{p}_a \sin \theta \cos \phi  \\
+\tilde{p}_a  \sin \theta \sin \phi \\
+\tilde{p}_a \cos \theta
 \end{pmatrix}
 ```
 
@@ -37,11 +39,13 @@ Where I am using spherical polar coordinates, as this helps separate out the mag
 ``` math
 P_b = \begin{pmatrix}
 E_b \\
-p_b \sin \theta_b \cos \phi_b  \\
-p_b \sin \theta_b \sin \phi_b \\
-p_b \cos \theta_b
+\tilde{p}_b \sin (\pi-\theta) \cos (\phi+\pi)  \\
+\tilde{p}_b \sin (\pi-\theta)\sin (\phi+\pi) \\
+\tilde{p}_b \cos (\pi-\theta)
 \end{pmatrix}
 ```
+
+> The angles for daughter b will be left for later, but are chosen so that $\mathbf{p}_a +\mathbf{p}_b=\mathbf{0}$ to conserve momentum.
 
 ## Energy of daughter a
 
@@ -67,7 +71,7 @@ Remembering that any four momentum vector squared is just it's square rest mass 
 ``` math
 \begin{align*}
 P_p^2 - 2 P_a \cdot P_p + P_a^2 &= P_b^2 \\
-M^2c^4 + m_a^2c^4 - 2 P_a \cdot P_p &= m_b^2 c^4 \\
+(Mc^2)^2 + m_a^2c^4 - 2 P_a \cdot P_p &= m_b^2 c^4 \\
 M^2c^4 + m_a^2c^4 - m_b^2 c^4 &= 2 P_a \cdot P_p
 \end{align*}
 ```
