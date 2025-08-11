@@ -22,3 +22,14 @@ who introduced it as a short-hand in his textbook Elementary Particle Physics.
 Starting with a triangle of with side lengths $a$,$b$ and $c$.
 
 ![triangle](./img/triangle.svg)
+
+Starting from The Cosine Rule
+
+``` math
+c^2 = a^2 + b^2 - 2ab \cos C
+```
+
+which can be rearranged for the angle $C$
+``` math
+\cos C= \frac{a^2 + b^2 -c^2}{2ab}
+```
