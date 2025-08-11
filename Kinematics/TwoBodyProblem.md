@@ -12,7 +12,7 @@ The frame of reference where the parent particle is at rest is called the rest f
 
 In the rest frame the parent particle has four momentum
 
-``` math
+```math
 P_p = \begin{pmatrix}
 \tilde{M} \\
 0 \\
@@ -23,7 +23,7 @@ P_p = \begin{pmatrix}
 
 ### Daughter A
 
-``` math
+```math
 P_a = \begin{pmatrix}
 E_a \\
 \tilde{p}_a \sin \theta \cos \phi  \\
@@ -38,13 +38,13 @@ Where I am using spherical polar coordinates, as this helps separate out the mag
 
 Starting by equating the momentum before with momentum after we get
 
-``` math
+```math
 P_p = P_a + P_b
 ```
 
 We can rearrange our momentum sum as follows.
 
-``` math
+```math
 \begin{align*}
 P_p &= P_a + P_b \\
 P_p - P_a &= P_b \\
@@ -55,7 +55,7 @@ P_p^2 - 2 P_a \cdot P_p + P_a^2 &= P_b^2
 
 Remembering that any four momentum vector squared is just it's square rest mass energy.
 
-``` math
+```math
 \begin{align*}
 P_p^2 - 2 P_a \cdot P_p + P_a^2 &= P_b^2 \\
 \tilde{M}^2 + \tilde{m}_a^2 - 2 P_a \cdot P_p &= \tilde{m}_b^2 \\
@@ -65,7 +65,7 @@ P_p^2 - 2 P_a \cdot P_p + P_a^2 &= P_b^2 \\
 
 Now we just have the dot product to deal with. Which we can do by following the rules about dot product for four momentum vectors
 
-``` math
+```math
 P_a \cdot P_p = \begin{pmatrix}
 E_a \\
 \tilde{p}_a \sin \theta \cos \phi \\
@@ -81,7 +81,7 @@ E_a \\
 
 So we're left with
 
-``` math
+```math
 \begin{align*}
 2 \tilde{M} E_a &= \tilde{M}^2 + \tilde{m}_a^2 - \tilde{m}_b^2\\
 E_a &= \frac{\tilde{M}^2 + \tilde{m}_a^2 - \tilde{m}_b^2}{2 \tilde{M}}
@@ -90,7 +90,7 @@ E_a &= \frac{\tilde{M}^2 + \tilde{m}_a^2 - \tilde{m}_b^2}{2 \tilde{M}}
 
 #### Momentum of daughter A
 
-``` math
+```math
 \begin{align*}
 \tilde{p}_a^2 &= E_a^2 - \tilde{m}_a^2 \\
 &= \left(\frac{\tilde{M}^2 + \tilde{m}_a^2 - \tilde{m}_b^2}{2 \tilde{M}}\right)^2 - \tilde{m}_a^2\\
@@ -104,11 +104,12 @@ E_a &= \frac{\tilde{M}^2 + \tilde{m}_a^2 - \tilde{m}_b^2}{2 \tilde{M}}
 \tilde{p}_a &= \frac{\sqrt{\lambda(\tilde{M}^2,\tilde{m}_a^2,\tilde{m}_b^2)}}{2 \tilde{M}}
 \end{align*}
 ```
+
 where $\lambda$ is the Kallen Function $\lambda(a,b,c) = a^2 + b^2 + c^2 - 2ab -2ac -2bc$
 
 ### Daughter B
 
-``` math
+```math
 P_b = \begin{pmatrix}
 E_b \\
 \tilde{p}_b \sin (\pi-\theta) \cos (\phi+\pi)  \\
@@ -123,13 +124,13 @@ E_b \\
 
 Starting by equating the momentum before with momentum after we get
 
-``` math
+```math
 P_p = P_a + P_b
 ```
 
 We can rearrange our momentum sum as follows.
 
-``` math
+```math
 \begin{align*}
 P_p &= P_a + P_b \\
 P_p - P_b &= P_a \\
@@ -140,7 +141,7 @@ P_p^2 - 2 P_b \cdot P_p + P_b^2 &= P_a^2
 
 Remembering that any four momentum vector squared is just it's square rest mass energy.
 
-``` math
+```math
 \begin{align*}
 P_p^2 - 2 P_b \cdot P_p + P_b^2 &= P_a^2 \\
 \tilde{M}^2 + \tilde{m}_b^2 - 2 P_b \cdot P_p &= \tilde{m}_a^2 \\
@@ -150,7 +151,7 @@ P_p^2 - 2 P_b \cdot P_p + P_b^2 &= P_a^2 \\
 
 Now we just have the dot product to deal with. Which we can do by following the rules about dot product for four momentum vectors
 
-``` math
+```math
 P_b \cdot P_p =\begin{pmatrix}
 E_b \\
 \tilde{p}_b \sin (\pi-\theta) \cos (\phi+\pi)  \\
@@ -166,7 +167,7 @@ E_b \\
 
 So we're left with
 
-``` math
+```math
 \begin{align*}
 2 \tilde{M} E_b &= \tilde{M}^2 + \tilde{m}_b^2 - \tilde{m}_a^2\\
 E_b &= \frac{\tilde{M}^2 + \tilde{m}_b^2 - \tilde{m}_a^2}{2 \tilde{M}}
@@ -175,7 +176,7 @@ E_b &= \frac{\tilde{M}^2 + \tilde{m}_b^2 - \tilde{m}_a^2}{2 \tilde{M}}
 
 ## Momentum of daughter b
 
-``` math
+```math
 \begin{align*}
 p_b^2c^2 &= E_b^2 - m_b^2 c^4 \\
 &=\left(\frac{M^2c^4 + m_b^2c^4 - m_a^2 c^4}{2 M c^2}\right)^2-m_b^2 c^4
@@ -185,14 +186,17 @@ p_b^2c^2 &= E_b^2 - m_b^2 c^4 \\
 ### Energy Triangle
 
 You may notice that the form of the energy is very similar to the cosine rule
-``` math
+
+```math
 \begin{align*}
 c^2 &= a^2 + b^2 -2ab \cos C \\
 b \cos C &= \frac{a^2 + b^2 - c^2}{2a}
 \end{align*}
 ```
+
 If we let $\tilde{M}=a$,$\tilde{m}_a=b$, $\tilde{m}_b=c$ and $E_a = b \cos C$, we get
-``` math
+
+```math
 E_a = \frac{\tilde{M}^2 + \tilde{m}_a^2 - \tilde{m}_b^2}{2 \tilde{M}}
 ```
 
@@ -200,9 +204,44 @@ E_a = \frac{\tilde{M}^2 + \tilde{m}_a^2 - \tilde{m}_b^2}{2 \tilde{M}}
 
 This means we can draw an Energy Triangle
 
-![energy triangle](./img/energy-triangle-2.svg)
+![energy triangle](./img/energy-triangle.svg)
 
-Also the area of the triangle is useful to us
-``` math
-A = \frac{1}{2} \tilde{M} \tilde{m}_a \sin A
+Also the area of the triangle $\tilde{A}$ is useful to us
+
+```math
+\tilde{A} = \frac{1}{2} \tilde{M} \tilde{m}_a \sin A
 ```
+
+but we also have the area as
+
+```math
+\tilde{A}=\frac{\sqrt{-\lambda(a^2,b^2,c^2)}}{4}
+```
+
+Setting these equal we get
+
+```math
+\begin{align*}
+ \frac{1}{2} \tilde{M} \tilde{m}_a \sin A &= \frac{\sqrt{-\lambda(a^2,b^2,c^2)}}{4}\\
+  2 \tilde{M} \tilde{m}_a \sin A &= i \sqrt{\lambda(a^2,b^2,c^2)}\\
+   \tilde{m}_a \sin A &= i \frac{\sqrt{\lambda(a^2,b^2,c^2)}}{2 \tilde{M}}\\
+   \tilde{m}_a \sin A &= i p \\
+   p &= -i \tilde{m}_a \sin A
+\end{align*}
+```
+
+So you might be curious why we have imaginary numbers showing up, well lets look back at the area
+
+```math
+\begin{align*}
+\tilde{A}&=\frac{\sqrt{-\lambda(a^2,b^2,c^2)}}{4}\\
+\tilde{A}&=i\frac{\sqrt{\lambda(a^2,b^2,c^2)}}{4}\\
+\frac{2\tilde{A}}{\tilde{M}}&=i\frac{\sqrt{\lambda(a^2,b^2,c^2)}}{2M}\\
+ip &= \frac{2\tilde{A}}{\tilde{M}}\\
+p &= -i \frac{2\tilde{A}}{\tilde{M}}\\
+\end{align*}
+```
+
+So as you can see, momentum is related to the area, but because of that factor of i, we only get real momentum if the area is imaginary.
+
+And in fact to not be kinematically disallowed, the area should be imaginary (apart from the case the momentum is 0). This has to be the case or the sum of the daughter particle masses would be greater than the mass of the parent, which would require an extra unaccounted for source of energy. So physical cases would have triangles with imaginary area.
