@@ -93,7 +93,11 @@ E_a &= \frac{\tilde{M}^2 + \tilde{m}_a^2 - \tilde{m}_b^2}{2 \tilde{M}}
 ``` math
 \begin{align*}
 \tilde{p}_a^2 &= E_a^2 - \tilde{m}_a^2 \\
-&= \left(\frac{\tilde{M}^2 + \tilde{m}_a^2 - \tilde{m}_b^2}{2 \tilde{M}}\right)^2 - m_a^2 c^4\\
+&= \left(\frac{\tilde{M}^2 + \tilde{m}_a^2 - \tilde{m}_b^2}{2 \tilde{M}}\right)^2 - \tilde{m}_a^2\\
+&= \frac{\left(\tilde{M}^2 + \tilde{m}_a^2 - \tilde{m}_b^2\right)^2}{4 \tilde{M}^2} - \tilde{m}_a^2\\
+&= \frac{\left(\tilde{M}^2 + \tilde{m}_a^2 - \tilde{m}_b^2\right)^2- 4 \tilde{M}^2\tilde{m}_a^2}{4 \tilde{M}^2} \\
+4 \tilde{M}^2\tilde{p}_a^2 &=\left(\tilde{M}^2 + \tilde{m}_a^2 - \tilde{m}_b^2\right)^2- 4 \tilde{M}^2\tilde{m}_a^2 \\
+&=\left(\tilde{M}^2 \left(\tilde{M}^2 + \tilde{m}_a^2 - \tilde{m}_b^2\right)+ \tilde{m}_a^2 \left(\tilde{M}^2 + \tilde{m}_a^2 - \tilde{m}_b^2\right)- \tilde{m}_b^2\left(\tilde{M}^2 + \tilde{m}_a^2 - \tilde{m}_b^2\right)\right)- 4 \tilde{M}^2\tilde{m}_a^2
 \end{align*}
 ```
 
