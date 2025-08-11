@@ -99,7 +99,9 @@ E_a &= \frac{\tilde{M}^2 + \tilde{m}_a^2 - \tilde{m}_b^2}{2 \tilde{M}}
 4 \tilde{M}^2\tilde{p}_a^2 &=\left(\tilde{M}^2 + \tilde{m}_a^2 - \tilde{m}_b^2\right)^2- 4 \tilde{M}^2\tilde{m}_a^2 \\
 &=\tilde{M}^2 \left(\tilde{M}^2 + \tilde{m}_a^2 - \tilde{m}_b^2\right)+ \tilde{m}_a^2 \left(\tilde{M}^2 + \tilde{m}_a^2 - \tilde{m}_b^2\right)- \tilde{m}_b^2\left(\tilde{M}^2 + \tilde{m}_a^2 - \tilde{m}_b^2\right)- 4 \tilde{M}^2\tilde{m}_a^2\\
 &= \tilde{M}^4 + \underline{\tilde{M}^2\tilde{m}_a^2} - \underline{\underline{\tilde{M}^2\tilde{m}_b^2}}+ \underline{\tilde{M}^2\tilde{m}_a^2} + \tilde{m}_a^4- \underline{\underline{\underline{\tilde{m}_a^2\tilde{m}_b^2}}} - \underline{\underline{\tilde{M}^2\tilde{m}_b^2}}- \underline{\underline{\underline{\tilde{m}_a^2\tilde{m}_b^2}}}+ \tilde{m}_b^4- 4 \underline{\tilde{M}^2\tilde{m}_a^2}\\
-&= \tilde{M}^4 + \tilde{m}_a^4 + \tilde{m}_b^4 - 2\tilde{M}^2\tilde{m}_a^2 - 2\tilde{M}^2\tilde{m}_b^2 - 2\tilde{m}_a^2\tilde{m}_b^2
+&= \tilde{M}^4 + \tilde{m}_a^4 + \tilde{m}_b^4 - 2\tilde{M}^2\tilde{m}_a^2 - 2\tilde{M}^2\tilde{m}_b^2 - 2\tilde{m}_a^2\tilde{m}_b^2 \\
+4 \tilde{M}^2\tilde{p}_a^2 &= \lambda(\tilde{M}^2,\tilde{m}_a^2,\tilde{m}_b^2)
+\tilde{p}_a = \frac{\sqrt{}}{2 \tilde{M}}
 \end{align*}
 ```
 
@@ -185,15 +187,21 @@ You may notice that the form of the energy is very similar to the cosine rule
 ``` math
 \begin{align*}
 c^2 &= a^2 + b^2 -2ab \cos C \\
-b \cos C = \frac{a^2 + b^2 - c^2}{2a}
+b \cos C &= \frac{a^2 + b^2 - c^2}{2a}
 \end{align*}
 ```
 If we let $\tilde{M}=a$,$\tilde{m}_a=b$, $\tilde{m}_b=c$ and $E_a = b \cos C$, we get
 ``` math
-E_a &= \frac{\tilde{M}^2 + \tilde{m}_a^2 - \tilde{m}_b^2}{2 \tilde{M}}
+E_a = \frac{\tilde{M}^2 + \tilde{m}_a^2 - \tilde{m}_b^2}{2 \tilde{M}}
 ```
 
-> Note that $\cos C = \frac{E_a}{\tilde{m}_a} = \gamma_a$
+> Note that $\cos A = \frac{E_a}{\tilde{m}_a} = \gamma_a$, where we have relabeled the angle $C$ to the angle $A$ to match the diagram below.
 
 This means we can draw an Energy Triangle
 
+![energy triangle](./img/energy-triangle-2.svg)
+
+Also the area of the triangle is useful to us
+``` math
+A = \frac{1}{2} \tilde{M} \tilde{m}_a \sin A
+```
