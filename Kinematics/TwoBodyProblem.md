@@ -151,7 +151,7 @@ So we're left with
 ``` math
 \begin{align*}
 2 \tilde{M} E_b &= \tilde{M}^2 + \tilde{m}_b^2 - \tilde{m}_a^2\\
-E_b &= \frac{\tilde{M}^2 + \tilde{m}_b^2 - \tilde{m}_a^2}{2  \tilde{M} }
+E_b &= \frac{\tilde{M}^2 + \tilde{m}_b^2 - \tilde{m}_a^2}{2 \tilde{M}}
 \end{align*}
 ```
 
@@ -159,12 +159,8 @@ E_b &= \frac{\tilde{M}^2 + \tilde{m}_b^2 - \tilde{m}_a^2}{2  \tilde{M} }
 
 ``` math
 \begin{align*}
-p_a^2c^2 &= E_a^2 - m_a^2 c^4 \\
-&= \left(\frac{M^2c^4 + m_a^2c^4 - m_b^2 c^4}{2 M c^2}\right)^2 - m_a^2 c^4\\
-&= \frac{\left(M^2c^4 + m_a^2c^4 - m_b^2 c^4\right)^2}{4M^2c^4} - m_a^2 c^4 \\
-&= \frac{M^4c^8+m_a^4c^8+m_b^4c^8+2M^2c^4m_a^2c^4-2M^2c^4m_b^2c^4-2m_a^2c^4m_b^2c^4}{4M^2c^4} - m_a^2 c^4\\
-&= \frac{M^4c^8+m_a^4c^8+m_b^4c^8+2M^2c^4m_a^2c^4-2M^2c^4m_b^2c^4-2m_a^2c^4m_b^2c^4- 4M^2c^4m_a^2 c^4}{4M^2c^4}\\
-&= \frac{M^4c^8+m_a^4c^8+m_b^4c^8-2M^2c^4m_a^2c^4-2M^2c^4m_b^2c^4-2m_a^2c^4m_b^2c^4}{4M^2c^4}\\
+\tilde{p}_a^2 &= E_a^2 - \tilde{m}_a^2 \\
+&= \left(\frac{\tilde{M}^2 + \tilde{m}_a^2 - \tilde{m}_b^2}{2 \tilde{M}}\right)^2 - m_a^2 c^4\\
 \end{align*}
 ```
 
