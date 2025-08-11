@@ -125,33 +125,33 @@ Remembering that any four momentum vector squared is just it's square rest mass 
 ``` math
 \begin{align*}
 P_p^2 - 2 P_b \cdot P_p + P_b^2 &= P_a^2 \\
-M^2c^4 + m_b^2c^4 - 2 P_b \cdot P_p &= m_a^2 c^4 \\
-M^2c^4 + m_b^2c^4 - m_a^2 c^4 &= 2 P_b \cdot P_p
+\tilde{M}^2 + \tilde{m}_b^2 - 2 P_b \cdot P_p &= \tilde{m}_a^2 \\
+\tilde{M}^2 +\tilde{m}_b^2-\tilde{m}_a^2 &= 2 P_b \cdot P_p
 \end{align*}
 ```
 
 Now we just have the dot product to deal with. Which we can do by following the rules about dot product for four momentum vectors
 
 ``` math
-P_b \cdot P_p = \begin{pmatrix}
+P_b \cdot P_p =\begin{pmatrix}
 E_b \\
-p_b \sin \theta_b \cos \phi_b  \\
-p_b \sin \theta_b \sin \phi_b \\
-p_b \cos \theta_b
+\tilde{p}_b \sin (\pi-\theta) \cos (\phi+\pi)  \\
+\tilde{p}_b \sin (\pi-\theta)\sin (\phi+\pi) \\
+\tilde{p}_b \cos (\pi-\theta)
 \end{pmatrix} \cdot \begin{pmatrix}
-Mc^2 \\
+\tilde{M} \\
 0 \\
 0\\
 0
-\end{pmatrix} = E_b Mc^2
+\end{pmatrix} = E_b \tilde{M}
 ```
 
 So we're left with
 
 ``` math
 \begin{align*}
-2 M E_b &= M^2c^4 + m_b^2c^4 - m_a^2 c^4\\
-E_b &= \frac{M^2c^4 + m_b^2c^4 - m_a^2 c^4}{2 M c^2}
+2 \tilde{M} E_b &= \tilde{M}^2 + \tilde{m}_b^2 - \tilde{m}_a^2\\
+E_b &= \frac{\tilde{M}^2 + \tilde{m}_b^2 - \tilde{m}_a^2}{2  \tilde{M} }
 \end{align*}
 ```
 
