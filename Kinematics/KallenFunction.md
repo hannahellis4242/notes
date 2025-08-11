@@ -45,5 +45,10 @@ A &= \frac{ah}{2}\\
 16A^2&= 4a^2b^2-\left(a^2 + b^2 -c^2\right)^2\\
 &= 4a^2b^2-a^2\left(a^2 + b^2 -c^2\right) - b^2 \left(a^2 + b^2 -c^2\right)+c^2\left(a^2 + b^2 -c^2\right) \\
 &= 4a^2b^2 -a^4 -\underline{a^2 b^2} +\underline{\underline{a^2c^2}}  - \underline{a^2b^2} - b^4 +\underline{\underline{\underline{b^2c^2}}}+\underline{\underline{a^2c^2}} +\underline{\underline{\underline{b^2c^2}}} -c^4 \\
+&= 4a^2b^2 -a^4 - b^4 -c^4-2a^2 b^2 +2a^2c^2   +2 b^2c^2 \\
+&= -a^4 - b^4 -c^4+2a^2 b^2 +2a^2c^2   +2 b^2c^2 \\
+&= -\lambda(a^2,b^2,c^2)\\
+A &= \sqrt{\frac{-\lambda(a^2,b^2,c^2)}{16}} \\
+&=\frac{\sqrt{-\lambda(a^2,b^2,c^2)}}{4}
 \end{align*}
 ```
