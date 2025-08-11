@@ -34,20 +34,7 @@ E_a \\
 
 Where I am using spherical polar coordinates, as this helps separate out the magnitute of the momentum from it's direction. It will also help when doing a lorentz boost into the lab frame later.
 
-### Daughter B
-
-``` math
-P_b = \begin{pmatrix}
-E_b \\
-\tilde{p}_b \sin (\pi-\theta) \cos (\phi+\pi)  \\
-\tilde{p}_b \sin (\pi-\theta)\sin (\phi+\pi) \\
-\tilde{p}_b \cos (\pi-\theta)
-\end{pmatrix}
-```
-
-> The angles for daughter b will be left for later, but are chosen so that $\mathbf{p}_a +\mathbf{p}_b=\mathbf{0}$ to conserve momentum.
-
-## Energy of daughter a
+#### Energy of Daughter A
 
 Starting by equating the momentum before with momentum after we get
 
@@ -101,6 +88,28 @@ E_a &= \frac{\tilde{M}^2 + \tilde{m}_a^2 - \tilde{m}_b^2}{2 \tilde{M}}
 \end{align*}
 ```
 
+#### Momentum of daughter A
+
+``` math
+\begin{align*}
+\tilde{p}_a^2 &= E_a^2 - \tilde{m}_a^2 \\
+&= \left(\frac{\tilde{M}^2 + \tilde{m}_a^2 - \tilde{m}_b^2}{2 \tilde{M}}\right)^2 - m_a^2 c^4\\
+\end{align*}
+```
+
+### Daughter B
+
+``` math
+P_b = \begin{pmatrix}
+E_b \\
+\tilde{p}_b \sin (\pi-\theta) \cos (\phi+\pi)  \\
+\tilde{p}_b \sin (\pi-\theta)\sin (\phi+\pi) \\
+\tilde{p}_b \cos (\pi-\theta)
+\end{pmatrix}
+```
+
+> The angles for daughter b will be left for later, but are chosen so that $\mathbf{p}_a +\mathbf{p}_b=\mathbf{0}$ to conserve momentum.
+
 ## Energy of daughter b
 
 Starting by equating the momentum before with momentum after we get
@@ -152,15 +161,6 @@ So we're left with
 \begin{align*}
 2 \tilde{M} E_b &= \tilde{M}^2 + \tilde{m}_b^2 - \tilde{m}_a^2\\
 E_b &= \frac{\tilde{M}^2 + \tilde{m}_b^2 - \tilde{m}_a^2}{2 \tilde{M}}
-\end{align*}
-```
-
-## Momentum of daughter a
-
-``` math
-\begin{align*}
-\tilde{p}_a^2 &= E_a^2 - \tilde{m}_a^2 \\
-&= \left(\frac{\tilde{M}^2 + \tilde{m}_a^2 - \tilde{m}_b^2}{2 \tilde{M}}\right)^2 - m_a^2 c^4\\
 \end{align*}
 ```
 
