@@ -97,7 +97,9 @@ E_a &= \frac{\tilde{M}^2 + \tilde{m}_a^2 - \tilde{m}_b^2}{2 \tilde{M}}
 &= \frac{\left(\tilde{M}^2 + \tilde{m}_a^2 - \tilde{m}_b^2\right)^2}{4 \tilde{M}^2} - \tilde{m}_a^2\\
 &= \frac{\left(\tilde{M}^2 + \tilde{m}_a^2 - \tilde{m}_b^2\right)^2- 4 \tilde{M}^2\tilde{m}_a^2}{4 \tilde{M}^2} \\
 4 \tilde{M}^2\tilde{p}_a^2 &=\left(\tilde{M}^2 + \tilde{m}_a^2 - \tilde{m}_b^2\right)^2- 4 \tilde{M}^2\tilde{m}_a^2 \\
-&=\left(\tilde{M}^2 \left(\tilde{M}^2 + \tilde{m}_a^2 - \tilde{m}_b^2\right)+ \tilde{m}_a^2 \left(\tilde{M}^2 + \tilde{m}_a^2 - \tilde{m}_b^2\right)- \tilde{m}_b^2\left(\tilde{M}^2 + \tilde{m}_a^2 - \tilde{m}_b^2\right)\right)- 4 \tilde{M}^2\tilde{m}_a^2
+&=\tilde{M}^2 \left(\tilde{M}^2 + \tilde{m}_a^2 - \tilde{m}_b^2\right)+ \tilde{m}_a^2 \left(\tilde{M}^2 + \tilde{m}_a^2 - \tilde{m}_b^2\right)- \tilde{m}_b^2\left(\tilde{M}^2 + \tilde{m}_a^2 - \tilde{m}_b^2\right)- 4 \tilde{M}^2\tilde{m}_a^2\\
+&= \tilde{M}^4 + \underline{\tilde{M}^2\tilde{m}_a^2} - \underline{\underline{\tilde{M}^2\tilde{m}_b^2}}+ \underline{\tilde{M}^2\tilde{m}_a^2} + \tilde{m}_a^4- \underline{\underline{\underline{\tilde{m}_a^2\tilde{m}_b^2}}} - \underline{\underline{\tilde{M}^2\tilde{m}_b^2}}- \underline{\underline{\underline{\tilde{m}_a^2\tilde{m}_b^2}}}+ \tilde{m}_b^4- 4 \underline{\tilde{M}^2\tilde{m}_a^2}\\
+&= \tilde{M}^4 + \tilde{m}_a^4 + \tilde{m}_b^4 - 2\tilde{M}^2\tilde{m}_a^2 - 2\tilde{M}^2\tilde{m}_b^2 - 2\tilde{m}_a^2\tilde{m}_b^2
 \end{align*}
 ```
 
