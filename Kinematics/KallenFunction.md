@@ -33,3 +33,15 @@ which can be rearranged for the angle $C$
 ``` math
 \cos C= \frac{a^2 + b^2 -c^2}{2ab}
 ```
+
+The area of the triangle is given by
+``` math
+\begin{align*}
+A &= \frac{ah}{2}\\
+&= \frac{ab \sin C}{2} \\
+&= \frac{ab \sqrt{1-\cos^2 C}}{2}\\
+\left(\frac{2A}{ab}\right)^2&= 1-\cos^2 C\\
+&= 1-\left(\frac{a^2 + b^2 -c^2}{2ab}\right)^2\\
+16A^2&= 4a^2b^2-\left(a^2 + b^2 -c^2\right)^2\\
+\end{align*}
+```
