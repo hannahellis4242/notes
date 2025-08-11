@@ -178,3 +178,22 @@ p_b^2c^2 &= E_b^2 - m_b^2 c^4 \\
 &=\left(\frac{M^2c^4 + m_b^2c^4 - m_a^2 c^4}{2 M c^2}\right)^2-m_b^2 c^4
 \end{align*}
 ```
+
+### Energy Triangle
+
+You may notice that the form of the energy is very similar to the cosine rule
+``` math
+\begin{align*}
+c^2 &= a^2 + b^2 -2ab \cos C \\
+b \cos C = \frac{a^2 + b^2 - c^2}{2a}
+\end{align*}
+```
+If we let $\tilde{M}=a$,$\tilde{m}_a=b$, $\tilde{m}_b=c$ and $E_a = b \cos C$, we get
+``` math
+E_a &= \frac{\tilde{M}^2 + \tilde{m}_a^2 - \tilde{m}_b^2}{2 \tilde{M}}
+```
+
+> Note that $\cos C = \frac{E_a}{\tilde{m}_a} = \gamma_a$
+
+This means we can draw an Energy Triangle
+
