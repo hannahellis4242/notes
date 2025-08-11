@@ -19,3 +19,6 @@ who introduced it as a short-hand in his textbook Elementary Particle Physics.
 
 ## Relationship with Triangles
 
+Starting with a triangle of with side lengths $a$,$b$ and $c$.
+
+![triangle](./img/triangle.svg)
