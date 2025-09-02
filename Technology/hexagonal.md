@@ -16,7 +16,7 @@ Allow an application to equally be driven by users, programs, automated test or 
 
 As events arrive from the outside world at a port, a technology-specific adapter converts it into a usable procedure call or message and passes it to the application. The application is blissfully ignorant of the nature of the input device. When the application has something to send out, it sends it out through a port to an adapter, which creates the appropriate signals needed by the receiving technology (human or automated). The application has a semantically sound interaction with the adapters on all sides of it, without actually knowing the nature of the things on the other side of the adapters.
 
-![figure 1s](./img/figure1.svg)
+![figure 1s](./hexagonal/hexFig1.png)
 
 #### Motivation
 
@@ -59,11 +59,11 @@ In the Application Notes, the left-right asymmetry will be brought up again. How
 
 #### Structure
 
-![figure 2](./img/figure2.svg)
+![figure 2](./hexagonal/hexFig2.png)
 
 Figure 2 shows an application having two active ports and several adapters for each port. The two ports are the application-controlling side and the data-retrieval side. This drawing shows that the application can be equally driven by an automated, system-level regression test suite, by a human user, by a remote http application, or by another local application. On the data side, the application can be configured to run decoupled from external databases using an in-memory oracle, or mock, database replacement; or it can run against the test- or run-time database. The functional specification of the application, perhaps in use cases, is made against the inner hexagon's interface and not against any one of the external technologies that might be used.
 
-![figure 3](./img/figure3.svg)
+![figure 3](./hexagonal/hexFig3.png)
 
 Figure 3 shows the same application mapped to a three-layer architectural drawing. To simplify the drawing only two adapters are shown for each port. This drawing is intended to show how multiple adapters fit in the top and bottom layers, and the sequence in which the various adapters are used during system development. The numbered arrows show the order in which a team might develop and use the application:
 
@@ -248,7 +248,7 @@ It doesn't appear that there is any particular damage in choosing the "wrong" nu
 
 #### Known Uses
 
-![figure 4](./img/figure4.svg)
+![figure 4](./hexagonal/hexFig4.png)
 
 Figure 4 shows an application with four ports and several adapters at each port. This was derived from an application that listened for alerts from the national weather service about earthquakes, tornadoes, fires and floods, and notified people on their telephones or telephone answering machines. At the time we discussed this system, the system's interfaces were identified and discussed by technology, linked to purpose. There was an interface for trigger-data arriving over a wire feed, one for notification data to be sent to answering machines, an administrative interface implemented in a GUI, and a database interface to get their subscriber data.
 
