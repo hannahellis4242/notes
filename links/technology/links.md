@@ -8,10 +8,11 @@
 - [MVVMS... A Better MVVM?](https://www.youtube.com/watch?v=ve0DFu-arD8)
 - [Object-Oriented Programming is Bad](https://www.youtube.com/watch?v=QM1iUe6IofM)
 - [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS)
+- [Hexagonal Architecture](https://alistair.cockburn.us/hexagonal-architectures)
 
 ## Katas
 
-### Refactoring 
+### Refactoring
 
 - [5 coding exercises to practice refactoring Legacy Code](https://understandlegacycode.com/blog/5-coding-exercises-to-practice-refactoring-legacy-code/)
 - [How to efficiently practice refactoring katas](https://understandlegacycode.com/blog/efficiently-practice-refactoring-katas/)
@@ -34,17 +35,19 @@
 
 ### Games
 
-- [Making a Game with Java with No Java Experience ](https://www.youtube.com/watch?v=iOeebAM_C5g)
+- [Making a Game with Java with No Java Experience](https://www.youtube.com/watch?v=iOeebAM_C5g)
 - [Pokémon JavaScript Game Tutorial with HTML Canvas](https://www.youtube.com/watch?v=yP5DKzriqXA)
-- [How NOT to make an indie game ](https://www.youtube.com/watch?v=NnI_1DOYt2A)
+- [How NOT to make an indie game](https://www.youtube.com/watch?v=NnI_1DOYt2A)
 
 ## Books
 
 ### Refactoring
+
 - [Refactoring book first chapter free](https://www.thoughtworks.com/content/dam/thoughtworks/documents/books/bk_Refactoring2-free-chapter_en.pdf)
 - [Refactoring book Kata](https://github.com/emilybache/Theatrical-Players-Refactoring-Kata/tree/main)
 
 ### Design Patterns
+
 - [From callbacks to design patterns](https://wstomv.win.tue.nl/edu/2ip15/downloads/Series_04/callbacks.pdf)
 
 ## Java
@@ -68,6 +71,7 @@
 - [Scala](https://www.youtube.com/watch?v=DzFt0YkZo8M)
 
 ## Node
+
 - [Two Factor Auth with node.js](https://medium.com/@pdlsandesh144/a-step-by-step-guide-on-using-node-js-to-implement-two-factor-authentication-059c7bcb220c)
 - [Javascript is Weird](https://www.youtube.com/watch?v=sRWE5tnaxlI)
 - [Inheritance in JavaScript - Prototypal Inheritance tutorial](https://www.youtube.com/watch?v=jnME98ckDbQ&list=PL1PqvM2UQiMoGNTaxFMSK2cih633lpFKP)
@@ -83,9 +87,10 @@
 - [turndown](https://www.npmjs.com/package/turndown)
 
 ## Web
+
 - [JavaScript Modal Popup: Create a modal using HTML, CSS and JavaScript](https://www.youtube.com/watch?v=KX0NR5HtQ1Q)
 - [Flexbox design patterns you can use in your projects](https://www.youtube.com/watch?v=vQAvjof1oe4)
-- [Learn CSS Grid in 20 Minutes ](https://www.youtube.com/watch?v=9zBsdzdE4sM)
+- [Learn CSS Grid in 20 Minutes](https://www.youtube.com/watch?v=9zBsdzdE4sM)
 - [solitare-js](https://codepen.io/bfa/pen/ggGYeE)
 - [How to get the browser viewport dimensions?](https://stackoverflow.com/questions/1248081/how-to-get-the-browser-viewport-dimensions)
 
