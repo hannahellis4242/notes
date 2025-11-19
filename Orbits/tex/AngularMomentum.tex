@@ -4,6 +4,30 @@ The angular momentum of a particle is given by
 &=m \bm{r}\times \frac{d \bm{r}}{d t} \nonumber \\
 &=m r \hat{\bm{r}} \times \left[ \dot{r} \hat{\bm{r}} + r \omega \hat{\bm{\theta}} \right] \nonumber \\
 &=m \left[ r \dot{r}\hat{\bm{r}} \times \hat{\bm{r}} + r^2 \omega \hat{\bm{r}} \times\hat{\bm{\theta}} \right] \nonumber \\
-&=m r^2 \omega \uveck \label{eq:AngularMomentumInTermsOfrandomega}
+&=m r^2 \omega \uveck \label{eq:AngularMomentum}
 \end{align}
-We shall see later that the angular momentum of a particle in orbit is conserved.
+
+We can also write this as $\mathbf{L} = l \uveck$ were
+\begin{equation}
+l=mr^2\omega \label{eq:AngularMomentumScalar}
+\end{equation}
+
+\subsection{Conservation Of Angular Momentum}
+We can show now that angular momentum is conserved under a central force by taking the derivative with respect to time.
+
+\begin{equation}
+\frac{d\mathbf{L}}{dt} = \frac{d l \uveck}{dt} = \frac{d l}{dt}\uveck
+\end{equation}
+\begin{align}
+\frac{dl}{dt}&=m\frac{d}{dt}\left[r^2\omega\right]\nonumber \\
+&=m\left[\frac{dr^2}{dt}\omega + r^2\frac{d\omega}{dt}\right]\nonumber \\
+&=m\left[\frac{dr^2}{dr}\frac{dr}{dt}\omega + r^2\frac{d\omega}{dt}\right] \nonumber \\
+&=m\left[2r\frac{dr}{dt}\omega + r^2\frac{d\omega}{dt}\right] \nonumber \\
+&=mr\left[2\frac{dr}{dt}\omega + r\frac{d\omega}{dt}\right]
+\end{align}
+The part inside the brackets is the angular acceleration which for a central force is zero\footnote{see equation \ref{eq:angularAcceleration}} and so
+\begin{align}
+\frac{dl}{dt}&=mr \times 0 \nonumber \\
+&=0
+\end{align}
+Which means that the angular momentum is constant.
