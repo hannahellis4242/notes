@@ -32,7 +32,7 @@ where we have used equation \ref{eq:unitangle} to replace the typical Cartesian 
 \end{equation}
 
 \begin{framed}
-\subsubsection{Polar unit vectors summary}
+\subsubsection*{Polar unit vectors summary}
 The polar coordinate unit vectors are
 \begin{align*}
 \hat{\bm{r}} &= \uveci \cos( \theta ) + \uvecj \sin( \theta ) \\
@@ -50,18 +50,25 @@ And the second derivative of $\hat{\bm{r}}$ being
 with $\omega = \frac{d \theta}{d t}$
 \end{framed}
 
-\subsection{Acceleration in polar coordinates}
-Here we will calculate the acceleration in terms of the polar unit vectors. Starting with the position vector
+\subsection{Velocity and acceleration in polar coordinates}
+Here we will calculate the acceleration in terms of the polar unit vectors. 
+
+\subsubsection{Position}
+Starting with the position vector
 \begin{equation}
 \textbf{r}= r \hat{\textbf{r}}
 \end{equation}
-This is the length of the position vector in the direction of $\hat{\bm{r}}$. The first derivative will be the velocity of the position vector in terms of the polar unit vectors
+This is the length of the position vector in the direction of $\hat{\bm{r}}$.
+
+\subsubsection{Velocity}
+The first derivative will be the velocity of the position vector in terms of the polar unit vectors
 \begin{equation}\label{eq:vel}
 \frac{d \bm{r}}{d t} = \frac{d r}{d t} \hat{\bm{r}} + r \frac{d \hat{\bm{r}}}{d t}=\frac{d r}{d t} \hat{\bm{r}} + r \omega \hat{\bm{\theta}}
 \end{equation}
 The velocity is the sum of the radial velocity in the radial direction $\dot{r}$ and the angular part of the velocity $r \omega$ in the angular direction.
 
-The acceleration
+\subsubsection{Acceleration}
+
 \begin{align}\label{eq:acceleration}
 \frac{ d^2 \bm{r}}{ d t^2} &= \frac{ d^2 r}{d t^2} \hat{\bm{r}} + \frac{d r}{d t} \frac{d \hat{\bm{r}}}{d t} +\frac{d r}{d t} \omega \hat{\bm{\theta}} +r \frac{d \omega}{d t} \hat{\bm{\theta}}+r \omega \frac{d \hat{\bm{\theta}}}{d t} \nonumber \\
 &=  \frac{ d^2 r}{d t^2} \hat{\bm{r}} + \frac{d r}{d t} \omega \hat{\bm{\theta}} +\frac{d r}{d t} \omega \hat{\bm{\theta}} +r \frac{d \omega}{d t} \hat{\bm{\theta}}-r \omega^2 \hat{\bm{r}} \nonumber \\
@@ -69,7 +76,7 @@ The acceleration
 \end{align}
 
 \begin{framed}
-\subsubsection{Acceleration in polar coordinates summary}
+\subsubsection*{Acceleration in polar coordinates summary}
 The position vector
 \begin{equation*}
 \bm{r}=r \hat{\bm{r}}
