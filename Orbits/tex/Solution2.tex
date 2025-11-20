@@ -1,6 +1,64 @@
-\subsection{Terminology}
+\subsection{Elipse}
 
-TODO a section about what periapsis and apoapsis, plus other terms. Maybe just a section deriving things about elipses here?
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{./img/elipse.png} 
+\caption{An Elipse with important values shown} \label{fig:GeometryElipse}
+\end{figure}
+
+In the above diagram a point $P$ on the ellipse forms an angle $E$ with the origin and the $x$ axis. Also the angle $\theta$ is formed at the ellipse's focus between the point on the ellipse and the axis.
+
+We also define the distances $a$ and $p$ as the apoapsis and periapsis distances respectively.
+
+The semi major axis has been labeled as $A$, so that the total width of the ellipse is $2A$. Also shown on the diagram is the semi minor axis $B$, so the total height of the ellipse is $2B$.
+
+For this text we will take the elliptical eccentricity to be defined as the ratio of the focus and the semi major axis.
+\begin{equation}
+e = \frac{f}{A}
+\end{equation}
+\subsubsection{The Apses}
+Before we get any further, we will look at the apses. From figure \ref{fig:GeometryElipse} we can see that
+
+\begin{equation}
+p = A - f = A - eA = A(1-e)
+\end{equation}
+
+and that
+\begin{equation}
+a  = A + f = A + eA = A(1+e)
+\end{equation}
+
+also
+
+\begin{align}
+a+p &= A -f + A +f = 2A \\
+a-p &= A + f - A + f = 2f
+\end{align}
+
+which can give us the eccentricity as defined by the apses
+\begin{equation}
+e=\frac{f}{A}=\frac{2f}{2A}=\frac{a-p}{a+p}
+\end{equation}
+
+\subsubsection{Sum of distances from foci and $P$}
+
+One property of an ellipse is that the sum of the distances from any point on the ellipse and the foci is a constant. This fact allows you to draw an ellipse using two pins and a piece of string. We will use this fact and look at two special cases, before looking at the general case and deriving the equation for an ellipse. Before we do we will define what the sum is here.
+
+\begin{equation}
+S=d+r
+\end{equation}
+
+\paragraph{Special Case 1: Point on the $x$ axis}
+
+When the point is at $(A,0)$. The distance $d$ is $f+A$ and the distance $r$ is $A-f$ from the diagram above. So our sum becomes
+
+\begin{equation}
+S = d + r = f+A + A-f = 2A
+\end{equation}
+
+\paragraph{Special Case 2: Point on the $y$ axis}
+
+
 
 \subsection{Solving equtaions of motion}
 

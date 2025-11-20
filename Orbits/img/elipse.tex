@@ -1,0 +1,50 @@
+\definecolor{aqaqaq}{rgb}{0.6274509803921569,0.6274509803921569,0.6274509803921569}
+\definecolor{wqwqwq}{rgb}{0.3764705882352941,0.3764705882352941,0.3764705882352941}
+\definecolor{qqffqq}{rgb}{0,1,0}
+\definecolor{qqwuqq}{rgb}{0,0.39215686274509803,0}
+\definecolor{qqqqff}{rgb}{0,0,1}
+\definecolor{ffqqqq}{rgb}{1,0,0}
+\definecolor{cqcqcq}{rgb}{0.7529411764705882,0.7529411764705882,0.7529411764705882}
+\definecolor{yqyqyq}{rgb}{0.5019607843137255,0.5019607843137255,0.5019607843137255}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+\clip(-2.7866263686612416,-1.734894239601558) rectangle (3.394141223371981,1.7592853485774962);
+\draw [shift={(0,0)},line width=2pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0,0) -- (0:0.5383943895499322) arc (0:35.53767779197438:0.5383943895499322) -- cycle;
+\draw [shift={(1,0)},line width=2pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0,0) -- (0:0.32303663372995933) arc (0:68.1985905136482:0.32303663372995933) -- cycle;
+\draw [rotate around={0:(0,0)},line width=2pt] (0,0) ellipse (1.8385164807134502cm and 1.5427711592634117cm);
+\draw [line width=2pt,color=cqcqcq,domain=-2.7866263686612416:3.394141223371981] plot(\x,{(-0-0*\x)/-2});
+\draw [line width=2pt] (0,0)-- (1.4,1);
+\draw [line width=2pt,dash pattern=on 1pt off 1pt,color=ffqqqq] (0,0)-- (0,1);
+\draw [line width=2pt,dash pattern=on 1pt off 1pt,color=qqqqff] (0,1)-- (1.4,1);
+\draw [line width=2pt] (1,0)-- (1.4,1);
+\draw [line width=2pt,color=qqffqq] (-1,0)-- (1.4,1);
+\draw [line width=2pt,color=cqcqcq] (0,-1.734894239601558) -- (0,1.7592853485774962);
+\draw [line width=2pt,dash pattern=on 1pt off 1pt,color=wqwqwq] (-1.8385164807134502,0.2)-- (-1,0.2);
+\draw [line width=2pt,dash pattern=on 1pt off 1pt,color=yqyqyq] (-1.8385164807134502,-0.2)-- (1,-0.2);
+\draw [line width=2pt,dash pattern=on 1pt off 1pt,color=aqaqaq] (1,-0.2)-- (1.8385164807134502,-0.2);
+\begin{scriptsize}
+\draw [color=black] (1,0)-- ++(-2.5pt,0 pt) -- ++(5pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5pt);
+\draw[color=black] (1.0144380215612805,-0.06317966004902155) node {f};
+\draw [color=black] (-1,0)-- ++(-2.5pt,0 pt) -- ++(5pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5pt);
+\draw[color=black] (-0.9883891075644677,-0.05779571615352225) node {-f};
+\draw [color=yqyqyq] (1.4,1)-- ++(-2.5pt,-2.5pt) -- ++(5pt,5pt) ++(-5pt,0) -- ++(5pt,-5pt);
+\draw[color=yqyqyq] (1.4128498698282304,1.09975222137883) node {P};
+\draw [color=ffqqqq] (0,0)-- ++(-2.5pt,0 pt) -- ++(5pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5pt);
+\draw[color=ffqqqq] (-0.06235075753858413,0.5882775513063953) node {y};
+\draw[color=qqqqff] (0.6967853317268203,1.0889843335878313) node {x};
+\draw[color=qqwuqq] (0.34682897851936434,0.14141020797995235) node {E};
+\draw[color=black] (1.1867242262172588,0.6205812146793912) node {r};
+\draw [fill=qqqqff] (1.8385164807134502,0) circle (2pt);
+\draw[color=qqqqff] (1.8327974936771776,-0.04702782836252363) node {A};
+\draw [fill=qqqqff] (-1.8385164807134502,0) circle (2pt);
+\draw[color=qqqqff] (-1.8498201308443594,-0.06317966004902155) node {-A};
+\draw [fill=ffqqqq] (0,1.5427711592634115) circle (2pt);
+\draw[color=ffqqqq] (0.0022565692074077402,1.4981640696457792) node {B};
+\draw [fill=ffqqqq] (0,-1.5427711592634117) circle (2pt);
+\draw[color=ffqqqq] (-0.003127374688091579,-1.4037816900283506) node {-B};
+\draw[color=qqwuqq] (1.2674833846497486,0.14679415187545164) node {$\theta$};
+\draw[color=qqffqq] (-0.18079752323956924,0.44291106612791387) node {d};
+\draw[color=wqwqwq] (-1.413720675308914,0.30831246874043106) node {p};
+\draw[color=yqyqyq] (-0.4015392229550414,-0.2193140330185016) node {a};
+\draw[color=aqaqaq] (1.439769589305727,-0.2193140330185016) node {p};
+\end{scriptsize}
+\end{tikzpicture}
