@@ -77,13 +77,17 @@ and so we now have the relationship between the semi major and minor axes and th
 \end{equation}
 
 This can also be used to get $B$ in terms of $A$ using the connection to the eccentricity\footnote{equation \ref{eq:ecentricity}}
-
 \begin{align}
 B^2&=A^2-f^2\nonumber \\
 &=A^2-(eA)^2\nonumber \\
 &=A^2(1-e^2)\nonumber \\
 \Rightarrow  & B = A\sqrt{1-e^2}
 \end{align}
+additionally, if we use the identity $x^2-y^2=(x+y)(x-y)$ we can also get the following
+\begin{equation}
+ B = A\sqrt{1-e^2} = \sqrt{A(1+e)\times A(1-e)}=\sqrt{ap}
+\end{equation}
+where we have used $A(1+e)$
 
 \paragraph{General case}
 
@@ -161,7 +165,7 @@ A\left(1-e^2\right)&= \left( 1+e \cos \theta\right) r
 
 Which with some rearranging results in the polar form for the equation of an elipse
 \begin{equation}
-r = \frac{A\left(1-e^2\right)}{ 1+e \cos \theta}
+r = \frac{A\left(1-e^2\right)}{ 1+e \cos \theta}\label{eq:PolarElipse}
 \end{equation}
 
 \subsection{Relationship between $\theta$ and $E$}
