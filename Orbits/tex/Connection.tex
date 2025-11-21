@@ -22,3 +22,39 @@ With some further rearrangement we can obtain the angular momentum per unit mass
 
 \subsection{Total Energy From Geometry}
 
+The total energy\footnote{eqation \ref{eq:Gravity:TotalEnergy}} is given by
+\begin{equation*}
+E(r,\dot{r})=\frac{1}{2}m \dot{r}^2 +  \frac{l^2}{2mr^2} - \frac{GMm}{r}
+\end{equation*}
+making this total energy per unit mass of the orbiting body instead
+\begin{equation}
+\frac{E}{m}=\frac{1}{2} \dot{r}^2 +  \frac{1}{2r^2}\left(\frac{l}{m}\right)^2 - \frac{GM}{r}
+\end{equation}
+If we choose one of the apses, say the periapsis we know that at this point $\dot{r}=0$ so the total energy per unit mass is
+\begin{align}
+\frac{E}{m}&= \frac{1}{2p^2}\left(\frac{l}{m}\right)^2 - \frac{GM}{p}\nonumber \\
+&=\frac{1}{2p^2}\left(GM\frac{2ap}{a+p}\right) - \frac{GM}{p}\nonumber \\
+&=GM\left[\frac{2ap}{2p^2(a+p)} - \frac{1}{p}\right]\nonumber \\
+&=GM\left[\frac{2ap}{2p^2(a+p)} - \frac{2p(a+p)}{2p^2(a+p)}\right]\nonumber \\
+&=GM\left[\frac{2ap-2p(a+p)}{2p^2(a+p)}\right]\nonumber \\
+&=GM\left[\frac{-2p^2}{2p^2(a+p)}\right]\nonumber \\
+&=-GM\left[\frac{1}{a+p}\right]\nonumber \\
+&=-\frac{GM}{2}\left[\frac{2}{a+p}\right]\nonumber \\
+&=-\frac{GM}{2A} \label{eq:totalEnergyGeometry}
+\end{align}
+Note that energy is negative because we took zero to be when the particle is at infinity. We can rearrange equation \ref{eq:totalEnergyGeometry} to obtain the semi major axis as
+\begin{align}
+\frac{E}{m}=\tilde{E}&=-\frac{GM}{2A}\nonumber \\
+2A\tilde{E}&=-{GM}\nonumber \\
+A&=-\frac{GM}{2\tilde{E}}
+\end{align}
+Where we are using $\tilde{E}=\frac{E}{m}$ to be the energy per unit mass of the orbiting body. This can then be fed back into our relationship for angular momentum.
+\begin{align}
+\tilde{l}^2 &= GMA(1-e^2)\nonumber \\
+&=-\frac{(GM)^2(1-e^2)}{2\tilde{E}}\nonumber \\
+-\frac{2\tilde{E}\tilde{l}^2}{(GM)^2}&=1-e^2\nonumber \\
+e^2-\frac{2\tilde{E}\tilde{l}^2}{(GM)^2}&=1\nonumber \\
+e^2&=1+\frac{2\tilde{E}\tilde{l}^2}{(GM)^2}\nonumber \\
+e&=\sqrt{1+\frac{2\tilde{E}\tilde{l}^2}{(GM)^2}}
+\end{align}
+Which means we can work out the semi major axis and the ecentricity based on the physics.
