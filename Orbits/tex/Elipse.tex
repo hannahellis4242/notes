@@ -168,17 +168,14 @@ Which with some rearranging results in the polar form for the equation of an eli
 r = \frac{A\left(1-e^2\right)}{ 1+e \cos \theta}\label{eq:PolarElipse}
 \end{equation}
 
-\subsection{Relationship between $\theta$ and $E$}
+\subsection{Relationship between the distance from the focus and the Eccentric Anomaly}
 
 Looking at figure \ref{fig:GeometryElipse} again we can see that $x$ and $y$ can also be given by
-
 \begin{align}
 x &= A \cos E \\
 y &= B \sin E = A \sqrt{1-e^2} \sin E
 \end{align}
-
 We can also see that $r$ can be given by
-
 \begin{align}
 r^2 &= (x-f)^2 + y^2\nonumber \\
 &= x^2-2xf+f^2 + y^2\nonumber  \\
@@ -195,3 +192,55 @@ leading to
 \begin{equation}
 r = A\left( 1-e\cos E\right) \label{eq:radiusVsEccentric Anomaly}
 \end{equation}
+
+\begin{framed}
+\subsection*{Summary}
+
+\begin{equation*}
+p=A(1-e)
+\end{equation*}
+
+\begin{equation*}
+a=A(1+e)
+\end{equation*}
+
+\begin{equation*}
+f=eA
+\end{equation*}
+
+\begin{equation*}
+A=\frac{a+p}{2}
+\end{equation*}
+
+\begin{equation*}
+f=\frac{a-p}{2}
+\end{equation*}
+
+\begin{equation*}
+e=\frac{a-p}{a+p}
+\end{equation*}
+
+\begin{align*}
+B^2 &= A^2-f^2\\
+&=A^2(1-e^2)\\
+&=A(1+e)A(1-e)\\
+&=ap\\
+B&=\sqrt{ap}
+\end{align*}
+
+\begin{align*}
+r&=\frac{A(1-e^2)}{1+e\cos\theta}\\
+&=A\left( 1-e\cos E\right)
+\end{align*}
+
+\begin{align*}
+x&=A\cos E\\
+&=f+r\cos\theta
+\end{align*}
+
+\begin{align*}
+y&=B\sin E\\
+&=r \sin \theta
+\end{align*}
+
+\end{framed}
