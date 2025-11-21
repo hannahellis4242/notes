@@ -58,3 +58,15 @@ e^2&=1+\frac{2\tilde{E}\tilde{l}^2}{(GM)^2}\nonumber \\
 e&=\sqrt{1+\frac{2\tilde{E}\tilde{l}^2}{(GM)^2}}
 \end{align}
 Which means we can work out the semi major axis and the ecentricity based on the physics.
+
+\subsection{Period}
+An orbiting body will complete a complete orbit when it has gone through an angle $E=2\pi$, we can then use Kepler's Equation\footnote{equation \ref{eq:KeplersEquation}} to compute the period. For ease of calculation we will assume that $t_0=0$.
+\begin{align}
+E-e\sin E &= kt \nonumber\\
+2\pi-e\sin(2\pi) &= kT \nonumber \\
+T &=\frac{2 \pi}{k}
+\end{align}
+Substituting equation \ref{eq:Kepler4} in for $k$, we get
+\begin{equation}
+T =\frac{2 \pi A^2\sqrt{1-e^2}}{\frac{l}{m}}
+\end{equation}
