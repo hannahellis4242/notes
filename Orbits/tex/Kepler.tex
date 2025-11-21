@@ -1,99 +1,78 @@
-Starting with equation \ref{} that gives the relationship between the distance from the focus and the ecentric anomaly
-
+Starting with equation \ref{eq:radiusVsEccentric Anomaly} that gives the relationship between the distance from the focus and the ecentric anomaly
 \begin{equation*}
 r=A(1-e\cos E)
 \end{equation*}
-
-where $A$ is the semi major axis and $e$ is the eccentricity of the ellipse, defined as $e=\frac{f}{A}$ where $f$ is the distance to the focus of the eclipse from it's center. Finally $E$ is the angle between the semi major axis going through the focus and the point on the ellipse.
-
-Taking the derivative with respect to time
-
-\begin{align*}
-\frac{dr}{dt} &= A \frac{d}{dt}\left(1-e\cos E \right)\\
-&= A \frac{dE}{dt}\frac{d}{dE}\left(1-e\cos E \right)\\
-&= eA \sin E \frac{dE}{dt}
-\end{align*}
-
-We have an equation for $r$ based on the polar equation of an ellipse $r = \frac{A\left(1-e^2\right)}{ 1+e \cos \theta}$. We can invert this this to get
+We can take the derivative with respect to time to get the relationship between the rate of change of distance with time and the ecentric anomally.
+\begin{align}
+\frac{dr}{dt} &= A \frac{d}{dt}\left(1-e\cos E \right)\nonumber \\
+&= A \frac{dE}{dt}\frac{d}{dE}\left(1-e\cos E \right)\nonumber \\
+&= eA \sin E \frac{dE}{dt} \label{eq:Kepler1}
+\end{align}
+Using equation \ref{eq:PolarElipse} for the equation of an elipse in polar form $r = \frac{A\left(1-e^2\right)}{ 1+e \cos \theta}$. We can invert this this to get
 
 \begin{equation}
 \frac{1}{r}= \frac{ 1+e \cos \theta}{A\left(1-e^2\right)} \\
 \end{equation}
 which will make taking the derivative with respect to time easier.
-\begin{align*}
-\frac{d}{dt}\left( \frac{1}{r}\right) &= \frac{d}{dt}\left[ \frac{ 1+e \cos \theta}{A\left(1-e^2\right)}\right]\\
-\frac{dr}{dt}\frac{d}{dr}\left( \frac{1}{r}\right) &= \frac{1}{A(1-e^2)}\frac{d\theta}{dt}\frac{d}{d\theta}\left[  1+e \cos \theta \right]\\
+\begin{align}
+\frac{d}{dt}\left( \frac{1}{r}\right) &= \frac{d}{dt}\left[ \frac{ 1+e \cos \theta}{A\left(1-e^2\right)}\right]\nonumber \\
+\frac{dr}{dt}\frac{d}{dr}\left( \frac{1}{r}\right) &= \frac{1}{A(1-e^2)}\frac{d\theta}{dt}\frac{d}{d\theta}\left[  1+e \cos \theta \right]\nonumber \\
 -\frac{1}{r^2}\frac{dr}{dt} &= \frac{-e \sin \theta}{A(1-e^2)}\frac{d\theta}{dt}
-\end{align*}
-
-We already have an equation for $\frac{dr}{dt} = eA \sin E \frac{dE}{dt}$, so we will substitute this in
-
+\end{align}
+we can now substitute in equation \ref{eq:Kepler1} for $\frac{dr}{dt}$ to get
 \begin{equation}
--\frac{1}{r^2} eA \sin E \frac{dE}{dt}= \frac{-e \sin \theta}{A(1-e^2)}\frac{d\theta}{dt}
+-\frac{1}{r^2} eA \sin E \frac{dE}{dt}= \frac{-e \sin \theta}{A(1-e^2)}\frac{d\theta}{dt} \label{eq:Kepler2}
 \end{equation}
-
-From the equations for an ellipse, we had an equation for the height of a point on the ellipse in terms of $\theta$ and in terms of $E$
-
-\begin{align*}
-y & = r \sin \theta \\
-&= A\sqrt{1-e^2}\sin E
-\end{align*}
-We can use this relationship to replace the $\sin \theta$ term in our equation
-\begin{align*}
--\frac{1}{r^2} eA \sin E \frac{dE}{dt}&= \frac{-e \sin \theta}{A(1-e^2)}\frac{d\theta}{dt}\\
-&= \frac{-e A\sqrt{1-e^2}\sin E}{Ar(1-e^2)}\frac{d\theta}{dt}\\
-&= \frac{-e \sin E}{r\sqrt{1-e^2}}\frac{d\theta}{dt}\\
-\frac{-eA \sin E }{r^2} \frac{dE}{dt}&= \frac{-e \sin E}{r\sqrt{1-e^2}}\frac{d\theta}{dt}\\
-\frac{dE}{dt}&= \frac{-r^2}{eA \sin E } \frac{-e \sin E}{r\sqrt{1-e^2}}\frac{d\theta}{dt}\\
+We can use equation \ref{eq:ElipseYTheta} and \ref{eq:ElipseYE} for y to obtain a relationship between $\sin \theta$ and $\sin E$
+\begin{equation}
+y = r \sin \theta = A\sqrt{1-e^2}\sin E
+\end{equation}
+We can use this relationship to replace the $\sin \theta$ term in equation \ref{eq:Kepler2}
+\begin{align}
+-\frac{1}{r^2} eA \sin E \frac{dE}{dt}&= \frac{-e \sin \theta}{A(1-e^2)}\frac{d\theta}{dt}\nonumber \\
+&= \frac{-e A\sqrt{1-e^2}\sin E}{Ar(1-e^2)}\frac{d\theta}{dt}\nonumber \\
+&= \frac{-e \sin E}{r\sqrt{1-e^2}}\frac{d\theta}{dt}\nonumber \\
+\frac{-eA \sin E }{r^2} \frac{dE}{dt}&= \frac{-e \sin E}{r\sqrt{1-e^2}}\frac{d\theta}{dt}\nonumber \\
+\frac{dE}{dt}&= \frac{-r^2}{eA \sin E } \frac{-e \sin E}{r\sqrt{1-e^2}}\frac{d\theta}{dt}\nonumber \\
 \frac{dE}{dt} & = \frac{r}{A\sqrt{1-e^2}}\frac{d\theta}{dt}
-\end{align*}
-Finally we can replace $r$ with our original equation $r=A(1-e \cos E)$ to get
-\begin{align*}
+\end{align}
+Finally we can replace $r$ with equation \ref{eq:radiusVsEccentric Anomaly} $r=A(1-e \cos E)$ to get
+\begin{align}
 \frac{dE}{dt} & = \frac{r}{A\sqrt{1-e^2}}\frac{d\theta}{dt}\\
  & = \frac{A(1-e\cos E)}{A\sqrt{1-e^2}}\frac{d\theta}{dt}\\
-  & = \frac{(1-e\cos E)}{\sqrt{1-e^2}}\frac{d\theta}{dt}
-\end{align*}
+  & = \frac{(1-e\cos E)}{\sqrt{1-e^2}}\frac{d\theta}{dt}\label{eq:Kepler3}
+\end{align}
 Now we have an equation that links the rate of change of $E$ to the rate of change of $\theta$ in terms of just $E$ and $\theta$
 
-\subsection{Conservation of Angular Momentum}
-
-The angular momentum of a particle in plane polar coordinates is given by
+\paragraph{Using Angular Momentum} given by equation \ref{eq:AngularMomentumScalar}
 \begin{equation*}
 l = m r^2 \frac{d\theta}{dt}
 \end{equation*}
-
-We can rearrange this and use the fact that $r=A(1-e\cos E)$
-\begin{align*}
-l &= m r^2 \frac{d\theta}{dt}\\
-\frac{d\theta}{dt}&= \frac{l}{m r^2} \\
-\frac{d\theta}{dt}&= \frac{l}{m A^2\left(1-e \cos E \right)^2} \\
-\end{align*}
-we can now use this to remove the $\frac{d\theta}{dt}$ term earlier.
-\begin{align*}
-\frac{dE}{dt} & = \frac{(1-e\cos E)}{\sqrt{1-e^2}}\frac{d\theta}{dt}\\
-& = \frac{(1-e\cos E)}{\sqrt{1-e^2}}\frac{l}{m A^2\left(1-e \cos E \right)^2}\\
-&= \frac{l}{m A^2\sqrt{1-e^2}}\frac{1}{1-e \cos E}\\
+useing equation \ref{eq:radiusVsEccentric Anomaly} and rearranging we obtain
+\begin{align}
+l &= m r^2 \frac{d\theta}{dt}\nonumber \\
+\frac{d\theta}{dt}&= \frac{l}{m r^2}\nonumber  \\
+\frac{d\theta}{dt}&= \frac{l}{m A^2\left(1-e \cos E \right)^2}
+\end{align}
+which we can now substitute in for $\frac{d\theta}{dt}$ term in equation \ref{eq:Kepler3}
+\begin{align}
+\frac{dE}{dt} & = \frac{(1-e\cos E)}{\sqrt{1-e^2}}\frac{d\theta}{dt}\nonumber \\
+& = \frac{(1-e\cos E)}{\sqrt{1-e^2}}\frac{l}{m A^2\left(1-e \cos E \right)^2}\nonumber \\
+&= \frac{l}{m A^2\sqrt{1-e^2}}\frac{1}{1-e \cos E}\nonumber \\
 \left(1-e \cos E \right)\frac{dE}{dt}&= \frac{l}{m A^2\sqrt{1-e^2}}
-\end{align*}
+\end{align}
 Now you can see that the right hand side is just a constant, which is defined by properties of the orbit. Namely the angular momentum, the mass of the orbiting object, the semi major axis and the eccentricity. An interesting thing to note is that the term $A^2\sqrt{1-e^2}$ can be rewritten as the product $AB$ instead, so linking the major and minor axes. We will however keep it in it's original form for now. Since the right hand side is a constant we will simplify by choosing the constant $k$ for it.
-
-\begin{equation*}
-k = \frac{l}{m A^2\sqrt{1-e^2}}
-\end{equation*}
-
-so finally all that is left to do is to integrate our equation with respect to time.
-
-\begin{align*}
-\int_{t_0}^t k dt &= \int_{t=t_0}^t\left(1-e \cos E \right)\frac{dE}{dt} dt\\
-k (t-t_0) &=\int_{E=0}^E\left(1-e \cos E \right)dE\\
-&=\int_0^E 1 dE - e \int_0^E \cos E dE\\
-&=E - e \sin E\\
-\end{align*}
-
-Note we have chosen $t_0$ to be the point in time when $E=0$, which is the same as the statement of Kepler's equation.
-
-Leading finally to Kepler's Equation
-
 \begin{equation}
-E - e \sin E=k(t-t_0)
+k = \frac{l}{m A^2\sqrt{1-e^2}}\label{eq:Kepler4}
+\end{equation}
+so finally all that is left to do is to integrate our equation with respect to time.
+\begin{align}
+\int_{t_0}^t k dt &= \int_{t=t_0}^t\left(1-e \cos E \right)\frac{dE}{dt} dt\nonumber \\
+k (t-t_0) &=\int_{E=0}^E\left(1-e \cos E \right)dE \nonumber \\
+&=\int_0^E 1 dE - e \int_0^E \cos E dE\nonumber \\
+&=E - e \sin E\\
+\end{align}
+Note we have chosen $t_0$ to be the point in time when $E=0$, which is the same as the statement of Kepler's equation.
+\begin{equation}
+E - e \sin E=k(t-t_0)\label{eq:KeplersEquation}
 \end{equation}
