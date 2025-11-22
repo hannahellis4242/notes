@@ -6,10 +6,14 @@ We can rearrange equation \ref{eq:link} to get
 
 \begin{align}
 \frac{l^2}{GMm^2} &= A(1-e^2)\nonumber \\
-&=\frac{A^2(1-e^2)}{A} \nonumber \\
-&=\frac{B^2}{A} \nonumber \\
-&=\frac{ap}{A} \nonumber \\
-&=\frac{2ap}{a+p}
+\left(\frac{l}{m} \right)^2 & = GM A(1-e^2) \label{eq:Connection1}
+\end{align}
+Which can be further rearranged using equations \ref{eq:SemiMinorVsSemiMajorAndEcentricity} and \ref{eq:SemiMinorVsApses}
+\begin{align}
+\left(\frac{l}{m} \right)^2 &= GM\frac{A^2(1-e^2)}{A} \nonumber \\
+&= GM\frac{B^2}{A} \nonumber \\
+&= GM\frac{ap}{A} \nonumber \\
+&=GM\frac{2ap}{a+p}
 \end{align}
 
 With some further rearrangement we can obtain the angular momentum per unit mass of the orbiting body
@@ -48,7 +52,7 @@ Note that energy is negative because we took zero to be when the particle is at 
 2A\tilde{E}&=-{GM}\nonumber \\
 A&=-\frac{GM}{2\tilde{E}}
 \end{align}
-Where we are using $\tilde{E}=\frac{E}{m}$ to be the energy per unit mass of the orbiting body. This can then be fed back into our relationship for angular momentum.
+Where we are using $\tilde{E}=\frac{E}{m}$ to be the energy per unit mass of the orbiting body. This can then be fed back into our relationship for angular momentum\footnote{equation \ref{eq:Connection1}}.
 \begin{align}
 \tilde{l}^2 &= GMA(1-e^2)\nonumber \\
 &=-\frac{(GM)^2(1-e^2)}{2\tilde{E}}\nonumber \\
@@ -64,9 +68,13 @@ An orbiting body will complete a complete orbit when it has gone through an angl
 \begin{align}
 E-e\sin E &= kt \nonumber\\
 2\pi-e\sin(2\pi) &= kT \nonumber \\
-T &=\frac{2 \pi}{k}
+T &=\frac{2 \pi}{k} \label{eq:PeriodInTermsOfK}
 \end{align}
 Substituting equation \ref{eq:Kepler4} in for $k$, we get
 \begin{equation}
 T =\frac{2 \pi A^2\sqrt{1-e^2}}{\frac{l}{m}}
 \end{equation}
+
+\subsection{Different forms of $k$}
+
+We can use equation \ref{} to simplify $k$.

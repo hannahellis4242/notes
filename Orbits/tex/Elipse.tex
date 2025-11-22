@@ -18,40 +18,31 @@ e = \frac{f}{A} \label{eq:ecentricity}
 \end{equation}
 \subsection{The Apses}
 Before we get any further, we will look at the apses. From figure \ref{fig:GeometryElipse} we can see that
-
 \begin{equation}
-p = A - f = A - eA = A(1-e)
+p = A - f = A - eA = A(1-e) \label{eq:PeriasisVsSemiMajorAxisAndEcentricity}
 \end{equation}
-
 and that
 \begin{equation}
-a  = A + f = A + eA = A(1+e)
+a  = A + f = A + eA = A(1+e) \label{eq:ApoasisVsSemiMajorAxisAndEcentricity}
 \end{equation}
-
 also
-
 \begin{align}
 a+p &= A -f + A +f = 2A \\
 a-p &= A + f - A + f = 2f
 \end{align}
-
 which can give us the eccentricity as defined by the apses
 \begin{equation}
 e=\frac{f}{A}=\frac{2f}{2A}=\frac{a-p}{a+p}
 \end{equation}
 
 \subsection{Sum of distances from foci and $P$}
-
 One property of an ellipse is that the sum of the distances from any point on the ellipse and the foci is a constant. This fact allows you to draw an ellipse using two pins and a piece of string. We will use this fact and look at two special cases, before looking at the general case and deriving the equation for an ellipse. Before we do we will define what the sum is here.
-
 \begin{equation}
 S=d+r \label{eq:elipseConstraint}
 \end{equation}
 
 \paragraph{Special Case 1: Point on the $x$ axis}
-
 When the point is at $(A,0)$. The distance $d$ is $f+A$ and the distance $r$ is $A-f$ from the diagram above. So our sum becomes
-
 \begin{equation}
 S = d + r = f+A + A-f = 2A \label{eq:ElipseSum}
 \end{equation}
@@ -59,19 +50,14 @@ S = d + r = f+A + A-f = 2A \label{eq:ElipseSum}
 \paragraph{Special Case 2: Point on the $y$ axis}
 
 When the point is on the $y$ axis, it is at the point $(0,B)$. The distance $d$ is $\sqrt{f^2+B^2}$ and the distance $r$ is also $\sqrt{f^2+B^2}$ from the diagram above. So our sum is
-
 \begin{equation}
 S = 2 \sqrt{f^2+B^2}
 \end{equation}
-
 and if the sum is a constant then this will be equal to the value obtained before\footnote{equation \ref{eq:ElipseSum}}.
-
 \begin{equation}
 S = 2 \sqrt{f^2+B^2} = 2 A
 \end{equation}
-
 and so we now have the relationship between the semi major and minor axes and the focus
-
 \begin{equation}
  A^2=f^2+B^2
 \end{equation}
@@ -81,13 +67,13 @@ This can also be used to get $B$ in terms of $A$ using the connection to the ecc
 B^2&=A^2-f^2\nonumber \\
 &=A^2-(eA)^2\nonumber \\
 &=A^2(1-e^2)\nonumber \\
-\Rightarrow  & B = A\sqrt{1-e^2}
+& \Rightarrow  B = A\sqrt{1-e^2} \label{eq:SemiMinorVsSemiMajorAndEcentricity}
 \end{align}
 additionally, if we use the identity $x^2-y^2=(x+y)(x-y)$ we can also get the following
 \begin{equation}
- B = A\sqrt{1-e^2} = \sqrt{A(1+e)\times A(1-e)}=\sqrt{ap}
+ B = A\sqrt{1-e^2} = \sqrt{A(1+e)\times A(1-e)}=\sqrt{ap} \label{eq:SemiMinorVsApses}
 \end{equation}
-where we have used $A(1+e)$
+where we have used equations \ref{eq:PeriasisVsSemiMajorAxisAndEcentricity} and \ref{eq:ApoasisVsSemiMajorAxisAndEcentricity} to substitute in for $a$ and $b$ respectively.
 
 \paragraph{General case}
 
