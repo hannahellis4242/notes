@@ -13,7 +13,7 @@ Which can be further rearranged using equations \ref{eq:SemiMinorVsSemiMajorAndE
 \left(\frac{l}{m} \right)^2 &= GM\frac{A^2(1-e^2)}{A} \nonumber \\
 &= GM\frac{B^2}{A} \nonumber \\
 &= GM\frac{ap}{A} \nonumber \\
-&=GM\frac{2ap}{a+p}
+&=GM\frac{2ap}{a+p} \label{eq:Connection1}
 \end{align}
 
 With some further rearrangement we can obtain the angular momentum per unit mass of the orbiting body
@@ -70,15 +70,38 @@ E-e\sin E &= kt \nonumber\\
 2\pi-e\sin(2\pi) &= kT \nonumber \\
 T &=\frac{2 \pi}{k} \label{eq:PeriodInTermsOfK}
 \end{align}
-Substituting equation \ref{eq:Kepler4} in for $k$, we get
+
+\subsubsection{The Relationship between Mean Motion and Time Period}
+As we have seen from equation~\ref{eq:PeriodInTermsOfK}, the mean motion is related to the orbital period
+\begin{equation}
+k =\frac{2 \pi}{T} \label{eq:MeanMotionPeriod}
+\end{equation}
+which is how the constant gets the name \emph{Mean Motion} as it is the mean angular velocity of the orbiting body. In this form Kelper's Equation\footnote{equation~\ref{eq:KeplersEquation} on page~\pageref{eq:KeplersEquation}} becomes
+
+\begin{equation}
+E-e\sin E = 2\pi\frac{(t-t_0)}{T}
+\end{equation}
+
+\subsubsection{Period based on physical and geometric properties}
+
+The period can be related to other geometric and physical properties by substituting equation \ref{eq:Kepler4} in for $k$, we get
 \begin{equation}
 T =\frac{2 \pi A^2\sqrt{1-e^2}}{\frac{l}{m}}
 \end{equation}
 
-\subsection{Different forms of $k$}
-As we have seen from equation~\ref{eq:PeriodInTermsOfK}, $k$ is related to the orbital period as such
-\begin{equation}
-k =\frac{2 \pi}{T} \label{eq:MeanMotionPeriod}
-\end{equation}
-which is how the constant gets the name \emph{Mean Motion} as it is the mean angular velocity of the orbiting body.
-We can use equation \ref{} to simplify $k$.
+We can use equation~\ref{eq:Connection1}\footnote{page~\pageref{eq:Connection1}} to replace $\frac{l}{m}$.
+
+\begin{align}
+T &=\frac{2 \pi A^2\sqrt{1-e^2}}{\frac{l}{m}}\nonumber \\
+&=\frac{2 \pi A^2\sqrt{1-e^2}}{\sqrt{GMA(1-e^2)}}\nonumber \\
+&= \frac{2 \pi A^2\sqrt{1-e^2}}{\sqrt{GM}\sqrt{A}\sqrt{1-e^2}} \nonumber \\
+&= \frac{2 \pi \sqrt{A^3}}{\sqrt{GM}}
+\end{align}
+
+We can get this in terms of the apses by using equation~\ref{eq:apsesSum} on page~\pageref{eq:apsesSum} to substitute in for $A=\frac{a+p}{2}$.
+\begin{align}
+T &= \frac{2 \pi \sqrt{A^3}}{\sqrt{GM}}\nonumber \\
+T^2 &= \frac{4 \pi^2 }{GM}A^3\nonumber \\
+ &= \frac{4 \pi^2 }{GM}\left(\frac{a+p}{2}\right)^3
+\end{align}
+Note that we have squared $T$ to make the equation easier to work with, but this reproduces one of Kepler's Law, that the square of the period is proportional to the cube of the semi major axis\footnote{or more usefully the average of the apses}.
