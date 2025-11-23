@@ -1,0 +1,55 @@
+We will assume that the apses are know as well as the central mass. From this the period is given by equation~\ref{eq:PeriodApses} on page~\pageref{eq:PeriodApses}
+\begin{equation*}
+T =\sqrt{ \frac{4 \pi^2 }{GM}}\left(\frac{a+p}{2}\right)^\frac{3}{2}
+\end{equation*}
+At any given time we can calculate the ecentric anomaly $E$ using Kepler's Equation\footnote{equation~\ref{eq:KeplersEquation2} on page~\pageref{eq:KeplersEquation2}}
+\begin{equation*}
+E-e\sin E = 2\pi\frac{(t-t_0)}{T}
+\end{equation*}
+Since this is trancendental, it will need to be solved numerically, or by approximation. This text will not cover those methods, and assume that $E$ can be determined as a function of $t$.
+
+\subsection{Position}
+Once $E$ is known, then the position can de determined by
+\begin{align*}
+e&=\frac{a-p}{a+p}\\
+r&=A\left( 1-e\cos E\right)\\
+x&=r\cos\theta =A(\cos(E)-e)\\
+y&=r\sin\theta = A\sqrt{1-e^2}\sin E
+\end{align*}
+
+\subsection{Velocitiy}
+
+\subsubsection{Angular Velocity}
+
+Using equation~\ref{eq:Connection1} on page~\pageref{eq:Connection1} to get the angular momentum
+\begin{equation*}
+\left(\frac{l}{m} \right) =\sqrt{GM}\sqrt{\frac{2ap}{a+p}}
+\end{equation*}
+and using equation~\ref{} on page~\pageref{}, we can get the angular velocity as
+\begin{equation}
+\omega = \frac{l}{m}\frac{1}{r^2}=\sqrt{GM}\sqrt{\frac{2ap}{a+p}}\frac{1}{r^2}
+\end{equation}
+
+\subsubsection{Radial velocity}
+The radial velocity we obtain from the geometry. Recall that we have
+\begin{equation}
+r=A(1-e\cos E)
+\end{equation}
+As we did for the derivation of Kepler's Equation, we can differentiate with respect to time. Which gives the result
+\begin{equation}
+\frac{dr}{dt} =eA \sin E \frac{dE}{dt}
+\end{equation}
+And looking at Kepler's Equation again
+\begin{align*}
+E-e\sin E &= 2\pi\frac{t-t_0}{T}\\
+t&=\frac{E-e\sin E}{2\pi}T+t_0\\
+\frac{dt}{dE}&=\frac{1-e\cos E}{2\pi}T
+\end{align*}
+which gives us the result that
+\begin{equation}
+\frac{dE}{dt}=\frac{2\pi}{T}\frac{1}{1-e\cos E}
+\end{equation}
+We can put this back in to our earlier equation to get the radial velocity
+\begin{equation}
+\frac{dr}{dt} = \frac{2\pi}{T}\frac{ eA \sin E}{1-e\cos E}
+\end{equation}
