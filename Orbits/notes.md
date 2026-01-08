@@ -38,14 +38,19 @@ if we didn't know $A$ then we can use $r=A(1 - e \cos E)$
 \cos E + e \cos E\cos \nu&= e+\cos \nu \\
 \cos E (1 + e cos \nu)&= e+\cos \nu \\
 \cos E &= \frac{e+\cos \nu}{1 + e cos \nu} \\
-\end{align*}
+\end{align*}\
 ```
 and
 ``` math
 \begin{align*}
 \sin E &= \frac{r}{A\sqrt{1-e^2}} \sin \nu\\
-\sin E &= \frac{A(1 - e \cos E)}{A\sqrt{1-e^2}} \sin \nu\\
-\sin E &= \frac(1 - e \cos E)}{\sqrt{1-e^2}} \sin \nu\\
-\sin E &= \frac(1 - e \frac{e+\cos \nu}{1 + e cos \nu}}{\sqrt{1-e^2}} \sin \nu\\
+&= \frac{A(1 - e \cos E}{A\sqrt{1-e^2}} \sin \nu\\
+&= \frac{1 - e \cos E}{\sqrt{1-e^2}} \sin \nu\\
+&= \frac{1 - e \frac{e+\cos \nu}{1 + e \cos \nu}}{\sqrt{1-e^2}} \sin \nu\\
+&= \frac{1 - \frac{e^2+e\cos \nu}{1 + e \cos \nu}}{\sqrt{1-e^2}} \sin \nu\\
+&= \frac{\frac{1 + e \cos \nu}{1 + e \cos \nu} - \frac{e^2+e\cos \nu}{1 + e \cos \nu}}{\sqrt{1-e^2}} \sin \nu\\
+&= \frac{\frac{1 + e \cos \nu-e^2-e\cos \nu}{1 + e \cos \nu} }{\sqrt{1-e^2}} \sin \nu\\
+&= \frac{\frac{1-e^2}{1 + e \cos \nu} }{\sqrt{1-e^2}} \sin \nu\\
+&= \frac{\sqrt{1-e^2}}{1 + e \cos \nu}\sin \nu
 \end{align*}
 ```
