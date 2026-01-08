@@ -37,7 +37,7 @@ if we didn't know $A$ then we can use $r=A(1 - e \cos E)$
 \cos E &= e+\cos \nu - e \cos E\cos \nu\\
 \cos E + e \cos E\cos \nu&= e+\cos \nu \\
 \cos E (1 + e cos \nu)&= e+\cos \nu \\
-\cos E &= \frac{e+\cos \nu}{1 + e cos \nu} \\
+\cos E &= \frac{e+\cos \nu}{1 + e \cos \nu} \\
 \end{align*}\
 ```
 and
