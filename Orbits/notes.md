@@ -214,3 +214,11 @@ which we can substitute back in
 and so $\mathbf{v} \times \mathbf{h}-GM \hat{\mathbf{r}}$ is a constant
 
 ### Little bit more investigation
+
+```math
+\begin{align*}
+\mathbf{v} \times \mathbf{h} &= \mathbf{v} \times \mathbf{r} \times \mathbf{v}\\
+&= (\mathbf{v} \cdot \mathbf{v}) \mathbf{r} - (\mathbf{v} \cdot \mathbf{r})\mathbf{v}\\
+&= v^2 \mathbf{r} - (\mathbf{v} \cdot \mathbf{r})\mathbf{v}
+\end{align*}
+```
