@@ -194,7 +194,11 @@ Now we can pull everything onto one side to show
 \end{align*}
 ```
 
-which implies the vector $\mathbf{v}\times\mathbf{h}-\mu\hat{\mathbf{r}}$ is a constant
+which implies the vector $\mathbf{v}\times\mathbf{h}-\mu\hat{\mathbf{r}}$ is a constant, let's call it $\alpha$
+
+```math
+\mathbf{\alpha} = \mathbf{v}\times\mathbf{h}-\mu\hat{\mathbf{r}}
+```
 
 ## Some more bits
 
@@ -288,3 +292,41 @@ which means
 ```math
 (\mathbf{v}\times{\mathbf{h}})\cdot\hat{\mathbf{r}}=\frac{h^2}{r}
 ```
+
+## Orbital Equation from eccentricity vector
+
+recall so far we had
+```math
+\mathbf{\alpha} = \mathbf{v}\times\mathbf{h}-\mu\hat{\mathbf{r}}
+```
+taking the dot product with $\hat{\mathbf{r}}$ gives
+```math
+\begin{align*}
+\mathbf{\alpha}\cdot\hat{\mathbf{r}} &= (\mathbf{v}\times\mathbf{h})\cdot\hat{\mathbf{r}} -\mu\hat{\mathbf{r}}\cdot\hat{\mathbf{r}}
+\end{align*}
+```
+we can use the above result of $(\mathbf{v}\times{\mathbf{h}})\cdot\hat{\mathbf{r}}=\frac{h^2}{r}$ to replace the first term in the rhs
+```math
+\begin{align*}
+\mathbf{\alpha}\cdot\hat{\mathbf{r}}&=  (\mathbf{v}\times\mathbf{h})\cdot\hat{\mathbf{r}} -\mu \\
+&=  \frac{h^2}{r}-\mu
+\end{align*}
+```
+we can also note that the lhs is $\mathbf{\alpha}\cdot\hat{\mathbf{r}} = \alpha \cos \nu$, where $\nu$ is the angle between the $\alpha$ vector and $\mathbf{r}$
+
+```math
+\begin{align*}
+\mathbf{\alpha}\cdot\hat{\mathbf{r}} &= \frac{h^2}{r}-\mu\\
+\alpha \cos \nu &=\frac{h^2}{r}-\mu\\
+\alpha \cos \nu + \mu&=\frac{h^2}{r}\\
+r &=\frac{h^2}{\mu+\alpha \cos \nu}
+\end{align*}
+```
+if we divide top and bottom by $\mu$ we get the expected form for an equation of an ellipse
+
+```math
+\begin{align*}
+r &=\frac{\frac{h^2}{\mu}}{1+\frac{\alpha}{\mu} \cos \nu}
+\end{align*}
+```
+from this we can determine that $ e = \frac{\alpha}{\mu}$ and that $A(1-e^2)=\frac{h^2}{\mu}$
