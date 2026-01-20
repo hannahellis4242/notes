@@ -218,35 +218,28 @@ so
 (\mathbf{v}\times\mathbf{h})\cdot\hat{\mathbf{r}} = (\mathbf{h}\times\hat{\mathbf{r}})\cdot\mathbf{v}
 ```
 
-We can now use the fact that $\mathbf{a}\times\mathbf{b}=-\mathbf{b}\times\mathbf{a}$ and reuse the result from earlier
-
-```math
-\hat{\mathbf{r}} \times \mathbf{h} =r\left[ \dot{r}\hat{\mathbf{r}} -\mathbf{v}\right]
-```
-
-leading to
+starting with the cross product $\mathbf{h}\times\hat{\mathbf{r}}$
 
 ```math
 \begin{align*}
-(\mathbf{v}\times\mathbf{h})\cdot\hat{\mathbf{r}} &= - (r\left[ \dot{r}\hat{\mathbf{r}} -\mathbf{v}\right])\cdot\mathbf{v}\\
-&= r\left[ \mathbf{v} \cdot \mathbf{v} - \dot{r}\hat{\mathbf{r}}\cdot\mathbf{v} \right]\\
-&= r v^2 - r\dot{r}\hat{\mathbf{r}}\cdot\mathbf{v}\\
-&= r v^2 - \dot{r} \mathbf{r}\cdot\mathbf{v}
+\mathbf{h}\times\hat{\mathbf{r}} &= \mathbf{r}\times\mathbf{v}\times\hat{\mathbf{r}}\\
+&=(\mathbf{r} \cdot \hat{\mathbf{r}})\mathbf{v} -(\mathbf{r} \cdot \mathbf{v} )\hat{\mathbf{r}}\\
+&=r\mathbf{v} -(\mathbf{r} \cdot \mathbf{v})\frac{\mathbf{r}}{r}\\
+&=r\mathbf{v} - \left(\frac{\mathbf{r}}{r} \cdot \mathbf{v} \right)\mathbf{r}\\
+&=r\mathbf{v} - \left(\hat{\mathbf{r}} \cdot \mathbf{v} \right)\mathbf{r}
 \end{align*}
 ```
 
-we can also reuse
-
-```math
-\mathbf{r}\cdot\mathbf{v} = r \frac{dr}{dt}
-```
-
-giving
+Now we apply the dot product with $\mathbf{v}$
 
 ```math
 \begin{align*}
-(\mathbf{v}\times\mathbf{h})\cdot\hat{\mathbf{r}} &= r v^2 - \dot{r} \mathbf{r}\cdot\mathbf{v} \\
- &= r v^2 - \dot{r}^2 r
+(\mathbf{h}\times\hat{\mathbf{r}})\cdot\mathbf{v} &= \left[r\mathbf{v} - \left(\hat{\mathbf{r}} \cdot \mathbf{v} \right)\mathbf{r}\right]\cdot\mathbf{v}\\
+&= r\mathbf{v}\cdot\mathbf{v} - \left(\hat{\mathbf{r}} \cdot \mathbf{v} \right)\mathbf{r}\cdot\mathbf{v}\\
+&= rv^2 - (\hat{\mathbf{r}} \cdot \mathbf{v})(\mathbf{r}\cdot\mathbf{v})\\
+&= rv^2 - (\hat{\mathbf{r}} \cdot \mathbf{v})(r\hat{\mathbf{r}}\cdot\mathbf{v})\\
+&= r (v^2 - (\hat{\mathbf{r}} \cdot \mathbf{v})(\hat{\mathbf{r}}\cdot\mathbf{v}))\\
+&= r (v^2 - (\hat{\mathbf{r}} \cdot \mathbf{v})^2)
 \end{align*}
 ```
 
@@ -280,4 +273,18 @@ h^2 &= (\mathbf{v} \times  \mathbf{h})\cdot\mathbf{r} \\
 &=v^2 r^2 -(\mathbf{v} \cdot \mathbf{r})^2\\
 &=r^2\left[v^2 -(\mathbf{v} \cdot \hat{\mathbf{r}})^2\right]
 \end{align*}
+```
+Comparing to the result from step 1 we see that
+
+```math
+(\mathbf{v}\times{\mathbf{h}})\cdot\hat{\mathbf{r}}=(\mathbf{h}\times\hat{\mathbf{r}})\cdot\mathbf{v} = r (v^2 - (\hat{\mathbf{r}} \cdot \mathbf{v})^2)
+```
+and
+```math
+\frac{h^2}{r} =r\left[v^2 -(\mathbf{v} \cdot \hat{\mathbf{r}})^2\right]
+```
+
+which means
+```math
+(\mathbf{v}\times{\mathbf{h}})\cdot\hat{\mathbf{r}}=\frac{h^2}{r}
 ```
