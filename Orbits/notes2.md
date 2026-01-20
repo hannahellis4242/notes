@@ -144,7 +144,6 @@ Or in a slightly more useful form for us
 \frac{dr}{dt} &= \frac{\mathbf{r}\cdot\mathbf{v}}{r}\\
  r \frac{dr}{dt} &= \mathbf{r}\cdot\mathbf{v}
 \end{align*}
-
 ```
 
 So we can substitute this in to
@@ -196,3 +195,88 @@ Now we can pull everything onto one side to show
 ```
 
 which implies the vector $\mathbf{v}\times\mathbf{h}-\mu\hat{\mathbf{r}}$ is a constant
+
+## Some more bits
+
+showing
+
+```math
+(\mathbf{v}×\mathbf{h})⋅\hat{\mathbf{r}}=\frac{h^2}{r}
+```
+
+### Step 1: Rewrite the scalar triple product
+
+Use the cyclic property of the scalar triple product
+
+```math
+(\mathbf{a}\times\mathbf{b})\cdot\mathbf{c}=(\mathbf{b}\times\mathbf{c})\cdot\mathbf{a}=(\mathbf{c}\times\mathbf{a})\cdot\mathbf{b}
+```
+
+so
+
+```math
+(\mathbf{v}\times\mathbf{h})\cdot\hat{\mathbf{r}} = (\mathbf{h}\times\hat{\mathbf{r}})\cdot\mathbf{v}
+```
+
+We can now use the fact that $\mathbf{a}\times\mathbf{b}=-\mathbf{b}\times\mathbf{a}$ and reuse the result from earlier
+
+```math
+\hat{\mathbf{r}} \times \mathbf{h} =r\left[ \dot{r}\hat{\mathbf{r}} -\mathbf{v}\right]
+```
+
+leading to
+
+```math
+\begin{align*}
+(\mathbf{v}\times\mathbf{h})\cdot\hat{\mathbf{r}} &= - (r\left[ \dot{r}\hat{\mathbf{r}} -\mathbf{v}\right])\cdot\mathbf{v}\\
+&= r\left[ \mathbf{v} \cdot \mathbf{v} - \dot{r}\hat{\mathbf{r}}\cdot\mathbf{v} \right]\\
+&= r v^2 - r\dot{r}\hat{\mathbf{r}}\cdot\mathbf{v}\\
+&= r v^2 - \dot{r} \mathbf{r}\cdot\mathbf{v}
+\end{align*}
+```
+
+we can also reuse
+
+```math
+\mathbf{r}\cdot\mathbf{v} = r \frac{dr}{dt}
+```
+
+giving
+
+```math
+\begin{align*}
+(\mathbf{v}\times\mathbf{h})\cdot\hat{\mathbf{r}} &= r v^2 - \dot{r} \mathbf{r}\cdot\mathbf{v} \\
+ &= r v^2 - \dot{r}^2 r
+\end{align*}
+```
+
+### Step 2: The square magnitude of specific angular momentum
+
+```math
+\begin{align*}
+h^2 &= (\mathbf{r}\times\mathbf{v})\cdot \mathbf{h} \\
+&= (\mathbf{v} \times  \mathbf{h})\cdot\mathbf{r}
+\end{align*}
+```
+
+where we have use the triple scalar product identity from before. We can also expand out $\mathbf{v} \times  \mathbf{h}$ as before with the triple vector product rule
+
+```math
+\begin{align*}
+\mathbf{v} \times  \mathbf{h} &= \mathbf{v} \times \mathbf{r} \times \mathbf{v}\\
+&=
+(\mathbf{v} \cdot \mathbf{v})\mathbf{r} -(\mathbf{v} \cdot \mathbf{r} )\mathbf{v}\\
+&= v^2 \mathbf{r} -(\mathbf{v} \cdot \mathbf{r} )\mathbf{v}
+\end{align*}
+```
+
+Substitute in
+
+```math
+\begin{align*}
+h^2 &= (\mathbf{v} \times  \mathbf{h})\cdot\mathbf{r} \\
+&=(v^2 \mathbf{r} -(\mathbf{v} \cdot \mathbf{r} )\mathbf{v})\cdot\mathbf{r}\\
+&=v^2 (\mathbf{r}\cdot\mathbf{r}) -(\mathbf{v} \cdot \mathbf{r})(\mathbf{v}\cdot\mathbf{r})\\
+&=v^2 r^2 -(\mathbf{v} \cdot \mathbf{r})^2
+\end{align*}
+```
