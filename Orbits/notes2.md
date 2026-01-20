@@ -277,6 +277,7 @@ Substitute in
 h^2 &= (\mathbf{v} \times  \mathbf{h})\cdot\mathbf{r} \\
 &=(v^2 \mathbf{r} -(\mathbf{v} \cdot \mathbf{r} )\mathbf{v})\cdot\mathbf{r}\\
 &=v^2 (\mathbf{r}\cdot\mathbf{r}) -(\mathbf{v} \cdot \mathbf{r})(\mathbf{v}\cdot\mathbf{r})\\
-&=v^2 r^2 -(\mathbf{v} \cdot \mathbf{r})^2
+&=v^2 r^2 -(\mathbf{v} \cdot \mathbf{r})^2\\
+&=r^2\left[v^2 -(\mathbf{v} \cdot \hat{\mathbf{r}})^2\right]
 \end{align*}
 ```
