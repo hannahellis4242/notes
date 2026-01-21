@@ -336,9 +336,7 @@ r &=\frac{h^2}{\mu+\alpha \cos \nu}
 if we divide top and bottom by $\mu$ we get the expected form for an equation of an ellipse
 
 ```math
-\begin{align*}
-r &=\frac{\frac{h^2}{\mu}}{1+\frac{\alpha}{\mu} \cos \nu}
-\end{align*}
+r =\frac{\frac{h^2}{\mu}}{1+\frac{\alpha}{\mu} \cos \nu}
 ```
 
 from this we can determine that $ e = \frac{\alpha}{\mu}$ and that $A(1-e^2)=\frac{h^2}{\mu}$
@@ -429,5 +427,73 @@ pretty easy now to work out the apses from
 \begin{align*}
 p &= A(1-e)\\
 a &= A(1+e)
+\end{align*}
+```
+
+## True Anomaly At Epoch
+
+At $t=0$ we have $\mathbf{r}_0$ and $\mathbf{v}_0$.
+
+### Cosine
+
+We can work out the cosine of the angle between the periapsis direction $\hat{\mathbf{e}}$ and $\mathbf{r}_0$ by taking dot products
+
+```math
+\cos \nu_0 = \hat{\mathbf{e}} \cdot \hat{\mathbf{r}}_0=\frac{{\mathbf{e}} \cdot {\mathbf{r}}}{er}
+```
+
+### sine
+
+The sine is a little more involved. We need to start at the orbital equation from earlier
+
+```math
+r =\frac{\frac{h^2}{\mu}}{1+e \cos \nu}
+```
+
+firstly we will differentiate with respect to time using the chain rule
+
+```math
+\begin{align*}
+\frac{dr}{dt} &= \frac{dr}{d\nu}\frac{d\nu}{dt}\\
+&= \frac{dr}{dw}\frac{dw}{d\nu}\frac{d\nu}{dt}
+\end{align*}
+```
+
+where $r=\frac{\frac{h^2}{\mu}}{w}$ and $w=1+e\cos \nu$
+
+```math
+\frac{dr}{dw} = -\frac{h^2}{\mu}\frac{1}{w^2}
+```
+
+```math
+\frac{dw}{d\nu} = -e \sin \nu
+```
+
+so
+
+```math
+\begin{align*}
+\frac{dr}{dt} &= \frac{dr}{dw}\frac{dw}{d\nu}\frac{d\nu}{dt}\\
+&= e\frac{h^2}{\mu}\frac{1}{w^2}\sin \nu \frac{d\nu}{dt}\\
+&= e\frac{h^2}{\mu}\frac{\sin \nu}{(1+e\cos \nu)^2} \frac{d\nu}{dt}
+\end{align*}
+```
+
+from we can use $h=r^2 \frac{d\nu}{dt}$ to remove the $\frac{d\nu}{dt}$ term
+
+```math
+\frac{dr}{dt} = e\frac{h^2}{\mu}\frac{\sin \nu}{(1+e\cos \nu)^2} \frac{h}{r^2}
+```
+
+and then put $r$ back in through $r =\frac{\frac{h^2}{\mu}}{1+e \cos \nu}$
+
+```math
+\begin{align*}
+\frac{dr}{dt} &= e\frac{h^2}{\mu}\frac{\sin \nu}{(1+e\cos \nu)^2} \frac{h}{r^2}\\
+&= e\frac{h^2}{\mu}\frac{\sin \nu}{(1+e\cos \nu)^2} \frac{h}{\left(\frac{\frac{h^2}{\mu}}{1+e \cos \nu}\right)^2}\\
+&= e\frac{h^3}{\mu}\frac{\sin \nu}{(1+e\cos \nu)^2}\left(\frac{1+e \cos \nu}{\frac{h^2}{\mu}}\right)^2\\
+&= e\frac{h^3}{\mu}\sin \nu\left(\frac{1}{\frac{h^2}{\mu}}\right)^2\\
+&= e\frac{h^3}{\mu}\sin \nu \frac{\mu^2}{h^4}\\
+&= \frac{e\mu}{h}\sin \nu
 \end{align*}
 ```
