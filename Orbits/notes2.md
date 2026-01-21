@@ -278,17 +278,21 @@ h^2 &= (\mathbf{v} \times  \mathbf{h})\cdot\mathbf{r} \\
 &=r^2\left[v^2 -(\mathbf{v} \cdot \hat{\mathbf{r}})^2\right]
 \end{align*}
 ```
+
 Comparing to the result from step 1 we see that
 
 ```math
 (\mathbf{v}\times{\mathbf{h}})\cdot\hat{\mathbf{r}}=(\mathbf{h}\times\hat{\mathbf{r}})\cdot\mathbf{v} = r (v^2 - (\hat{\mathbf{r}} \cdot \mathbf{v})^2)
 ```
+
 and
+
 ```math
 \frac{h^2}{r} =r\left[v^2 -(\mathbf{v} \cdot \hat{\mathbf{r}})^2\right]
 ```
 
 which means
+
 ```math
 (\mathbf{v}\times{\mathbf{h}})\cdot\hat{\mathbf{r}}=\frac{h^2}{r}
 ```
@@ -296,22 +300,28 @@ which means
 ## Orbital Equation from eccentricity vector
 
 recall so far we had
+
 ```math
 \mathbf{\alpha} = \mathbf{v}\times\mathbf{h}-\mu\hat{\mathbf{r}}
 ```
+
 taking the dot product with $\hat{\mathbf{r}}$ gives
+
 ```math
 \begin{align*}
 \mathbf{\alpha}\cdot\hat{\mathbf{r}} &= (\mathbf{v}\times\mathbf{h})\cdot\hat{\mathbf{r}} -\mu\hat{\mathbf{r}}\cdot\hat{\mathbf{r}}
 \end{align*}
 ```
+
 we can use the above result of $(\mathbf{v}\times{\mathbf{h}})\cdot\hat{\mathbf{r}}=\frac{h^2}{r}$ to replace the first term in the rhs
+
 ```math
 \begin{align*}
 \mathbf{\alpha}\cdot\hat{\mathbf{r}}&=  (\mathbf{v}\times\mathbf{h})\cdot\hat{\mathbf{r}} -\mu \\
 &=  \frac{h^2}{r}-\mu
 \end{align*}
 ```
+
 we can also note that the lhs is $\mathbf{\alpha}\cdot\hat{\mathbf{r}} = \alpha \cos \nu$, where $\nu$ is the angle between the $\alpha$ vector and $\mathbf{r}$
 
 ```math
@@ -322,6 +332,7 @@ we can also note that the lhs is $\mathbf{\alpha}\cdot\hat{\mathbf{r}} = \alpha 
 r &=\frac{h^2}{\mu+\alpha \cos \nu}
 \end{align*}
 ```
+
 if we divide top and bottom by $\mu$ we get the expected form for an equation of an ellipse
 
 ```math
@@ -329,4 +340,27 @@ if we divide top and bottom by $\mu$ we get the expected form for an equation of
 r &=\frac{\frac{h^2}{\mu}}{1+\frac{\alpha}{\mu} \cos \nu}
 \end{align*}
 ```
+
 from this we can determine that $ e = \frac{\alpha}{\mu}$ and that $A(1-e^2)=\frac{h^2}{\mu}$
+
+So we can say that
+
+```math
+\mathbf{e}=\frac{\mathbf{\alpha}}{\mu}=\frac{\mathbf{v}\times\mathbf{h}}{\mu}-\hat{\mathbf{r}}
+```
+
+## Direction of the eccentricity vector
+
+At periapsis, $\mathbf{r} = \mathbf{p}$ and the position vector and velocity vector are perpendicular so $\mathbf{p}\cdot\mathbf{v}=0$
+
+```math
+\begin{align*}
+\mathbf{e}&=\frac{\mathbf{v}\times\mathbf{h}}{\mu}-\hat{\mathbf{r}}\\
+&=\frac{\mathbf{v}\times\mathbf{p}\times\mathbf{v}}{\mu}-\hat{\mathbf{p}}\\
+&=\frac{(\mathbf{v} \cdot \mathbf{v})\mathbf{p} -(\mathbf{v} \cdot \mathbf{p} )\mathbf{v}}{\mu}-\hat{\mathbf{p}}\\
+&=\frac{v^2\mathbf{p}}{\mu}-\frac{{\mathbf{p}}}{p}\\
+&=\left[\frac{v^2}{\mu}-\frac{1}{p}\right]\mathbf{p}
+\end{align*}
+```
+
+which shows that $\mathbf{e}$ is in the direction of the periapsis
