@@ -389,3 +389,45 @@ e^2 &= \mathbf{e}\cdot\mathbf{e}\\
 ```
 
 Where we have used the fact that $\mathbf{v}$ and $\mathbf{h}$ are perpendicular by construction so that the magnitude of $\mathbf{v}\times\mathbf{v}$ will be $vh$. Also we have reused the result from earlier that $(\mathbf{v}\times{\mathbf{h}})\cdot\hat{\mathbf{r}}=\frac{h^2}{r}$, we have also used the specific orbital energy $\epsilon = \frac{v^2}{2} - \frac{\mu}{r}$.
+
+## Semi Major Axis
+
+Looking back at the equation for an ellipse we had that
+
+```math
+\begin{align*}
+A(1-e^2)&=\frac{h^2}{\mu}\\
+A-Ae^2&=\frac{h^2}{\mu}\\
+A-\frac{h^2}{\mu}&=Ae^2\\
+1-\frac{h^2}{A\mu}&=e^2
+\end{align*}
+```
+
+before we had
+
+```math
+e^2 =1+\frac{2\epsilon h^2}{\mu^2}
+```
+
+so we can substitute in
+
+```math
+\begin{align*}
+1-\frac{h^2}{A\mu}&=e^2\\
+&=1+\frac{2\epsilon h^2}{\mu^2}\\
+-\frac{h^2}{A\mu}&=\frac{2\epsilon h^2}{\mu^2}\\
+\frac{1}{A}&=-\frac{2\epsilon}{\mu}\\
+A&=-\frac{\mu}{2\epsilon}
+\end{align*}
+```
+
+## Apses revisited
+
+pretty easy now to work out the apses from
+
+```math
+\begin{align*}
+p &= A(1-e)\\
+a &= A(1+e)
+\end{align*}
+```
