@@ -364,3 +364,28 @@ At periapsis, $\mathbf{r} = \mathbf{p}$ and the position vector and velocity vec
 ```
 
 which shows that $\mathbf{e}$ is in the direction of the periapsis
+
+## Eccentricity vector squared
+
+Starting with the eccentricity vector
+
+```math
+\mathbf{e}=\frac{\mathbf{v}\times\mathbf{h}}{\mu}-\hat{\mathbf{r}}
+```
+
+and squaring it
+
+```math
+\begin{align*}
+e^2 &= \mathbf{e}\cdot\mathbf{e}\\
+&=\left(\frac{\mathbf{v}\times\mathbf{h}}{\mu}-\hat{\mathbf{r}}\right)\cdot\left(\frac{\mathbf{v}\times\mathbf{h}}{\mu}-\hat{\mathbf{r}}\right)\\
+&=\left(\frac{\mathbf{v}\times\mathbf{h}}{\mu}\right)^2 - \frac{2}{\mu}\mathbf{v}\times\mathbf{h}\cdot\hat{\mathbf{r}}+\hat{\mathbf{r}}^2\\
+&=\frac{\left|\mathbf{v}\times\mathbf{h}\right|^2}{\mu^2} - \frac{2 }{\mu}\frac{h^2}{r}+1\\
+&=1+\frac{\left|vh\right|^2}{\mu^2} - \frac{2h^2}{\mu r}\\
+&=1+\frac{v^2h^2}{\mu^2} - \frac{2 \mu h^2}{\mu^2 r}\\
+&=1+\frac{2h^2}{\mu^2}\left(\frac{v^2}{2} - \frac{\mu}{r}\right)\\
+&=1+\frac{2\epsilon h^2}{\mu^2}
+\end{align*}
+```
+
+Where we have used the fact that $\mathbf{v}$ and $\mathbf{h}$ are perpendicular by construction so that the magnitude of $\mathbf{v}\times\mathbf{v}$ will be $vh$. Also we have reused the result from earlier that $(\mathbf{v}\times{\mathbf{h}})\cdot\hat{\mathbf{r}}=\frac{h^2}{r}$, we have also used the specific orbital energy $\epsilon = \frac{v^2}{2} - \frac{\mu}{r}$.
