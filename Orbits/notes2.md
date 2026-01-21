@@ -503,19 +503,7 @@ Now we can substitute in the equation for the rate of change of the magnitude of
 ```math
 \begin{align*}
 \mathbf{r}\cdot\mathbf{v}&=r \frac{dr}{dt}\\
-&=r \frac{e\mu}{h}\sin \nu
+&=r \frac{e\mu}{h}\sin \nu \\
+\frac{h}{e \mu r}\mathbf{r}\cdot\mathbf{v}&=\sin \nu
 \end{align*}
 ```
-
-we can again substitute for $r$ with $r =\frac{\frac{h^2}{\mu}}{1+e \cos \nu}$
-
-```math
-\begin{align*}
-\mathbf{r}\cdot\mathbf{v}&=r \frac{e\mu}{h}\sin \nu\\
-&= \frac{\frac{h^2}{\mu}}{1+e \cos \nu}\frac{e\mu}{h}\sin \nu\\
-&= \frac{1}{1+e \cos \nu}\frac{e\mu h^2}{h \mu}\sin \nu\\
-&= \frac{eh}{1+e \cos \nu}\sin \nu
-\end{align*}
-```
-
-maybe replace $\cos \nu$ with above equation???
