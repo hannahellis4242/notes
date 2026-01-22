@@ -536,36 +536,17 @@ We can now use the double angle trigonometric identities to get things in terms 
 ```math
 \begin{align*}
 \sin \theta &= \frac{2 \tan \frac{\theta}{2}}{1+\tan^2 \frac{\theta}{2}}\\
-\cos \theta &= \frac{1- \tan^2 \frac{\theta}{2}}{1+\tan^2 \frac{\theta}{2}}
+\cos \theta &= \frac{1- \tan^2 \frac{\theta}{2}}{1+\tan^2 \frac{\theta}{2}}\\
+\tan \theta &= \frac{2 \tan \frac{\theta}{2}}{1-\tan^2\frac{\theta}{2}}
 \end{align*}
 ```
 
-putting these in gives
-
-```math
-\tan \nu = \frac{\sqrt{1-e^2}\frac{2 \tan \frac{E}{2}}{1+\tan^2 \frac{E}{2}}}{\frac{1- \tan^2 \frac{E}{2}}{1+\tan^2 \frac{E}{2}}-e}
-```
-
-### Simplify the denominator
-
 ```math
 \begin{align*}
-\frac{1- \tan^2 \frac{E}{2}}{1+\tan^2 \frac{E}{2}}-e&=
-\frac{1- \tan^2 \frac{E}{2}-e(1+\tan^2 \frac{E}{2})}{1+\tan^2 \frac{E}{2}}\\
-&=
-\frac{(1-e)- (1+e)\tan^2 \frac{E}{2}}{1+\tan^2 \frac{E}{2}}\\
-\end{align*}
-```
-
-### Cancel denominators
-
-so we can put back in our simplified form
-
-```math
-\begin{align*}
-\tan \nu &= \frac{\sqrt{1-e^2}\frac{2 \tan \frac{E}{2}}{1+\tan^2 \frac{E}{2}}}{\frac{1- \tan^2 \frac{E}{2}}{1+\tan^2 \frac{E}{2}}-e}\\
-&= \frac{\sqrt{1-e^2}\frac{2 \tan \frac{E}{2}}{1+\tan^2 \frac{E}{2}}}{\frac{(1-e)- (1+e)\tan^2 \frac{E}{2}}{1+\tan^2 \frac{E}{2}}}\\
-&= \frac{\sqrt{1-e^2} 2 \tan \frac{E}{2}}{(1-e)- (1+e)\tan^2 \frac{E}{2}}\\
-&= \frac{2\sqrt{1-e^2} \tan \frac{E}{2}}{(1-e)- (1+e)\tan^2 \frac{E}{2}}
+\tan \nu &= \frac{\sqrt{1-e^2}\sin E}{\cos E-e}\\
+\frac{2 \tan \frac{\nu}{2}}{1-\tan^2\frac{\nu}{2}} & = \frac{\sqrt{1-e^2}\sin E}{\cos E-e}\\
+2 \tan \frac{\nu}{2}\cos E-e & = \left(1-\tan^2\frac{\nu}{2}\right)\sqrt{1-e^2}\sin E\\
+2 \tan \frac{\nu}{2}\cos E-e & = (1-\tan\frac{\nu}{2})(1+\tan\frac{\nu}{2})\sqrt{1-e^2}\sin E\\
+2 \tan \frac{\nu}{2}\cos E& = (1-\tan\frac{\nu}{2})(1+\tan\frac{\nu}{2})\sqrt{1-e^2}\sin E +e
 \end{align*}
 ```
