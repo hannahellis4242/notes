@@ -507,3 +507,65 @@ Now we can substitute in the equation for the rate of change of the magnitude of
 \frac{h}{e \mu r}\mathbf{r}\cdot\mathbf{v}&=\sin \nu
 \end{align*}
 ```
+
+Now that we have both cosine and sine values, we can use the tan2 function to obtain the true anomaly at epoch.
+
+## Eccentric Anomaly at Epoch
+
+From our derivations for an eclipse we got
+
+```math
+\begin{align*}
+x &= A(\cos E-e)\\
+y &= A \sqrt{1-e^2}\sin E
+\end{align*}
+```
+
+where $x$ and $y$ are based on focus being at the origin. We can take the ratio of these to get
+
+```math
+\begin{align*}
+\tan \nu &= \frac{y}{x}\\
+&= \frac{A \sqrt{1-e^2}\sin E}{A(\cos E-e)}\\
+&= \frac{\sqrt{1-e^2}\sin E}{\cos E-e}
+\end{align*}
+```
+
+We can now use the double angle trigonometric identities to get things in terms of tangents
+
+```math
+\begin{align*}
+\sin \theta &= \frac{2 \tan \frac{\theta}{2}}{1+\tan^2 \frac{\theta}{2}}\\
+\cos \theta &= \frac{1- \tan^2 \frac{\theta}{2}}{1+\tan^2 \frac{\theta}{2}}
+\end{align*}
+```
+
+putting these in gives
+
+```math
+\tan \nu = \frac{\sqrt{1-e^2}\frac{2 \tan \frac{E}{2}}{1+\tan^2 \frac{E}{2}}}{\frac{1- \tan^2 \frac{E}{2}}{1+\tan^2 \frac{E}{2}}-e}
+```
+
+### Simplify the denominator
+
+```math
+\begin{align*}
+\frac{1- \tan^2 \frac{E}{2}}{1+\tan^2 \frac{E}{2}}-e&=
+\frac{1- \tan^2 \frac{E}{2}-e(1+\tan^2 \frac{E}{2})}{1+\tan^2 \frac{E}{2}}\\
+&=
+\frac{(1-e)- (1+e)\tan^2 \frac{E}{2}}{1+\tan^2 \frac{E}{2}}\\
+\end{align*}
+```
+
+### Cancel denominators
+
+so we can put back in our simplified form
+
+```math
+\begin{align*}
+\tan \nu &= \frac{\sqrt{1-e^2}\frac{2 \tan \frac{E}{2}}{1+\tan^2 \frac{E}{2}}}{\frac{1- \tan^2 \frac{E}{2}}{1+\tan^2 \frac{E}{2}}-e}\\
+&= \frac{\sqrt{1-e^2}\frac{2 \tan \frac{E}{2}}{1+\tan^2 \frac{E}{2}}}{\frac{(1-e)- (1+e)\tan^2 \frac{E}{2}}{1+\tan^2 \frac{E}{2}}}\\
+&= \frac{\sqrt{1-e^2} 2 \tan \frac{E}{2}}{(1-e)- (1+e)\tan^2 \frac{E}{2}}\\
+&= \frac{2\sqrt{1-e^2} \tan \frac{E}{2}}{(1-e)- (1+e)\tan^2 \frac{E}{2}}
+\end{align*}
+```
