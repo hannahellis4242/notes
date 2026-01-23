@@ -550,3 +550,7 @@ We can now use the double angle trigonometric identities to get things in terms 
 2 \tan \frac{\nu}{2}\cos E& = (1-\tan\frac{\nu}{2})(1+\tan\frac{\nu}{2})\sqrt{1-e^2}\sin E +e
 \end{align*}
 ```
+
+## Links
+
+- <https://www.alanzucconi.com/2025/09/04/orbital-mechanics/#angular-positions>
