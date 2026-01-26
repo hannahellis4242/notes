@@ -17,7 +17,7 @@ S = r + d
 
 where
 \begin{align}
-r &= \sqrt{(X-f)^2+y^2} \\ \nonumber
+r &= \sqrt{(X-f)^2+y^2} \nonumber \\
 d &= \sqrt{(X+f)^2+y^2}
 \end{align}
 
@@ -25,14 +25,14 @@ d &= \sqrt{(X+f)^2+y^2}
 
 From the construction method, we know that the sum is fixed.  We can find it's exact value by considering $P$ when $y=0$ and $X=A$, so that 
 \begin{align}
-r &= \sqrt{(A-f)^2+0^2}\\ \nonumber
-&=  \sqrt{(A-f)^2}\\ \nonumber
-&=  A-f\\ \nonumber
-d &= \sqrt{(A+f)^2+0^2}\\ \nonumber
-&= \sqrt{(A+f)^2}\\ \nonumber
-&= A+f\\ \nonumber
-S &= r + d \\ \nonumber
-&= A - f + A + f\\ \nonumber
+r &= \sqrt{(A-f)^2+0^2}\nonumber \\
+&=  \sqrt{(A-f)^2}\nonumber \\
+&=  A-f\nonumber \\
+d &= \sqrt{(A+f)^2+0^2}\nonumber \\
+&= \sqrt{(A+f)^2}\nonumber \\
+&= A+f\nonumber \\
+S &= r + d \nonumber \\
+&= A - f + A + f\nonumber \\
 S &= 2A
 \end{align}
 
@@ -41,19 +41,19 @@ This shows that the string must be twice the length of the semi-major axis to wo
 Another interesting result is obtained when we look at the point $P=(0,B)$
 
 \begin{align}
-r &=  \sqrt{(0-f)^2+B^2}\\ \nonumber
-&=  \sqrt{f^2+B^2}\\ \nonumber
-d &= \sqrt{(0+f)^2+B^2}\\ \nonumber
-&= \sqrt{(f^2+B^2)^2}\\ \nonumber
+r &=  \sqrt{(0-f)^2+B^2}\nonumber \\
+&=  \sqrt{f^2+B^2}\nonumber \\
+d &= \sqrt{(0+f)^2+B^2}\nonumber \\
+&= \sqrt{(f^2+B^2)^2}\nonumber \\
 S &=2  \sqrt{(f^2+B^2)^2}
 \end{align}
 
 since we now know that $S=2A$ we can subtitute for $S$
 \begin{align}
-S &=2  \sqrt{(f^2+B^2)^2} \\ \nonumber
-2A &=2  \sqrt{(f^2+B^2)^2} \\ \nonumber
-A &=\sqrt{(f^2+B^2)^2} \\ \nonumber
-A^2 &=f^2+B^2
+S &=2  \sqrt{(f^2+B^2)^2} \nonumber \\
+2A &=2  \sqrt{(f^2+B^2)^2} \nonumber \\
+A &=\sqrt{(f^2+B^2)^2} \nonumber \\
+A^2 &=f^2+B^2 \label{eq:geom1}
 \end{align}
 
 You are more likely to see this stated as $B=A\sqrt{1-e^2}$ where $e$ or the eccentricity is defined to be 
@@ -70,5 +70,32 @@ Now we know the value of $S$ we can look for a general equation that links $X$ a
 
 \begin{align}
 S & = r + d \nonumber \\
-&= \sqrt{(A-f)^2+y^2} +  \sqrt{(A+f)^2+y^2}
+2A &= \sqrt{(X-f)^2+y^2} +  \sqrt{(X+f)^2+y^2} \nonumber \\
+2A -\sqrt{(X-f)^2+y^2}  &=\sqrt{(X+f)^2+y^2}
 \end{align}
+Now we square both sides to get rid of the first square root
+
+\begin{align}
+\left(2A -\sqrt{(X-f)^2+y^2}\right)^2 &=(X+f)^2+y^2\nonumber \\
+4A^2 -4A\sqrt{(X-f)^2+y^2}+(X-f)^2+\textcolor{red}{\cancel{y^2}} &=(X+f)^2+\textcolor{red}{\cancel{y^2}}\nonumber \\
+4A^2 -4A\sqrt{(X-f)^2+y^2}+\textcolor{green}{\cancel{X^2}} \textcolor{red}{- 2Xf} +\textcolor{blue}{\cancel{f^2}} &=\textcolor{green}{\cancel{X^2}}+\textcolor{red}{2Xf}+\textcolor{blue}{\cancel{f^2}}\nonumber \\
+4A^2 -4A\sqrt{(X-f)^2+y^2}&=4Xf \nonumber \\
+A^2 - A\sqrt{(X-f)^2+y^2} &=fX \nonumber \\
+A^2  - fX &=A\sqrt{(X-f)^2+y^2}\nonumber \\
+A  -\frac{ fX}{A} &=\sqrt{(X-f)^2+y^2}
+\end{align}
+Once again we square both sides to remove the square root
+\begin{align}
+\left(A  -\frac{ fX}{A}\right)^2 &=(X-f)^2+y^2\nonumber \\
+A^2 - 2\textcolor{red}{\cancel{A}}\frac{fX}{\textcolor{red}{\cancel{A}}}+\left(\frac{f}{A}\right)^2 X^2 &=X^2 -2fX +f^2+y^2\nonumber \\
+A^2 \textcolor{red}{\cancel{- 2fX}}+\left(\frac{f}{A}\right)^2 X^2 &=X^2 \textcolor{red}{\cancel{-2fX}} +f^2+y^2\nonumber \\
+A^2-f^2 &=\left(1-\left(\frac{f}{A}\right)^2\right)X^2 +y^2\nonumber \\
+&=  \frac{A^2-f^2}{A^2} X^2 + y^2\nonumber \\
+1 &=  \frac{X^2}{A^2} + \frac{y^2}{A^2 -f^2}\nonumber 
+\end{align}
+This further simplifies if we use equation \ref{eq:geom1}\footnote{On page \pageref{eq:geom1}} which with some rearrangement gives $B^2=A^2-f^2$.
+
+And so we get the typical form of the equation of an ellipse
+\begin{equation}
+1=\frac{X^2}{A^2}+\frac{y^2}{B^2}
+\end{equation}
