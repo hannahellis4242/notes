@@ -33,7 +33,7 @@ d &= \sqrt{(A+f)^2+0^2}\nonumber \\
 &= A+f\nonumber \\
 S &= r + d \nonumber \\
 &= A - f + A + f\nonumber \\
-S &= 2A
+S &= 2A \label{eq:geom-sum}
 \end{align}
 
 This shows that the string must be twice the length of the semi-major axis to work.
@@ -59,7 +59,7 @@ A^2 &=f^2+B^2 \label{eq:geom1}
 You are more likely to see this stated as $B=A\sqrt{1-e^2}$ where $e$ or the eccentricity is defined to be 
 
 \begin{equation}
-e=\frac{f}{A} \label{eq:eccentricity}
+e=\frac{f}{A} \label{eq:geom-eccentricity}
 \end{equation}
 
 so that $f=eA$
@@ -99,3 +99,59 @@ And so we get the typical form of the equation of an ellipse
 \begin{equation}
 1=\frac{X^2}{A^2}+\frac{y^2}{B^2}
 \end{equation}
+
+\section{Equation for an ellipse in polar form}
+
+Here we are going to look at the equation of an ellipse in polar coordinates with the positive focus at the origin. The closest point\footnote{Which as we will see later is called the periapsis for an orbit} lies along the positive x axis. This is the same system as we have been working with but shifted along the x axis so that the focus it at the origin, alternatively we can continue to use our centred ellipse but measure everything from the positive focus. This is in fact what we will do here and is also why we have made the distiction between the $X$ coordinate and the $x$ coordinate. Before looking at the relationship between $X$ and $x$, we will look at the polar angle for an ellipse\footnote{for orbits, this angle is called the true anomaly}.
+
+\begin{figure}[h]
+\centering
+\includegraphics[height=0.3\textheight]{./img/string-method-polar.png} 
+\caption{The polar angle for an ellipse} \label{fig:string-method-polar}
+\end{figure}
+
+As you can see from Figure \ref{fig:string-method-polar} we can determine the point $P$ based on the polar angle $\nu$
+
+\begin{align}
+X &= f + r \cos \nu \nonumber \\
+y &= r \sin \nu
+\end{align}
+
+we can also define $x$ now also
+
+\begin{equation}
+x = r \cos \nu
+\end{equation}
+
+Going back to the sum equation\footnote{Equation \ref{eq:geom-sum} on page \pageref{eq:geom-sum}}
+
+\begin{align}
+S &= r + d \nonumber \\
+2A - r &= d \nonumber \\
+(2 A - r)^2 &= d^2 \nonumber \\
+(2 A - r)^2 &= (X+f)^2 + y^2 \nonumber \\
+4A^2-4Ar + r^2 &= X^2+2Xf + f^2 + y^2 \nonumber \\
+4A^2-4Ar + r^2 &= X^2+2Xf + f^2 + y^2 \nonumber \\
+ &= (f+r\cos \nu)^2 + 2f^2 + 2fr\cos \nu  +f^2 +y^2 \nonumber \\
+ &=\textcolor{blue}{f^2}+\textcolor{green}{2fr\cos \nu} + r^2\cos^2 \nu + \textcolor{blue}{2f^2} +\textcolor{green}{ 2fr\cos \nu}  +\textcolor{blue}{f^2} +y^2 \nonumber \\
+ &=4f^2+4fr\cos \nu + r^2\cos^2 \nu +y^2 \nonumber \\
+ &=4f^2+4fr\cos \nu + r^2\cos^2 \nu +r^2 \sin^2 \nu \nonumber \\
+ &=4f^2+4fr\cos \nu + r^2 \nonumber \\
+4A^2-4Ar + \textcolor{red}{\cancel{r^2}}&= 4f^2+4fr\cos \nu + \textcolor{red}{\cancel{r^2}} \nonumber \\
+4A^2-4Ar&= 4f^2+4fr\cos \nu \nonumber \\
+A^2-Ar&= f^2+fr\cos \nu \nonumber \\
+A^2-f^2&= Ar+fr\cos \nu \nonumber \\
+A^2-f^2&=r(A+f\cos \nu) \nonumber \\
+r &=\frac{A^2-f^2}{A+f\cos \nu}
+\end{align}
+
+We can do a little further simplifying by using Equation \ref{eq:geom-eccentricity}\footnote{page \pageref{eq:geom-eccentricity}}
+
+\begin{align}
+r &=\frac{A^2-f^2}{A+f\cos \nu} \nonumber \\
+&=\frac{A^2-e^2A^2}{A+eA\cos \nu} \nonumber \\
+&=\frac{A^2(1-e^2)}{A(1+e\cos \nu)} \nonumber \\
+&=\frac{A(1-e^2)}{1+e\cos \nu} \nonumber \\
+\end{align}
+
+Which is the standard form
