@@ -97,7 +97,7 @@ This further simplifies if we use equation \ref{eq:geom1}\footnote{On page \page
 
 And so we get the typical form of the equation of an ellipse
 \begin{equation}
-1=\frac{X^2}{A^2}+\frac{y^2}{B^2}
+1=\frac{X^2}{A^2}+\frac{y^2}{B^2}\label{eq:geom-cart}
 \end{equation}
 
 \section{Equation for an ellipse in polar form}
@@ -151,7 +151,36 @@ We can do a little further simplifying by using Equation \ref{eq:geom-eccentrici
 r &=\frac{A^2-f^2}{A+f\cos \nu} \nonumber \\
 &=\frac{A^2-e^2A^2}{A+eA\cos \nu} \nonumber \\
 &=\frac{A^2(1-e^2)}{A(1+e\cos \nu)} \nonumber \\
-&=\frac{A(1-e^2)}{1+e\cos \nu} \nonumber \\
+&=\frac{A(1-e^2)}{1+e\cos \nu} \label{eq:geom-polar-form}
 \end{align}
 
-Which is the standard form
+Which is the standard form.
+
+\section{The Auxiliary Circle}
+
+Another parameterisation for an ellipse comes from looking at the relationship to a circle. In other words, an ellipse can also be seen as a flattened circle.
+
+\begin{figure}[h]
+\centering
+\includegraphics[height=0.3\textheight]{./img/auxiliary-circle.png} 
+\caption{The ellipse and the auxiliary circle} \label{fig:auxiliary-circle}
+\end{figure}
+
+Consider a circle with radius $A$ which is centred on the ellipse with a semi-major axis of length $A$ and a semi-minor axis of length $B$, as in Figure \ref{fig:auxiliary-circle}. The circle is known as the Auxiliary Circle. We can define a point $Q$ on the circle as $(A \cos E, A \sin E)$ so that the line from the origin to $Q$ has an angle $E$\footnote{This angle is called the eccentric anomaly in terms of orbits} with the x axis.
+
+We can now choose point $P$ that is on the ellipse so that $Q$ and $P$ share the same x coordinate. We can work out the corresponding y coordinate by using the equation of an ellipse\footnote{Equation \ref{eq:geom-cart} on page \pageref{eq:geom-cart}}.
+
+\begin{align}
+\frac{X^2}{A^2}+\frac{y^2}{B^2}&=1 \nonumber \\
+\frac{A^2\cos^2 E}{A^2}+\frac{y^2}{B^2}&=1 \nonumber \\
+\cos^2 E+\frac{y^2}{B^2}&=1 \nonumber \\
+\frac{y^2}{B^2}&=1 -\cos^2 E\nonumber \\
+\frac{y^2}{B^2}&=\sin^2 E\nonumber \\
+y^2&=B^2\sin^2 E\nonumber \\
+y & = B \sin E 
+\end{align}
+
+Which leads to one of the standard parameterisations $P=(A \cos E, B \sin E)$
+
+\section{The Apses}
+\section{Relationship between true and eccentric anomalies}
