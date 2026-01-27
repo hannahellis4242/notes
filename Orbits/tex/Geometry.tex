@@ -93,7 +93,7 @@ A^2-f^2 &=\left(1-\left(\frac{f}{A}\right)^2\right)X^2 +y^2\nonumber \\
 &=  \frac{A^2-f^2}{A^2} X^2 + y^2\nonumber \\
 1 &=  \frac{X^2}{A^2} + \frac{y^2}{A^2 -f^2}\nonumber 
 \end{align}
-This further simplifies if we use equation \ref{eq:geom1}\footnote{On page \pageref{eq:geom1}} which with some rearrangement gives $B^2=A^2-f^2$.
+This further simplifies if we use equation \refpage{eq:geom1} which with some rearrangement gives $B^2=A^2-f^2$.
 
 And so we get the typical form of the equation of an ellipse
 \begin{equation}
@@ -114,13 +114,13 @@ As you can see from Figure \ref{fig:string-method-polar} we can determine the po
 
 \begin{align}
 X &= f + r \cos \nu \nonumber \\
-y &= r \sin \nu
+y &= r \sin \nu \label{eq:geom-Xy}
 \end{align}
 
 we can also define $x$ now also
 
 \begin{equation}
-x = r \cos \nu
+x = r \cos \nu \label{eq:geom-x}
 \end{equation}
 
 Going back to the sum equation\footnote{Equation \ref{eq:geom-sum} on page \pageref{eq:geom-sum}}
@@ -145,7 +145,7 @@ A^2-f^2&=r(A+f\cos \nu) \nonumber \\
 r &=\frac{A^2-f^2}{A+f\cos \nu}
 \end{align}
 
-We can do a little further simplifying by using Equation \ref{eq:geom-eccentricity}\footnote{page \pageref{eq:geom-eccentricity}}
+We can do a little further simplifying by using Equation \refpage{eq:geom-eccentricity}
 
 \begin{align}
 r &=\frac{A^2-f^2}{A+f\cos \nu} \nonumber \\
@@ -192,7 +192,7 @@ The apses are the closest and furthest point from the positive focus of the elli
 \caption{The ellipse with the apses highlighted} \label{fig:geometry-apses}
 \end{figure}
 
-As we can see from Figure \ref{fig:geometry-apses} that the periapsis has a length of $p=A-f$ and the apoapsis has a length of $a=A+f$. We can put these in terms of the semi-major axis and the eccentricity by using equation \ref{eq:geom-eccentricity}\footnote{page \pageref{eq:geom-eccentricity}}
+As we can see from Figure \ref{fig:geometry-apses} that the periapsis has a length of $p=A-f$ and the apoapsis has a length of $a=A+f$. We can put these in terms of the semi-major axis and the eccentricity by using equation \refpage{eq:geom-eccentricity}
 
 \begin{align}
 p&=A(1-e) \nonumber \\
@@ -202,3 +202,62 @@ a&=A(1+e)
 We can also see that $A=p+a$ and that $f=a-p$
 
 \section{Relationship between true and eccentric anomalies}
+
+Here we will show that there is a relationship between the angles $\nu$ in Figure \refpage{fig:string-method-polar} and $E$ in Figure \refpage{fig:auxiliary-circle}. In terms of orbits as we will see later, $\nu$ is called the true anomaly and $E$ is the eccentric anomaly.
+
+We start by looking at the tangent of $\nu$ and using equation \refpage{eq:geom1} in particular the form $B=A\sqrt{1-e^2}$ and equation \refpage{eq:geom-eccentricity} in particular the form $f=eA$. Finally we need equations \refpage{eq:geom-Xy} and \refpage{eq:geom-x}.
+
+\begin{align}
+x &= r \cos \nu \nonumber \\
+ &= A \cos E -f  \nonumber \\
+&= A \cos E - eA  \nonumber \\
+&= A(\cos E -e)
+\end{align}
+
+\begin{align}
+y &= r \sin \nu \nonumber \\
+ &= B \sin E \nonumber \\
+&= A\sqrt{1-e^2} \sin E
+\end{align}
+
+We can now put these into
+
+\begin{align}
+\tan \nu &= \frac{y}{x} \nonumber \\
+ &= \frac{A\sqrt{1-e^2} \sin E}{A(\cos E -e)} \nonumber \\
+&= \frac{\sqrt{1-e^2} \sin E}{\cos E -e}
+\end{align}
+
+Here we can use the half tan formulas \refpage{eq:trig1} and \refpage{eq:trig2} to replace the sine and cosine
+\begin{align}
+\tan \nu &= \frac{\sqrt{1-e^2} \sin E}{\cos E -e} \nonumber \\
+ &= \frac{\sqrt{1-e^2} \frac{2 \tan \frac{E}{2}}{1+\tan^2 \frac{E}{2}}}{\frac{1- \tan^2 \frac{E}{2}}{1+\tan^2 \frac{E}{2}} -e}
+\end{align}
+Because the next steps can get a little messy, we'll introduce some variables to help, let $t = \tan  \frac{E}{2}$
+
+\begin{align}
+\tan \nu&= \frac{\sqrt{1-e^2} \frac{2 \tan \frac{E}{2}}{1+\tan^2 \frac{E}{2}}}{\frac{1- \tan^2 \frac{E}{2}}{1+\tan^2 \frac{E}{2}} -e}\nonumber \\
+&= \frac{\sqrt{1-e^2} \frac{2 t}{1+t^2}}{\frac{1- t^2}{1+t^2} -e}\nonumber \\
+&= \frac{\sqrt{1-e^2} \frac{2 t}{1+t^2}}{\frac{1- t^2-e -e t^2}{1+t^2}}\nonumber \\
+&= \frac{\sqrt{1-e^2} 2 t}{1- t^2-e -e t^2}\nonumber \\
+&= \frac{\sqrt{1-e^2} 2 t}{1-e-(1+e)t^2}\nonumber \\
+&= \frac{\sqrt{1-e^2} 2 t}{(1+e)\left(\frac{1-e}{1+e}-t^2\right)}\nonumber \\
+&= \frac{\sqrt{(1-e)(1+e)} 2 t}{(1+e)\left(\frac{1-e}{1+e}-t^2\right)}\nonumber \\
+&= \sqrt{\frac{1-e}{1+e}}\frac{2 t}{\left(\sqrt{\frac{1-e}{1+e}}\right)^2-t^2}
+\end{align}
+Again for ease, let $\alpha = \sqrt{\frac{1-e}{1+e}}$
+\begin{align}
+\tan \nu&= \sqrt{\frac{1-e}{1+e}}\frac{2 t}{\left(\sqrt{\frac{1-e}{1+e}}\right)^2-t^2} \nonumber \\
+&= \alpha \frac{2 t}{\alpha^2-t^2}\nonumber \\
+&= \alpha \frac{2 t}{\alpha^2 \left(1-\frac{t^2}{\alpha^2}\right)}\nonumber \\
+&= \frac{2\frac{t}{\alpha}}{ \left(1-\frac{t^2}{\alpha^2}\right)}\nonumber \\
+\end{align}
+Now we now use Equation \refpage{eq:trig3} to replace $\tan \nu$ with $\tan \frac{\nu}{2}$
+\begin{align}
+\tan \nu&= \frac{2\frac{t}{\alpha}}{ \left(1-\frac{t^2}{\alpha^2}\right)}\nonumber \\
+\frac{2 \tan \frac{\nu}{2}}{1-\tan^2 \frac{\nu}{2}} &= \frac{2\frac{t}{\alpha}}{ \left(1-\frac{t^2}{\alpha^2}\right)}\nonumber \\
+\end{align}
+you can see that
+\begin{equation}
+\tan \frac{\nu}{2} = \sqrt{\frac{1+e}{1-e}}\tan \frac{E}{2} \label{eq:geom2}
+\end{equation}
