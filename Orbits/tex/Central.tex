@@ -44,21 +44,20 @@ We have used the fact that the vector product of any vector with itself is zero.
 This shows that the angular momentum is a constant of the motion for a central force.
 
 \section{Potential Energy}
-The potential energy is the work done in moving the particle from a radius of $\infty$ to $r$.
-So the work done is given by
+
+The potential energy of a particle at a point is the amount of work that an external agent must do against the force exerted by the system on that particle from a chose reference point where we define the potential energy to be zero to that point.
+
+In the case of a central force it is typical to choose the reference point to be at a radius of $\infty$ for attractive forces and to be at a radius of zero for repulsive forces. Additionally note that it is the work done against the force applied to the particle by the system, so the force the external agent must apply is equal and opposite the force applied by the system. This means when calculating the work done by the external agent, the force must be the negative of the force applied by the system. 
+
+Here we want the potential energy at a radus r, so we integrate from $\infty$ to $r$
 \begin{align}
-V(r)&=\int_{\infty}^{r} \mathbf{F}(r') \cdot d\mathbf{r}'  \nonumber \\
-&=\int_{\infty}^{r} f(r') \hat{\mathbf{r}} \cdot dr' \hat{\mathbf{r}} \nonumber \\
-&=\int_{\infty}^{r} f(r') dr'\label{eq:central-potentialEnergy}
+V(r)&=\int_{\infty}^{r} -\mathbf{F}(r') \cdot d\mathbf{r}'  \nonumber \\
+&=-\int_{\infty}^{r} f(r') \hat{\mathbf{r}} \cdot dr' \hat{\mathbf{r}} \nonumber \\
+&=-\int_{\infty}^{r} f(r') dr'\label{eq:central-potentialEnergy}
 \end{align}
-if we let $U(x) = \int f(x)dx$
-Then we get
-\begin{equation}
-V(r)=U(r)-U(\infty)
-\end{equation}
 If we take the derivative of both sides with respect to $r$ we get
 \begin{align}
-\frac{d V}{dr}&=\frac{d}{dr}(U(\infty)-U(r)\label{eq:central3}
+\frac{d V}{dr}&=-f(r)\label{eq:central3}
 \end{align}
 
 \section{Kinetic Energy}
@@ -70,15 +69,15 @@ T(v)=\frac{1}{2}m\mathbf{v}\cdot\mathbf{v} = \frac{1}{2} m v^2\label{eq:central-
 \section{Total Energy}
 The total energy is the sum of kinetic energy and potential energy
 \begin{equation}
-E =\frac{1}{2} m v^2 + \int_{\infty}^{r} f(r') dr'
+E =\frac{1}{2} m v^2 + V(r)
 \end{equation}
 
 Again it is often easier to use the specific total energy $\epsilon$
 
 \begin{equation}
-\epsilon=\frac{E}{m}=\frac{1}{2} v^2 + \int_{\infty}^{r} \frac{f(r')}{m} dr'
+\epsilon=\frac{E}{m}=\frac{1}{2} v^2 + \frac{V(r)}{m}
 \end{equation}
-to make this a little easier still we will let $\tilde{V}=  \int_{\infty}^{r} \frac{f(r')}{m} dr'$, so we get
+to make this a little easier still we will let $\tilde{V}=\frac{V(r)}{m}$, so we get
 \begin{equation}
 \epsilon=\frac{E}{m}=\frac{1}{2} v^2 +\tilde{V}
 \end{equation}
@@ -88,9 +87,27 @@ As before with the angular momentum, we can show that the total energy is a cons
 
 \begin{align}
 \frac{d\epsilon}{dt}&=\frac{d}{dt}\left(\frac{1}{2} v^2 + \tilde{V}\right)\nonumber \\
-&=\frac{1}{2} \frac{1}{2}\frac{d v^2}{dv}\frac{dv}{dt} + \frac{d\tilde{V}}{dr}\frac{dr}{dt} \nonumber \\
-&=\frac{1}{2} \frac{1}{2}(2v)\dot{v} + \frac{f(r)}{m} v \nonumber \\
-&=\frac{1}{2} v(\dot{v} + \frac{f(r)}{m}) \nonumber \\
+&=\frac{1}{2} \frac{d v^2}{dt}+ \frac{d\tilde{V}}{dt}\nonumber \\
+&=\frac{1}{2} \frac{d v^2}{dv}\frac{d v}{dt}+ \frac{d\tilde{V}}{dr}\frac{d r}{dt}\nonumber \\
+&=\frac{1}{2} 2v\frac{d v}{dt}-\frac{f(r)}{m}v\nonumber \\
+&=v\left(\dot{v}-\frac{f(r)}{m}\right)\label{eq:central4}
 \end{align}
+From equation \refpage{eq:central2}
+\begin{align}
+\dot{v} &= \sqrt{\dot{\mathbf{v}}\cdot\dot{\mathbf{v}}}\nonumber \\
+&=\sqrt{ \frac{f(r)}{m} \hat{\mathbf{r}} \cdot \frac{f(r)}{m} \hat{\mathbf{r}}}\nonumber \\
+&= \frac{f(r)}{m} \sqrt{ \hat{\mathbf{r}} \cdot \hat{\mathbf{r}}}\nonumber \\
+&= \frac{f(r)}{m} \label{eq:central5}
+\end{align}
+we can then substitute equation \refpage{eq:central5} into equation \refpage{eq:central4} giving
 
+\begin{align}
+\frac{d\epsilon}{dt}&=v\left(\dot{v}-\frac{f(r)}{m}\right)\nonumber \\
+&=v\left(\frac{f(r)}{m}-\frac{f(r)}{m}\right)\nonumber \\
+&= 0
+\end{align}
+This then shows that total energy is a constant of the motion for a central force
 
+\section{Summary}
+
+In this chapter we have shown that both the angluar momentum and the total energy is conserved under a central force.
