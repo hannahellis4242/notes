@@ -1,15 +1,101 @@
-\subsection{Gravity as a central force}
-The force between two particles a distance $r$ apart with mass $M$ and $m$ respectivly is given by
+%Introduce the inverse square law for gravity and show the eccentricity vector is a constant of motion under gravity
+\section{Introduction}
+
+Now that we have looked at central forces more generally, we can apply what we have found to gravitational attraction between two bodies.
+
+The force between two particles a distance $r$ apart with the central larger mass $M$ and the smaller mass $m$ is given by
 \begin{equation}
-\bm{F}=-\frac{G M m}{r^2} \hat{\bm{r}}
+\mathbf{F} = -\frac{G M m}{r^2} \hat{\mathbf{r}}
 \end{equation}
 
-The acceleration on the particle of mass $m$ due to the force of gravity between the two particles is
+We will introduce the standard gravitational parameter $\mu = GM$ here to simplify the equations, we will also use
+the specific force, ie the force per unit mass, also known as the acceleration for a body with fixed mass.
+
 \begin{equation}
-\ddot{\bm{r}} =\frac{ \bm{F} }{m}=-\frac{GM}{r^2} \hat{\bm{r}}
+\frac{\mathbf{F}}{m} = -\frac{\mu}{r^2} \hat{\mathbf{r}}
 \end{equation}
-Using equation \ref{eq:acceleration} we can split the acceleration into radial and angular parts
+
+\section{Gravitational Potential Energy}
+
+As seen earlier, the potential energy is given by equation \refpage{eq:central-potentialEnergy}
+
 \begin{align}
--\frac{GM}{r^2} &=\ddot{r} - r \omega^2 \label{eq:radialAcceleration} \\
-0 &=r \ddot{\theta} + 2 \dot{r} \dot{\theta} \label{eq:angularAcceleration}
+V(r)&=-\int_{\infty}^{r} -\frac{\mu m}{r'^2} dr' \nonumber \\
+\frac{V(r)}{m}&=\mu \int_{\infty}^{r} \frac{1}{r'^2} dr' \nonumber \\
+&=-\mu \left[ \frac{1}{r} - \frac{1}{\infty} \right] \nonumber \\
+&= - \frac{\mu}{r}\label{eq:gravity1}
 \end{align}
+
+\section{Total Energy}
+
+The specific total energy is then given by
+\begin{equation}
+\epsilon = \frac{v^2}{2} - \frac{\mu}{r}
+\end{equation}
+
+\section{The Eccentricity Vector}
+
+For inverse square central forces there is another constant of motion.
+This is known as the eccentricity vector. The reason it is called this will
+become clear later, but for this section we will work through it's derivation.
+
+\subsection{The Rate of change of the unit position vector}
+
+\begin{align}
+\frac{d}{dt}\hat{\mathbf{r}} & = \frac{d}{dt}\frac{\mathbf{r}}{r}\nonumber \\
+&=\frac {\dot{\mathbf{r}}r-\mathbf{r}\dot{r}}{r^2} \nonumber \\
+&=\frac {{\mathbf{v}}-\dot{r}\hat{\mathbf{r}}}{r}
+\end{align}
+
+where we have used the quotient rule\footnote{equation \ref{eq:calc-qr} on page \pageref{eq:calc-qr}}
+
+\subsection{Force cross angular momentum}
+
+Next we take the force and do the cross product with angular momentum
+
+\begin{align}
+\frac{\mathbf{F}}{m} \times \mathbf{h} &= -\frac{\mu}{r^2} \hat{\mathbf{r}} \times \mathbf{h} \nonumber \\
+\dot{\mathbf{v}} \times \mathbf{h} &= -\frac{\mu}{r^2} \hat{\mathbf{r}} \times \mathbf{h}
+\end{align}
+
+but
+
+\begin{align}
+\frac{d}{dt}(\mathbf{v}\times\mathbf{h}) &= \frac{d\mathbf{v}}{dt}\times\mathbf{h} + \mathbf{v}\times\frac{d\mathbf{h}}{dt}\nonumber \\
+&=\dot{\mathbf{v}}\times\mathbf{h} + \mathbf{v}\times\mathbf{0}\nonumber \\
+&=\dot{\mathbf{v}}\times\mathbf{h}
+\end{align}
+
+so we can just subtitute
+
+\begin{align}
+\dot{\mathbf{v}} \times \mathbf{h} &= -\frac{\mu}{r^2} \hat{\mathbf{r}} \times \mathbf{h} \nonumber \\
+\frac{d}{dt}(\mathbf{v}\times\mathbf{h}) &= -\frac{\mu}{r^2} \hat{\mathbf{r}} \times \mathbf{h} \nonumber \\
+ &= -\frac{\mu}{r^2} \hat{\mathbf{r}} \times \mathbf{r} \times \mathbf{v}
+\end{align}
+
+We can use the triple vector product expansion\footnote{equation \ref{eq:vec1} on page \pageref{eq:vec1}} now
+
+\begin{align}
+\dot{\mathbf{v}} \times \mathbf{h} &= -\frac{\mu}{r^2} \hat{\mathbf{r}} \times \mathbf{r} \times \mathbf{v}\nonumber \\
+&= -\frac{\mu}{r^2} \left[(\hat{\mathbf{r}} \cdot \mathbf{v})\mathbf{r} -(\hat{\mathbf{r}}\cdot \mathbf{r} )\mathbf{v} \right]
+\end{align}
+
+We can get rid of the unit vectors by noting that $r \hat{\mathbf{r}} \ \mathbf{r}$
+
+\begin{align}
+\dot{\mathbf{v}} \times \mathbf{h} &= -\frac{\mu}{r^2} \left[(\hat{\mathbf{r}} \cdot \mathbf{v})\mathbf{r} -(\hat{\mathbf{r}}\cdot \mathbf{r} )\mathbf{v} \right] \nonumber \\
+&= -\frac{\mu}{r^2} \frac{r}{r}\left[(\hat{\mathbf{r}} \cdot \mathbf{v})\mathbf{r} -(\hat{\mathbf{r}}\cdot \mathbf{r} )\mathbf{v} \right] \nonumber \\
+&= -\frac{\mu}{r^2} \frac{1}{r}\left[(\mathbf{r} \cdot \mathbf{v})\mathbf{r} -(\mathbf{r}\cdot \mathbf{r} )\mathbf{v} \right] \nonumber \\
+&= -\frac{\mu}{r^2} \frac{1}{r}\left[(\mathbf{r} \cdot \mathbf{v})\mathbf{r} - r^2 \mathbf{v} \right] \nonumber \\
+\end{align}
+
+
+\begin{align*}
+\hat{\mathbf{r}} \times \mathbf{h} &= \hat{\mathbf{r}} \times \mathbf{r} \times \mathbf{v}\\
+&=(\hat{\mathbf{r}} \cdot \mathbf{v})\mathbf{r} -(\hat{\mathbf{r}}\cdot \mathbf{r} )\mathbf{v}\\
+&=\frac{r\left[(\hat{\mathbf{r}} \cdot \mathbf{v})\mathbf{r} -(\hat{\mathbf{r}}\cdot \mathbf{r} )\mathbf{v}\right]}{r}\\
+&=\frac{(\mathbf{r} \cdot \mathbf{v})\mathbf{r} -(\mathbf{r}\cdot \mathbf{r} )\mathbf{v}}{r}\\
+&=\frac{(\mathbf{r} \cdot \mathbf{v})\mathbf{r} -r^2\mathbf{v}}{r}\\
+&=(\mathbf{r} \cdot \mathbf{v})\hat{\mathbf{r}} -r\mathbf{v}
+\end{align*}
