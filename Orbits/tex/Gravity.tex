@@ -12,7 +12,7 @@ We will introduce the standard gravitational parameter $\mu = GM$ here to simpli
 the specific force, ie the force per unit mass, also known as the acceleration for a body with fixed mass.
 
 \begin{equation}
-\frac{\mathbf{F}}{m} = -\frac{\mu}{r^2} \hat{\mathbf{r}}
+\frac{\mathbf{F}}{m} = -\frac{\mu}{r^2} \hat{\mathbf{r}} \label{eq:gravity0}
 \end{equation}
 
 \section{Gravitational Potential Energy}
@@ -38,64 +38,128 @@ The specific total energy is then given by
 For inverse square central forces there is another constant of motion.
 This is known as the eccentricity vector. The reason it is called this will
 become clear later, but for this section we will work through it's derivation.
+There are a lot of moving parts with this derivation so we will start with some
+smaller seemingly independant calculations that will ultimately get us to the 
+eccentricity vector and the fact it is a constant of the motion.
 
-\subsection{The Rate of change of the unit position vector}
+\subsection{Rate of change of velocity}
+
+The rate of change of velocity is given by equation \refpage{eq:gravity0},
+since the rate of change of velocity is the acceleration, which is just the
+specific force, ie $\frac{\mathbf{F}}{m}$, so
+
+\begin{align}
+\dot{v}&=\frac{\mathbf{F}}{m}\nonumber \\
+&= -\frac{\mu}{r^2} \hat{\mathbf{r}} \nonumber \\
+&= -\frac{\mu}{r^3} \mathbf{r} \label{eq:gravity2}
+\end{align}
+
+\subsection{Rate of change of $\mathbf{K}$}
+
+We will firstly define a vector which we will label $\mathbf{K}$ which is the vector product of 
+the velocity vector and the specific angular momentum vector. The vector $\mathbf{K}$ doesn't have
+any special significance by itself, we're introducing it now for book keeping purposes here to help
+keep track of the steps in the derivation.
+
+We will now look how this quantity $\mathbf{K}$ changes with respect to time.
+
+\begin{align}
+\frac{d\mathbf{K}}{dt}&=\frac{d}{dt}\left( \mathbf{v} \times \mathbf{h} \right)\nonumber \\
+ &= \frac{d\mathbf{v}}{dt} \times \mathbf{h} + \mathbf{v} \times \frac{d\mathbf{h}}{dt} \nonumber \\
+\end{align}
+
+since we have already shown that the rate of change of angular momentum is zero\footnote{equation \ref{eq:central6} on page \pageref{eq:central6}}
+our above equation simplifies to
+\begin{equation}
+\frac{d\mathbf{K}}{dt} = \dot{\mathbf{v}} \times \mathbf{h}
+\end{equation}
+
+We can now substitute in equation \refpage{eq:gravity2} for $\dot{\mathbf{v}}$, leaving us with
+
+\begin{equation}
+\frac{d\mathbf{K}}{dt} = -\frac{\mu}{r^3} \mathbf{r} \times \mathbf{h}
+\end{equation}
+
+Recall that $\mathbf{h} = \mathbf{r} \times \mathbf{v}$ leading to
+
+\begin{equation}
+\frac{d\mathbf{K}}{dt} = -\frac{\mu}{r^3} \mathbf{r} \times \mathbf{r} \times \mathbf{v}
+\end{equation}
+
+Next we can use the triple vector product expansion\footnote{equation \ref{eq:vec1} on page \pageref{eq:vec1}}
+to expand $\mathbf{r} \times \mathbf{r} \times \mathbf{v}$
+
+\begin{align}
+\dot{\mathbf{K}} &= -\frac{\mu}{r^3} \left[ (\mathbf{r} \cdot \mathbf{v}) \mathbf{r}-(\mathbf{r} \cdot \mathbf{r})\mathbf{v} \right] \nonumber \\
+&= -\frac{\mu}{r^3} \left[ (\mathbf{r} \cdot \mathbf{v}) \mathbf{r}-r^2 \mathbf{v} \right] \nonumber \\
+&= \frac{\mu}{r^3} \left[ r^2 \mathbf{v} - (\mathbf{r} \cdot \mathbf{v}) \mathbf{r} \right] \label{eq:gravity4}
+\end{align}
+
+\subsection{Rate of change of the unit position vector}
 
 \begin{align}
 \frac{d}{dt}\hat{\mathbf{r}} & = \frac{d}{dt}\frac{\mathbf{r}}{r}\nonumber \\
 &=\frac {\dot{\mathbf{r}}r-\mathbf{r}\dot{r}}{r^2} \nonumber \\
-&=\frac {{\mathbf{v}}-\dot{r}\hat{\mathbf{r}}}{r}
+&=\frac {{\mathbf{v}}-\dot{r}\hat{\mathbf{r}}}{r} \label{eq:gravity3}
 \end{align}
 
 where we have used the quotient rule\footnote{equation \ref{eq:calc-qr} on page \pageref{eq:calc-qr}}
 
-\subsection{Force cross angular momentum}
-
-Next we take the force and do the cross product with angular momentum
+Let's look at the rate of change of the magnitude of the position vector for a moment
 
 \begin{align}
-\frac{\mathbf{F}}{m} \times \mathbf{h} &= -\frac{\mu}{r^2} \hat{\mathbf{r}} \times \mathbf{h} \nonumber \\
-\dot{\mathbf{v}} \times \mathbf{h} &= -\frac{\mu}{r^2} \hat{\mathbf{r}} \times \mathbf{h}
+\frac{dr}{dt} &= \frac{d}{dt}(\sqrt{r^2})\nonumber \\
+&=\frac{d \sqrt{u}}{du}\frac{du}{dt}\nonumber \\
+&=\frac{1}{2\sqrt{u}}\frac{du}{dt}
+\end{align}
+where we have introduced $u=r^2$
+\begin{align}
+\dot{r}&= \frac{1}{2\sqrt{u}}\frac{du}{dt} \nonumber \\
+&= \frac{1}{2\sqrt{r^2}}\frac{dr^2}{dt} \nonumber \\
+&= \frac{1}{2r}\frac{d}{dt}(\mathbf{r}\cdot\mathbf{r}) \nonumber \\
+&=\frac{1}{2r}(\dot{\mathbf{r}}\cdot\mathbf{r} + \mathbf{r}\cdot\dot{\mathbf{r}})\nonumber \\
+&=\frac{2 \mathbf{r} \cdot \mathbf{v}}{2r} \nonumber \\
+&=\frac{\mathbf{r} \cdot \mathbf{v}}{r}
 \end{align}
 
-but
+we can now put this result back into equation \refpage{eq:gravity3}
 
 \begin{align}
-\frac{d}{dt}(\mathbf{v}\times\mathbf{h}) &= \frac{d\mathbf{v}}{dt}\times\mathbf{h} + \mathbf{v}\times\frac{d\mathbf{h}}{dt}\nonumber \\
-&=\dot{\mathbf{v}}\times\mathbf{h} + \mathbf{v}\times\mathbf{0}\nonumber \\
-&=\dot{\mathbf{v}}\times\mathbf{h}
+\frac{d}{dt}\hat{\mathbf{r}} &=\frac {{\mathbf{v}}-\dot{r}\hat{\mathbf{r}}}{r} \nonumber \\
+ &=\frac {{\mathbf{v}}-\frac{\mathbf{r} \cdot \mathbf{v}}{r}\hat{\mathbf{r}}}{r} \nonumber \\
+ &= \frac{r^2}{r^2} \frac {{\mathbf{v}}-\frac{\mathbf{r} \cdot \mathbf{v}}{r}\hat{\mathbf{r}}}{r} \nonumber \\
+&= \frac{{r^2\mathbf{v}}-(\mathbf{r} \cdot \mathbf{v})r\hat{\mathbf{r}}}{r^3} \nonumber \\
+&= \frac{{r^2\mathbf{v}}-(\mathbf{r} \cdot \mathbf{v})\mathbf{r}}{r^3}
 \end{align}
+If we now multiply through by $\mu$
 
-so we can just subtitute
+\begin{equation}
+\mu \frac{d}{dt}\hat{\mathbf{r}} = \frac{\mu}{r^2}\left[{r^2\mathbf{v}}-(\mathbf{r} \cdot \mathbf{v})\mathbf{r}\right]
+\end{equation}
+
+Now if we compare to equation \refpage{eq:gravity4}
 
 \begin{align}
-\dot{\mathbf{v}} \times \mathbf{h} &= -\frac{\mu}{r^2} \hat{\mathbf{r}} \times \mathbf{h} \nonumber \\
-\frac{d}{dt}(\mathbf{v}\times\mathbf{h}) &= -\frac{\mu}{r^2} \hat{\mathbf{r}} \times \mathbf{h} \nonumber \\
- &= -\frac{\mu}{r^2} \hat{\mathbf{r}} \times \mathbf{r} \times \mathbf{v}
+\mu \frac{d}{dt}\hat{\mathbf{r}} &= \frac{\mu}{r^2}\left[{r^2\mathbf{v}}-(\mathbf{r} \cdot \mathbf{v})\mathbf{r}\right] \nonumber \\
+\frac{d \mathbf{K}}{dt} &= \frac{\mu}{r^3} \left[ r^2 \mathbf{v} - (\mathbf{r} \cdot \mathbf{v}) \mathbf{r} \right] \nonumber \\
 \end{align}
 
-We can use the triple vector product expansion\footnote{equation \ref{eq:vec1} on page \pageref{eq:vec1}} now
+As you can see both are equal so we can equate them
 
 \begin{align}
-\dot{\mathbf{v}} \times \mathbf{h} &= -\frac{\mu}{r^2} \hat{\mathbf{r}} \times \mathbf{r} \times \mathbf{v}\nonumber \\
-&= -\frac{\mu}{r^2} \left[(\hat{\mathbf{r}} \cdot \mathbf{v})\mathbf{r} -(\hat{\mathbf{r}}\cdot \mathbf{r} )\mathbf{v} \right]
+\frac{d \mathbf{K}}{dt}  &= \mu \frac{d}{dt}\hat{\mathbf{r}}  \nonumber \\
+\frac{d \mathbf{K}}{dt} - \mu \frac{d}{dt}\hat{\mathbf{r}} &= \mathbf{0}\nonumber \\
+\frac{d}{dt}\left[\mathbf{K} - \mu \hat{\mathbf{r}}\right] &= 0
 \end{align}
 
-We can get rid of the unit vectors by noting that $r \hat{\mathbf{r}} \ \mathbf{r}$
+This shows that the vector $\mathbf{K} - \mu \hat{\mathbf{r}}$ is a constant.
 
-\begin{align}
-\dot{\mathbf{v}} \times \mathbf{h} &= -\frac{\mu}{r^2} \left[(\hat{\mathbf{r}} \cdot \mathbf{v})\mathbf{r} -(\hat{\mathbf{r}}\cdot \mathbf{r} )\mathbf{v} \right] \nonumber \\
-&= -\frac{\mu}{r^2} \frac{r}{r}\left[(\hat{\mathbf{r}} \cdot \mathbf{v})\mathbf{r} -(\hat{\mathbf{r}}\cdot \mathbf{r} )\mathbf{v} \right] \nonumber \\
-&= -\frac{\mu}{r^2} \frac{1}{r}\left[(\mathbf{r} \cdot \mathbf{v})\mathbf{r} -(\mathbf{r}\cdot \mathbf{r} )\mathbf{v} \right] \nonumber \\
-&= -\frac{\mu}{r^2} \frac{1}{r}\left[(\mathbf{r} \cdot \mathbf{v})\mathbf{r} - r^2 \mathbf{v} \right] \nonumber \\
-\end{align}
+The eccentricity vector is defined as
 
+\begin{equation}
+\mathbf{e} = \frac{\mathbf{v} \times \mathbf{h}}{\mu} - \hat{\mathbf{r}} \label{eq:gravity5}
+\end{equation}
 
-\begin{align*}
-\hat{\mathbf{r}} \times \mathbf{h} &= \hat{\mathbf{r}} \times \mathbf{r} \times \mathbf{v}\\
-&=(\hat{\mathbf{r}} \cdot \mathbf{v})\mathbf{r} -(\hat{\mathbf{r}}\cdot \mathbf{r} )\mathbf{v}\\
-&=\frac{r\left[(\hat{\mathbf{r}} \cdot \mathbf{v})\mathbf{r} -(\hat{\mathbf{r}}\cdot \mathbf{r} )\mathbf{v}\right]}{r}\\
-&=\frac{(\mathbf{r} \cdot \mathbf{v})\mathbf{r} -(\mathbf{r}\cdot \mathbf{r} )\mathbf{v}}{r}\\
-&=\frac{(\mathbf{r} \cdot \mathbf{v})\mathbf{r} -r^2\mathbf{v}}{r}\\
-&=(\mathbf{r} \cdot \mathbf{v})\hat{\mathbf{r}} -r\mathbf{v}
-\end{align*}
+Which is just the vector we had multiplied by $\frac{1}{\mu}$ and so is also a constant.
+We will see later why this form in particular is choosen, for now it is enough to know that
+it is a third constant of the motion.
