@@ -25,3 +25,29 @@ at an earlier time.
 
 Both possibilities contradict the assumption that the point is the periapsis.
 Hence the velocity at periapsis has no radial component and must be perpendicular to the position vector.
+
+We will label the position vector when it is at periapsis $\mathbf{p}$, we also know that the velocity
+vector at periapsis $\mathbf{v}_p$ is perpendicular to the periapsis so $\mathbf{p} \cdot \mathbf{v}_p$.
+
+We can feed this into the eccentricity vector
+
+\begin{align}
+\mathbf{e}&=\frac{\mathbf{v}\times\mathbf{h}}{\mu}-\hat{\mathbf{r}}\nonumber \\
+&=\frac{\mathbf{v}_p\times\mathbf{p}\times\mathbf{v}_p}{\mu}-\hat{\mathbf{p}}\nonumber \\
+&=\frac{(\mathbf{v}_p\cdot\mathbf{v}_p)\mathbf{p}-(\mathbf{v}_p\cdot\mathbf{p})\mathbf{v}_p}{\mu}-\frac{\mathbf{p}}{p}\nonumber \\
+&=\left[\frac{v_p^2}{\mu}-\frac{1}{p}\right]\mathbf{p}\nonumber \\
+\end{align}
+
+This shows that the eccentricity vector is directed towards the periapsis vector.
+
+\section{Orbital Plane Basis Vectors}
+We now have two vectors that are perpendicular, one in the orbital plane directed towards the periapsis and
+another which is normal to it. We can create a third vector by taking the vector product of of the unit
+periapsis\footnote{or equivalently the unit eccentricity vector} and the unit angular momentum vector. We
+will label this vector $\mathbf{q}$.
+
+\begin{equation}
+\mathbf{q}=\frac{\mathbf{e}\times\mathbf{h}}{e h}
+\end{equation}
+
+So now we have a set of basis vectors for the orbital plane $(\hat{\mathbf{p}},\hat{\mathbf{q}},\hat{\mathbf{h}})$
