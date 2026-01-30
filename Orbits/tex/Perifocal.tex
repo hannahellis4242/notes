@@ -104,3 +104,133 @@ Acceleration
 \frac{ d^2 \bm{r}}{ d t^2} =\left[  \frac{ d^2 r}{d t^2} -r \omega^2 \right] \hat{\bm{r}} + \left[ 2 \frac{d r}{d t} \omega + r \frac{ d \omega}{d t} \right] \hat{\bm{\theta}}
 \end{equation*}
 \end{framed}
+
+\section{Gravity}
+\subsection{Gravity as a central force}
+The force between two particles a distance $r$ apart with mass $M$ and $m$ respectivly is given by
+\begin{equation}
+\bm{F}=-\frac{G M m}{r^2} \hat{\bm{r}}
+\end{equation}
+
+The acceleration on the particle of mass $m$ due to the force of gravity between the two particles is
+\begin{equation}
+\ddot{\bm{r}} =\frac{ \bm{F} }{m}=-\frac{GM}{r^2} \hat{\bm{r}}
+\end{equation}
+Using equation \ref{eq:acceleration} we can split the acceleration into radial and angular parts
+\begin{align}
+-\frac{GM}{r^2} &=\ddot{r} - r \omega^2 \label{eq:radialAcceleration} \\
+0 &=r \ddot{\theta} + 2 \dot{r} \dot{\theta} \label{eq:angularAcceleration}
+\end{align}
+
+\section{Angular Momentum}
+The angular momentum of a particle is given by
+\begin{align}
+\bm{L}&=\bm{r} \times \bm{p} \nonumber \\
+&=m \bm{r}\times \frac{d \bm{r}}{d t} \nonumber \\
+&=m r \hat{\bm{r}} \times \left[ \dot{r} \hat{\bm{r}} + r \omega \hat{\bm{\theta}} \right] \nonumber \\
+&=m \left[ r \dot{r}\hat{\bm{r}} \times \hat{\bm{r}} + r^2 \omega \hat{\bm{r}} \times\hat{\bm{\theta}} \right] \nonumber \\
+&=m r^2 \omega \uveck \label{eq:AngularMomentum}
+\end{align}
+
+We can also write this as $\mathbf{L} = l \uveck$ were
+\begin{equation}
+l=mr^2\omega \label{eq:AngularMomentumScalar}
+\end{equation}
+
+\subsection{Conservation Of Angular Momentum}
+We can show now that angular momentum is conserved under a central force by taking the derivative with respect to time.
+
+\begin{equation}
+\frac{d\mathbf{L}}{dt} = \frac{d l \uveck}{dt} = \frac{d l}{dt}\uveck
+\end{equation}
+\begin{align}
+\frac{dl}{dt}&=m\frac{d}{dt}\left[r^2\omega\right]\nonumber \\
+&=m\left[\frac{dr^2}{dt}\omega + r^2\frac{d\omega}{dt}\right]\nonumber \\
+&=m\left[\frac{dr^2}{dr}\frac{dr}{dt}\omega + r^2\frac{d\omega}{dt}\right] \nonumber \\
+&=m\left[2r\frac{dr}{dt}\omega + r^2\frac{d\omega}{dt}\right] \nonumber \\
+&=mr\left[2\frac{dr}{dt}\omega + r\frac{d\omega}{dt}\right]
+\end{align}
+The part inside the brackets is the angular acceleration which for a central force is zero\footnote{see equation \ref{eq:angularAcceleration}} and so
+\begin{align}
+\frac{dl}{dt}&=mr \times 0 \nonumber \\
+&=0
+\end{align}
+Which means that the angular momentum is constant as seen before.
+
+\section{Energy}
+\subsection{Potential Energy}
+The potential energy is the work done in moving the particle from a radius of $\infty$ to $r$.
+So the work done is given by
+\begin{align}
+U(r)&=\int_{\infty}^{r} \bm{F}(r') \cdot d\bm{r}'  \nonumber \\
+U(r)&=\int_{\infty}^{r} -\frac{GMm}{r'^2} \hat{\bm{r}} \cdot dr' \hat{\bm{r}}  \nonumber \\
+U(r)&=-GMm\int_{\infty}^{r} \frac{dr'}{r'^2} \nonumber \\
+U(r)&=-GMm \left[ \frac{-1}{r'} \right]_{\infty}^{r} \nonumber \\
+U(r)&=GMm \left[ \frac{1}{\infty} - \frac{1}{r} \right] \nonumber \\
+U(r)&=- \frac{GMm}{r} \label{eq:potentialEnergy}
+\end{align}
+
+\subsection{Kinetic Energy}
+The kinetic energy of a particle is given by
+\begin{equation}
+T(\dot{r})=\frac{1}{2}m\dot{\bm{r}}\cdot\dot{\bm{r}} \label{eq:KineticEnergy}
+\end{equation}
+using eqation \ref{eq:vel} gives 
+\begin{align}
+T(\dot{r})&=\frac{1}{2}m\left[ \dot{r}\hat{\bm{r}}+r\omega\hat{\bm{\theta}}\right]\cdot\left[ \dot{r}\hat{\bm{r}}+r\omega\hat{\bm{\theta}}\right] \nonumber \\
+&=\frac{1}{2}m \dot{r}^2 + \frac{1}{2}mr^2 \omega^2 \label{eq:Gravity:KineticEnergy}
+\end{align}
+
+we can also make the subsitution using using the magnitude of the angular momentum\footnote{equation \ref{eq:AngularMomentumScalar}} $l=mr^2\omega$
+
+\begin{align}
+l&=mr^2\omega \nonumber \\
+\omega&=\frac{l}{mr^2} \label{eq:Gravity:AngularMomentum}
+\end{align}
+
+using equation \ref{eq:Gravity:AngularMomentum} in equation \ref{eq:Gravity:KineticEnergy} leads to
+
+\begin{align}
+T(\dot{r})&=\frac{1}{2}m \dot{r}^2 + \frac{1}{2}mr^2 \omega^2 \nonumber \\
+&=\frac{1}{2}m \dot{r}^2 + \frac{1}{2}mr^2 \frac{l^2}{m^2r^4} \nonumber \\
+&=\frac{1}{2}m \dot{r}^2 + \frac{l^2}{2mr^2} \label{eq:Gravity:KineticEnergyFinal}
+\end{align}
+
+\subsubsection{Total Energy}
+Finally the total energy can be found by putting together the equation for kinetic energy and potential energy
+\begin{align}
+E(r,\dot{r})=T(\dot{r})+U(r) \nonumber \\
+E(r,\dot{r})=\frac{1}{2}m \dot{r}^2 + \frac{l^2}{2mr^2}- \frac{GMm}{r}\label{eq:Gravity:TotalEnergy}
+\end{align}
+
+sometimes the last two terms of equation \ref{eq:Gravity:TotalEnergy} are put together to form a new potential energy type term that is dependent only on the radius and the angular momentum.
+
+\subsection{Conservation of Total Energy}
+
+Just like with angular momentum we can show that total energy is conserved by taking the derivative with respect to time.
+
+\begin{align}
+\frac{dE}{dt}&=\frac{d}{dt}\left[\frac{1}{2}m \dot{r}^2 +  \frac{l^2}{2mr^2}-\frac{GMm}{r}\right] \nonumber \\
+&=\frac{1}{2}m \frac{d\dot{r}^2}{dt} +  \frac{l^2}{2m}\frac{dr^{-2}}{dt}-GMm\frac{dr^{-1}}{dt} \nonumber \\
+&=\frac{1}{2}m \frac{d\dot{r}^2}{d\dot{r}}\frac{d\dot{r}}{dt} +  \frac{l^2}{2m}\frac{dr^{-2}}{dr}\frac{dr}{dt}-GMm\frac{dr^{-1}}{dr}\frac{dr}{dt} \nonumber \\
+&=\frac{1}{2}m (2\dot{r})\ddot{r}+ \frac{l^2}{2m}\left(\frac{-2}{r^3}\right)\dot{r}+\frac{GMm}{r^2}\dot{r} \nonumber \\
+&=m \dot{r}\ddot{r}- \frac{l^2}{mr^3}\dot{r}+\frac{GMm}{r^2}\dot{r}
+\end{align}
+
+using the magnitude of the angular momentum\footnote{equation \ref{eq:AngularMomentumScalar}} $l=mr^2\omega$
+
+\begin{align}
+\frac{dE}{dt} &=m \dot{r}\ddot{r}- \frac{l^2}{mr^3}\dot{r}+\frac{GMm}{r^2}\dot{r} \nonumber \\
+&=m \dot{r}\ddot{r}- \frac{m^2r^4\omega^2}{mr^3}\dot{r}+\frac{GMm}{r^2}\dot{r} \nonumber \\
+&=m \dot{r}\ddot{r}-mr\omega^2\dot{r}+\frac{GMm}{r^2}\dot{r} \nonumber \\
+&=m \dot{r}\left[\ddot{r}-r\omega^2+\frac{GM}{r^2}\right]
+\end{align}
+
+using the radial part of the acceleration\footnote{equation \ref{eq:radialAcceleration}} $-\frac{GM}{r^2}= \ddot{r} -r \omega^2$ we get
+\begin{align}
+\frac{dE}{dt}&=m \dot{r}\left[-\frac{GM}{r^2}+\frac{GM}{r^2}\right] \nonumber \\
+&=m \dot{r}\left[0\right] \nonumber \\
+&=0
+\end{align}
+
+This then shows that the total energy does not change with respect to time, so is a constant and also conserved.
