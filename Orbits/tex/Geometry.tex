@@ -251,43 +251,49 @@ a&=A(1+e)
 
 We can also see that $A=p+a$ and that $f=a-p$
 
-\section{Relationship between true and eccentric anomalies}
+\section{Relationship between angles}
 
-Here we will show that there is a relationship between the angles $\nu$ in Figure \refpage{fig:string-method-polar} and $E$ in Figure \refpage{fig:auxiliary-circle}. In terms of orbits as we will see later, $\nu$ is called the true anomaly and $E$ is the eccentric anomaly.
+Here we will show that there is a relationship between the angles $\nu$
+in Figure \refpage{fig:string-method-polar} and $E$ in
+Figure \refpage{fig:auxiliary-circle}. In terms of orbits as we
+will see later, $\nu$ is called the true anomaly and $E$ is the eccentric anomaly.
 
-We start by looking at the tangent of $\nu$ and using equation \refpage{eq:geom1} in particular the form $B=A\sqrt{1-e^2}$ and equation \refpage{eq:geom-eccentricity} in particular the form $f=eA$. Finally we need equations \refpage{eq:geom-Xy} and \refpage{eq:geom-x}.
+We start by looking at the tangent of $\nu$.
+\begin{equation}
+\tan \nu = \frac{y}{x}
+\end{equation}
 
+Let's firstly look at $y$, we can start with the y part of equation \refpage{eq:geom-Xy} and equation \refpage{eq:geom-y}
+\begin{align}
+y &= r \sin \nu \nonumber \\
+&= B \sin E \nonumber \\
+&= A\sqrt{1-e^2} \sin E
+\end{align}
+We have used equation \refpage{eq:geom1} and equation \refpage{eq:geom-eccentricity} to replace $B$ with $A\sqrt{1-e^2}$ 
+
+Next we can look at $x$, using the $X$ part of equation \refpage{eq:geom-Xy} and \refpage{eq:geom-x}, we get
 \begin{align}
 x &= r \cos \nu \nonumber \\
- &= A \cos E -f  \nonumber \\
+&= A \cos E -f  \nonumber \\
 &= A \cos E - eA  \nonumber \\
 &= A(\cos E -e)
 \end{align}
-
-\begin{align}
-y &= r \sin \nu \nonumber \\
- &= B \sin E \nonumber \\
-&= A\sqrt{1-e^2} \sin E
-\end{align}
+where once again we have used equation \refpage{eq:geom-eccentricity} to replace $f$ with $eA$.
 
 We can now put these into
-
 \begin{align}
 \tan \nu &= \frac{y}{x} \nonumber \\
  &= \frac{A\sqrt{1-e^2} \sin E}{A(\cos E -e)} \nonumber \\
 &= \frac{\sqrt{1-e^2} \sin E}{\cos E -e}
 \end{align}
-
 Here we can use the half tan formulas \refpage{eq:trig1} and \refpage{eq:trig2} to replace the sine and cosine
 \begin{align}
 \tan \nu &= \frac{\sqrt{1-e^2} \sin E}{\cos E -e} \nonumber \\
  &= \frac{\sqrt{1-e^2} \frac{2 \tan \frac{E}{2}}{1+\tan^2 \frac{E}{2}}}{\frac{1- \tan^2 \frac{E}{2}}{1+\tan^2 \frac{E}{2}} -e}
 \end{align}
 Because the next steps can get a little messy, we'll introduce some variables to help, let $t = \tan  \frac{E}{2}$
-
 \begin{align}
-\tan \nu&= \frac{\sqrt{1-e^2} \frac{2 \tan \frac{E}{2}}{1+\tan^2 \frac{E}{2}}}{\frac{1- \tan^2 \frac{E}{2}}{1+\tan^2 \frac{E}{2}} -e}\nonumber \\
-&= \frac{\sqrt{1-e^2} \frac{2 t}{1+t^2}}{\frac{1- t^2}{1+t^2} -e}\nonumber \\
+\tan \nu&= \frac{\sqrt{1-e^2} \frac{2 t}{1+t^2}}{\frac{1- t^2}{1+t^2} -e}\nonumber \\
 &= \frac{\sqrt{1-e^2} \frac{2 t}{1+t^2}}{\frac{1- t^2-e -e t^2}{1+t^2}}\nonumber \\
 &= \frac{\sqrt{1-e^2} 2 t}{1- t^2-e -e t^2}\nonumber \\
 &= \frac{\sqrt{1-e^2} 2 t}{1-e-(1+e)t^2}\nonumber \\
