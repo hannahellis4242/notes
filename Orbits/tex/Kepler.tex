@@ -1,4 +1,5 @@
 %Derive Kepler's Equation to show time evolution in the perifocal plane
+\section{Angular rates of change}
 Starting with equation \refpage{eq:geom-radius} that gives the relationship between the distance from the focus and the ecentric anomaly
 \begin{equation*}
 r=A(1-e\cos E)
@@ -45,37 +46,86 @@ Finally we can replace $r$ with equation \refpage{eq:geom-radius} $r=A(1-e \cos 
 \end{align}
 Now we have an equation that links the rate of change of $E$ to the rate of change of $\nu$ in terms of just $E$ and $\nu$
 
-\paragraph{Using Angular Momentum} given by equation \ref{eq:AngularMomentumScalar}
+\section{Using Angular Momentum}
+
+We can now use the magnitude of specific angular momentum in perifocal coordinates, given by equation \footnote{to review}
+to replace $\dot{\nu}$
 \begin{equation*}
-l = m r^2 \frac{d\nu}{dt}
+\frac{d\nu}{dt} = \frac{h}{r^2}
 \end{equation*}
-useing equation \ref{eq:radiusVsEccentric Anomaly} and rearranging we obtain
+useing equation \refpage{eq:geom-radius} and rearranging we obtain
 \begin{align}
-l &= m r^2 \frac{d\nu}{dt}\nonumber \\
-\frac{d\nu}{dt}&= \frac{l}{m r^2}\nonumber  \\
-\frac{d\nu}{dt}&= \frac{l}{m A^2\left(1-e \cos E \right)^2}
+\frac{d\nu}{dt}&=\frac{h}{r^2}\nonumber \\
+\frac{d\nu}{dt}&= \frac{h}{A^2\left(1-e \cos E \right)^2}
 \end{align}
-which we can now substitute in for $\frac{d\nu}{dt}$ term in equation \ref{eq:Kepler3}
+which we can now substitute in for $\frac{d\nu}{dt}$ term in equation \refpage{eq:Kepler3}
 \begin{align}
 \frac{dE}{dt} & = \frac{(1-e\cos E)}{\sqrt{1-e^2}}\frac{d\nu}{dt}\nonumber \\
-& = \frac{(1-e\cos E)}{\sqrt{1-e^2}}\frac{l}{m A^2\left(1-e \cos E \right)^2}\nonumber \\
-&= \frac{l}{m A^2\sqrt{1-e^2}}\frac{1}{1-e \cos E}\nonumber \\
-\left(1-e \cos E \right)\frac{dE}{dt}&= \frac{l}{m A^2\sqrt{1-e^2}}
+& = \frac{(1-e\cos E)}{\sqrt{1-e^2}}\frac{h}{A^2\left(1-e \cos E \right)^2}\nonumber \\
+&= \frac{h}{A^2\sqrt{1-e^2}}\frac{1}{1-e \cos E}\nonumber \\
+\left(1-e \cos E \right)\frac{dE}{dt}&= \frac{h}{A^2\sqrt{1-e^2}}
 \end{align}
-Now you can see that the right hand side is just a constant, which is defined by properties of the orbit. Namely the angular momentum, the mass of the orbiting object, the semi major axis and the eccentricity. An interesting thing to note is that the term $A^2\sqrt{1-e^2}$ can be rewritten as the product $AB$ instead, so linking the major and minor axes. We will however keep it in it's original form for now. Since the right hand side is a constant we will simplify by choosing the constant $k$ for it. This constant $k$ is the \emph{Mean Motion}, later\footnote{see equation~\ref{eq:PeriodInTermsOfK} on page~\pageref{eq:PeriodInTermsOfK}} we will see that it's connected to the period of the orbit, and ends up being the mean angular velocity of the orbiting body.
+Now you can see that the right hand side is just a constant, 
+which is defined by properties of the orbit.
+An interesting thing to note is that the term $A^2\sqrt{1-e^2}$ can be
+rewritten as the product $AB$ instead, so linking the major and minor axes.
+We will however keep it in it's original form for now. Since the right hand
+side is a constant we will simplify by choosing the constant $n$ for it. 
+This constant $n$ is the \emph{Mean Motion}, later we will see that it's 
+connected to the period of the orbit, and ends up being the mean 
+angular velocity of the orbiting body.
 \begin{equation}
-k = \frac{\frac{l}{m}}{A^2\sqrt{1-e^2}}\label{eq:Kepler4}
+n = \frac{\frac{l}{m}}{A^2\sqrt{1-e^2}}\label{eq:Kepler4}
 \end{equation}
 so finally all that is left to do is to integrate our equation with respect to time.
 \begin{align}
-\int_{t_0}^t k dt &= \int_{t=t_0}^t\left(1-e \cos E \right)\frac{dE}{dt} dt\nonumber \\
-k (t-t_0) &=\int_{E=0}^E\left(1-e \cos E \right)dE \nonumber \\
+\int_{t_0}^t n dt &= \int_{t=t_0}^t\left(1-e \cos E \right)\frac{dE}{dt} dt\nonumber \\
+n (t-t_0) &=\int_{E=0}^E\left(1-e \cos E \right)dE \nonumber \\
 &=\int_0^E 1 dE - e \int_0^E \cos E dE\nonumber \\
 &=E - e \sin E\\
 \end{align}
-Note we have chosen $t_0$ to be the point in time when $E=0$, which is the same as the statement of Kepler's equation.
+Note we have chosen $t_0$ to be the point in time when $E=0$, or in words
+the time since periapsis at epoch.
 \begin{equation}
-E - e \sin E=k(t-t_0)\label{eq:KeplersEquation}
+E - e \sin E=n(t-t_0)
 \end{equation}
+If we define the \emph{Mean Anomally} to be $M = n(t-\tau)$,
+where we have given $t_0$ a new label $\tau = t_0$, because it is a parameter
+that determines something about the orbit.
 
+We can now rewrite the equation in the more standard form of 
+\begin{equation}
+E - e \sin E=M
+\end{equation}
+With $M$ being
+\begin{equation}
+M = n(t-\tau) = nt - M_0
+\end{equation}
+where $M_0$ is the mean anomally at epoch, and is just another way to state $\tau$.
+It is the angle the orbiting body would be at if the orbit was circular from the periapsis
+at time zero.
 
+\section{Mean Motion}
+
+We previously stated that the mean motion was related to the period without actually showing it.
+Here we will show the relationship. Because of the way we have integrated, we have chosen to make
+$\tau$ the time when the eccentric anomally $E$ is zero, this means that at $t=0$ the eccentric
+anomally is
+\begin{align}
+M(t=0)&= -n\tau \nonumber \\
+E_0 - e \sin E_0 & = -n\tau
+\end{align}
+
+When the orbiting body has gone through a whole orbit, the time 
+taken to do that will be $T$, or the period. The eccentric anomally will then be $E=2\pi+E_0$, because
+it has completed a full circle in terms of angle around the centre of the ellipse. So the mean
+anomally is
+
+\begin{align}
+M(t=T)&= nT - n\tau \nonumber \\
+nT - n\tau&=2\pi +E_0 - e \sin (2\pi + E_0)\nonumber \\
+&=2\pi +E_0 - e \sin (E_0)\nonumber \\
+&= 2\pi -n\tau\nonumber \\
+nT &= 2\pi \nonumber \\
+n &= \frac{2\pi}{T}
+\end{align}
