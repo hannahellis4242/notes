@@ -12,13 +12,13 @@ We will work in a two dimensional Cartesian coordinate system with an ellipse ce
 The ellipse has semi-major axis length $A$ and semi-minor axis length $B$,  so that $-A \leq X \leq A$ and $-B \leq y \leq B$. Let $r$ be the distance from $F$ to $P$ and $d$ be the distance from $-F$ to $P$ and let the sum of these be S, so that
 
 \begin{equation}
-S = r + d
+S = r + d \label{eq:geom-sum-0}
 \end{equation}
 
 where
 \begin{align}
 r &= \sqrt{(X-f)^2+y^2} \nonumber \\
-d &= \sqrt{(X+f)^2+y^2}
+d &= \sqrt{(X+f)^2+y^2} \label{eq:geom-parts}
 \end{align}
 
 \subsection{Special cases and useful results}
@@ -166,9 +166,15 @@ Another parameterisation for an ellipse comes from looking at the relationship t
 \caption{The ellipse and the auxiliary circle} \label{fig:auxiliary-circle}
 \end{figure}
 
-Consider a circle with radius $A$ which is centred on the ellipse with a semi-major axis of length $A$ and a semi-minor axis of length $B$, as in Figure \ref{fig:auxiliary-circle}. The circle is known as the Auxiliary Circle. We can define a point $Q$ on the circle as $(A \cos E, A \sin E)$ so that the line from the origin to $Q$ has an angle $E$\footnote{This angle is called the eccentric anomaly in terms of orbits} with the x axis.
+Consider a circle with radius $A$ which is centred on the ellipse with a semi-major axis of length $A$ and a semi-minor axis of length $B$, as in Figure \ref{fig:auxiliary-circle}.
+The circle is known as the Auxiliary Circle. We can define a point $Q$ 
+on the circle as $(A \cos E, A \sin E)$ so that the line from the origin to $Q$ has an angle $E$\footnote{This angle is called the eccentric anomaly in terms of orbits} with the x axis.
 
-We can now choose point $P$ that is on the ellipse so that $Q$ and $P$ share the same x coordinate. We can work out the corresponding y coordinate by using the equation of an ellipse\footnote{Equation \ref{eq:geom-cart} on page \pageref{eq:geom-cart}}.
+We can now choose point $P$ that is on the ellipse so that $Q$ and $P$ share the same x coordinate.
+\begin{equation}
+X = A \cos E \label{eq:geom-x}
+\end{equation}
+We can work out the corresponding y coordinate by using the equation of an ellipse\footnote{Equation \ref{eq:geom-cart} on page \pageref{eq:geom-cart}}.
 
 \begin{align}
 \frac{X^2}{A^2}+\frac{y^2}{B^2}&=1 \nonumber \\
@@ -177,10 +183,54 @@ We can now choose point $P$ that is on the ellipse so that $Q$ and $P$ share the
 \frac{y^2}{B^2}&=1 -\cos^2 E\nonumber \\
 \frac{y^2}{B^2}&=\sin^2 E\nonumber \\
 y^2&=B^2\sin^2 E\nonumber \\
-y & = B \sin E 
+y & = B \sin E \label{eq:geom-y}
 \end{align}
 
 Which leads to one of the standard parameterisations $P=(A \cos E, B \sin E)$
+
+\subsection{String Construction Revisited}
+
+We can use the string construction again to obtain the distance from the positive
+focus to point $P$, which we have called $r$, in terms of the angle $E$ now. Firstly
+we recall the sum of the lengths, equation \refpage{eq:geom-sum-0} which we can rearrange
+to get the length $r$
+\begin{equation}
+r = S - d
+\end{equation}
+Also we showed that the sum $S = 2A$ via equtaion \refpage{eq:geom-sum}
+\begin{equation}
+r = 2A - d
+\end{equation}
+We can now replace d with equation \refpage{eq:geom-parts}
+\begin{align}
+r &= 2A - \sqrt{(X+f)^2+y^2} \nonumber \\
+&= 2A - \sqrt{X^2+2fX+f^2+y^2} \nonumber \\
+\end{align}
+We can now substitute in the new parameterisation we obtained for $P$, namely equations \refpage{eq:geom-x} and \refpage{eq:geom-y}.
+\begin{align}
+r &= 2A - \sqrt{X^2+2fX+f^2+y^2} \nonumber \\
+&= 2A - \sqrt{A^2\cos^2 E +2fA \cos E +f^2+B^2\sin^2 E}
+\end{align}
+we can now replace $B$ using equation \refpage{eq:geom1} 
+by noting that $B^2=A^2-f^2$
+\begin{align}
+r &= 2A - \sqrt{A^2\cos^2 E +2fA \cos E +f^2+B^2\sin^2 E} \nonumber \\
+&= 2A - \sqrt{A^2\cos^2 E +2fA \cos E +f^2+(A^2-f^2)\sin^2 E} \nonumber \\
+&= 2A - \sqrt{A^2\cos^2 E +2fA \cos E +f^2+A^2 \sin^2 E-f^2 \sin^2 E} \nonumber \\
+&= 2A - \sqrt{A^2\cos^2 E +A^2 \sin^2 E+2fA \cos E +f^2-f^2 \sin^2 E} \nonumber \\
+&= 2A - \sqrt{A^2 +2fA \cos E f^2(1- \sin^2 E)}\nonumber \\
+&= 2A - \sqrt{A^2 +2fA \cos E +f^2\cos^2 E}
+\end{align}
+via equation \refpage{eq:geom-eccentricity} we can replace $f=eA$
+\begin{align}
+r &= 2A - \sqrt{A^2 +2fA \cos E +f^2\cos^2 E} \nonumber \\
+&= 2A - \sqrt{A^2 +2eA^2 \cos E +e^2A^2\cos^2 E} \nonumber \\
+&= 2A - A\sqrt{1 +2e\cos E +e^2\cos^2 E} \nonumber \\
+&= 2A - A\sqrt{(1 +e\cos E)^2} \nonumber \\
+&= 2A - A(1 +e\cos E) \nonumber \\
+&= 2A - A - eA\cos E \nonumber \\
+&= A(1- e\cos E) \label{eq:geom-radius}
+\end{align}
 
 \section{The Apses}
 

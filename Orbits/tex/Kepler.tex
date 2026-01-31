@@ -1,4 +1,5 @@
-Starting with equation \ref{eq:radiusVsEccentric Anomaly} that gives the relationship between the distance from the focus and the ecentric anomaly
+%Derive Kepler's Equation to show time evolution in the perifocal plane
+Starting with equation \refpage{eq:geom-radius} that gives the relationship between the distance from the focus and the ecentric anomaly
 \begin{equation*}
 r=A(1-e\cos E)
 \end{equation*}
@@ -8,55 +9,55 @@ We can take the derivative with respect to time to get the relationship between 
 &= A \frac{dE}{dt}\frac{d}{dE}\left(1-e\cos E \right)\nonumber \\
 &= eA \sin E \frac{dE}{dt} \label{eq:Kepler1}
 \end{align}
-Using equation \ref{eq:PolarElipse} for the equation of an elipse in polar form $r = \frac{A\left(1-e^2\right)}{ 1+e \cos \theta}$. We can invert this this to get
+Using equation \refpage{eq:geom-polar-form} for the equation of an elipse in polar form $r = \frac{A\left(1-e^2\right)}{ 1+e \cos \nu}$. We can invert this this to get
 
 \begin{equation}
-\frac{1}{r}= \frac{ 1+e \cos \theta}{A\left(1-e^2\right)} \\
+\frac{1}{r}= \frac{ 1+e \cos \nu}{A\left(1-e^2\right)} \\
 \end{equation}
 which will make taking the derivative with respect to time easier.
 \begin{align}
-\frac{d}{dt}\left( \frac{1}{r}\right) &= \frac{d}{dt}\left[ \frac{ 1+e \cos \theta}{A\left(1-e^2\right)}\right]\nonumber \\
-\frac{dr}{dt}\frac{d}{dr}\left( \frac{1}{r}\right) &= \frac{1}{A(1-e^2)}\frac{d\theta}{dt}\frac{d}{d\theta}\left[  1+e \cos \theta \right]\nonumber \\
--\frac{1}{r^2}\frac{dr}{dt} &= \frac{-e \sin \theta}{A(1-e^2)}\frac{d\theta}{dt}
+\frac{d}{dt}\left( \frac{1}{r}\right) &= \frac{d}{dt}\left[ \frac{ 1+e \cos \nu}{A\left(1-e^2\right)}\right]\nonumber \\
+\frac{dr}{dt}\frac{d}{dr}\left( \frac{1}{r}\right) &= \frac{1}{A(1-e^2)}\frac{d\nu}{dt}\frac{d}{d\nu}\left[  1+e \cos \nu \right]\nonumber \\
+-\frac{1}{r^2}\frac{dr}{dt} &= \frac{-e \sin \nu}{A(1-e^2)}\frac{d\nu}{dt}
 \end{align}
 we can now substitute in equation \ref{eq:Kepler1} for $\frac{dr}{dt}$ to get
 \begin{equation}
--\frac{1}{r^2} eA \sin E \frac{dE}{dt}= \frac{-e \sin \theta}{A(1-e^2)}\frac{d\theta}{dt} \label{eq:Kepler2}
+-\frac{1}{r^2} eA \sin E \frac{dE}{dt}= \frac{-e \sin \nu}{A(1-e^2)}\frac{d\nu}{dt} \label{eq:Kepler2}
 \end{equation}
-We can use equation \ref{eq:ElipseYTheta} and \ref{eq:ElipseYE} for y to obtain a relationship between $\sin \theta$ and $\sin E$
+We can use equation \refpage{eq:geom-Xy} and \refpage{eq:geom-y} for y to obtain a relationship between $\sin \nu$ and $\sin E$
 \begin{equation}
-y = r \sin \theta = A\sqrt{1-e^2}\sin E
+y = r \sin \nu = A\sqrt{1-e^2}\sin E
 \end{equation}
-We can use this relationship to replace the $\sin \theta$ term in equation \ref{eq:Kepler2}
+We can use this relationship to replace the $\sin \nu$ term in equation \ref{eq:Kepler2}
 \begin{align}
--\frac{1}{r^2} eA \sin E \frac{dE}{dt}&= \frac{-e \sin \theta}{A(1-e^2)}\frac{d\theta}{dt}\nonumber \\
-&= \frac{-e A\sqrt{1-e^2}\sin E}{Ar(1-e^2)}\frac{d\theta}{dt}\nonumber \\
-&= \frac{-e \sin E}{r\sqrt{1-e^2}}\frac{d\theta}{dt}\nonumber \\
-\frac{-eA \sin E }{r^2} \frac{dE}{dt}&= \frac{-e \sin E}{r\sqrt{1-e^2}}\frac{d\theta}{dt}\nonumber \\
-\frac{dE}{dt}&= \frac{-r^2}{eA \sin E } \frac{-e \sin E}{r\sqrt{1-e^2}}\frac{d\theta}{dt}\nonumber \\
-\frac{dE}{dt} & = \frac{r}{A\sqrt{1-e^2}}\frac{d\theta}{dt}
+-\frac{1}{r^2} eA \sin E \frac{dE}{dt}&= \frac{-e \sin \nu}{A(1-e^2)}\frac{d\nu}{dt}\nonumber \\
+&= \frac{-e A\sqrt{1-e^2}\sin E}{Ar(1-e^2)}\frac{d\nu}{dt}\nonumber \\
+&= \frac{-e \sin E}{r\sqrt{1-e^2}}\frac{d\nu}{dt}\nonumber \\
+\frac{-eA \sin E }{r^2} \frac{dE}{dt}&= \frac{-e \sin E}{r\sqrt{1-e^2}}\frac{d\nu}{dt}\nonumber \\
+\frac{dE}{dt}&= \frac{-r^2}{eA \sin E } \frac{-e \sin E}{r\sqrt{1-e^2}}\frac{d\nu}{dt}\nonumber \\
+\frac{dE}{dt} & = \frac{r}{A\sqrt{1-e^2}}\frac{d\nu}{dt}
 \end{align}
-Finally we can replace $r$ with equation \ref{eq:radiusVsEccentric Anomaly} $r=A(1-e \cos E)$ to get
+Finally we can replace $r$ with equation \refpage{eq:geom-radius} $r=A(1-e \cos E)$ to get
 \begin{align}
-\frac{dE}{dt} & = \frac{r}{A\sqrt{1-e^2}}\frac{d\theta}{dt}\\
- & = \frac{A(1-e\cos E)}{A\sqrt{1-e^2}}\frac{d\theta}{dt}\\
-  & = \frac{(1-e\cos E)}{\sqrt{1-e^2}}\frac{d\theta}{dt}\label{eq:Kepler3}
+\frac{dE}{dt} & = \frac{r}{A\sqrt{1-e^2}}\frac{d\nu}{dt}\\
+ & = \frac{A(1-e\cos E)}{A\sqrt{1-e^2}}\frac{d\nu}{dt}\\
+  & = \frac{(1-e\cos E)}{\sqrt{1-e^2}}\frac{d\nu}{dt}\label{eq:Kepler3}
 \end{align}
-Now we have an equation that links the rate of change of $E$ to the rate of change of $\theta$ in terms of just $E$ and $\theta$
+Now we have an equation that links the rate of change of $E$ to the rate of change of $\nu$ in terms of just $E$ and $\nu$
 
 \paragraph{Using Angular Momentum} given by equation \ref{eq:AngularMomentumScalar}
 \begin{equation*}
-l = m r^2 \frac{d\theta}{dt}
+l = m r^2 \frac{d\nu}{dt}
 \end{equation*}
 useing equation \ref{eq:radiusVsEccentric Anomaly} and rearranging we obtain
 \begin{align}
-l &= m r^2 \frac{d\theta}{dt}\nonumber \\
-\frac{d\theta}{dt}&= \frac{l}{m r^2}\nonumber  \\
-\frac{d\theta}{dt}&= \frac{l}{m A^2\left(1-e \cos E \right)^2}
+l &= m r^2 \frac{d\nu}{dt}\nonumber \\
+\frac{d\nu}{dt}&= \frac{l}{m r^2}\nonumber  \\
+\frac{d\nu}{dt}&= \frac{l}{m A^2\left(1-e \cos E \right)^2}
 \end{align}
-which we can now substitute in for $\frac{d\theta}{dt}$ term in equation \ref{eq:Kepler3}
+which we can now substitute in for $\frac{d\nu}{dt}$ term in equation \ref{eq:Kepler3}
 \begin{align}
-\frac{dE}{dt} & = \frac{(1-e\cos E)}{\sqrt{1-e^2}}\frac{d\theta}{dt}\nonumber \\
+\frac{dE}{dt} & = \frac{(1-e\cos E)}{\sqrt{1-e^2}}\frac{d\nu}{dt}\nonumber \\
 & = \frac{(1-e\cos E)}{\sqrt{1-e^2}}\frac{l}{m A^2\left(1-e \cos E \right)^2}\nonumber \\
 &= \frac{l}{m A^2\sqrt{1-e^2}}\frac{1}{1-e \cos E}\nonumber \\
 \left(1-e \cos E \right)\frac{dE}{dt}&= \frac{l}{m A^2\sqrt{1-e^2}}
