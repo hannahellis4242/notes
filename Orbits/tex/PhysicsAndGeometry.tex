@@ -1,0 +1,88 @@
+\section{Introduction}
+
+In this chapter we will look at the connection between the geometry of
+ellipses and the physical constants that we've shown previously.
+
+\section{The Apses}
+
+The apses are the closest and furthest point from the focus in the orbit. 
+In other words they are the maximum and minimum radius. At the apses
+\begin{equation}
+\frac{d r}{dt}=\dot{r} = 0
+\end{equation}
+We can then use equation \refpage{eq:gravity6} to show that the velocity is
+perpendicular to the radius at the apses.
+\begin{align}
+\dot{r} &= \frac{\mathbf{r}\cdot\mathbf{v}}{r} \nonumber \\
+0 &= \frac{\mathbf{r}\cdot\mathbf{v}}{r} \nonumber \\
+0 &= \mathbf{r}\cdot\mathbf{v}
+\end{align}
+since the scalar product is zero, the two vectors must be 
+perpendicular\footnote{or zero, but we are looking at non-zero solutions in
+particular}. 
+
+\subsection{Angular Momentum}
+
+If the radius and velocity are perpendicular at the apses, then the magnitude
+of the specific angular momentum is
+\begin{equation}
+h=p v_p = a v_a
+\end{equation} 
+where $v_p$ is the velocity at the periapsis and $v_a$ is the velocity at apoapsis.
+
+\subsection{Energy}
+
+We can now look at the specific total energy again, firstly at periapsis
+\begin{align}
+\epsilon &= \frac{v_p^2}{2}-\frac{\mu}{p} \nonumber \\
+&= \frac{h^2}{2p^2}-\frac{\mu}{p} \label{eq:phys-geom-energy1}
+\end{align} 
+then at apoapsis
+\begin{align}
+\epsilon &= \frac{v_a^2}{2}-\frac{\mu}{a} \nonumber \\
+&= \frac{h^2}{2a^2}-\frac{\mu}{a}
+\end{align} 
+Since total energy is a constant these must be equal
+\begin{align}
+\frac{h^2}{2p^2}-\frac{\mu}{p} &= \frac{h^2}{2a^2}-\frac{\mu}{a} \nonumber \\
+\frac{h^2}{2p^2}-\frac{h^2}{2a^2} &= \frac{\mu}{p} -\frac{\mu}{a} \nonumber \\
+\frac{a^2h^2}{2a^2p^2}-\frac{p^2h^2}{2a^2p^2} &= \frac{a\mu}{ap} -\frac{p\mu}{ap} \nonumber \\
+\frac{a^2h^2-p^2h^2}{2a^2p^2} &= \frac{a\mu-p\mu}{ap} \nonumber \\
+h^2 \frac{a^2-p^2}{2 ap} &= (a-p)\mu \nonumber \\
+h^2 &= \frac{2ap(a-p)}{a^2-p^2}\mu \nonumber \\
+ &= \frac{2ap(a-p)}{(a-p)(a+p)}\mu \nonumber \\
+&= \frac{2ap}{a+p}\mu \label{eq:phys-geom1}
+\end{align}
+
+\subsection{Velocity}
+We now have an equation\refpage{eq:phys-geom1} for the specific angular momentum based purely
+on the central mass and the geometry of the orbit. We can use this to
+calculate velocities at the periapsis
+\begin{equation}
+v_p = \frac{h}{p} = \frac{\sqrt{\mu}}{p}\sqrt{\frac{2ap}{a+p}}
+\end{equation}
+and for the apoapsis
+\begin{equation}
+v_a = \frac{h}{a} = \frac{\sqrt{\mu}}{a}\sqrt{\frac{2ap}{a+p}}
+\end{equation}
+
+\subsection{Semi-Major Axis}
+We can feed this result back into equation \refpage{eq:phys-geom-energy1}
+\begin{align}
+\epsilon &= \frac{h^2}{2p^2}-\frac{\mu}{p} \nonumber \\
+&= \frac{2ap}{2p^2(a+p)}\mu-\frac{\mu}{p} \nonumber \\
+&= \frac{\mu}{p}\left(\frac{a}{a+p}-1 \right) \nonumber \\
+&= \frac{\mu}{p}\left(\frac{a}{a+p}-\frac{a+p}{a+p} \right) \nonumber \\
+&= \frac{\mu}{p}\left(\frac{a-a-p}{a+p}\right) \nonumber \\
+&= \frac{\mu}{p}\left(\frac{-p}{a+p}\right) \nonumber \\
+&= \frac{-\mu}{a+p}
+\end{align}
+Using equation \refpage{eq:geom3} we can replace the $a+p$ term
+\begin{align}
+\epsilon &= \frac{-\mu}{2A} \nonumber \\
+A &= \frac{-\mu}{2\epsilon}\label{eq:phys-geom5}
+\end{align}
+
+\subsection{Eccentricity}
+
+
