@@ -101,5 +101,65 @@ now we can use equation \refpage{eq:phys-geom5} to replace $A$
 h^2 &= A(1-e^2)\mu \nonumber \\
 &=\frac{-\mu}{2\epsilon}(1-e^2)\mu \nonumber \\
 \frac{2\epsilon h^2}{\mu}&=e^2-1 \nonumber \\
-1+\frac{2\epsilon h^2}{\mu^2}&=e^2
+1+\frac{2\epsilon h^2}{\mu^2}&=e^2 \label{eq:phys-geom8}
 \end{align}
+
+We could now calculate $a$ and $p$ from the energy and angular momentum, by
+first using those to calculate A and e, and then using equation \refpage{eq:geom6}.
+We will not do this here, this is more a note to say it can be done. When we
+look at using initial conditions to calculate various constants, we will return
+to the calculation then.
+
+\section{Eccentricity Vector}
+
+Now we will return to the eccentricity vector given by equation \refpage{eq:gravity5}.
+\begin{equation*}
+\mathbf{e} = \frac{\mathbf{v} \times \mathbf{h}}{\mu} - \hat{\mathbf{r}} 
+\end{equation*}
+In the chapter we introduced the eccentricity vector, we claimed that it's 
+length was the same as the eccentricity, which is why it was called the
+eccentricity vector. At the time we did not show this to be the case, but
+now we have all the machinary needed to show it to be the case.
+
+We will need one result that we haven't yet seen, that is the squared
+magnitude of h, or at least in form we haven't seen yet
+
+\begin{align}
+h^2 &= \mathbf{h}\cdot\mathbf{h} \nonumber \\
+&= \mathbf{h}\cdot(\mathbf{r}\times\mathbf{v})
+\end{align}
+We can use equation \refpage{eq:vec2} to get the result
+\begin{align}
+h^2 &= \mathbf{h}\cdot(\mathbf{r}\times\mathbf{v}) \nonumber \\
+&= \mathbf{r}\cdot(\mathbf{v}\times\mathbf{h}) \label{eq:phys-geom7}
+\end{align}
+Not a very exciting result yet, but it will come into play now.
+Lets now look at the thing we actually want to know, the magnitude of the
+eccentricity vector.
+
+\begin{align}
+e^2 &= \mathbf{e} \cdot \mathbf{e} \nonumber \\
+&= \left( \frac{\mathbf{v} \times \mathbf{h}}{\mu} - \hat{\mathbf{r}} \right) \cdot \left( \frac{\mathbf{v} \times \mathbf{h}}{\mu} - \hat{\mathbf{r}} \right) \nonumber \\
+&= \left( \frac{\mathbf{v} \times \mathbf{h}}{\mu} \right)^2 - 2 \frac{\mathbf{v} \times \mathbf{h}}{\mu} \cdot \hat{\mathbf{r}} + \hat{\mathbf{r}} \cdot \hat{\mathbf{r}} \nonumber \\
+&= \frac{|\mathbf{v} \times \mathbf{h}|^2}{\mu^2} - 2 \frac{(\mathbf{v} \times \mathbf{h})\cdot \hat{\mathbf{r}}}{\mu} + 1 \nonumber \\
+&= \frac{|\mathbf{v} \times \mathbf{h}|^2}{\mu^2} - 2 \frac{(\mathbf{v} \times \mathbf{h})\cdot \mathbf{r}}{\mu r} + 1
+\end{align}
+We can use our previous equation \refpage{eq:phys-geom7} now,
+as well as the fact that $\mathbf{v}$ and $\mathbf{h}$ are perpendicular
+by construction, since $\mathbf{h}=\mathbf{r}\times\mathbf{v}$, so it is
+perpendicular to both $\mathbf{r}$ and $\mathbf{v}$. This means 
+$|\mathbf{v} \times \mathbf{h}|=vh$.
+\begin{align}
+e^2 &= \frac{|\mathbf{v} \times \mathbf{h}|^2}{\mu^2} - 2 \frac{(\mathbf{v} \times \mathbf{h})\cdot \mathbf{r}}{\mu r} + 1 \nonumber \\
+&= \frac{v^2h^2}{\mu^2} - 2 \frac{h^2}{\mu r} + 1 \nonumber \\
+&= \frac{2v^2h^2}{2\mu^2} - 2 \frac{h^2\mu}{\mu^2 r} + 1 \nonumber \\
+&= \frac{2h^2}{\mu^2}\left(\frac{v^2}{2} - \frac{\mu}{r}\right) + 1 \nonumber \\
+\end{align}
+Notice how the part in the brackets is the same as equation \refpage{eq:gravity7},
+this means we can replace the whole bracket with $\epsilon$, leading to the result.
+\begin{equation*}
+e^2= \frac{2\epsilon h^2}{\mu^2} + 1 \nonumber \\
+\end{equation*}
+Which is the exact same form as equation \refpage{eq:phys-geom8},
+this shows that the length of the eccentricity vector is in fact
+the same as the eccentricity.
