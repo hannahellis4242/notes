@@ -16,55 +16,36 @@ In this section we will derive the equations of motion for an object acted upon 
 polar coordinates. To do this we will first consider plane polar coordinates themselves and the derivatives of the position vector within the coordinate system.
 \begin{figure}[h]
   \centering
-\input{./img/PolarCoordinates.tex} 
+\includegraphics[width=0.6\textwidth]{./img/perifocal.png} 
 \caption{Position and unit vectors in plane polar coordinates} \label{fig:PolarCoordinates}
 \end{figure}
 
 \subsection{Polar unit vectors}
-The unit vectors of plane polar coordinates can be determined from the standard unit vectors as
+The unit vectors of plane polar coordinates can be determined from the Cartesian unit vectors as
 \begin{align}
-\hat{\bm{r}} &= \uveci \cos( \theta ) + \uvecj \sin( \theta ) \label{eq:unitrad} \\
-\hat{\bm{\theta}}  &= - \uveci \sin( \theta ) + \uvecj \cos( \theta ) \label{eq:unitangle}
+\hat{\mathbf{r}} &= \uveci \cos( \nu ) + \uvecj \sin( \nu ) \label{eq:unitrad} \\
+\hat{\mathbf{\nu}}  &= - \uveci \sin( \nu ) + \uvecj \cos( \nu ) \label{eq:unitangle}
 \end{align}
-Where $r$ is the distance from the origin to the position or alternatively the length of the position vector, and $\theta$ is the angle between $\uveci$ and $\bm{r}$.
-Since the unit vectors $\hat{\bm{r}}$ and $\hat{\bm{\theta}}$ depend on $\theta$ which changes with time, the unit vectors also change with time. We will begin by looking at the derivative of $\hat{\bm{r}}$ with respect to time.
+Where $r$ is the length of the position vector, and $\nu$ is the angle between $\uveci$ and $\mathbf{r}$.
+Since the unit vectors $\hat{\mathbf{r}}$ and $\hat{\mathbf{\nu}}$ depend on $\nu$ which changes with time, the unit vectors also change with time. We will begin by looking at the derivative of $\hat{\mathbf{r}}$ with respect to time.
 
 \begin{equation} \label{eq:radvel}
-\frac{d {\hat{\bm{r}}}}{d t} = \frac{ d \theta}{d t}\frac{d}{d \theta} \hat{\bm{r}} =  \frac{ d \theta}{d t} \left[ -\uveci \sin( \theta ) + \uvecj \cos( \theta ) \right] = \frac{ d \theta}{d t} \hat{\bm{\theta}}
+\frac{d {\hat{\mathbf{r}}}}{d t} = \frac{ d \nu}{d t}\frac{d}{d \nu} \hat{\mathbf{r}} =  \frac{ d \nu}{d t} \left[ -\uveci \sin( \nu ) + \uvecj \cos( \nu ) \right] = \frac{ d \nu}{d t} \hat{\mathbf{\nu}}
 \end{equation}
 
 where we have used equation \ref{eq:unitangle} to replace the typical Cartesian coordinate unit vectors.
 
 \begin{equation}\label{eq:angvel}
-\frac{d {\hat{\bm{\theta}}}}{d t}=\frac{d \theta}{d t} \frac{d}{dt}{\hat{\bm{\theta}}}=\frac{d \theta}{d t}  \left[ - \uveci \cos( \theta ) - \uvecj \sin( \theta ) \right]=- \frac{d \theta}{d t} \hat{\bm{r}}
+\frac{d {\hat{\mathbf{\nu}}}}{d t}=\frac{d \nu}{d t} \frac{d}{dt}{\hat{\mathbf{\nu}}}=\frac{d \nu}{d t}  \left[ - \uveci \cos( \nu ) - \uvecj \sin( \nu ) \right]=- \frac{d \nu}{d t} \hat{\mathbf{r}}
 \end{equation}
 
- Since $\frac{d {\hat{\bm{r}}}}{d t}$ too depends on $\theta$ so is also time dependent.
+ Since $\frac{d {\hat{\mathbf{r}}}}{d t}$ too depends on $\nu$ so is also time dependent.
 
 \begin{equation} \label{eq:radaccel}
-\frac{d^2 {\hat{\bm{r}}}}{d t^2} = \frac{d}{dt}\left[ \frac{ d \theta}{d t} \hat{\bm{\theta}} \right]=\frac{d^2 \theta}{d t^2}\hat{\bm{\theta}}+\frac{d \theta}{d t} \frac{d \hat{\bm{\theta}}}{dt}=\frac{d^2 \theta}{d t^2}\hat{\bm{\theta}}-\left(\frac{d \theta}{d t} \right)^2  \hat{\bm{r}} 
+\frac{d^2 {\hat{\mathbf{r}}}}{d t^2} = \frac{d}{dt}\left[ \frac{ d \nu}{d t} \hat{\mathbf{\nu}} \right]=\frac{d^2 \nu}{d t^2}\hat{\mathbf{\nu}}+\frac{d \nu}{d t} \frac{d \hat{\mathbf{\nu}}}{dt}=\frac{d^2 \nu}{d t^2}\hat{\mathbf{\nu}}-\left(\frac{d \nu}{d t} \right)^2  \hat{\mathbf{r}} 
 \end{equation}
 
-\begin{framed}
-\subsubsection*{Polar unit vectors summary}
-The polar coordinate unit vectors are
-\begin{align*}
-\hat{\bm{r}} &= \uveci \cos( \theta ) + \uvecj \sin( \theta ) \\
-\hat{\bm{\theta}}  &= - \uveci \sin( \theta ) + \uvecj \cos( \theta )
-\end{align*}
-With the first derivatives being
-\begin{align*}
-\frac{d {\hat{\bm{r}}}}{d t} &=  \omega \hat{\bm{\theta}} \\
-\frac{d {\hat{\bm{\theta}}}}{d t} &=-\omega \hat{\bm{r}}
-\end{align*}
-And the second derivative of $\hat{\bm{r}}$ being
-\begin{equation*}
-\frac{d^2 {\hat{\bm{r}}}}{d t^2} =\frac{d \omega}{d t}\hat{\bm{\theta}}-\omega^2  \hat{\bm{r}} 
-\end{equation*}
-with $\omega = \frac{d \theta}{d t}$
-\end{framed}
-
-\subsection{Velocity and acceleration in polar coordinates}
+\subsection{Velocity and Acceleration}
 Here we will calculate the acceleration in terms of the polar unit vectors. 
 
 \subsubsection{Position}
@@ -72,63 +53,47 @@ Starting with the position vector
 \begin{equation}
 \textbf{r}= r \hat{\textbf{r}}
 \end{equation}
-This is the length of the position vector in the direction of $\hat{\bm{r}}$.
+This is the length of the position vector in the direction of $\hat{\mathbf{r}}$.
 
 \subsubsection{Velocity}
 The first derivative will be the velocity of the position vector in terms of the polar unit vectors
 \begin{equation}\label{eq:vel}
-\frac{d \bm{r}}{d t} = \frac{d r}{d t} \hat{\bm{r}} + r \frac{d \hat{\bm{r}}}{d t}=\frac{d r}{d t} \hat{\bm{r}} + r \omega \hat{\bm{\theta}}
+\frac{d \mathbf{r}}{d t} = \frac{d r}{d t} \hat{\mathbf{r}} + r \frac{d \hat{\mathbf{r}}}{d t}=\frac{d r}{d t} \hat{\mathbf{r}} + r \omega \hat{\mathbf{\nu}}
 \end{equation}
 The velocity is the sum of the radial velocity in the radial direction $\dot{r}$ and the angular part of the velocity $r \omega$ in the angular direction.
 
 \subsubsection{Acceleration}
 
 \begin{align}\label{eq:acceleration}
-\frac{ d^2 \bm{r}}{ d t^2} &= \frac{ d^2 r}{d t^2} \hat{\bm{r}} + \frac{d r}{d t} \frac{d \hat{\bm{r}}}{d t} +\frac{d r}{d t} \omega \hat{\bm{\theta}} +r \frac{d \omega}{d t} \hat{\bm{\theta}}+r \omega \frac{d \hat{\bm{\theta}}}{d t} \nonumber \\
-&=  \frac{ d^2 r}{d t^2} \hat{\bm{r}} + \frac{d r}{d t} \omega \hat{\bm{\theta}} +\frac{d r}{d t} \omega \hat{\bm{\theta}} +r \frac{d \omega}{d t} \hat{\bm{\theta}}-r \omega^2 \hat{\bm{r}} \nonumber \\
-&=\left[  \frac{ d^2 r}{d t^2} -r \omega^2 \right] \hat{\bm{r}} + \left[ 2 \frac{d r}{d t} \omega + r \frac{ d \omega}{d t} \right] \hat{\bm{\theta}}
+\frac{ d^2 \mathbf{r}}{ d t^2} &= \frac{ d^2 r}{d t^2} \hat{\mathbf{r}} + \frac{d r}{d t} \frac{d \hat{\mathbf{r}}}{d t} +\frac{d r}{d t} \omega \hat{\mathbf{\nu}} +r \frac{d \omega}{d t} \hat{\mathbf{\nu}}+r \omega \frac{d \hat{\mathbf{\nu}}}{d t} \nonumber \\
+&=  \frac{ d^2 r}{d t^2} \hat{\mathbf{r}} + \frac{d r}{d t} \omega \hat{\mathbf{\nu}} +\frac{d r}{d t} \omega \hat{\mathbf{\nu}} +r \frac{d \omega}{d t} \hat{\mathbf{\nu}}-r \omega^2 \hat{\mathbf{r}} \nonumber \\
+&=\left[  \frac{ d^2 r}{d t^2} -r \omega^2 \right] \hat{\mathbf{r}} + \left[ 2 \frac{d r}{d t} \omega + r \frac{ d \omega}{d t} \right] \hat{\mathbf{\nu}}
 \end{align}
-
-\begin{framed}
-\subsubsection*{Acceleration in polar coordinates summary}
-The position vector
-\begin{equation*}
-\bm{r}=r \hat{\bm{r}}
-\end{equation*}
-Velocity
-\begin{equation*}\label{eq:vel}
-\frac{d \bm{r}}{d t} =\frac{d r}{d t} \hat{\bm{r}} + r \omega \hat{\bm{\theta}}
-\end{equation*}
-Acceleration
-\begin{equation*}
-\frac{ d^2 \bm{r}}{ d t^2} =\left[  \frac{ d^2 r}{d t^2} -r \omega^2 \right] \hat{\bm{r}} + \left[ 2 \frac{d r}{d t} \omega + r \frac{ d \omega}{d t} \right] \hat{\bm{\theta}}
-\end{equation*}
-\end{framed}
 
 \section{Gravity}
 \subsection{Gravity as a central force}
 The force between two particles a distance $r$ apart with mass $M$ and $m$ respectivly is given by
 \begin{equation}
-\bm{F}=-\frac{G M m}{r^2} \hat{\bm{r}}
+\mathbf{F}=-\frac{G M m}{r^2} \hat{\mathbf{r}}
 \end{equation}
 
 The acceleration on the particle of mass $m$ due to the force of gravity between the two particles is
 \begin{equation}
-\ddot{\bm{r}} =\frac{ \bm{F} }{m}=-\frac{GM}{r^2} \hat{\bm{r}}
+\ddot{\mathbf{r}} =\frac{ \mathbf{F} }{m}=-\frac{GM}{r^2} \hat{\mathbf{r}}
 \end{equation}
 Using equation \ref{eq:acceleration} we can split the acceleration into radial and angular parts
 \begin{align}
 -\frac{GM}{r^2} &=\ddot{r} - r \omega^2 \label{eq:radialAcceleration} \\
-0 &=r \ddot{\theta} + 2 \dot{r} \dot{\theta} \label{eq:angularAcceleration}
+0 &=r \ddot{\nu} + 2 \dot{r} \dot{\nu} \label{eq:angularAcceleration}
 \end{align}
 
 \section{Angular Momentum}
 The angular momentum of a particle is given by
 \begin{align}
-\bm{L}&=\bm{r} \times \bm{p} \nonumber \\
-&=m \bm{r}\times \frac{d \bm{r}}{d t} \nonumber \\
-&=m r \hat{\bm{r}} \times \left[ \dot{r} \hat{\bm{r}} + r \omega \hat{\bm{\theta}} \right] \nonumber \\
-&=m \left[ r \dot{r}\hat{\bm{r}} \times \hat{\bm{r}} + r^2 \omega \hat{\bm{r}} \times\hat{\bm{\theta}} \right] \nonumber \\
+\mathbf{L}&=\mathbf{r} \times \mathbf{p} \nonumber \\
+&=m \mathbf{r}\times \frac{d \mathbf{r}}{d t} \nonumber \\
+&=m r \hat{\mathbf{r}} \times \left[ \dot{r} \hat{\mathbf{r}} + r \omega \hat{\mathbf{\nu}} \right] \nonumber \\
+&=m \left[ r \dot{r}\hat{\mathbf{r}} \times \hat{\mathbf{r}} + r^2 \omega \hat{\mathbf{r}} \times\hat{\mathbf{\nu}} \right] \nonumber \\
 &=m r^2 \omega \uveck \label{eq:AngularMomentum}
 \end{align}
 
@@ -162,8 +127,8 @@ Which means that the angular momentum is constant as seen before.
 The potential energy is the work done in moving the particle from a radius of $\infty$ to $r$.
 So the work done is given by
 \begin{align}
-U(r)&=\int_{\infty}^{r} \bm{F}(r') \cdot d\bm{r}'  \nonumber \\
-U(r)&=\int_{\infty}^{r} -\frac{GMm}{r'^2} \hat{\bm{r}} \cdot dr' \hat{\bm{r}}  \nonumber \\
+U(r)&=\int_{\infty}^{r} \mathbf{F}(r') \cdot d\mathbf{r}'  \nonumber \\
+U(r)&=\int_{\infty}^{r} -\frac{GMm}{r'^2} \hat{\mathbf{r}} \cdot dr' \hat{\mathbf{r}}  \nonumber \\
 U(r)&=-GMm\int_{\infty}^{r} \frac{dr'}{r'^2} \nonumber \\
 U(r)&=-GMm \left[ \frac{-1}{r'} \right]_{\infty}^{r} \nonumber \\
 U(r)&=GMm \left[ \frac{1}{\infty} - \frac{1}{r} \right] \nonumber \\
@@ -173,11 +138,11 @@ U(r)&=- \frac{GMm}{r} \label{eq:potentialEnergy}
 \subsection{Kinetic Energy}
 The kinetic energy of a particle is given by
 \begin{equation}
-T(\dot{r})=\frac{1}{2}m\dot{\bm{r}}\cdot\dot{\bm{r}} \label{eq:KineticEnergy}
+T(\dot{r})=\frac{1}{2}m\dot{\mathbf{r}}\cdot\dot{\mathbf{r}} \label{eq:KineticEnergy}
 \end{equation}
 using eqation \ref{eq:vel} gives 
 \begin{align}
-T(\dot{r})&=\frac{1}{2}m\left[ \dot{r}\hat{\bm{r}}+r\omega\hat{\bm{\theta}}\right]\cdot\left[ \dot{r}\hat{\bm{r}}+r\omega\hat{\bm{\theta}}\right] \nonumber \\
+T(\dot{r})&=\frac{1}{2}m\left[ \dot{r}\hat{\mathbf{r}}+r\omega\hat{\mathbf{\nu}}\right]\cdot\left[ \dot{r}\hat{\mathbf{r}}+r\omega\hat{\mathbf{\nu}}\right] \nonumber \\
 &=\frac{1}{2}m \dot{r}^2 + \frac{1}{2}mr^2 \omega^2 \label{eq:Gravity:KineticEnergy}
 \end{align}
 
@@ -253,49 +218,49 @@ next we introduce an $\omega$ by chain rule
 \begin{align}
 \frac{dr}{dt}
 &= -r^2\frac{du}{dt}\nonumber \\
-\frac{dr}{dt} &= -r^2\frac{du}{d\theta}\frac{d\theta}{dt} \nonumber \\
-&= -r^2\omega\frac{du}{d\theta} \nonumber
+\frac{dr}{dt} &= -r^2\frac{du}{d\nu}\frac{d\nu}{dt} \nonumber \\
+&= -r^2\omega\frac{du}{d\nu} \nonumber
 \end{align}
 
 And using the magnitude of angular momentum\footnote{equation \ref{eq:AngularMomentumScalar}} $l=mr^2\omega$ or rearranging $\omega = \frac{l}{mr^2}$
 
 \begin{align}
-\frac{dr}{dt}&= -r^2\omega\frac{du}{d\theta} \nonumber \\
-\frac{dr}{dt}&= -r^2\frac{l}{mr^2}\frac{du}{d\theta} \nonumber \\
-\frac{dr}{dt}&= -\frac{l}{m}\frac{du}{d\theta} \nonumber \\
-\frac{dr}{dt}&= -\frac{l}{m}\frac{du}{d\theta}
+\frac{dr}{dt}&= -r^2\omega\frac{du}{d\nu} \nonumber \\
+\frac{dr}{dt}&= -r^2\frac{l}{mr^2}\frac{du}{d\nu} \nonumber \\
+\frac{dr}{dt}&= -\frac{l}{m}\frac{du}{d\nu} \nonumber \\
+\frac{dr}{dt}&= -\frac{l}{m}\frac{du}{d\nu}
 \end{align}
 
 Differentiating again with respect to time gives
 
 \begin{align}
-\frac{dr^2}{dt^2}&= -\frac{l}{m}\frac{d}{dt}\frac{du}{d\theta} \nonumber \\
-&= -\frac{l}{m}\frac{d\theta}{dt}\frac{d}{d\theta}\frac{du}{d\theta}\nonumber \\
-&= -\frac{l}{m}\omega\frac{d^2u}{d\theta^2}
+\frac{dr^2}{dt^2}&= -\frac{l}{m}\frac{d}{dt}\frac{du}{d\nu} \nonumber \\
+&= -\frac{l}{m}\frac{d\nu}{dt}\frac{d}{d\nu}\frac{du}{d\nu}\nonumber \\
+&= -\frac{l}{m}\omega\frac{d^2u}{d\nu^2}
 \end{align}
 
 We can substitute the magnitude of angular momentum\footnote{equation \ref{eq:AngularMomentumScalar}} $l=mr^2\omega$ again to get
 
 \begin{align}
-\frac{dr^2}{dt^2}&= -\frac{l}{m}\omega\frac{d^2u}{d\theta^2} \nonumber \\
-&= -\frac{mr^2\omega}{m}\omega\frac{d^2u}{d\theta^2} \nonumber \\
-&= -r^2\omega^2\frac{d^2u}{d\theta^2}
+\frac{dr^2}{dt^2}&= -\frac{l}{m}\omega\frac{d^2u}{d\nu^2} \nonumber \\
+&= -\frac{mr^2\omega}{m}\omega\frac{d^2u}{d\nu^2} \nonumber \\
+&= -r^2\omega^2\frac{d^2u}{d\nu^2}
 \end{align}
 
 We can now substitute this into the radial part of the acceleration\footnote{equation \ref{eq:radialAcceleration}}
 
 \begin{align}
 -\frac{GM}{r^2}&= \frac{ d^2 r}{d t^2} -r \omega^2  \nonumber \\
-&=-r^2\omega^2\frac{d^2u}{d\theta^2} -r\omega^2 \nonumber \\
-&=-r^2\omega^2\left[\frac{d^2u}{d\theta^2}+\frac{1}{r}\right] \nonumber \\
-GM&=r^4\omega^2\left[\frac{d^2u}{d\theta^2}+\frac{1}{r}\right]
+&=-r^2\omega^2\frac{d^2u}{d\nu^2} -r\omega^2 \nonumber \\
+&=-r^2\omega^2\left[\frac{d^2u}{d\nu^2}+\frac{1}{r}\right] \nonumber \\
+GM&=r^4\omega^2\left[\frac{d^2u}{d\nu^2}+\frac{1}{r}\right]
 \end{align}
 
 Next we recall that $u=\frac{1}{r}$ and that $\frac{l}{m}=r^2\omega$ and substitute these in
 
 \begin{align}
-GM&=\left(\frac{l}{m}\right)^2\left[\frac{d^2u}{d\theta^2}+u\right] \nonumber\\
-\frac{d^2u}{d\theta^2}+u &=\frac{GMm^2}{l^2}
+GM&=\left(\frac{l}{m}\right)^2\left[\frac{d^2u}{d\nu^2}+u\right] \nonumber\\
+\frac{d^2u}{d\nu^2}+u &=\frac{GMm^2}{l^2}
 \end{align}
 
 To simplify this equation we will use $\alpha=\frac{GMm^2}{l^2}$
@@ -304,7 +269,7 @@ To simplify this equation we will use $\alpha=\frac{GMm^2}{l^2}$
 
 The direct solution to
 \begin{equation}
-\frac{d^2u}{d\theta^2}+u =\alpha
+\frac{d^2u}{d\nu^2}+u =\alpha
 \end{equation}
 
 is $u=\alpha$
@@ -312,17 +277,17 @@ is $u=\alpha$
 However because there is also a function that results in zero, we must include that
 
 \begin{align}
-\frac{d^2u}{d\theta^2}+u &=0 \nonumber \\
-\frac{d^2u}{d\theta^2} &=-u
+\frac{d^2u}{d\nu^2}+u &=0 \nonumber \\
+\frac{d^2u}{d\nu^2} &=-u
 \end{align}
 
-we can take the solution that $u=c\cos\theta$ which gives the general overall solution of
+we can take the solution that $u=c\cos\nu$ which gives the general overall solution of
 
 \begin{equation}
-u(\theta)=\alpha + c \cos \theta
+u(\nu)=\alpha + c \cos \nu
 \end{equation}
 
-We can pick an initial condition when $\theta=0$ the body is at periapsis or $r=p=A(1-e)$ which gives $u=\frac{1}{A(1-e)}$ (see the ellipse notes for $p=A(1-e)$)
+We can pick an initial condition when $\nu=0$ the body is at periapsis or $r=p=A(1-e)$ which gives $u=\frac{1}{A(1-e)}$ (see the ellipse notes for $p=A(1-e)$)
 
 
 \begin{align}
@@ -331,7 +296,7 @@ We can pick an initial condition when $\theta=0$ the body is at periapsis or $r=
 \end{align}
 
 
-we could similarly hae picked the condition that when $\theta=\pi$ the body is at apoapsis or $r=a=A(1+e)$ which gives $u=\frac{1}{A(1+e)}$ (see ellipse notes for $a=A(1+e)$)
+we could similarly hae picked the condition that when $\nu=\pi$ the body is at apoapsis or $r=a=A(1+e)$ which gives $u=\frac{1}{A(1+e)}$ (see ellipse notes for $a=A(1+e)$)
 
 
 \begin{align}
@@ -363,14 +328,14 @@ Now that we have $c$ we can use this to determine $\alpha$ in terms of $A$ and $
 So feeding all this back in we have
 
 \begin{align}
-u(\theta)&=\alpha + c \cos \theta \nonumber \\
-&=\frac{1}{A(1-e^2)} + \frac{e}{A(1-e^2)} \cos \theta \nonumber \\
-&=\frac{1+e\cos\theta}{A(1-e^2)}
+u(\nu)&=\alpha + c \cos \nu \nonumber \\
+&=\frac{1}{A(1-e^2)} + \frac{e}{A(1-e^2)} \cos \nu \nonumber \\
+&=\frac{1+e\cos\nu}{A(1-e^2)}
 \end{align}
 
 Now we have a simple form for $u$ we can recall that we chose $u=\frac{1}{r}$, so
 \begin{equation}
-r=\frac{1+e\cos\theta}{A(1-e^2)}
+r=\frac{1+e\cos\nu}{A(1-e^2)}
 \end{equation}
 which is the equation for a ellipse\footnote{equation \ref{eq:PolarElipse}}.
 
