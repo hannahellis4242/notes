@@ -51,7 +51,7 @@ Here we will calculate the acceleration in terms of the polar unit vectors.
 \subsubsection{Position}
 Starting with the position vector
 \begin{equation}
-\textbf{r}= r \hat{\textbf{r}}
+\textbf{r}= r \hat{\textbf{r}} \label{eq:perifocal-position}
 \end{equation}
 This is the length of the position vector in the direction of $\hat{\mathbf{r}}$.
 
@@ -60,7 +60,7 @@ The first derivative will be the velocity of the position vector in terms of the
 \begin{equation}\label{eq:vel}
 \frac{d \mathbf{r}}{d t} = \frac{d r}{d t} \hat{\mathbf{r}} + r \frac{d \hat{\mathbf{r}}}{d t}=\frac{d r}{d t} \hat{\mathbf{r}} + r \omega \hat{\mathbf{\nu}}
 \end{equation}
-The velocity is the sum of the radial velocity in the radial direction $\dot{r}$ and the angular part of the velocity $r \omega$ in the angular direction.
+The velocity is the sum of the radial velocity in the radial direction $\dot{r}$ and the angular part of the velocity $r \omega$\footnote{$\omega$ is the angular velocity or $\frac{d \nu}{dt}$} in the angular direction.
 
 \subsubsection{Acceleration}
 
@@ -70,7 +70,71 @@ The velocity is the sum of the radial velocity in the radial direction $\dot{r}$
 &=\left[  \frac{ d^2 r}{d t^2} -r \omega^2 \right] \hat{\mathbf{r}} + \left[ 2 \frac{d r}{d t} \omega + r \frac{ d \omega}{d t} \right] \hat{\mathbf{\nu}}
 \end{align}
 
-\section{Gravity}
+\section{Acceleration under Gravity}
+
+The acceleration due to the gravitational pull of the central body is given by equation \refpage{eq:gravity2}.
+We can now use this with the earlier equation \refpage{eq:acceleration} for acceleration in the perifocal coordinate system.
+
+\begin{equation}
+\left[\frac{ d^2 r}{d t^2} -r \omega^2 \right] \hat{\mathbf{r}} + \left[ 2 \frac{d r}{d t} \omega + r \frac{ d \omega}{d t} \right] \hat{\mathbf{\nu}} = -\frac{\mu}{r^2} \hat{\mathbf{r}} \label{eq:perifocal1}
+\end{equation}
+
+We can split equation \ref{eq:perifocal1} into radial and angular parts
+\begin{align}
+\frac{ d^2 r}{d t^2} -r \omega^2 &= -\frac{\mu}{r^2} \hat{\mathbf{r}} \nonumber \\
+2 \frac{d r}{d t} \omega + r \frac{ d \omega}{d t} &= 0 \label{eq:perifocal2}
+\end{align}
+
+
+\subsection{Angular Momentum}
+
+We've seen before the specific angular momentum is given by equation \refpage{eq:central-angular-momentum},
+we can now use equation \refpage{eq:perifocal-position} and equation \refpage{eq:vel} to obtain the form of the specific angular momentum in
+terms of perifocal coordinates.
+\begin{align}
+\mathbf{h} &= \mathbf{r} \times \mathbf{v} \nonumber \\
+&= r \hat{\mathbf{r}} \times \left(\dot{r} \hat{\mathbf{r}} + r \omega \hat{\mathbf{\nu}}\right) \nonumber \\
+&=  r \dot{r} \hat{\mathbf{r}} \times \hat{\mathbf{r}} + r^2 \omega \hat{\mathbf{r}} \times\hat{\mathbf{\nu}}\nonumber \\
+&=  r^2 \omega \uveck
+\end{align}
+Where we have used the fact that a vector product of any vector with itself will be zero and that $\hat{\mathbf{r}} \times\hat{\mathbf{\nu}} = \uveck$.
+$uveck$ is a vector that points normal to the orbital plane so that $\hat{\mathbf{r}}$ and $\hat{\mathbf{\nu}}$ form a right handed coordinate system.
+
+\subsubsection{Conservation of Angular Momentum}
+
+We already know that angular momentum is conserved for a central force in general, but we can now show that the angular part of equation \refpage{eq:perifocal2} 
+also leads to the conservation of angular momentum.
+\begin{align}
+\frac{dh}{dt}&=\frac{d}{dt}(r^2 \omega)\nonumber \\
+&=\frac{dr^2}{dt}\omega + r^2 \frac{d\omega}{dt} \nonumber \\
+&=2r\frac{dr}{dt}\omega + r^2 \frac{d\omega}{dt} \nonumber \\
+&=r\left(2\frac{dr}{dt}\omega + r \frac{d\omega}{dt}\right) \nonumber \\
+&=0
+\end{align}
+Note that the term in the brackets is exactly what we had for the angular part of equation \ref{eq:perifocal2}.
+This then shows the same result as before, that under a central force angular momentum is conserved.
+
+\subsection{Energy}
+
+We have seen before that the specific total energy is given by equation \refpage{eq:gravity7}, as we did before with specific angular momentum,
+we will use equation \refpage{eq:vel} to replace terms
+\begin{align}
+\epsilon &= \frac{v^2}{2} - \frac{\mu}{r} \nonumber \\
+&=\frac{\mathbf{v}\cdot\mathbf{v}}{2}- \frac{\mu}{r} \nonumber \\
+&=\frac{\dot{r}^2 \hat{\mathbf{r}}^2 +2r\omega\dot{r} \hat{\mathbf{r}} \cdot \hat{\mathbf{\nu}}+ r^2 \omega^2 \hat{\mathbf{\nu}}^2}{2}- \frac{\mu}{r} \nonumber \\
+&=\frac{\dot{r}^2 + r^2 \omega^2}{2}- \frac{\mu}{r}
+\end{align}
+Next we can use $h^2 = r^4 \omega^2$ to get rid of the angular velocity term.
+\begin{align}
+\epsilon &=\frac{\dot{r}^2 + r^2 \omega^2}{2}- \frac{\mu}{r} \nonumber \\
+&=\frac{\dot{r}^2 + r^2 \frac{h^2}{r^4}}{2}- \frac{\mu}{r} \nonumber \\
+&=\frac{\dot{r}^2}{2} + \frac{h^2}{2r^2}- \frac{\mu}{r}
+\end{align}
+The last two terms together are often called the modified potential, since they depend only on $r$, since $h$ is a constant.
+\subsubsection{Conservation}
+
+
+%Stuff to review vvvvvv
 \subsection{Gravity as a central force}
 The force between two particles a distance $r$ apart with mass $M$ and $m$ respectivly is given by
 \begin{equation}
@@ -122,7 +186,7 @@ The part inside the brackets is the angular acceleration which for a central for
 \end{align}
 Which means that the angular momentum is constant as seen before.
 
-\section{Energy}
+
 \subsection{Potential Energy}
 The potential energy is the work done in moving the particle from a radius of $\infty$ to $r$.
 So the work done is given by
