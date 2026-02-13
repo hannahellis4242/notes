@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   width="400"
+   height="400"
+   id="svg20"
+   sodipodi:docname="diagram.svg"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   inkscape:export-filename="diagram.png"
+   inkscape:export-xdpi="300"
+   inkscape:export-ydpi="300"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview20"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.0445946"
+     inkscape:cx="374.30789"
+     inkscape:cy="370"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg20" />
+  <defs
+     id="defs1">
+    <clipPath
+       id="aksMRmsmSylo">
+      <path
+         fill="none"
+         stroke="none"
+         d="M 0,0 H 748 V 740 H 0 Z"
+         id="path1" />
+    </clipPath>
+  </defs>
+  <g
+     clip-path="url(#aksMRmsmSylo)"
+     id="g20"
+     transform="translate(-205.66039,0.54619067)">
+    <g
+       id="g19">
+      <rect
+         fill="#ffffff"
+         stroke="none"
+         x="0"
+         y="0"
+         width="748"
+         height="741"
+         fill-opacity="1"
+         id="rect1" />
+      <path
+         fill="#006400"
+         stroke="none"
+         paint-order="stroke fill markers"
+         d="m 385.67402,344.27865 c 0,-15.63997 -7.77982,-30.25535 -20.75404,-38.9891 l -26.24596,38.9891 z"
+         fill-opacity="0.0980392"
+         id="path2" />
+      <path
+         fill="none"
+         stroke="#006400"
+         paint-order="fill stroke markers"
+         d="m 385.67402,344.27865 c 0,-15.63997 -7.77982,-30.25535 -20.75404,-38.9891 l -26.24596,38.9891 z"
+         stroke-opacity="0.698039"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         stroke-width="2.5"
+         id="path3" />
+      <text
+         fill="#006400"
+         stroke="none"
+         font-family="geogebra-sans-serif, sans-serif"
+         font-size="16px"
+         font-style="normal"
+         font-weight="normal"
+         text-decoration="normal"
+         x="364"
+         y="337"
+         text-anchor="start"
+         dominant-baseline="alphabetic"
+         fill-opacity="1"
+         id="text3">ν</text>
+      <path
+         fill="#808080"
+         stroke="none"
+         paint-order="stroke fill markers"
+         fill-rule="evenodd"
+         d="m 513.6521,344.27865 v -21.2132 h -21.2132 v 21.2132 h 21.2132"
+         fill-opacity="0.0980392"
+         id="path4" />
+      <path
+         fill="none"
+         stroke="#808080"
+         paint-order="fill stroke markers"
+         d="m 513.6521,344.27865 v -21.2132 h -21.2132 v 21.2132 h 21.2132"
+         stroke-opacity="0.698039"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         stroke-width="2.5"
+         id="path5" />
+      <path
+         fill="#808080"
+         stroke="none"
+         paint-order="stroke fill markers"
+         fill-rule="evenodd"
+         d="m 513.6521,239.98324 h -21.2132 v 21.2132 h 21.2132 v -21.2132"
+         fill-opacity="0.0980392"
+         id="path6" />
+      <path
+         fill="none"
+         stroke="#808080"
+         paint-order="fill stroke markers"
+         d="m 513.6521,239.98324 h -21.2132 v 21.2132 h 21.2132 v -21.2132"
+         stroke-opacity="0.698039"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         stroke-width="2.5"
+         id="path7" />
+      <path
+         fill="none"
+         stroke="#000000"
+         paint-order="fill stroke markers"
+         d="m 434.11661,344.27865 -0.0523,-4.68622 -0.15716,-4.69342 -0.26289,-4.70786 -0.37008,-4.72964 -0.47932,-4.7589 -0.59125,-4.79585 -0.70653,-4.84074 -0.82587,-4.89386 -0.95003,-4.95561 -1.07983,-5.02644 -1.21618,-5.10686 -1.36006,-5.19746 -1.51258,-5.29899 -1.67495,-5.41223 -1.84856,-5.53814 -2.03498,-5.6778 -2.23597,-5.83246 -2.45354,-6.00357 -2.69004,-6.19279 -2.94814,-6.4021 -3.23094,-6.63371 -3.54212,-6.8903 -3.8859,-7.17493 -4.26735,-7.49127 -4.69244,-7.84359 -5.16832,-8.23706 -5.70357,-8.67779 -6.30863,-9.1732 -6.99618,-9.73224 -3.78588,-5.0986 -3.99597,-5.26735 -4.22139,-5.44756 -4.46364,-5.64029 -4.72441,-5.84671 -5.0056,-6.06815 -5.30937,-6.30609 -5.63815,-6.56219 -5.99472,-6.83839 -6.38221,-7.13682 -6.80426,-7.45997 -7.26498,-7.810648 -7.76916,-8.192122 -8.32231,-8.608135 -8.93084,-9.063038 -9.60225,-9.561901 -5.07491,-4.983355 -5.27039,-5.127298 -5.47646,-5.278574 -5.69388,-5.437699 -5.92347,-5.605234 -6.16615,-5.781788 -6.42292,-5.968031 -6.69485,-6.164697 -6.98317,-6.3725864 -7.28917,-6.59258427 -7.6143,-6.82566253 m -59.03653,754.4509732 5.22589,-4.4181 5.09713,-4.3276 4.97283,-4.24011 9.58956,-8.22909 9.14095,-7.91202 8.72143,-7.61469 8.32857,-7.33546 7.96017,-7.0729 7.6143,-6.82566 7.28917,-6.59258 6.98317,-6.37259 6.69485,-6.1647 6.42292,-5.96803 6.16615,-5.78179 5.92347,-5.60523 5.69388,-5.4377 5.47646,-5.27857 5.27039,-5.1273 5.07491,-4.98335 9.60225,-9.56191 8.93084,-9.06303 8.32231,-8.60814 7.76916,-8.19212 7.26498,-7.81065 6.80426,-7.45997 6.38221,-7.13682 5.99472,-6.83838 5.63815,-6.5622 5.30937,-6.30609 5.0056,-6.06815 4.72441,-5.84671 4.46364,-5.64029 4.22139,-5.44756 3.99597,-5.26734 3.78588,-5.0986 6.99618,-9.73225 6.30863,-9.1732 5.70357,-8.67779 5.16832,-8.23706 4.69244,-7.84359 4.26735,-7.49126 3.8859,-7.17494 3.54212,-6.89029 3.23094,-6.63372 2.94814,-6.40209 2.69004,-6.1928 2.45354,-6.00357 2.23597,-5.83246 2.03498,-5.67779 1.84856,-5.53814 1.67495,-5.41224 1.51258,-5.29899 1.36006,-5.19746 1.21618,-5.10686 1.07983,-5.02644 0.95003,-4.95561 0.82587,-4.89386 0.70653,-4.84074 0.59125,-4.79584 0.47932,-4.75891 0.37008,-4.72963 0.26289,-4.70786 0.15716,-4.69342 0.0523,-4.68623"
+         stroke-opacity="0.698039"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         stroke-width="2.5"
+         id="path8" />
+      <path
+         fill="none"
+         stroke="#ff0000"
+         paint-order="fill stroke markers"
+         d="M 513.6521,746 V -5"
+         stroke-opacity="0.698039"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         stroke-width="2.5"
+         id="path9" />
+      <text
+         fill="#ff0000"
+         stroke="none"
+         font-family="geogebra-sans-serif, sans-serif"
+         font-size="16px"
+         font-style="normal"
+         font-weight="normal"
+         text-decoration="normal"
+         x="520"
+         y="84"
+         text-anchor="start"
+         dominant-baseline="alphabetic"
+         fill-opacity="1"
+         id="text9">directrix</text>
+      <path
+         fill="none"
+         stroke="#000000"
+         paint-order="fill stroke markers"
+         d="M -5,344.27865 H 753"
+         stroke-opacity="0.698039"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         stroke-width="2.5"
+         id="path10" />
+      <text
+         fill="#0000ff"
+         stroke="none"
+         font-family="geogebra-sans-serif, sans-serif"
+         font-size="16px"
+         font-style="normal"
+         font-weight="normal"
+         text-decoration="normal"
+         x="328"
+         y="237"
+         text-anchor="start"
+         dominant-baseline="alphabetic"
+         fill-opacity="1"
+         id="text10">l</text>
+      <path
+         fill="none"
+         stroke="#0000ff"
+         paint-order="fill stroke markers"
+         d="M 338.67402,344.27865 V 134.30496"
+         stroke-opacity="0.698039"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         stroke-width="2.5"
+         id="path11" />
+      <text
+         fill="#000000"
+         stroke="none"
+         font-family="geogebra-sans-serif, sans-serif"
+         font-size="16px"
+         font-style="normal"
+         font-weight="normal"
+         text-decoration="normal"
+         x="372"
+         y="276"
+         text-anchor="start"
+         dominant-baseline="alphabetic"
+         fill-opacity="1"
+         id="text11">r</text>
+      <path
+         fill="none"
+         stroke="#000000"
+         paint-order="fill stroke markers"
+         d="M 338.67402,344.27865 408.88169,239.98324"
+         stroke-opacity="0.698039"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         stroke-width="2.5"
+         id="path12" />
+      <text
+         fill="#000000"
+         stroke="none"
+         font-family="geogebra-sans-serif, sans-serif"
+         font-size="16px"
+         font-style="normal"
+         font-weight="normal"
+         text-decoration="normal"
+         x="466"
+         y="233"
+         text-anchor="start"
+         dominant-baseline="alphabetic"
+         fill-opacity="1"
+         id="text12">d</text>
+      <path
+         fill="none"
+         stroke="#000000"
+         paint-order="fill stroke markers"
+         d="M 408.88169,239.98324 H 513.6521"
+         stroke-opacity="0.698039"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         stroke-width="2.5"
+         id="path13" />
+      <path
+         fill="#6e6d73"
+         stroke="none"
+         paint-order="stroke fill markers"
+         d="m 438.11661,344.27865 c 0,2.20914 -1.79086,4 -4,4 -2.20914,0 -4,-1.79086 -4,-4 0,-2.20914 1.79086,-4 4,-4 2.20914,0 4,1.79086 4,4 z"
+         fill-opacity="1"
+         id="path14" />
+      <path
+         fill="none"
+         stroke="#000000"
+         paint-order="fill stroke markers"
+         d="m 438.11661,344.27865 c 0,2.20914 -1.79086,4 -4,4 -2.20914,0 -4,-1.79086 -4,-4 0,-2.20914 1.79086,-4 4,-4 2.20914,0 4,1.79086 4,4 z"
+         stroke-opacity="1"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path15" />
+      <text
+         fill="#6e6d73"
+         stroke="none"
+         font-family="geogebra-sans-serif, sans-serif"
+         font-size="16px"
+         font-style="normal"
+         font-weight="normal"
+         text-decoration="normal"
+         x="443"
+         y="371"
+         text-anchor="start"
+         dominant-baseline="alphabetic"
+         fill-opacity="1"
+         id="text15">p</text>
+      <path
+         fill="#000000"
+         stroke="none"
+         paint-order="stroke fill markers"
+         d="m 343.67402,344.27865 c 0,2.76142 -2.23857,5 -5,5 -2.76142,0 -5,-2.23858 -5,-5 0,-2.76142 2.23858,-5 5,-5 2.76143,0 5,2.23858 5,5 z"
+         fill-opacity="1"
+         id="path16" />
+      <path
+         fill="none"
+         stroke="#000000"
+         paint-order="fill stroke markers"
+         d="m 343.67402,344.27865 c 0,2.76142 -2.23857,5 -5,5 -2.76142,0 -5,-2.23858 -5,-5 0,-2.76142 2.23858,-5 5,-5 2.76143,0 5,2.23858 5,5 z"
+         stroke-opacity="1"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path17" />
+      <text
+         fill="#000000"
+         stroke="none"
+         font-family="geogebra-sans-serif, sans-serif"
+         font-size="16px"
+         font-style="normal"
+         font-weight="normal"
+         text-decoration="normal"
+         x="343"
+         y="363"
+         text-anchor="start"
+         dominant-baseline="alphabetic"
+         fill-opacity="1"
+         id="text17">f</text>
+      <path
+         fill="#808080"
+         stroke="none"
+         paint-order="stroke fill markers"
+         d="m 413.88169,239.98324 c 0,2.76142 -2.23858,5 -5,5 -2.76143,0 -5,-2.23858 -5,-5 0,-2.76143 2.23857,-5 5,-5 2.76142,0 5,2.23857 5,5 z"
+         fill-opacity="1"
+         id="path18" />
+      <path
+         fill="none"
+         stroke="#000000"
+         paint-order="fill stroke markers"
+         d="m 413.88169,239.98324 c 0,2.76142 -2.23858,5 -5,5 -2.76143,0 -5,-2.23858 -5,-5 0,-2.76143 2.23857,-5 5,-5 2.76142,0 5,2.23857 5,5 z"
+         stroke-opacity="1"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         id="path19" />
+      <text
+         fill="#808080"
+         stroke="none"
+         font-family="geogebra-sans-serif, sans-serif"
+         font-size="16px"
+         font-style="normal"
+         font-weight="normal"
+         text-decoration="normal"
+         x="413"
+         y="230"
+         text-anchor="start"
+         dominant-baseline="alphabetic"
+         fill-opacity="1"
+         id="text19">P</text>
+    </g>
+  </g>
+</svg>
