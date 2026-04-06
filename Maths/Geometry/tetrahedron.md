@@ -36,76 +36,131 @@ The volume of a tetrahedron is a sixth the volume of the parallelepiped that enc
 
 ### Proof of volume equation
 
-Lets first define our vertices of a parallelepiped. We will start with one vertex at the origin of our coordinate system for convenience. You can always translate and rotate as required. Starting from the origin, we have 3 other unique points, $P,Q,R$. The other points of the parallelepiped are formed based on the position vectors of these three points.
+Let's start with a generic tetrahedron as above. We can choose a coordinate system so that the following conditions are met.
 
-- $\mathbf{p} = \overrightarrow{OP}$
-- $\mathbf{q} = \overrightarrow{OQ}$
-- $\mathbf{r} = \overrightarrow{OR}$
-- $\mathbf{s} = p+q = \overrightarrow{OS}$
-- $\mathbf{t} = p+r = \overrightarrow{OT}$
-- $\mathbf{u} = q+r = \overrightarrow{OU}$
-- $\mathbf{v} = p+q+r = \overrightarrow{OV}$
+- point A is at the origin
+- point B lies on the x axis
+- point C lies in the xy plane
+- point D is above the xy plane
 
-Before beginning to look at a general parallelepiped, we shall look at the cube first
+This should be possible by doing the correct translations, rotations and reflections, all of which leave the volume unchanged.
 
-### The Cube and The Six Tetrahedra
+![tetrahedron](./Tetrahedron.png)
 
-If we look down the diagonal axis $OV$ you can see a hexagonal shadow. That's how we get our six tetrahedra. The vertices of the tetrahedra are as follows
+#### Slices in height
 
-| Tetrahedron | Vertices |          Edges          |            Edge lengths             |
-| :---------: | :------: | :---------------------: | :---------------------------------: |
-|      1      |   OPTV   | (O,P),(O,T),(O,V),(P,T) | len(O,P),len(O,T),len(O,V),len(P,T) |
-|      2      |   ORTV   | (O,R),(O,T),(O,V),(R,T) | len(O,R),len(O,T),len(O,V),len(R,T) |
-|      3      |   ORUV   | (O,R),(O,U),(O,V),(R,U) | len(O,R),len(O,U),len(O,V),len(R,U) |
-|      4      |   OQUV   | (O,Q),(O,U),(O,V),(Q,U) | len(O,Q),len(O,U),len(O,V),len(Q,U) |
-|      5      |   OQSV   | (O,Q),(O,S),(O,V),(Q,S) | len(O,Q),len(O,S),len(O,V),len(Q,S) |
-|      6      |   OPSV   | (O,P),(O,S),(O,V),(P,S) | len(O,P),len(O,S),len(O,V),len(P,S) |
+The volume of any shape can be considered to be the integral of the area of a slice as a function of height and the height.
 
-We will use the parallelepiped base vectors $\mathbf{p}$,$\mathbf{q}$ and $\mathbf{r}$ whenever we can, using the notation that
+```math
+\text{Volume}=\int \text{Area}(z) dz
+```
 
-- len(O,P) = $\left|\mathbf{p}\right|$ = $p$
-- len(O,Q) = $\left|\mathbf{q}\right|$ = $q$
-- len(O,R) = $\left|\mathbf{r}\right|$ = $r$
+If we can find the equation for the area of a slice of the tetrahedron as a function of $z$ then we can calculate the volume.
 
-| Tetrahedron | Vertices |          Edges          |          Edge lengths          |
-| :---------: | :------: | :---------------------: | :----------------------------: |
-|      1      |   OPTV   | (O,P),(O,T),(O,V),(P,T) | $p$,len(O,T),len(O,V),len(P,T) |
-|      2      |   ORTV   | (O,R),(O,T),(O,V),(R,T) | $r$,len(O,T),len(O,V),len(R,T) |
-|      3      |   ORUV   | (O,R),(O,U),(O,V),(R,U) | $r$,len(O,U),len(O,V),len(R,U) |
-|      4      |   OQUV   | (O,Q),(O,U),(O,V),(Q,U) | $q$,len(O,U),len(O,V),len(Q,U) |
-|      5      |   OQSV   | (O,Q),(O,S),(O,V),(Q,S) | $q$,len(O,S),len(O,V),len(Q,S) |
-|      6      |   OPSV   | (O,P),(O,S),(O,V),(P,S) | $p$,len(O,S),len(O,V),len(P,S) |
+We will start by working out points along the edges (A,D),(B,D) and (C,D).
 
-Due to symmetry (ie the faces being parallelograms):
+Starting with the equation for a point along a segment from point $P$ to point $Q$
 
-- len(P,T) = len(O,R) = $r$
-- len(R,T) = len(O,P) = $p$
-- len(R,U) = len(O,Q) = $q$
-- len(Q,U) = len(O,R) = $r$
-- len(Q,S) = len(O,P) = $p$
-- len(P,S) = len(O,Q) = $q$
+```math
+r=(1-\alpha)P+\alpha Q
+```
 
-| Tetrahedron | Vertices |          Edges          |       Edge lengths        |
-| :---------: | :------: | :---------------------: | :-----------------------: |
-|      1      |   OPTV   | (O,P),(O,T),(O,V),(P,T) | $p$,len(O,T),len(O,V),$r$ |
-|      2      |   ORTV   | (O,R),(O,T),(O,V),(R,T) | $r$,len(O,T),len(O,V),$p$ |
-|      3      |   ORUV   | (O,R),(O,U),(O,V),(R,U) | $r$,len(O,U),len(O,V),$q$ |
-|      4      |   OQUV   | (O,Q),(O,U),(O,V),(Q,U) | $q$,len(O,U),len(O,V),$r$ |
-|      5      |   OQSV   | (O,Q),(O,S),(O,V),(Q,S) | $q$,len(O,S),len(O,V),$p$ |
-|      6      |   OPSV   | (O,P),(O,S),(O,V),(P,S) | $p$,len(O,S),len(O,V),$q$ |
+For all the edges we care about we get the following
 
-The lengths of the diagonals are
+```math
+\begin{align*}
+A(\alpha)&=(1-\alpha)A+\alpha D \\
+B(\beta)&=(1-\beta)B+\beta D \\
+C(\gamma)&=(1-\gamma)C+\gamma D
+\end{align*}
+```
 
-- len(O,S) = $\left|\overrightarrow{OS} \right| = \left| \mathbf{p}+\mathbf{q} \right|$
-  = $\sqrt{(\mathbf{p}+\mathbf{q})\cdot(\mathbf{p}+\mathbf{q})}$
-  = $\sqrt{\left|\mathbf{p}\right|^2+\left|\mathbf{q}\right|^2 + 2 \mathbf{p}\cdot \mathbf{q}}$
-- len(O,T) = $\left|\overrightarrow{OT} \right|= \left| p+r \right| $
-  = $\sqrt{(\mathbf{p}+\mathbf{r})\cdot(\mathbf{p}+\mathbf{r})}$
-  = $\sqrt{\left|\mathbf{p}\right|^2+\left|\mathbf{r}\right|^2 + 2 \mathbf{p}\cdot \mathbf{r}}$
-- len(O,U) = $\left|\overrightarrow{OU} \right|= \left| q+r \right| $
-  = $\sqrt{(\mathbf{q}+\mathbf{r})\cdot(\mathbf{q}+\mathbf{r})}$
-  = $\sqrt{\left|\mathbf{q}\right|^2+\left|\mathbf{r}\right|^2 + 2 \mathbf{q}\cdot \mathbf{r}}$
+When taking a slice at a given height value, lets say z, then
 
-## Realisation
+```math
+\begin{align*}
+z &= \\
+&=(1-\alpha)A_z+\alpha D_z \\
+&=(1-\beta)B_z+\beta D_z \\
+&=(1-\gamma)C_z+\gamma D_z
+\end{align*}
+```
 
-Two tetrahedrons with the same base area and height will have the same volume.
+Noting that $A_z=B_z=C_z=0$ we get
+
+```math
+\begin{align*}
+z &= \\
+&=\alpha D_z \\
+&=\beta D_z \\
+&=\gamma D_z
+\end{align*}
+```
+
+which means that $\alpha = \beta = \gamma = \frac{z}{D_z}$
+
+Giving us
+
+```math
+\begin{align*}
+A(z)&=\left(1-\frac{z}{h}\right)A+\frac{z}{h} D \\
+B(z)&=\left(1-\frac{z}{h}\right)B+\frac{z}{h} D \\
+C(z)&=\left(1-\frac{z}{h}\right)C+\frac{z}{h} D
+\end{align*}
+```
+
+> We have used $h=D_z$ above
+
+So now for any slice through z, we can determine the positions of the vertices that form the triangle within that slice.
+
+![a slice of a tetrahedron](Tetrahedron2.png)
+
+#### Slice vectors
+
+Since we have the positions at a given height, we can work out the vectors that form the base and side of the triangle in that slice.
+
+```math
+\begin{align*}
+\mathbf{a}(z)&=B(z)-A(z)\\
+&= \left(1-\frac{z}{h}\right)B+\frac{z}{h} D - \left(\left(1-\frac{z}{h}\right)A+\frac{z}{h}D\right)\\
+&= \left(1-\frac{z}{h}\right)(B-A) \\
+&=\left(1-\frac{z}{h}\right)\mathbf{a}
+\end{align*}
+```
+
+```math
+\begin{align*}
+\mathbf{b}(z)&=C(z)-A(z)\\
+&=\left(1-\frac{z}{h}\right)C+\frac{z}{h} D - \left(\left(1-\frac{z}{h}\right)A+\frac{z}{h}D\right)\\
+&= \left(1-\frac{z}{h}\right)(C-A)\\
+&=\left(1-\frac{z}{h}\right)\mathbf{b}
+\end{align*}
+```
+
+![vectors at a given height](Tetrahedron3.png)
+
+The area is then given by
+
+```math
+\begin{align*}
+\text{Area}(z)&=\frac{1}{2} \mathbf{a}(z) \times \mathbf{b}(z)\\
+&=\frac{1}{2} \left(\left(1-\frac{z}{h}\right)\mathbf{a} \times \left(1-\frac{z}{h}\right)\mathbf{b}\right) \\
+&=\frac{1}{2} \mathbf{a}(z) \times \mathbf{b}(z)\\
+&= \left(1-\frac{z}{h}\right)^2\left[\frac{1}{2} \mathbf{a} \times \mathbf{b}\right] \\
+&= \left(1-\frac{z}{h}\right)^2 \text{base}
+\end{align*}
+```
+
+So now we've connected the area of a slice based on the area of the base. The area of the base is $\frac{1}{2} \mathbf{a} \times \mathbf{b}$
+
+So finally we can do our integral
+
+```math
+\begin{align*}
+\text{Volume} &=\int_0^h \text{Area}(z) dz\\
+ &=\int_0^h \left(1-\frac{z}{h}\right)^2 \text{base} dz\\
+ &= \text{base} \int_0^h \left(1-\frac{z}{h}\right)^2 dz\\
+\end{align*}
+```
+
+Now let $u=1-\frac{z}{h}$
