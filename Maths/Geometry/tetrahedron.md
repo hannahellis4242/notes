@@ -105,3 +105,7 @@ The lengths of the diagonals are
 - len(O,U) = $\left|\overrightarrow{OU} \right|= \left| q+r \right| $
   = $\sqrt{(\mathbf{q}+\mathbf{r})\cdot(\mathbf{q}+\mathbf{r})}$
   = $\sqrt{\left|\mathbf{q}\right|^2+\left|\mathbf{r}\right|^2 + 2 \mathbf{q}\cdot \mathbf{r}}$
+
+## Realisation
+
+Two tetrahedrons with the same base area and height will have the same volume.
