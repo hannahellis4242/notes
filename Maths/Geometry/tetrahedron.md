@@ -151,16 +151,62 @@ The area is then given by
 \end{align*}
 ```
 
-So now we've connected the area of a slice based on the area of the base. The area of the base is $\frac{1}{2} \mathbf{a} \times \mathbf{b}$
+So now we've connected the area of a slice based on the area of the base.
 
 So finally we can do our integral
 
 ```math
 \begin{align*}
 \text{Volume} &=\int_0^h \text{Area}(z) dz\\
- &=\int_0^h \left(1-\frac{z}{h}\right)^2 \text{base} dz\\
+ &=\int_0^h \left(1-\frac{z}{h}\right)^2 \text{base } dz\\
  &= \text{base} \int_0^h \left(1-\frac{z}{h}\right)^2 dz\\
 \end{align*}
 ```
 
 Now let $u=1-\frac{z}{h}$
+
+```math
+\begin{align*}
+\frac{du}{dz} &= - \frac{1}{h} \\
+du &= - \frac{1}{h} dz \\
+-h du &= dz
+\end{align*}
+```
+
+Then the limits are $u(0)=1-\frac{0}{h}=1$ and $u(h)=1-\frac{h}{h}=1-1=0$
+
+```math
+\begin{align*}
+\text{Volume} &= \text{base} \int_0^h \left(1-\frac{z}{h}\right)^2 dz\\
+&= \text{base} \int_1^0 u^2 (-h) du \\
+&= - \text{base } h \int_1^0 u^2 du \\
+&= \text{base } h \int_0^1 u^2 du \\
+&= \text{base } h \left[ \frac{u^3}{3} \right]_0^1\\
+&= \text{base } h \left[ \frac{1^3}{3} - \frac{0^3}{3}\right]\\
+&= \frac{1}{3}\text{base } h
+\end{align*}
+```
+
+So the volume of the tetrahedron is a third it's base area times it height.
+
+#### Volume in terms of edge vectors
+
+Using the edge vectors we can work out the area of the base. Which is $\frac{1}{2} \left|\mathbf{a} \times \mathbf{b}\right|$
+
+The height depends on taking the projection of the third vector $\mathbf{c}$ onto the normal of the base. The normal is given by $\mathbf{n}=\mathbf{a} \times \mathbf{b}$
+
+So leads to the height being
+
+```math
+h=\mathbf{c} \cdot \hat{\mathbf{n}} = \frac{\mathbf{c} \cdot \mathbf{a} \times \mathbf{b}}{\left| \mathbf{a} \times \mathbf{b} \right|}
+```
+
+Putting these back into our formula for volume
+
+```math
+\begin{align*}
+\text{Volume} &= \frac{1}{3}\text{base } h \\
+&= \frac{1}{3}\frac{1}{2} \left|\mathbf{a} \times \mathbf{b}\right| \frac{\mathbf{c} \cdot \mathbf{a} \times \mathbf{b}}{\left| \mathbf{a} \times \mathbf{b} \right|}\\
+&=\frac{1}{6}\left(\mathbf{c} \cdot \mathbf{a} \times \mathbf{b}\right)
+\end{align*}
+```
